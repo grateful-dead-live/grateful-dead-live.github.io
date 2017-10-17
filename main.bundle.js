@@ -83,7 +83,7 @@ var AppComponent = (function () {
         var grid = { "xs": 1, "sm": 2, "md": 4, "lg": 5, "xl": 6 };
         this.cols = this.observableMedia.asObservable()
             .map(function (change) { return grid[change.mqAlias]; })
-            .startWith(3);
+            .startWith(1);
     };
     AppComponent.prototype.eventSelected = function (event) {
         var _this = this;
