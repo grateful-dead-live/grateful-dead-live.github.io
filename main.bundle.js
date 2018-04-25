@@ -21,7 +21,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".gd-card {\n  margin: auto;\n  width: 100%;\n  height: 100%;\n  overflow: scroll;\n}\n\nagm-map {\n  width: 100%;\n  height: 300px;\n}\n\nh6 {\n  font-size: 80px;\n}", ""]);
+exports.push([module.i, ".gd-card {\n  border-radius: 10px;\n  /* border: 3px solid #E91C2C; */\n  border: 3px solid rgb(59, 59, 59); \n  background: rgb(59, 59, 59);\n  margin: auto;\n  width: 100%;\n  height: 86.5%;\n  overflow: scroll;\n  \n\n}\n\nagm-map {\n  width: 100%;\n  height: 300px;\n}\n\nh6 {\n  font-size: 80px;\n}\n\nh1 {\n  font-size: 16px;\n  font-weight: normal;\n}\n\nh4 {\n  font-size: 14px;\n  font-weight: normal;\n}\n\ndiv.gallery {\n  margin: 5px;\n  /* border: 1px solid #ccc; */\n  float: left;\n  width: 180px;\n}\n\n\ndiv.gallery img {\n  width: auto;\n  max-height: 150px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n\n}\n\ndiv.desc {\n  padding: 10px;\n  text-align: center;\n}\n\nbutton {\n  height: 18px ;\n  min-width: 20px ;\n  font-size: 13px ;\n  line-height: 0px; \n  /* background-color: #2358AC */\n\n}\n\nmd-toolbar.black{\n  background-color: black;\n}\n", ""]);
 
 // exports
 
@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<md-toolbar>\n  <button md-button [mdMenuTriggerFor]=\"menu\">Menu</button>\n  <md-menu #menu=\"mdMenu\">\n    <button md-menu-item *ngFor=\"let e of events\" (click)=\"eventSelected(e)\">{{ e.date }} {{ e.location }}</button>\n  </md-menu>\n  <!--img src=\"https://pbs.twimg.com/profile_images/692441136472784896/KowiUPSf.jpg\"-->\n  <span>Grateful Dead Live</span>\n  <md-toolbar-row *ngIf=\"selectedEvent\">\n    <span>{{ selectedEvent.date }} {{ selectedEvent.location }}</span>\n  </md-toolbar-row>\n</md-toolbar>\n<md-grid-list [cols]=\"cols | async\" rowHeight=\"400px\">\n  <md-grid-tile *ngIf=\"location\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Location</md-card-title>\n        <md-card-subtitle>{{ location.name }}</md-card-subtitle>\n      </md-card-header>\n      <img md-card-image src=\"{{ location.image }}\">\n      <md-card-content>{{ location.comment }}</md-card-content>\n      <agm-map *ngIf=\"location.geoloc\" [latitude]=\"location.geoloc.lat\" [longitude]=\"location.geoloc.long\" [zoom]=\"9\"  [scrollwheel]=false>\n        <agm-marker [latitude]=\"location.geoloc.lat\" [longitude]=\"location.geoloc.long\"></agm-marker>\n      </agm-map>\n    </md-card>\n  </md-grid-tile>\n  <md-grid-tile *ngIf=\"venue\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Venue</md-card-title>\n        <md-card-subtitle>{{ venue.name }}</md-card-subtitle>\n      </md-card-header>\n      <!--md-card-content>({{ venue.sameas }})</md-card-content-->\n      <img md-card-image src=\"{{ venue.image }}\">\n      <md-card-content>{{ venue.comment }}</md-card-content>\n      <agm-map *ngIf=\"venue.geoloc\" [latitude]=\"venue.geoloc.lat\" [longitude]=\"venue.geoloc.long\" [zoom]=\"12\" [scrollwheel]=false>\n        <agm-marker [latitude]=\"venue.geoloc.lat\" [longitude]=\"venue.geoloc.long\"></agm-marker>\n      </agm-map>\n    </md-card>\n  </md-grid-tile>\n  <md-grid-tile *ngIf=\"tickets&&tickets.length > 0\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Ticket</md-card-title>\n      </md-card-header>\n      <img md-card-image *ngFor=\"let t of tickets\" src=\"{{ t }}\">\n    </md-card>\n  </md-grid-tile>\n  <md-grid-tile *ngIf=\"posters&&posters.length > 0\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Poster</md-card-title>\n      </md-card-header>\n      <img md-card-image *ngFor=\"let p of posters\" src=\"{{ p }}\">\n    </md-card>\n  </md-grid-tile>\n  <md-grid-tile *ngIf=\"weather\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Weather</md-card-title>\n      </md-card-header>\n      <md-card-content>\n        <h6>{{ weather.maxTemperature }} °C<br>{{ weather.precipitation }} mm</h6>\n      </md-card-content>\n    </md-card>\n  </md-grid-tile>\n  <md-grid-tile *ngIf=\"setlist\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Setlist</md-card-title>\n      </md-card-header>\n      <md-card-content>\n        <div *ngFor=\"let s of setlist\">{{ s }}</div>\n      </md-card-content>\n    </md-card>\n  </md-grid-tile>\n  <md-grid-tile *ngIf=\"performers&&performers.length > 0\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Performers</md-card-title>\n      </md-card-header>\n      <md-card-content>\n        <md-grid-list [cols]=\"3\">\n          <md-grid-tile *ngFor=\"let i of performerImages\">\n            <img src=\"{{ i }}\" width=\"100%\">\n          </md-grid-tile>\n        </md-grid-list>\n        <div *ngFor=\"let p of performers\">{{ p.name }} ({{ p.instruments.join(', ') }})</div>\n      </md-card-content>\n    </md-card>\n  </md-grid-tile>\n  <md-grid-tile *ngIf=\"recordings&&recordings.length > 0\">\n    <md-card class=\"gd-card\">\n      <md-card-header>\n        <md-card-title>Recordings</md-card-title>\n      </md-card-header>\n      <md-select [(ngModel)]=\"selectedRec\" [style.width]=\"'100%'\">\n        <md-option *ngFor=\"let r of recordings\" [value]=\"r\">\n          {{ r.id }}\n        </md-option>\n      </md-select>\n      <iframe [src]=\"selectedRec.url\" [style.width]=\"'100%'\" height=\"280\" frameborder=\"0\"></iframe>\n    </md-card>\n  </md-grid-tile>\n</md-grid-list>\n<date-axis [events]=\"events\" [onClick]=\"eventSelected.bind(this)\"></date-axis>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<md-toolbar class=\"black\">\r\n  <button md-button [mdMenuTriggerFor]=\"menu\"><h1>the <img src=\"assets/gd_logo1.png\" height=\"50\" align=\"middle\"> concert explorer</h1></button>\r\n  <md-menu #menu=\"mdMenu\">\r\n    <button md-menu-item *ngFor=\"let e of events\" (click)=\"eventSelected(e)\">{{ e.date }} {{ e.location }}</button>\r\n  </md-menu>\r\n  <!--img src=\"https://pbs.twimg.com/profile_images/692441136472784896/KowiUPSf.jpg\"-->\r\n  <md-toolbar-row *ngIf=\"selectedEvent\">\r\n    <span>{{ selectedEvent.date }} {{ selectedEvent.location }}</span>\r\n  </md-toolbar-row>\r\n</md-toolbar>\r\n\r\n<md-grid-list [cols]=\"cols | async\" rowHeight=\"400px\">\r\n  <md-grid-tile *ngIf=\"location\">\r\n     <!--<md-grid-tile-header>\r\n          <h3><font color=\"red\">This is some text!</font></h3>\r\n        </md-grid-tile-header> -->\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Location</md-card-title>\r\n         <!-- <md-card-subtitle>{{ location.name }}</md-card-subtitle>  -->\r\n      </md-card-header>\r\n      <button md-button [mdMenuTriggerFor]=\"locmenu\">{{ location.name }} </button>\r\n      <md-menu #locmenu=\"mdMenu\">\r\n        <button md-menu-item *ngFor=\"let e of location.events\" (click)=\"eventSelected(e)\">{{ e.date }} {{ e.venue }}</button>\r\n      </md-menu>\r\n      <img md-card-image src=\"{{ location.thumbnail }}\" (click)=\"openDialog(location.image)\">\r\n      <md-card-content>{{ location.comment }}</md-card-content>\r\n      <agm-map *ngIf=\"location.geoloc\" [latitude]=\"location.geoloc.lat\" [longitude]=\"location.geoloc.long\" [zoom]=\"9\"  [scrollwheel]=false>\r\n        <agm-marker [latitude]=\"location.geoloc.lat\" [longitude]=\"location.geoloc.long\"></agm-marker>\r\n      </agm-map>\r\n   \r\n    </md-card>\r\n  </md-grid-tile>\r\n  <md-grid-tile *ngIf=\"venue\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Venue</md-card-title>\r\n        <!-- <md-card-subtitle>{{ venue.name }}</md-card-subtitle> -->\r\n      </md-card-header>\r\n\r\n      <button md-button [mdMenuTriggerFor]=\"venmenu\">{{ venue.name }} </button>\r\n      <md-menu #venmenu=\"mdMenu\">\r\n        <button md-menu-item *ngFor=\"let e of venue.events\" (click)=\"eventSelected(e)\">{{ e.date }}</button>\r\n      </md-menu>\r\n\r\n      <!--md-card-content>({{ venue.sameas }})</md-card-content-->\r\n      <img md-card-image src=\"{{ venue.thumbnail }}\" (click)=\"openDialog(venue.image)\">\r\n      <md-card-content>{{ venue.comment }}</md-card-content>\r\n      <agm-map *ngIf=\"venue.geoloc\" [latitude]=\"venue.geoloc.lat\" [longitude]=\"venue.geoloc.long\" [zoom]=\"12\" [scrollwheel]=false>\r\n        <agm-marker [latitude]=\"venue.geoloc.lat\" [longitude]=\"venue.geoloc.long\"></agm-marker>\r\n      </agm-map>\r\n      \r\n    </md-card>\r\n  </md-grid-tile>\r\n  <md-grid-tile *ngIf=\"tickets&&tickets.length > 0\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Ticket</md-card-title>\r\n      </md-card-header>\r\n      <!--<button mat-raised-button (click)=\"openDialog()\">Pick one</button>-->\r\n      <img md-card-image *ngFor=\"let t of tickets\" src=\"{{ t }}\" (click)=\"openDialog(t)\">\r\n    </md-card>\r\n\r\n  </md-grid-tile>\r\n  <md-grid-tile *ngIf=\"posters&&posters.length > 0\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Poster</md-card-title>\r\n      </md-card-header>\r\n      <img md-card-image *ngFor=\"let p of posters\" src=\"{{ p }}\" (click)=\"openDialog(p)\">\r\n\r\n\r\n\r\n    </md-card>\r\n  </md-grid-tile>\r\n  <md-grid-tile *ngIf=\"weather\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Weather</md-card-title>\r\n      </md-card-header>\r\n      <md-card-content>\r\n        <h3>max. temperature: {{ weather.maxTemperature }}°C<br>\r\n          precipitation: {{ weather.precipitation }}mm<br>\r\n          wind: {{ weather.wind }}km/h {{weather.wind_direction}}\r\n        </h3>\r\n        \r\n\r\n      </md-card-content>\r\n    </md-card>\r\n  </md-grid-tile>\r\n\r\n  <md-grid-tile *ngIf=\"setlist\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Setlist</md-card-title>\r\n      </md-card-header>\r\n      <md-card-content>\r\n<!--<div *ngFor=\"let s of setlist\">{{ s.name }}</div> -->\r\n\r\n\r\n  <div *ngFor=\"let s of setlist\">\r\n      <button md-button [mdMenuTriggerFor]=\"setmenu\">{{ s.name }}</button>\r\n      <md-menu #setmenu=\"mdMenu\">\r\n          <button md-menu-item *ngFor=\"let e of s.events\" (click)=\"eventSelected(e)\">{{ e.date }} {{ e.location }}</button>\r\n      </md-menu>\r\n  </div>\r\n      </md-card-content>\r\n    </md-card>\r\n  </md-grid-tile>\r\n  <md-grid-tile *ngIf=\"performers&&performers.length > 0\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Performers</md-card-title>\r\n      </md-card-header>\r\n      <md-card-content>\r\n\r\n          <md-grid-list [cols]=\"2\">\r\n              <md-grid-tile *ngFor=\"let p of performers\">\r\n                  <div class=\"gallery\">\r\n                    <img src=\"{{ p.thumbnail }}\" (click)=\"openDialog(p.image)\">\r\n                    <div class=\"desc\">{{ p.name }} ({{ p.instruments.join(', ') }}) </div>\r\n                  </div>\r\n                </md-grid-tile>\r\n              </md-grid-list>\r\n          \r\n\r\n        <!--\r\n        <md-grid-list [cols]=\"3\">\r\n          <md-grid-tile *ngFor=\"let i of performerImages\">\r\n            <img src=\"{{ i }}\" width=\"100%\">\r\n          </md-grid-tile>\r\n        </md-grid-list>\r\n        <div *ngFor=\"let p of performers\">{{ p.name }} ({{ p.instruments.join(', ') }})</div>\r\n        <p>-------</p>\r\n        -->\r\n\r\n\r\n      </md-card-content>\r\n    </md-card>\r\n  </md-grid-tile>\r\n  <md-grid-tile *ngIf=\"recordings&&recordings.length > 0\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Recordings</md-card-title>\r\n      </md-card-header>\r\n      <md-select [(ngModel)]=\"selectedRec\" [style.width]=\"'100%'\" (ngModelChange)=\"recordingSelected()\">\r\n        <md-option *ngFor=\"let r of recordings\" [value]=\"r\">\r\n          {{ r.id }}\r\n        </md-option>\r\n      </md-select>\r\n      <iframe [src]=\"selectedRec.url\" [style.width]=\"'100%'\" height=\"1000\" frameborder=\"0\"></iframe>\r\n\r\n    </md-card>\r\n  </md-grid-tile>\r\n\r\n  <md-grid-tile *ngIf=\"etreeinfo&&etreeinfo.notes != 'n/a'\">\r\n    <md-card class=\"gd-card\">\r\n      <md-card-header>\r\n        <md-card-title>Recording Info</md-card-title>\r\n      </md-card-header>\r\n      <div *ngIf=\"etreeinfo\">\r\n        <h4>ID:<br />{{ etreeinfo.id }}</h4>\r\n        <h4>SOURCE:<br />{{ etreeinfo.source }}</h4>\r\n        <h4>LINEAGE:<br />{{ etreeinfo.lineage }}</h4>\r\n        <h4>NOTES:<br />{{ etreeinfo.notes }}</h4>\r\n        <h4>KEYWORDS:<br />{{ etreeinfo.keywords }}</h4>\r\n      </div>\r\n    </md-card>\r\n  </md-grid-tile>\r\n\r\n\r\n  <md-grid-tile *ngIf=\"etreeinfo&&etreeinfo.tracks != 'n/a'\">\r\n      <md-card class=\"gd-card\">\r\n        <md-card-header>\r\n          <md-card-title>Spectrograms</md-card-title>\r\n        </md-card-header>\r\n        <div *ngFor=\"let e of etreeinfo.tracks; let i = index\">\r\n           <span>track {{i+1}}</span>\r\n           <img md-card-image src=\"{{ 'https://archive.org/download/' + etreeinfo.id + '/' + e + '_spectrogram.png' }}\" (click)=\"openDialog('https://archive.org/download/' + etreeinfo.id + '/' + e + '_spectrogram.png')\">\r\n        </div>\r\n      </md-card>\r\n    </md-grid-tile>\r\n\r\n</md-grid-list>\r\n\r\n<date-axis [events]=\"events\" [onClick]=\"eventSelected.bind(this)\"></date-axis>\r\n"
 
 /***/ }),
 
@@ -52,6 +52,8 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_startWith__ = __webpack_require__("../../../../rxjs/add/operator/startWith.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_startWith__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dead_api_service__ = __webpack_require__("../../../../../src/app/dead-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modal_component__ = __webpack_require__("../../../../../src/app/modal.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -69,21 +71,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var AppComponent = (function () {
-    function AppComponent(apiService, observableMedia, sanitizer) {
+    function AppComponent(dialog, apiService, observableMedia, sanitizer) {
         var _this = this;
+        this.dialog = dialog;
         this.apiService = apiService;
         this.observableMedia = observableMedia;
         this.sanitizer = sanitizer;
         this.apiService.getEvents()
-            .then(function (e) { return _this.events = e.sort(); })
+            .then(function (e) { return _this.events = e.sort(function (a, b) { return parseFloat(a.date) - parseFloat(b.date); }); })
             .then(function () { return _this.eventSelected(_this.events[Math.floor(Math.random() * _this.events.length)]); });
     }
     AppComponent.prototype.ngOnInit = function () {
-        var grid = { "xs": 1, "sm": 2, "md": 4, "lg": 5, "xl": 6 };
+        var grid = { "xs": 1, "sm": 2, "md": 2, "lg": 3, "xl": 4 };
         this.cols = this.observableMedia.asObservable()
             .map(function (change) { return grid[change.mqAlias]; })
-            .startWith(1);
+            .startWith(3);
     };
     AppComponent.prototype.eventSelected = function (event) {
         var _this = this;
@@ -94,30 +99,42 @@ var AppComponent = (function () {
         this.apiService.getLocation(event.id).then(function (l) { return _this.location = l; });
         this.apiService.getWeather(event.id).then(function (w) { return _this.weather = w; });
         this.apiService.getSetlist(event.id).then(function (s) { return _this.setlist = s; });
-        this.apiService.getRecordings(event.id).then(function (rs) { return _this.initRecordings(rs); });
+        this.apiService.getRecordings(event.id).then(function (rs) { return _this.initRecordings(rs); })
+            .then(function () { return _this.recordingSelected(); });
         this.apiService.getPerformers(event.id).then(function (p) { return _this.performers = p; })
             .then(function () { return _this.performerImages = _this.performers.map(function (p) { return p.image; }).filter(function (i) { return i; }); });
+    };
+    AppComponent.prototype.recordingSelected = function () {
+        var _this = this;
+        this.apiService.getEtreeInfo(this.selectedRec.id).then(function (e) { return _this.etreeinfo = e; });
     };
     AppComponent.prototype.initRecordings = function (ids) {
         var _this = this;
         this.recordings = ids.map(function (r) { return ({ id: r }); });
         this.recordings.forEach(function (r) {
-            return r.url = _this.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.id + "&playlist=1");
+            return r.url = _this.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.id + "&playlist=1&list_height=1000");
         });
         this.selectedRec = this.recordings[0];
+    };
+    AppComponent.prototype.openDialog = function (clickedImage) {
+        console.log(clickedImage);
+        this.dialog.open(__WEBPACK_IMPORTED_MODULE_8__modal_component__["a" /* DialogComponent */], {
+            panelClass: 'app-custom-dialog',
+            data: clickedImage
+        });
     };
     return AppComponent;
 }());
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__dead_api_service__["a" /* DeadApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__dead_api_service__["a" /* DeadApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_flex_layout__["b" /* ObservableMedia */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_flex_layout__["b" /* ObservableMedia */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["d" /* DomSanitizer */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_material__["i" /* MdDialog */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__dead_api_service__["a" /* DeadApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__dead_api_service__["a" /* DeadApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_flex_layout__["b" /* ObservableMedia */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_flex_layout__["b" /* ObservableMedia */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["e" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["e" /* DomSanitizer */]) === "function" && _d || Object])
 ], AppComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -136,6 +153,7 @@ var _a, _b, _c;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__date_axis_component__ = __webpack_require__("../../../../../src/app/date-axis.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__dead_api_service__ = __webpack_require__("../../../../../src/app/dead-api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__modal_component__ = __webpack_require__("../../../../../src/app/modal.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -153,6 +171,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+//import { DialogResultExample, DialogResultExampleDialog } from './modal.component';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -160,9 +181,11 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+        entryComponents: [__WEBPACK_IMPORTED_MODULE_10__modal_component__["a" /* DialogComponent */]],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__date_axis_component__["a" /* DateAxis */]
+            __WEBPACK_IMPORTED_MODULE_8__date_axis_component__["a" /* DateAxis */],
+            __WEBPACK_IMPORTED_MODULE_10__modal_component__["a" /* DialogComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -178,7 +201,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_6__agm_core__["a" /* AgmCoreModule */].forRoot({
                 apiKey: 'AIzaSyBhBOyzthOjvWKAhax_o1clQYSdoSQIkd4'
-            })
+            }),
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["h" /* MdDialogModule */]
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_9__dead_api_service__["a" /* DeadApiService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
@@ -248,9 +272,9 @@ var DateAxis = (function () {
             dataSelection.enter()
                 .append("path")
                 .attr("class", this.DATE_LINE_CLASS)
-                .attr("d", lineFunction([{ "x": 0, "y": 0 }, { "x": 0, "y": 70 }]))
+                .attr("d", lineFunction([{ "x": 0, "y": 0 }, { "x": 0, "y": 40 }]))
                 .attr("transform", function (e) { return "translate(" + _this.eventToDatePoint(e) + "," + 0 + ")"; })
-                .style("stroke", function (e) { return "hsl(" + _this.eventToDatePoint(e) + ", 80%, 50%)"; })
+                .style("stroke", function (e) { return "hsl(100, 0%, 60%)"; })
                 .attr("stroke-width", 2)
                 .style("opacity", 0.5)
                 .on("click", function (e) { return _this.onClick(e); })
@@ -314,7 +338,7 @@ var DateAxis = (function () {
                 .tickFormat(__WEBPACK_IMPORTED_MODULE_1_d3__["g" /* timeFormat */]("%y/%m/%d"));
             var axis = this.svg.append("g")
                 .attr("class", "xaxis")
-                .attr("transform", "translate(0," + this.height / 1.4 + ")")
+                .attr("transform", "translate(0," + this.height / 2.5 + ")")
                 .call(this.dateAxis);
             axis.selectAll("line").style("stroke", "white");
             axis.selectAll("path").style("stroke", "white");
@@ -324,7 +348,7 @@ var DateAxis = (function () {
             this.dateScale.range([this.margins.left, this.width]);
             this.dateAxis.scale(this.dateScale);
             this.svg.selectAll("g.xaxis")
-                .attr("transform", "translate(0," + this.height / 1.4 + ")")
+                .attr("transform", "translate(0," + this.height / 2.5 + ")")
                 .call(this.dateAxis);
         }
     };
@@ -342,19 +366,19 @@ var DateAxis = (function () {
     return DateAxis;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])('visuals'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* ElementRef */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* ViewChild */])('visuals'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* ElementRef */]) === "function" && _a || Object)
 ], DateAxis.prototype, "visualsContainer", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */])(),
     __metadata("design:type", Array)
 ], DateAxis.prototype, "events", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */])(),
     __metadata("design:type", Object)
 ], DateAxis.prototype, "onClick", void 0);
 DateAxis = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'date-axis',
         template: '<div mdTooltip="{{tooltipText}}" mdTooltipPosition="above" class="d3-visuals" #visuals (window:resize)="onResize($event)"></div>',
         providers: []
@@ -383,6 +407,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 var DeadApiService = (function () {
+    //private API_URL = "http://localhost:8060/";
     function DeadApiService() {
         this.API_URL = "https://grateful-dead-api.herokuapp.com/"; //"http://localhost:8060/";
     }
@@ -413,6 +438,9 @@ var DeadApiService = (function () {
     DeadApiService.prototype.getPerformers = function (eventId) {
         return this.getJsonFromApi('performers?event=' + encodeURIComponent(eventId));
     };
+    DeadApiService.prototype.getEtreeInfo = function (recordingId) {
+        return this.getJsonFromApi('etreeinfo?recording=' + encodeURIComponent(recordingId));
+    };
     DeadApiService.prototype.getJsonFromApi = function (path) {
         return fetch(this.API_URL + path)
             .then(function (r) { return r.text(); })
@@ -427,6 +455,48 @@ DeadApiService = __decorate([
 ], DeadApiService);
 
 //# sourceMappingURL=dead-api.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/modal.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+var DialogComponent = (function () {
+    function DialogComponent(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    return DialogComponent;
+}());
+DialogComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'img-dialog',
+        template: "<img src=\"{{ data }}\" style=\"max-height:100%;max-width:100%;\" img>"
+    }),
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MD_DIALOG_DATA */])),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, Object])
+], DialogComponent);
+
+var _a;
+//# sourceMappingURL=modal.component.js.map
 
 /***/ }),
 
