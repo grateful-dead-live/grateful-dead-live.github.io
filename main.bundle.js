@@ -16,13 +16,12 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /***/ "../../../../../src/app/app.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__("../../../../css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".gd-card {\n  /*border-radius: 12px; */\n  /* border: 3px solid #E91C2C; */\n  /*background: rgb(59, 59, 59);*/\n  background: rgb(1, 6, 32); \n  margin: auto;\n  width: 100%;\n  height: 86.5%;\n  overflow: scroll;\n  \n\n}\n\nagm-map {\n  width: 100%;\n  height: 300px;\n}\n\nh6 {\n  font-size: 80px;\n}\n\nh1 {\n  font-size: 16px;\n  font-weight: normal;\n}\n\nh4 {\n  font-size: 14px;\n  font-weight: normal;\n}\n\ndiv.gallery {\n  margin: 5px;\n  /* border: 1px solid #ccc; */\n  float: left;\n  width: 180px;\n}\n\n\ndiv.gallery img {\n  width: auto;\n  max-height: 150px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n\n}\n\ndiv.desc {\n  padding: 10px;\n  text-align: center;\n}\n\nbutton {\n  height: 18px ;\n  min-width: 20px ;\n  font-size: 13px ;\n  line-height: 0px; \n  /* background-color: #2358AC */\n\n}\n\nmd-toolbar.black{\n  /*background-color: black;*/\n  background-image: url(" + escape(__webpack_require__("../../../../../src/assets/tie-dye.jpg")) + "); \n\n}\n\n\n.menu-container {\n  max-height: 500px; \n}\n\n", ""]);
+exports.push([module.i, ".gd-card {\n  /*border-radius: 12px; */\n  /* border: 3px solid #E91C2C; */\n  /*background: rgb(59, 59, 59);*/\n  background: rgb(1, 6, 32); \n  margin: auto;\n  width: 100%;\n  height: 86.5%;\n  overflow: scroll;\n  \n\n}\n\nagm-map {\n  width: 100%;\n  height: 300px;\n}\n\nh6 {\n  font-size: 80px;\n}\n\nh1 {\n  font-size: 16px;\n  font-weight: normal;\n}\n\nh4 {\n  font-size: 14px;\n  font-weight: normal;\n}\n\ndiv.gallery {\n  margin: 5px;\n  /* border: 1px solid #ccc; */\n  float: left;\n  width: 180px;\n}\n\n\ndiv.gallery img {\n  width: auto;\n  max-height: 150px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n\n}\n\ndiv.desc {\n  padding: 10px;\n  text-align: center;\n}\n\nbutton {\n  height: 18px ;\n  min-width: 20px ;\n  font-size: 13px ;\n  line-height: 0px; \n  /* background-color: #2358AC */\n\n}\n\nmd-toolbar.black{\n  /*background-color: black;*/\n  /*background-image: url(\"../assets/tie-dye.jpg\"); */\n  background-color: transparent;\n}\n\n\n.menu-container {\n  max-height: 500px; \n}\n\n", ""]);
 
 // exports
 
@@ -83,7 +82,7 @@ var AppComponent = /** @class */ (function () {
         this.sanitizer = sanitizer;
         this.apiService.getEvents()
             // .then(e => this.events = e.sort())
-            .then(function (e) { return _this.events = e.sort(function (a, b) { return parseFloat(a.date) - parseFloat(b.date); }); })
+            .then(function (e) { return _this.events = e.sort(function (a, b) { return parseFloat(a.date.replace(/-/g, '')) - parseFloat(b.date.replace(/-/g, '')); }); })
             .then(function () { return _this.eventSelected(_this.events[Math.floor(Math.random() * _this.events.length)]); });
     }
     AppComponent.prototype.ngOnInit = function () {
@@ -255,7 +254,7 @@ var DateAxis = /** @class */ (function () {
             this.svg = __WEBPACK_IMPORTED_MODULE_1_d3__["a" /* select */](this.element).append('svg')
                 .attr('width', this.element.offsetWidth)
                 .attr('height', this.height)
-                .style("background-color", "black");
+                .style("background-color", "transparent");
             this.updateVisuals();
         }
     };
@@ -556,13 +555,6 @@ var DialogComponent = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=modal.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/assets/tie-dye.jpg":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "tie-dye.44b109efbcaf5ee7fab6.jpg";
 
 /***/ }),
 
