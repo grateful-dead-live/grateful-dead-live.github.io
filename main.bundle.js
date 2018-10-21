@@ -276,7 +276,7 @@ var DateAxis = /** @class */ (function () {
                 .attr("class", this.DATE_LINE_CLASS)
                 .attr("d", lineFunction([{ "x": 0, "y": 0 }, { "x": 0, "y": 40 }]))
                 .attr("transform", function (e) { return "translate(" + _this.eventToDatePoint(e) + "," + 0 + ")"; })
-                .style("stroke", function (e) { return "hsl(" + _this.eventToDatePoint(e) + ", 80%, 50%)"; })
+                .style("stroke", function (e) { return "hsla(" + _this.eventToDatePoint(e) + ", 80%, 50%, 0.6)"; })
                 //.style("stroke", e => "hsl(100, 0%, 60%)")
                 .attr("stroke-width", 2)
                 .style("opacity", 0.5)
