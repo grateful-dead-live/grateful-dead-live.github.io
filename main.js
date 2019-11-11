@@ -1,0 +1,3063 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
+
+/***/ "./src/$$_lazy_route_resource lazy recursive":
+/*!**********************************************************!*\
+  !*** ./src/$$_lazy_route_resource lazy namespace object ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncaught exception popping up in devtools
+	return Promise.resolve().then(function() {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
+
+/***/ }),
+
+/***/ "./src/app/app-routing.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/app-routing.module.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _views_show_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/show.component */ "./src/app/views/show.component.ts");
+/* harmony import */ var _views_location_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/location.component */ "./src/app/views/location.component.ts");
+/* harmony import */ var _views_venue_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/venue.component */ "./src/app/views/venue.component.ts");
+/* harmony import */ var _views_song_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/song.component */ "./src/app/views/song.component.ts");
+/* harmony import */ var _views_recording_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/recording.component */ "./src/app/views/recording.component.ts");
+/* harmony import */ var _views_artist_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/artist.component */ "./src/app/views/artist.component.ts");
+/* harmony import */ var _views_artifacts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/artifacts.component */ "./src/app/views/artifacts.component.ts");
+/* harmony import */ var _views_mapselect_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/mapselect.component */ "./src/app/views/mapselect.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+var routes = [
+    { path: '', redirectTo: '/show', pathMatch: 'full' },
+    { path: 'show', component: _views_show_component__WEBPACK_IMPORTED_MODULE_3__["ShowComponent"] },
+    { path: 'show/:id', component: _views_show_component__WEBPACK_IMPORTED_MODULE_3__["ShowComponent"] },
+    { path: 'location', component: _views_location_component__WEBPACK_IMPORTED_MODULE_4__["LocationComponent"] },
+    { path: 'location/:id', component: _views_location_component__WEBPACK_IMPORTED_MODULE_4__["LocationComponent"] },
+    { path: 'venue', component: _views_venue_component__WEBPACK_IMPORTED_MODULE_5__["VenueComponent"] },
+    { path: 'venue/:id', component: _views_venue_component__WEBPACK_IMPORTED_MODULE_5__["VenueComponent"] },
+    { path: 'song', component: _views_song_component__WEBPACK_IMPORTED_MODULE_6__["SongComponent"] },
+    { path: 'song/:id', component: _views_song_component__WEBPACK_IMPORTED_MODULE_6__["SongComponent"] },
+    { path: 'recording', component: _views_recording_component__WEBPACK_IMPORTED_MODULE_7__["RecordingComponent"] },
+    { path: 'recording/:id', component: _views_recording_component__WEBPACK_IMPORTED_MODULE_7__["RecordingComponent"] },
+    { path: 'artist', component: _views_artist_component__WEBPACK_IMPORTED_MODULE_8__["ArtistComponent"] },
+    { path: 'artist/:id', component: _views_artist_component__WEBPACK_IMPORTED_MODULE_8__["ArtistComponent"] },
+    { path: 'artifacts', component: _views_artifacts_component__WEBPACK_IMPORTED_MODULE_9__["ArtifactsComponent"] },
+    { path: 'artifacts/:types', component: _views_artifacts_component__WEBPACK_IMPORTED_MODULE_9__["ArtifactsComponent"] },
+    { path: 'mapselect', component: _views_mapselect_component__WEBPACK_IMPORTED_MODULE_10__["MapSelectComponent"] }
+];
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.component.html":
+/*!************************************!*\
+  !*** ./src/app/app.component.html ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" fxFlexFill>\n  <div fxFlex><router-outlet></router-outlet></div>\n  <footer><gd-player></gd-player></footer>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/app.component.sass":
+/*!************************************!*\
+  !*** ./src/app/app.component.sass ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2FzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/app.component.ts":
+/*!**********************************!*\
+  !*** ./src/app/app.component.ts ***!
+  \**********************************/
+/*! exports provided: AppComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var AppComponent = /** @class */ (function () {
+    function AppComponent() {
+    }
+    AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-root',
+            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
+            styles: [__webpack_require__(/*! ./app.component.sass */ "./src/app/app.component.sass")]
+        })
+    ], AppComponent);
+    return AppComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.module.ts":
+/*!*******************************!*\
+  !*** ./src/app/app.module.ts ***!
+  \*******************************/
+/*! exports provided: AppModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
+/* harmony import */ var ng_lazyload_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-lazyload-image */ "./node_modules/ng-lazyload-image/fesm5/ng-lazyload-image.js");
+/* harmony import */ var _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @asymmetrik/ngx-leaflet */ "./node_modules/@asymmetrik/ngx-leaflet/dist/index.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _views_show_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./views/show.component */ "./src/app/views/show.component.ts");
+/* harmony import */ var _views_location_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/location.component */ "./src/app/views/location.component.ts");
+/* harmony import */ var _views_venue_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/venue.component */ "./src/app/views/venue.component.ts");
+/* harmony import */ var _views_song_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/song.component */ "./src/app/views/song.component.ts");
+/* harmony import */ var _views_recording_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/recording.component */ "./src/app/views/recording.component.ts");
+/* harmony import */ var _views_artist_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/artist.component */ "./src/app/views/artist.component.ts");
+/* harmony import */ var _views_artifacts_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./views/artifacts.component */ "./src/app/views/artifacts.component.ts");
+/* harmony import */ var _views_mapselect_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/mapselect.component */ "./src/app/views/mapselect.component.ts");
+/* harmony import */ var _shared_header_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./shared/header.component */ "./src/app/shared/header.component.ts");
+/* harmony import */ var _shared_map_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./shared/map.component */ "./src/app/shared/map.component.ts");
+/* harmony import */ var _shared_weather_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./shared/weather.component */ "./src/app/shared/weather.component.ts");
+/* harmony import */ var _shared_shows_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./shared/shows.component */ "./src/app/shared/shows.component.ts");
+/* harmony import */ var _shared_player_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./shared/player.component */ "./src/app/shared/player.component.ts");
+/* harmony import */ var _shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./shared/list-dialog.component */ "./src/app/shared/list-dialog.component.ts");
+/* harmony import */ var _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./shared/search-dialog.component */ "./src/app/shared/search-dialog.component.ts");
+/* harmony import */ var _shared_showmap_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./shared/showmap.component */ "./src/app/shared/showmap.component.ts");
+/* harmony import */ var _services_dead_api_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/dead-api.service */ "./src/app/services/dead-api.service.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/player.service */ "./src/app/services/player.service.ts");
+/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/dialog.service */ "./src/app/services/dialog.service.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [
+                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+                _views_show_component__WEBPACK_IMPORTED_MODULE_12__["ShowComponent"],
+                _views_location_component__WEBPACK_IMPORTED_MODULE_13__["LocationComponent"],
+                _views_venue_component__WEBPACK_IMPORTED_MODULE_14__["VenueComponent"],
+                _views_song_component__WEBPACK_IMPORTED_MODULE_15__["SongComponent"],
+                _views_recording_component__WEBPACK_IMPORTED_MODULE_16__["RecordingComponent"],
+                _views_artist_component__WEBPACK_IMPORTED_MODULE_17__["ArtistComponent"],
+                _views_artifacts_component__WEBPACK_IMPORTED_MODULE_18__["ArtifactsComponent"],
+                _shared_header_component__WEBPACK_IMPORTED_MODULE_20__["HeaderComponent"],
+                _shared_map_component__WEBPACK_IMPORTED_MODULE_21__["MapComponent"],
+                _shared_weather_component__WEBPACK_IMPORTED_MODULE_22__["WeatherComponent"],
+                _shared_shows_component__WEBPACK_IMPORTED_MODULE_23__["ShowsComponent"],
+                _shared_player_component__WEBPACK_IMPORTED_MODULE_24__["PlayerComponent"],
+                _shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_25__["ListDialogComponent"],
+                _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_26__["SearchDialogComponent"],
+                _shared_showmap_component__WEBPACK_IMPORTED_MODULE_27__["ShowMapComponent"],
+                _views_mapselect_component__WEBPACK_IMPORTED_MODULE_19__["MapSelectComponent"]
+            ],
+            imports: [
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_4__["FlexLayoutModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"],
+                _angular_material_menu__WEBPACK_IMPORTED_MODULE_7__["MatMenuModule"],
+                ng_lazyload_image__WEBPACK_IMPORTED_MODULE_8__["LazyLoadImageModule"],
+                _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_9__["LeafletModule"].forRoot(),
+            ],
+            providers: [
+                _services_dead_api_service__WEBPACK_IMPORTED_MODULE_28__["DeadApiService"],
+                _services_data_service__WEBPACK_IMPORTED_MODULE_29__["DataService"],
+                _services_player_service__WEBPACK_IMPORTED_MODULE_30__["PlayerService"],
+                _services_dialog_service__WEBPACK_IMPORTED_MODULE_31__["DialogService"]
+            ],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
+            entryComponents: [_shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_25__["ListDialogComponent"], _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_26__["SearchDialogComponent"]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/globals.ts":
+/*!****************************!*\
+  !*** ./src/app/globals.ts ***!
+  \****************************/
+/*! exports provided: VIEWS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VIEWS", function() { return VIEWS; });
+var VIEWS = [
+    { name: "Shows", url: "/show" },
+    { name: "Locations", url: "/location" },
+    { name: "Venues", url: "/venue" },
+    { name: "Songs", url: "/song" },
+    { name: "Recording", url: "/recording" },
+    { name: "Artists", url: "/artist" },
+    { name: "Artifacts", url: "/artifacts" },
+    { name: "Map", url: "/mapselect" },
+];
+
+
+/***/ }),
+
+/***/ "./src/app/services/data.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/data.service.ts ***!
+  \******************************************/
+/*! exports provided: DataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _dead_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dead-api.service */ "./src/app/services/dead-api.service.ts");
+
+
+
+
+var ARCHIVE_URI = 'https://archive.org/download/';
+var DataService = /** @class */ (function () {
+    function DataService(apiService) {
+        this.apiService = apiService;
+        this.loading = this.initEvents();
+    }
+    DataService.prototype.getEventInfo = function (eventId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getEventInfos([eventId])];
+                    case 1: return [2 /*return*/, (_a.sent())[0]];
+                }
+            });
+        });
+    };
+    DataService.prototype.getEventInfos = function (eventIds) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!eventIds) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.loading];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, this.events.filter(function (e) { return eventIds.indexOf(e.id) >= 0; })];
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DataService.prototype.getEventDetails = function (eventId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.apiService.getEventDetails(eventId)];
+                    case 1:
+                        _a.event = _b.sent();
+                        return [2 /*return*/, this.event];
+                }
+            });
+        });
+    };
+    DataService.prototype.getLocation = function (locationId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.apiService.getLocation(locationId)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    DataService.prototype.getVenue = function (venueId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.apiService.getVenue(venueId)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    DataService.prototype.getVenueCoordinates = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.apiService.getVenueCoordinates()];
+            });
+        });
+    };
+    DataService.prototype.getTourCoordinates = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.apiService.getTourCoordinates()];
+            });
+        });
+    };
+    DataService.prototype.getArtistDetails = function (artistId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.apiService.getArtistDetails(artistId)];
+            });
+        });
+    };
+    DataService.prototype.getSong = function (songId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.apiService.getSong(songId)];
+            });
+        });
+    };
+    DataService.prototype.getEventInfoForRecording = function (recordingId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loading];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, this.events.filter(function (e) { return e.recordings.some(function (r) { return r.id === recordingId; }); })[0]];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRecording = function (recordingId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.apiService.getRecordingDetails(recordingId)];
+            });
+        });
+    };
+    DataService.prototype.getRecordingTracks = function (recording, event) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var tracks;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.apiService.getRecordingTracks(recording.id)];
+                    case 1:
+                        tracks = _a.sent();
+                        console.log(tracks);
+                        return [2 /*return*/, tracks.map(function (t) { return _this.toTrack(event, recording.etreeId, t); })];
+                }
+            });
+        });
+    };
+    DataService.prototype.getTrackFromAudio = function (audio, event, etreeId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.toTrack(event, etreeId, audio)];
+            });
+        });
+    };
+    DataService.prototype.getTrack = function (song, event, etreeId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var songDetails, sbd;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.apiService.getSong(song.id)];
+                    case 1:
+                        songDetails = _a.sent();
+                        if (!etreeId) {
+                            sbd = event.recordings.filter(function (r) { return r.isSoundboard; });
+                            etreeId = sbd.length ? sbd[0].etreeId : lodash__WEBPACK_IMPORTED_MODULE_1__["sample"](event.recordings).etreeId;
+                        }
+                        return [2 /*return*/, this.getTracks(songDetails, event, etreeId)[0]];
+                }
+            });
+        });
+    };
+    DataService.prototype.getTracks = function (song, event, etreeId) {
+        var _this = this;
+        return song.audio && song.audio[etreeId] ?
+            song.audio[etreeId].map(function (a) { return _this.toTrack(event, etreeId, a); }) : [];
+    };
+    DataService.prototype.loadRandomEvent = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this.getEventDetails;
+                        return [4 /*yield*/, this.getRandomEventId()];
+                    case 1: return [4 /*yield*/, _a.apply(this, [_b.sent()])];
+                    case 2: return [2 /*return*/, (_b.sent())];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomEventId = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loading];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, this.events[Math.floor(Math.random() * this.events.length)].id];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomVenue = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loadRandomEvent()];
+                    case 1: return [2 /*return*/, (_a.sent()).venue];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomLocation = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loadRandomEvent()];
+                    case 1: return [2 /*return*/, (_a.sent()).location];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomArtifacts = function (types, count) {
+        if (count === void 0) { count = 20; }
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var artifacts;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loading];
+                    case 1:
+                        _a.sent();
+                        artifacts = lodash__WEBPACK_IMPORTED_MODULE_1__["flatten"](this.events.map(function (e) { return e.artifacts.map(function (a) {
+                            return Object.assign(a, { eventInfo: e.venue + ", " + e.location + ", " + e.date });
+                        }); }));
+                        if (types) {
+                            artifacts = artifacts.filter(function (a) { return types.indexOf(a.type) >= 0; });
+                        }
+                        return [2 /*return*/, lodash__WEBPACK_IMPORTED_MODULE_1__["sampleSize"](artifacts, count)];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomArtistId = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loading];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, lodash__WEBPACK_IMPORTED_MODULE_1__["sample"](this.event.performers).id];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomRecording = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var randomEvent, _a;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this.getEventInfo;
+                        return [4 /*yield*/, this.getRandomEventId()];
+                    case 1: return [4 /*yield*/, _a.apply(this, [_b.sent()])];
+                    case 2:
+                        randomEvent = _b.sent();
+                        return [2 /*return*/, this.apiService.getRecordingDetails(lodash__WEBPACK_IMPORTED_MODULE_1__["sample"](randomEvent.recordings).id)];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomSetlist = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a, _b;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        _b = (_a = this.apiService).getSetlist;
+                        return [4 /*yield*/, this.getRandomEventId()];
+                    case 1: return [2 /*return*/, _b.apply(_a, [_c.sent()])];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomSong = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var randomSong, _a, _b, _c, _d;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_e) {
+                switch (_e.label) {
+                    case 0:
+                        _b = (_a = lodash__WEBPACK_IMPORTED_MODULE_1__).sample;
+                        _d = (_c = lodash__WEBPACK_IMPORTED_MODULE_1__).sample;
+                        return [4 /*yield*/, this.getRandomSetlist()];
+                    case 1:
+                        randomSong = _b.apply(_a, [_d.apply(_c, [_e.sent()]).songs]);
+                        console.log(randomSong);
+                        return [2 /*return*/, this.apiService.getSong(randomSong.id)];
+                }
+            });
+        });
+    };
+    DataService.prototype.getRandomTrack = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var randomSong, randomRecordingId, randomAudio, correspondingEvent;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getRandomSong()];
+                    case 1:
+                        randomSong = _a.sent();
+                        randomRecordingId = lodash__WEBPACK_IMPORTED_MODULE_1__["sample"](lodash__WEBPACK_IMPORTED_MODULE_1__["keys"](randomSong.audio));
+                        randomAudio = lodash__WEBPACK_IMPORTED_MODULE_1__["sample"](randomSong.audio[randomRecordingId]);
+                        correspondingEvent = this.events.filter(function (e) {
+                            return e.recordings.map(function (r) { return r.etreeId; }).indexOf(randomRecordingId) >= 0;
+                        })[0];
+                        return [2 /*return*/, this.toTrack(correspondingEvent, randomRecordingId, randomAudio)];
+                }
+            });
+        });
+    };
+    DataService.prototype.toTrack = function (event, etreeId, audio) {
+        var uri = ARCHIVE_URI + etreeId + '/' + audio.filename;
+        return {
+            title: audio.title + ", " + event.venue + ", "
+                + event.location + ", " + event.date,
+            uri: uri,
+            waveform: uri.replace('.mp3', '.png')
+        };
+    };
+    DataService.prototype.initEvents = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.apiService.getEvents()];
+                    case 1:
+                        _a.events = _b.sent();
+                        this.events.sort(function (a, b) { return parseFloat(a.date.replace(/-/g, ''))
+                            - parseFloat(b.date.replace(/-/g, '')); });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DataService.prototype.formatDate = function (date) {
+        return new Date(date).toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    };
+    DataService.prototype.formatDates = function (objects) {
+        var _this = this;
+        objects.forEach(function (o) { return o.date = _this.formatDate(o.date); });
+    };
+    DataService.prototype.getSearchResult = function (q) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.apiService.getSearchResult(q)];
+            });
+        });
+    };
+    DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_dead_api_service__WEBPACK_IMPORTED_MODULE_3__["DeadApiService"]])
+    ], DataService);
+    return DataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/dead-api.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/dead-api.service.ts ***!
+  \**********************************************/
+/*! exports provided: DeadApiService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeadApiService", function() { return DeadApiService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var DeadApiService = /** @class */ (function () {
+    function DeadApiService() {
+        //private API_URL = "https://grateful-dead-api.herokuapp.com/";
+        this.API_URL = "http://localhost:8060/";
+    }
+    DeadApiService.prototype.getEvents = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.getJsonFromApi('events')];
+            });
+        });
+    };
+    DeadApiService.prototype.getVenueCoordinates = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.getJsonFromApi('coordinates')];
+            });
+        });
+    };
+    DeadApiService.prototype.getTourCoordinates = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.getJsonFromApi('tours')];
+            });
+        });
+    };
+    DeadApiService.prototype.getEventDetails = function (eventId) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.getJsonFromApi('details?event=' + encodeURIComponent(eventId))];
+            });
+        });
+    };
+    DeadApiService.prototype.getLocation = function (locationId) {
+        return this.getJsonFromApi('location?id=' + encodeURIComponent(locationId));
+    };
+    DeadApiService.prototype.getVenue = function (venueId) {
+        return this.getJsonFromApi('venue?id=' + encodeURIComponent(venueId));
+    };
+    DeadApiService.prototype.getSetlist = function (eventId) {
+        return this.getJsonFromApi('setlist?event=' + encodeURIComponent(eventId));
+    };
+    DeadApiService.prototype.getSong = function (songId) {
+        return this.getJsonFromApi('song?id=' + encodeURIComponent(songId));
+    };
+    DeadApiService.prototype.getRecordingDetails = function (recordingId) {
+        return this.getJsonFromApi('recording?id=' + encodeURIComponent(recordingId));
+    };
+    DeadApiService.prototype.getRecordingTracks = function (recordingId) {
+        return this.getJsonFromApi('tracks?id=' + encodeURIComponent(recordingId));
+    };
+    DeadApiService.prototype.getArtistDetails = function (artistId) {
+        return this.getJsonFromApi('artist?id=' + encodeURIComponent(artistId));
+    };
+    DeadApiService.prototype.getFeatureSummary = function (audioUri) {
+        return this.getJsonFromApi('featuresummary?audiouri=' + encodeURIComponent(audioUri));
+    };
+    DeadApiService.prototype.getDiachronicVersionsAudio = function (songName, count, skip) {
+        if (count === void 0) { count = 100; }
+        if (skip === void 0) { skip = 0; }
+        return this.getJsonFromApi('diachronic?songname=' + encodeURIComponent(songName)
+            + "&count=" + count + "&skip=" + skip);
+    };
+    DeadApiService.prototype.getJsonFromApi = function (path) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, fetch(this.API_URL + path)
+                        .then(function (r) { return r.text(); })
+                        .then(function (t) { return JSON.parse(t); })
+                        .catch(function (e) { return console.log(e); })];
+            });
+        });
+    };
+    DeadApiService.prototype.getSearchResult = function (q) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, this.getJsonFromApi('search?q=' + encodeURIComponent(q))];
+            });
+        });
+    };
+    DeadApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], DeadApiService);
+    return DeadApiService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/dialog.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/dialog.service.ts ***!
+  \********************************************/
+/*! exports provided: DialogService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DialogService", function() { return DialogService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/list-dialog.component */ "./src/app/shared/list-dialog.component.ts");
+
+
+
+
+var DialogService = /** @class */ (function () {
+    function DialogService(dialog) {
+        this.dialog = dialog;
+    }
+    DialogService.prototype.openMultiFunction = function (title, options, funcs) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.open(title, options).subscribe(function (result) {
+                    return funcs[options.indexOf(result)]();
+                });
+                return [2 /*return*/];
+            });
+        });
+    };
+    DialogService.prototype.openSingleFunction = function (title, options, func) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.open(title, options).subscribe(function (result) { return func(result); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    DialogService.prototype.open = function (title, options) {
+        return this.dialog.open(_shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_3__["ListDialogComponent"], this.getDialogConfig(title, options)).afterClosed();
+    };
+    DialogService.prototype.getDialogConfig = function (title, items) {
+        var dialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
+        dialogConfig.autoFocus = true;
+        dialogConfig.data = { title: title, items: items };
+        return dialogConfig;
+    };
+    DialogService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+    ], DialogService);
+    return DialogService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/player.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/player.service.ts ***!
+  \********************************************/
+/*! exports provided: PlayerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlayerService", function() { return PlayerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PlayerService = /** @class */ (function () {
+    function PlayerService() {
+        this.maxTime = 0;
+        this.currentTime = 0;
+        this.playlist = [];
+        this.currentTrackIndex = 0;
+        this.muted = false;
+    }
+    PlayerService.prototype.addToPlaylist = function (track) {
+        this.playlist.push(track);
+    };
+    PlayerService.prototype.getCurrentTrack = function () {
+        return this.playlist[this.currentTrackIndex]
+            || { title: "", uri: "", waveform: "" };
+    };
+    PlayerService.prototype.skipToTrack = function (track) {
+        this.skipToTrackAtIndex(this.playlist.indexOf(track));
+    };
+    PlayerService.prototype.play = function () {
+        if (this.currentAudio) {
+            this.currentAudio.paused ? this.pause() : null;
+        }
+        else {
+            this.playPlaylist();
+        }
+    };
+    PlayerService.prototype.pause = function () {
+        if (this.currentAudio) {
+            this.currentAudio.paused ?
+                this.currentAudio.play() : this.currentAudio.pause();
+        }
+    };
+    PlayerService.prototype.stop = function () {
+        if (this.currentAudio) {
+            this.reset();
+        }
+    };
+    PlayerService.prototype.setTime = function (time) {
+        if (this.currentAudio && time != Math.floor(this.currentAudio.currentTime)) {
+            this.currentAudio.currentTime = time;
+        }
+    };
+    PlayerService.prototype.toggleMute = function () {
+        this.muted = !this.muted;
+        if (this.currentAudio) {
+            this.currentAudio.muted = this.muted;
+        }
+    };
+    PlayerService.prototype.isMuted = function () {
+        return this.muted;
+    };
+    PlayerService.prototype.nextTrack = function () {
+        if (this.playlist.length) {
+            this.skipToTrackAtIndex((this.currentTrackIndex + 1) % this.playlist.length);
+        }
+    };
+    PlayerService.prototype.previousTrack = function () {
+        if (this.playlist.length) {
+            this.skipToTrackAtIndex((this.currentTrackIndex - 1) % this.playlist.length);
+        }
+    };
+    PlayerService.prototype.skipToTrackAtIndex = function (index) {
+        this.currentTrackIndex = index;
+        if (this.currentAudio) {
+            this.stop();
+            this.play();
+        }
+    };
+    PlayerService.prototype.playPlaylist = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!(this.currentTrackIndex < this.playlist.length)) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.playCurrentTrack()];
+                    case 1:
+                        _a.sent();
+                        this.currentTrackIndex++;
+                        this.playPlaylist();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        this.reset();
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    PlayerService.prototype.playCurrentTrack = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var audio;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                audio = new Audio(this.playlist[this.currentTrackIndex].uri);
+                audio.muted = this.muted;
+                audio.play();
+                this.currentAudio = audio;
+                audio.ontimeupdate = function () {
+                    _this.maxTime = audio.duration;
+                    _this.currentTime = audio.currentTime;
+                };
+                return [2 /*return*/, new Promise(function (resolve) { return audio.onended = resolve; })];
+            });
+        });
+    };
+    PlayerService.prototype.reset = function () {
+        this.currentAudio.ontimeupdate = null;
+        this.currentAudio.pause();
+        this.currentAudio = null;
+        this.currentTime = 0;
+    };
+    PlayerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PlayerService);
+    return PlayerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/types.ts":
+/*!***********************************!*\
+  !*** ./src/app/services/types.ts ***!
+  \***********************************/
+/*! exports provided: ArtifactType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArtifactType", function() { return ArtifactType; });
+var ArtifactType;
+(function (ArtifactType) {
+    ArtifactType["Ticket"] = "ticket";
+    ArtifactType["Poster"] = "poster";
+    ArtifactType["Pass"] = "backstage pass";
+    ArtifactType["Photo"] = "photo";
+    ArtifactType["Envelope"] = "envelope";
+    ArtifactType["Tshirt"] = "T-shirt";
+    ArtifactType["Fanart"] = "fan art";
+})(ArtifactType || (ArtifactType = {}));
+;
+
+
+/***/ }),
+
+/***/ "./src/app/shared/header.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/shared/header.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"title\" fxLayout=\"row\" fxLayout.xs=\"column\"\n    [style.background-color]=\"'#ededed'\" [style.background-size]=\"'cover'\"\n    [style.background-position]=\"'center'\" [style.padding]=\"'3px'\">\n  <div class=\"container\" fxLayout=\"column\" fxFlex=\"1 1 auto\">\n    <span>\n        <button mat-button [matMenuTriggerFor]=\"menu\"><img src=\"assets/gd_logo2.png\" height=\"25\"></button>\n        <mat-menu #menu=\"matMenu\">\n          <button *ngFor=\"let v of views\" mat-menu-item [routerLink]=\"[v.url]\">{{v.name}}</button>\n        </mat-menu>\n    </span>\n  </div>\n\n\n  <div class=\"container hf1\" fxLayout=\"column\" fxFlex=\"1 1 auto\" [style.padding]=\"'4px'\">\n    <span>\n      {{ title }} – {{ subtitle }}\n    </span>\n    \n  </div>\n  <!--<div fxFlex=\"5 1 auto\"></div>-->\n  <ng-content></ng-content>\n\n  <input #searchfield placeholder=\"Search\" (keydown.enter)=\"onSubmit(searchfield.value)\">\n \n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/shared/header.component.sass":
+/*!**********************************************!*\
+  !*** ./src/app/shared/header.component.sass ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".hf1 {\n  color: #242424; }\n\n#overlay {\n  position: fixed;\n  /* Sit on top of the page content */\n  display: none;\n  /* Hidden by default */\n  width: 100%;\n  /* Full width (cover the whole page) */\n  height: 100%;\n  /* Full height (cover the whole page) */\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  /* Black background with opacity */\n  z-index: 2;\n  /* Specify a stack order in case you're using a different order for other elements */\n  cursor: pointer;\n  /* Add a pointer on hover */ }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mbG8vUHJvamVjdHMvQ29kZS9GQVNUL2dyYXRlZnVsLWRlYWQvd2ViLWFwcDIvc3JjL2FwcC9zaGFyZWQvaGVhZGVyLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUUsY0FBYyxFQUFBOztBQUdoQjtFQUNFLGVBQWU7RUFDZixtQ0FBQTtFQUNBLGFBQWE7RUFDYixzQkFBQTtFQUNBLFdBQVc7RUFDWCxzQ0FBQTtFQUNBLFlBQVk7RUFDWix1Q0FBQTtFQUNBLE1BQU07RUFDTixPQUFPO0VBQ1AsUUFBUTtFQUNSLFNBQVM7RUFDVCxvQ0FBb0M7RUFDcEMsa0NBQUE7RUFDQSxVQUFVO0VBQ1Ysb0ZBQUE7RUFDQSxlQUFlO0VBQ2YsMkJBQUEsRUFBNEIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvaGVhZGVyLmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiLmhmMSB7XG4gIC8vIGNvbG9yOiAjMmEzOThhXG4gIGNvbG9yOiAjMjQyNDI0O1xuIH0gIC8vZm9udC1mYW1pbHk6IEltcGFjdCwgQ2hhcmNvYWwsIHNhbnMtc2VyaWZcblxuI292ZXJsYXkge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIC8qIFNpdCBvbiB0b3Agb2YgdGhlIHBhZ2UgY29udGVudCAqL1xuICBkaXNwbGF5OiBub25lO1xuICAvKiBIaWRkZW4gYnkgZGVmYXVsdCAqL1xuICB3aWR0aDogMTAwJTtcbiAgLyogRnVsbCB3aWR0aCAoY292ZXIgdGhlIHdob2xlIHBhZ2UpICovXG4gIGhlaWdodDogMTAwJTtcbiAgLyogRnVsbCBoZWlnaHQgKGNvdmVyIHRoZSB3aG9sZSBwYWdlKSAqL1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC41KTtcbiAgLyogQmxhY2sgYmFja2dyb3VuZCB3aXRoIG9wYWNpdHkgKi9cbiAgei1pbmRleDogMjtcbiAgLyogU3BlY2lmeSBhIHN0YWNrIG9yZGVyIGluIGNhc2UgeW91J3JlIHVzaW5nIGEgZGlmZmVyZW50IG9yZGVyIGZvciBvdGhlciBlbGVtZW50cyAqL1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIC8qIEFkZCBhIHBvaW50ZXIgb24gaG92ZXIgKi8gfVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/shared/header.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/shared/header.component.ts ***!
+  \********************************************/
+/*! exports provided: HeaderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _globals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/search-dialog.component */ "./src/app/shared/search-dialog.component.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+
+
+
+
+//import * as Fuse from 'fuse.js';
+
+
+
+//declare var require: any;
+//const searchjson = require("../../assets/search.json");
+var HeaderComponent = /** @class */ (function () {
+    function HeaderComponent(sanitizer, titleService, dialog, data) {
+        this.sanitizer = sanitizer;
+        this.titleService = titleService;
+        this.dialog = dialog;
+        this.data = data;
+        this.views = _globals__WEBPACK_IMPORTED_MODULE_3__["VIEWS"];
+    }
+    HeaderComponent.prototype.ngOnInit = function () {
+        this.image = this.sanitizer.bypassSecurityTrustStyle('url(' + this.imageUrl + ')');
+        this.titleService.setTitle('Grateful Live - ' + this.title + ', ' + this.subtitle);
+    };
+    HeaderComponent.prototype.onSubmit = function (e) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var result;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        console.log(e);
+                        return [4 /*yield*/, this.data.getSearchResult(e)];
+                    case 1:
+                        result = _a.sent();
+                        if (result.length > 0) {
+                            this.openDialog(result);
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HeaderComponent.prototype.openDialog = function (r) {
+        var dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialogConfig"]();
+        dialogConfig.position = { right: '0', top: '0' };
+        dialogConfig.maxHeight = 400;
+        dialogConfig.data = {
+            id: 1,
+            result: r
+        };
+        //dialogConfig.disableClose = true;
+        //dialogConfig.autoFocus = true;
+        this.dialog.open(_shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_5__["SearchDialogComponent"], dialogConfig);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], HeaderComponent.prototype, "imageUrl", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], HeaderComponent.prototype, "title", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], HeaderComponent.prototype, "subtitle", void 0);
+    HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-header',
+            template: __webpack_require__(/*! ./header.component.html */ "./src/app/shared/header.component.html"),
+            styles: [__webpack_require__(/*! ./header.component.sass */ "./src/app/shared/header.component.sass")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"], _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"], _services_data_service__WEBPACK_IMPORTED_MODULE_6__["DataService"]])
+    ], HeaderComponent);
+    return HeaderComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/list-dialog.component.html":
+/*!***************************************************!*\
+  !*** ./src/app/shared/list-dialog.component.html ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!--h1 mat-dialog-title>{{data.title}}</h1-->\n<div mat-dialog-content>\n  <p class=\"mat-dialog-title\" >{{data.title}}</p>\n  <button *ngFor=\"let i of data.items\" (click)=\"onItemClick(i)\"\n    [style.margin-bottom]=\"'5px'\">{{ i }}</button>\n</div>\n<!--div mat-dialog-actions>\n  <button mat-button (click)=\"onCancelClick()\">Cancel</button>\n  <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial>Ok</button>\n</div-->"
+
+/***/ }),
+
+/***/ "./src/app/shared/list-dialog.component.ts":
+/*!*************************************************!*\
+  !*** ./src/app/shared/list-dialog.component.ts ***!
+  \*************************************************/
+/*! exports provided: ListDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListDialogComponent", function() { return ListDialogComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+
+
+
+var ListDialogComponent = /** @class */ (function () {
+    function ListDialogComponent(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    ListDialogComponent.prototype.onCancelClick = function () {
+        this.dialogRef.close();
+    };
+    ListDialogComponent.prototype.onItemClick = function (item) {
+        this.dialogRef.close(item);
+    };
+    ListDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'list-dialog',
+            template: __webpack_require__(/*! ./list-dialog.component.html */ "./src/app/shared/list-dialog.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
+    ], ListDialogComponent);
+    return ListDialogComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/map.component.html":
+/*!*******************************************!*\
+  !*** ./src/app/shared/map.component.html ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"map\" leaflet [leafletOptions]=\"options\"></div>"
+
+/***/ }),
+
+/***/ "./src/app/shared/map.component.sass":
+/*!*******************************************!*\
+  !*** ./src/app/shared/map.component.sass ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".map {\n  width: 100%;\n  height: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mbG8vUHJvamVjdHMvQ29kZS9GQVNUL2dyYXRlZnVsLWRlYWQvd2ViLWFwcDIvc3JjL2FwcC9zaGFyZWQvbWFwLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztFQUNYLFlBQVksRUFBQSIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9tYXAuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFwIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTsgfVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/shared/map.component.ts":
+/*!*****************************************!*\
+  !*** ./src/app/shared/map.component.ts ***!
+  \*****************************************/
+/*! exports provided: MapComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var MapComponent = /** @class */ (function () {
+    function MapComponent() {
+    }
+    MapComponent.prototype.ngOnInit = function () {
+        this.options = {
+            layers: [
+                //tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["tileLayer"])('https://a.tiles.mapbox.com/v3/smmaurer.k59p72bl/{z}/{x}/{y}.png', { maxZoom: 17, attribution: '...' }),
+                Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["marker"])([this.latitude, this.longitude], {
+                    icon: Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["icon"])({
+                        iconSize: [25, 41],
+                        iconAnchor: [13, 41],
+                        iconUrl: 'assets/marker-icon-2x.png',
+                    })
+                })
+            ],
+            zoom: this.zoom,
+            center: Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["latLng"])(this.latitude, this.longitude)
+        };
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], MapComponent.prototype, "latitude", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], MapComponent.prototype, "longitude", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], MapComponent.prototype, "zoom", void 0);
+    MapComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-map',
+            template: __webpack_require__(/*! ./map.component.html */ "./src/app/shared/map.component.html"),
+            styles: [__webpack_require__(/*! ./map.component.sass */ "./src/app/shared/map.component.sass")]
+        })
+    ], MapComponent);
+    return MapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/player.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/shared/player.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" [style.height]=\"loaded && !minimized ? '120px' : '20px'\">\n  <img *ngIf=\"player.getCurrentTrack().waveform\" class=\"image\"\n    [lazyLoad]=\"player.getCurrentTrack().waveform\" [style.height]=\"'100px'\"\n    [class.flashy]=\"loaded\" (load)=\"loaded = true\" [hidden]=\"minimized\">\n  <input type=\"range\" min=\"0\" max=\"{{player.maxTime}}\"\n    [(ngModel)]=\"player.currentTime\" (ngModelChange)=\"player.setTime($event)\"/>\n</div>\n<div fxLayout=\"row\">\n  <button mat-flat-button fxFlex (click)=\"player.play()\">\n    <mat-icon>play_arrow</mat-icon></button>\n  <button mat-flat-button fxFlex (click)=\"player.pause()\">\n    <mat-icon>pause</mat-icon></button>\n  <button mat-flat-button fxFlex (click)=\"player.stop()\">\n    <mat-icon>stop</mat-icon></button>\n  <button mat-flat-button fxFlex (click)=\"player.previousTrack()\">\n    <mat-icon>skip_previous</mat-icon></button>\n  <button mat-flat-button fxFlex (click)=\"player.nextTrack()\">\n    <mat-icon>skip_next</mat-icon></button>\n  <button mat-flat-button fxFlex (click)=\"player.toggleMute()\">\n    <mat-icon>{{player.muted ? 'volume_up' : 'volume_off'}}</mat-icon></button>\n  <button mat-flat-button fxFlex (click)=\"addRandomTrack()\">\n    <mat-icon>playlist_add</mat-icon></button>\n  <button mat-flat-button fxFlex (click)=\"minimized = !minimized\">\n    <mat-icon>{{minimized ? 'visibility' : 'visibility_off'}}</mat-icon></button>\n</div>\n<div  fxLayout=\"column\">\n  <div class=\"playlist\" *ngFor=\"let s of player.playlist\"\n      [hidden]=\"minimized && s !== player.getCurrentTrack()\"\n      [style.color]=\"s === player.getCurrentTrack() ? '#3d3d3d' : 'grey'\"\n      (click)=\"player.skipToTrack(s)\">\n    {{s.title}}\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/shared/player.component.sass":
+/*!**********************************************!*\
+  !*** ./src/app/shared/player.component.sass ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "button {\n  background-color: #fcfcfc;\n  border: 1px solid #3d3d3d;\n  color: #3d3d3d;\n  text-align: center; }\n\nbutton:focus {\n  outline: 0; }\n\nbutton:active {\n  background: #3d3d3d; }\n\n.playlist {\n  font-size: 80%; }\n\n.flashy {\n  background-image: linear-gradient(to bottom right, #2a398a, #dc3030); }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mbG8vUHJvamVjdHMvQ29kZS9GQVNUL2dyYXRlZnVsLWRlYWQvd2ViLWFwcDIvc3JjL2FwcC9zaGFyZWQvcGxheWVyLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQXlCO0VBQ3pCLHlCQUF5QjtFQUN6QixjQUFjO0VBQ2Qsa0JBQWtCLEVBQUE7O0FBRXBCO0VBQ0UsVUFBVSxFQUFBOztBQUVaO0VBQ0UsbUJBQW1CLEVBQUE7O0FBRXJCO0VBQ0UsY0FBYyxFQUFBOztBQUVoQjtFQUNFLG9FQUFvRSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3BsYXllci5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbImJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmY2ZjZmM7XG4gIGJvcmRlcjogMXB4IHNvbGlkICMzZDNkM2Q7XG4gIGNvbG9yOiAjM2QzZDNkO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7IH1cblxuYnV0dG9uOmZvY3VzIHtcbiAgb3V0bGluZTogMDsgfVxuXG5idXR0b246YWN0aXZlIHtcbiAgYmFja2dyb3VuZDogIzNkM2QzZDsgfVxuXG4ucGxheWxpc3Qge1xuICBmb250LXNpemU6IDgwJTsgfVxuXG4uZmxhc2h5IHtcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSByaWdodCwgIzJhMzk4YSwgI2RjMzAzMCk7IH1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/shared/player.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/shared/player.component.ts ***!
+  \********************************************/
+/*! exports provided: PlayerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlayerComponent", function() { return PlayerComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+
+
+
+
+var PlayerComponent = /** @class */ (function () {
+    function PlayerComponent(player, data) {
+        this.player = player;
+        this.data = data;
+        this.loaded = false;
+        this.minimized = false;
+    }
+    PlayerComponent.prototype.addRandomTrack = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a, _b;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        _b = (_a = this.player).addToPlaylist;
+                        return [4 /*yield*/, this.data.getRandomTrack()];
+                    case 1:
+                        _b.apply(_a, [_c.sent()]);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    PlayerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-player',
+            template: __webpack_require__(/*! ./player.component.html */ "./src/app/shared/player.component.html"),
+            styles: [__webpack_require__(/*! ./player.component.sass */ "./src/app/shared/player.component.sass")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_player_service__WEBPACK_IMPORTED_MODULE_2__["PlayerService"], _services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"]])
+    ], PlayerComponent);
+    return PlayerComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/search-dialog.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/search-dialog.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"left\">  <b>Search results</b></div>\n\n<div class=\"type\" *ngIf=\"result.song.length != 0\">Songs:</div>\n<div  class=\"result\" *ngFor=\"let r of result.song, let i = index\">\n  <span [routerLink]=\"['/song', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.venue.length != 0\">Venues:</div>\n<div class=\"result\" *ngFor=\"let r of result.venue, let i = index\">\n  <span [routerLink]=\"['/venue', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.show.length != 0\">Shows:</div>\n<div class=\"result\" *ngFor=\"let r of result.show, let i = index\">\n  <span [routerLink]=\"['/show', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n\n\n\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/shared/search-dialog.component.sass":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/search-dialog.component.sass ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".result {\n  font-size: 13px;\n  text-align: left; }\n\n.type {\n  font-size: 14px;\n  text-align: left;\n  font-weight: bold; }\n\n.left {\n  text-align: left; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mbG8vUHJvamVjdHMvQ29kZS9GQVNUL2dyYXRlZnVsLWRlYWQvd2ViLWFwcDIvc3JjL2FwcC9zaGFyZWQvc2VhcmNoLWRpYWxvZy5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7RUFDZixnQkFBZ0IsRUFBQTs7QUFFbEI7RUFDRSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGlCQUFpQixFQUFBOztBQUVuQjtFQUNFLGdCQUFnQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3NlYXJjaC1kaWFsb2cuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVzdWx0IHtcbiAgZm9udC1zaXplOiAxM3B4O1xuICB0ZXh0LWFsaWduOiBsZWZ0OyB9XG5cbi50eXBlIHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICBmb250LXdlaWdodDogYm9sZDsgfVxuXG4ubGVmdCB7XG4gIHRleHQtYWxpZ246IGxlZnQ7IH1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/shared/search-dialog.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/search-dialog.component.ts ***!
+  \***************************************************/
+/*! exports provided: SearchDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchDialogComponent", function() { return SearchDialogComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+
+
+
+var SearchDialogComponent = /** @class */ (function () {
+    function SearchDialogComponent(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        //this.result = data.result; //this.sortItems(data.result);
+        this.result = this.sortItems(data.result);
+    }
+    SearchDialogComponent.prototype.onCancelClick = function () {
+        this.dialogRef.close();
+    };
+    SearchDialogComponent.prototype.onItemClick = function (item) {
+        this.dialogRef.close(item);
+    };
+    SearchDialogComponent.prototype.sortItems = function (r) {
+        var s = { 'show': [], 'venue': [], 'song': [] };
+        r.forEach(function (i) {
+            s[i.type].push([i.title, i.uri]);
+        });
+        console.log(s);
+        return s;
+    };
+    SearchDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'search-dialog',
+            template: __webpack_require__(/*! ./search-dialog.component.html */ "./src/app/shared/search-dialog.component.html"),
+            styles: [__webpack_require__(/*! ./search-dialog.component.sass */ "./src/app/shared/search-dialog.component.sass")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
+    ], SearchDialogComponent);
+    return SearchDialogComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/showmap.component.html":
+/*!***********************************************!*\
+  !*** ./src/app/shared/showmap.component.html ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"center\">\n<select [(ngModel)]=\"selectedTour\" (ngModelChange)=\"tourChanged($event)\" >\n    <option *ngFor=\"let l of layerNames\" ngValue=\"{{l}}\"> {{l}}</option>\n</select>\n</div>\n\n\n<div id=\"MapContainer\" \n    leaflet\n    [leafletOptions]=\"mapOptions\"\n    (leafletMapReady)=\"onMapReady($event)\">\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/shared/showmap.component.sass":
+/*!***********************************************!*\
+  !*** ./src/app/shared/showmap.component.sass ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".center {\n  position: relative !important;\n  left: 12.5%; }\n\ndiv.leaflet-container {\n  position: absolute  !important;\n  width: 75%;\n  height: 75%;\n  left: 12.5%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mbG8vUHJvamVjdHMvQ29kZS9GQVNUL2dyYXRlZnVsLWRlYWQvd2ViLWFwcDIvc3JjL2FwcC9zaGFyZWQvc2hvd21hcC5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLDZCQUE2QjtFQUM3QixXQUFXLEVBQUE7O0FBRWI7RUFDRSw4QkFBOEI7RUFDOUIsVUFBVTtFQUNWLFdBQVc7RUFDWCxXQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvc2hvd21hcC5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG4uY2VudGVyIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlICFpbXBvcnRhbnQ7XG4gIGxlZnQ6IDEyLjUlOyB9XG5cbmRpdi5sZWFmbGV0LWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZSAgIWltcG9ydGFudDtcbiAgd2lkdGg6IDc1JTtcbiAgaGVpZ2h0OiA3NSU7XG4gIGxlZnQ6IDEyLjUlOyB9XG5cblxuXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/shared/showmap.component.ts":
+/*!*********************************************!*\
+  !*** ./src/app/shared/showmap.component.ts ***!
+  \*********************************************/
+/*! exports provided: ShowMapComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowMapComponent", function() { return ShowMapComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../leaflet-fusesearch/src/leaflet.fusesearch.js */ "./src/leaflet-fusesearch/src/leaflet.fusesearch.js");
+/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! leaflet-polylinedecorator */ "./node_modules/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js");
+/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+//import * as Fuse from 'fuse.js'; // imported in angular.json
+
+
+
+
+var ShowMapComponent = /** @class */ (function () {
+    function ShowMapComponent(data, sanitizer) {
+        this.data = data;
+        this.sanitizer = sanitizer;
+    }
+    ShowMapComponent.prototype.ngOnInit = function () {
+        this.selectLayers = {};
+        this.layerNames = [];
+        this.geoJsons = {};
+        this.mapOptions = {
+            layers: [
+                //L.tileLayer('https://a.tiles.mapbox.com/v3/villeda.c4c63d13/{z}/{x}/{y}.png',
+                //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                //L.tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p4an0/{z}/{x}/{y}.png',
+                L.tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p72bl/{z}/{x}/{y}.png', 
+                //L.tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p92aj/{z}/{x}/{y}.png',
+                //L.tileLayer('https://a.tiles.mapbox.com/v3/aj.03e9e12d/{z}/{x}/{y}.png',
+                { maxZoom: 18, attribution: '...' })
+            ],
+            zoom: this.zoom,
+            center: L.latLng(45, -70)
+        };
+    };
+    ShowMapComponent.prototype.onMapReady = function (map) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a, geoJsonData, tours, tourGeoJsonData, all;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        this.map = map;
+                        _a = this;
+                        return [4 /*yield*/, this.data.getVenueCoordinates()];
+                    case 1:
+                        _a.venues = _b.sent();
+                        geoJsonData = this.getGeoJson(this.venues);
+                        return [4 /*yield*/, this.data.getTourCoordinates()];
+                    case 2:
+                        tours = _b.sent();
+                        tourGeoJsonData = this.getTourJson(tours);
+                        all = this.groupLayers(geoJsonData);
+                        this.geoJsons['all shows'] = geoJsonData;
+                        this.selectLayers['all shows'] = all;
+                        this.layerNames.push('all shows');
+                        this.selectLayers['all shows'].addTo(this.map);
+                        this.currentLayer = 'all shows';
+                        tourGeoJsonData.forEach(function (t) {
+                            _this.selectLayers[t[0]] = _this.groupLayers(t[1]);
+                            _this.geoJsons[t[0]] = t[1];
+                            _this.geoJsons[t[0]].sort(_this.dateSort());
+                            _this.layerNames.push(t[0]);
+                        });
+                        this.searchCtrl = L.control.fuseSearch({ 'showResultFct': function (feature, container) {
+                                var props = feature.properties;
+                                if (props.dates != '') { // workaround for result list after first click on search button
+                                    var name = L.DomUtil.create('span', null, container);
+                                    name.innerHTML = props.name;
+                                    //container.appendChild(L.DomUtil.create('br', null, container));
+                                    //container.appendChild(document.createTextNode(props.dates));
+                                }
+                            } });
+                        this.searchCtrl.indexFeatures(geoJsonData, ['name', 'dates']);
+                        this.searchCtrl.addTo(this.map);
+                        this.searchCtrl.indexFeatures(this.geoJsons['all shows'], ['name', 'dates']);
+                        this.selectedTour = 'all shows';
+                        this.fitZoom();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ShowMapComponent.prototype.dateStrings = function (s) {
+        if (s != undefined) {
+            var htmlstring = '<br>';
+            var datestring = '';
+            var dates = s.map(function (e) { return [e.date, e.id]; });
+            dates.sort();
+            dates.forEach(function (e) {
+                htmlstring += '<a style="color: black;" href="/show/' + e[1] + '">' + e[0] + '</a><br>';
+                datestring += e[0] + ' ';
+            });
+            return [datestring, htmlstring];
+        }
+    };
+    ShowMapComponent.prototype.onEachFeature = function (feature, layer) {
+        if (feature.properties && feature.properties.popupContent) {
+            layer.bindPopup(feature.properties.popupContent, { maxHeight: 160 });
+        }
+        feature.layer = layer;
+    };
+    ShowMapComponent.prototype.getGeoJson = function (shows) {
+        var _this = this;
+        var geoJsonData = [];
+        var latlongs = [];
+        shows.forEach(function (v) {
+            if (v.long != undefined) {
+                var lat = parseFloat(v.lat);
+                var long = parseFloat(v.long);
+                while (_this.searchForArray(latlongs, [lat, long]) != -1) { // prevent markers in same place
+                    lat += 0.001;
+                }
+                latlongs.push([lat, long]);
+                var ds = _this.dateStrings(v.shows);
+                var datestring = ds[0];
+                var venuehtml = ds[1];
+                if (v.georss == 'city') {
+                    venuehtml += '(marker for city only)';
+                }
+                ;
+                var geojsonFeature = {
+                    'type': 'Feature',
+                    'properties': {
+                        'name': v.name,
+                        'dates': datestring,
+                        'popupContent': '<b><a style="color: black;" href="/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [lat, long]
+                    }
+                };
+                geoJsonData.push(geojsonFeature);
+            }
+        });
+        return geoJsonData;
+    };
+    ShowMapComponent.prototype.groupLayers = function (g) {
+        var _this = this;
+        var l = [];
+        var myIcon = L.icon({
+            iconUrl: 'assets/dead_marker_small_shadow.png',
+            iconSize: [null, 35],
+            iconAnchor: [12, 34],
+            popupAnchor: [-3, -32],
+        });
+        g.forEach(function (v) {
+            var g = L.geoJSON(v, {
+                onEachFeature: _this.onEachFeature,
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, { icon: myIcon, riseOnHover: true });
+                }
+            });
+            l.push(g);
+        });
+        var lg = L.layerGroup(l);
+        return (lg);
+    };
+    ShowMapComponent.prototype.getTourJson = function (t) {
+        var _this = this;
+        var tours = [];
+        Object.keys(t).forEach(function (tour) {
+            var geoJsonData = [];
+            var latlongs = [];
+            Object.keys(t[tour]).forEach(function (venue) {
+                var venue_id = t[tour][venue].id;
+                var long = parseFloat(t[tour][venue].long);
+                var lat = parseFloat(t[tour][venue].lat);
+                while (_this.searchForArray(latlongs, [lat, long]) != -1) { // prevent markers in same place
+                    lat += 0.001;
+                }
+                latlongs.push([lat, long]);
+                var shows = [];
+                t[tour][venue].shows.forEach(function (show) { return shows.push(show); });
+                var ds = _this.dateStrings(shows);
+                var datestring = ds[0];
+                var venuehtml = ds[1];
+                if (t[tour][venue].georss == 'city') {
+                    venuehtml += '(marker for city only)';
+                }
+                ; // todo: make work!
+                var geojsonFeature = {
+                    'type': 'Feature',
+                    'properties': {
+                        'name': venue,
+                        'tour': tour,
+                        'dates': datestring,
+                        'popupContent': '<b><a style="color: black; "href="/venue/' + venue_id + '">' + venue + '</a></b>' + venuehtml
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [lat, long]
+                    }
+                };
+                geoJsonData.push(geojsonFeature);
+            });
+            if (geoJsonData.length > 0) {
+                tours.push([tour, geoJsonData]);
+            }
+        });
+        return tours;
+    };
+    ShowMapComponent.prototype.tourChanged = function (e) {
+        if (this.tourLine != undefined) {
+            this.map.removeLayer(this.tourLine);
+        }
+        if (this.lineDecorator != undefined) {
+            this.map.removeLayer(this.lineDecorator);
+        }
+        this.map.removeLayer(this.selectLayers[this.currentLayer]);
+        this.selectLayers[e].addTo(this.map);
+        this.searchCtrl.indexFeatures(this.geoJsons[e], ['name', 'dates']);
+        this.currentLayer = e;
+        if (e != 'all shows' && this.geoJsons[e].length > 1) {
+            this.connectTheDots(this.geoJsons[e]);
+        }
+        this.fitZoom();
+    };
+    ShowMapComponent.prototype.fitZoom = function () {
+        var group = new L.featureGroup;
+        this.map.eachLayer(function (l) { if (l['feature'] != undefined) {
+            group.addLayer(l);
+        } });
+        this.map.fitBounds(group.getBounds());
+        if (this.map.getZoom() > 10) {
+            this.map.setZoom(10);
+        }
+    };
+    ShowMapComponent.prototype.connectTheDots = function (e) {
+        var c = [];
+        e.forEach(function (i) { return c.push(lodash__WEBPACK_IMPORTED_MODULE_4__["clone"](i.geometry.coordinates).reverse()); });
+        this.tourLine = L.polyline(c, { color: '#1D3A87', weight: 3 }).addTo(this.map);
+        console.log(this.tourLine);
+        this.lineDecorator = L.polylineDecorator(this.tourLine, {
+            patterns: [
+                { offset: '0%', repeat: 40, symbol: L.Symbol.arrowHead({ pixelSize: 9, polygon: false, pathOptions: { weight: 3, color: '#1D3A87', stroke: true } })
+                }
+            ]
+        }).addTo(this.map);
+    };
+    ShowMapComponent.prototype.dateSort = function () {
+        return function (a, b) {
+            var result = (a.properties.dates < b.properties.dates) ? -1 : (a.properties.dates > b.properties.dates) ? 1 : 0;
+            return result;
+        };
+    };
+    ShowMapComponent.prototype.searchForArray = function (haystack, needle) {
+        var i, j, current;
+        for (i = 0; i < haystack.length; ++i) {
+            if (needle.length === haystack[i].length) {
+                current = haystack[i];
+                for (j = 0; j < needle.length && needle[j] === current[j]; ++j)
+                    ;
+                if (j === needle.length)
+                    return i;
+            }
+        }
+        return -1;
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], ShowMapComponent.prototype, "zoom", void 0);
+    ShowMapComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-showmap',
+            template: __webpack_require__(/*! ./showmap.component.html */ "./src/app/shared/showmap.component.html"),
+            styles: [__webpack_require__(/*! ./showmap.component.sass */ "./src/app/shared/showmap.component.sass")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
+    ], ShowMapComponent);
+    return ShowMapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/shows.component.html":
+/*!*********************************************!*\
+  !*** ./src/app/shared/shows.component.html ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" class=\"gd-container\">\n  <div *ngFor=\"let e of events\" fxLayout=\"row\" fxLayoutAlign=\" center\">\n    <img fxLayout=\"column\" class=\"image field\" fxFlex=\"1 1 15%\"\n      [style.width]=\"'80px'\" [style.height]=\"'60px'\"\n      [defaultImage]=\"'assets/gd_placeholder.png'\"\n      [lazyLoad]=\"e.artifacts[0] ? e.artifacts[0].thumbnail || e.artifacts[0].image: null\"\n      [style.object-fit]=\"'cover'\"\n      [routerLink]=\"['/show', e.id]\">\n      <div fxLayout=\"column\" fxFlex=\"1 1 10%\" fxLayoutAlign=\"center\"\n      [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n        {{ e.date }}\n      </div>\n      <div fxLayout=\"column\" fxFlex=\"1 1 25%\" fxLayoutAlign=\"center\"\n      [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n        {{ e.venue }} \n      </div>\n      <span class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.location }}\n    </span>\n\n\n    <!--\n    <div fxLayout=\"column\" fxFlex=\"1 1 25%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.date }}\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"1 1 30%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.venue }}\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"1 1 20%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.location }}\n    </div>\n    <button mat-icon-button fxLayout=\"column\" class=\"field\" fxFlex=\"1 1 10%\"\n      (click)=\"onOptions(e)\"><mat-icon>more_horiz</mat-icon>\n    </button>\n    -->\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/shared/shows.component.sass":
+/*!*********************************************!*\
+  !*** ./src/app/shared/shows.component.sass ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".field {\n  padding-right: 3px;\n  padding-bottom: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mbG8vUHJvamVjdHMvQ29kZS9GQVNUL2dyYXRlZnVsLWRlYWQvd2ViLWFwcDIvc3JjL2FwcC9zaGFyZWQvc2hvd3MuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIsbUJBQW1CLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvc2hvd3MuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZmllbGQge1xuICBwYWRkaW5nLXJpZ2h0OiAzcHg7XG4gIHBhZGRpbmctYm90dG9tOiA1cHg7IH1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/shared/shows.component.ts":
+/*!*******************************************!*\
+  !*** ./src/app/shared/shows.component.ts ***!
+  \*******************************************/
+/*! exports provided: ShowsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowsComponent", function() { return ShowsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+
+
+
+var ShowsComponent = /** @class */ (function () {
+    function ShowsComponent(data) {
+        this.data = data;
+    }
+    ShowsComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.data.getEventInfos(this.eventIds)];
+                    case 1:
+                        _a.events = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], ShowsComponent.prototype, "eventIds", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function)
+    ], ShowsComponent.prototype, "onOptions", void 0);
+    ShowsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-shows',
+            template: __webpack_require__(/*! ./shows.component.html */ "./src/app/shared/shows.component.html"),
+            styles: [__webpack_require__(/*! ./shows.component.sass */ "./src/app/shared/shows.component.sass")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
+    ], ShowsComponent);
+    return ShowsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/weather.component.html":
+/*!***********************************************!*\
+  !*** ./src/app/shared/weather.component.html ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n  <div fxLayout=\"row\" >\n      \n    <div fxLayout=\"column\" fxFlex fxLayoutAlign=\"center center\" [style.font-size]=\"'150%'\"[style.padding]=\"'4px'\">\n      <i class=\"wi wc {{ weather.conditionIcon }}\"></i>\n    </div>\n    <div fxLayout=\"column\" fxFlex fxLayoutAlign=\"center center\" [style.font-size]=\"'150%'\">\n      <i class=\"wi wc wpadleft {{ weather.windDirectionIcon }}\"></i>\n    </div>\n    <div fxLayout=\"column\" class=\"wf wc wpadleft wpadright\" fxFlex fxLayoutAlign=\"center center\" >\n        {{ weather.maxTemperature }}°F\n      </div>\n  </div>\n  <!--\n  <div fxLayout=\"column\" fxFlex fxLayoutAlign=\"center\" [style.padding-left]=\"'30px'\">\n    <span *ngIf=\"weather.condition\">\n      <b>{{ weather.condition }}</b>\n    </span>\n    max. temperature: {{ weather.maxTemperature }} °F<br>\n    precipitation: {{ weather.precipitation }} in<br>\n    wind: {{ weather.wind }} mph\n  </div>\n-->"
+
+/***/ }),
+
+/***/ "./src/app/shared/weather.component.sass":
+/*!***********************************************!*\
+  !*** ./src/app/shared/weather.component.sass ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "div.transbox {\n  background: rgba(0, 0, 0, 0.4);\n  border-radius: 20px;\n  filter: alpha(opacity=60);\n  /* For IE8 and earlier */ }\n\n.wf {\n  font-family: Impact, Charcoal, sans-serif; }\n\n.wc {\n  color: #2a398a; }\n\n.wpadleft {\n  padding-left: 10px; }\n\n.wpadright {\n  padding-right: 10px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mbG8vUHJvamVjdHMvQ29kZS9GQVNUL2dyYXRlZnVsLWRlYWQvd2ViLWFwcDIvc3JjL2FwcC9zaGFyZWQvd2VhdGhlci5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDhCQUE0QjtFQUM1QixtQkFBbUI7RUFDbkIseUJBQXlCO0VBQUUsd0JBQUEsRUFBeUI7O0FBRXREO0VBQ0UseUNBQXlDLEVBQUE7O0FBRTNDO0VBQ0UsY0FBYyxFQUFBOztBQUVoQjtFQUNFLGtCQUFrQixFQUFBOztBQUVwQjtFQUNFLG1CQUFtQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3dlYXRoZXIuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXYudHJhbnNib3gge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLCAwLjQpO1xuICBib3JkZXItcmFkaXVzOiAyMHB4O1xuICBmaWx0ZXI6IGFscGhhKG9wYWNpdHk9NjApOyAvKiBGb3IgSUU4IGFuZCBlYXJsaWVyICovOyB9XG5cbi53ZiB7XG4gIGZvbnQtZmFtaWx5OiBJbXBhY3QsIENoYXJjb2FsLCBzYW5zLXNlcmlmOyB9XG5cbi53YyB7XG4gIGNvbG9yOiAjMmEzOThhOyB9XG5cbi53cGFkbGVmdCB7XG4gIHBhZGRpbmctbGVmdDogMTBweDsgfVxuXG4ud3BhZHJpZ2h0IHtcbiAgcGFkZGluZy1yaWdodDogMTBweDsgfVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/shared/weather.component.ts":
+/*!*********************************************!*\
+  !*** ./src/app/shared/weather.component.ts ***!
+  \*********************************************/
+/*! exports provided: WeatherComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WeatherComponent", function() { return WeatherComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var WeatherComponent = /** @class */ (function () {
+    function WeatherComponent() {
+    }
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], WeatherComponent.prototype, "weather", void 0);
+    WeatherComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-weather',
+            template: __webpack_require__(/*! ./weather.component.html */ "./src/app/shared/weather.component.html"),
+            styles: [__webpack_require__(/*! ./weather.component.sass */ "./src/app/shared/weather.component.sass")]
+        })
+    ], WeatherComponent);
+    return WeatherComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/artifacts.component.html":
+/*!************************************************!*\
+  !*** ./src/app/views/artifacts.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"artifacts\" fxLayout=\"column\">\n  <gd-header *ngIf=\"artifacts\" title='Artifacts'\n    [subtitle]='types' imageUrl=\"{{ artifacts[0] }}\">\n  </gd-header>\n  <div *ngIf=\"artifacts.length\" class=\"gd-container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\">\n    <div *ngFor=\"let a of artifacts\" class=\"gd-container\" fxLayout=\"column\" fxFlex=\"33\" fxFlex.xs=\"100\">\n      <img class=\"image\" [src]=\"a.thumbnail || a.image\" [style.object-fit]=\"'cover'\" [style.width]=\"'100%'\">\n      {{a.description}}<br>\n      {{a.eventInfo}}<br>\n      {{a.type}} in {{a.collection}} collection\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/views/artifacts.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/views/artifacts.component.ts ***!
+  \**********************************************/
+/*! exports provided: ArtifactsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArtifactsComponent", function() { return ArtifactsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+
+
+
+
+var ArtifactsComponent = /** @class */ (function () {
+    function ArtifactsComponent(data, route) {
+        this.data = data;
+        this.route = route;
+    }
+    ArtifactsComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.route.paramMap.subscribe(function (params) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                    var _a, _b;
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_c) {
+                        switch (_c.label) {
+                            case 0:
+                                if (!params.has('id')) return [3 /*break*/, 1];
+                                return [3 /*break*/, 5];
+                            case 1:
+                                if (!params.has('types')) return [3 /*break*/, 3];
+                                this.types = JSON.parse(params.get('types'));
+                                _a = this;
+                                return [4 /*yield*/, this.data.getRandomArtifacts(this.types, 6)];
+                            case 2:
+                                _a.artifacts = _c.sent();
+                                return [3 /*break*/, 5];
+                            case 3:
+                                _b = this;
+                                return [4 /*yield*/, this.data.getRandomArtifacts(null, 6)];
+                            case 4:
+                                _b.artifacts = _c.sent();
+                                console.log(this.artifacts);
+                                _c.label = 5;
+                            case 5: return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    ArtifactsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-artifacts',
+            template: __webpack_require__(/*! ./artifacts.component.html */ "./src/app/views/artifacts.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], ArtifactsComponent);
+    return ArtifactsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/artist.component.html":
+/*!*********************************************!*\
+  !*** ./src/app/views/artist.component.html ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"artist\" fxLayout=\"column\">\n  <gd-header *ngIf=\"artist\" title=\"{{ artist.name }}\"\n    subtitle=\"{{ artist.instruments.join(', ').split('_').join(' ') }}\">\n  </gd-header>\n  \n  <div class=\"gd-container\" fxLayout=\"row\" fxLayout.xs=\"column\">\n    <img *ngIf=\"artist.thumbnail\" class=\"image gd-container\"\n      [defaultImage]=\"'assets/gd_placeholder.png'\"\n      [lazyLoad]=\"artist.thumbnail\" [style.object-fit]=\"'contain'\"\n      fxFlex=\"50\">\n    <div class=\"gd-container\" fxFlex=\"50\">\n      {{ artist.comment }}\n    </div>\n  </div>\n  \n  <p class=\"gd-section\">Songs composed by {{artist.name}}:</p>\n  \n  <div class=\"gd-container\" fxLayout=\"column\">\n    <div class=\"gd-container\" fxLayout=\"column\">\n      <div *ngFor=\"let song of artist.compositions\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n        <span [routerLink]=\"['/song', song.id]\">{{ song.name }}</span>\n        <button mat-icon-button (click)=\"openSongOptionsDialog(song)\">\n          <mat-icon>more_horiz</mat-icon>\n        </button>\n      </div>\n    </div>\n  </div>\n  \n  <p *ngIf=\"artist.eventIds.length\" class=\"gd-section\">{{artist.name}} played with the Dead on:</p>\n  \n  <gd-shows [eventIds]=\"artist.eventIds\"></gd-shows>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/views/artist.component.ts":
+/*!*******************************************!*\
+  !*** ./src/app/views/artist.component.ts ***!
+  \*******************************************/
+/*! exports provided: ArtistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArtistComponent", function() { return ArtistComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+
+
+
+
+var ArtistComponent = /** @class */ (function () {
+    function ArtistComponent(data, router, route) {
+        this.data = data;
+        this.router = router;
+        this.route = route;
+    }
+    ArtistComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a, _b, _c;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_d) {
+                switch (_d.label) {
+                    case 0:
+                        this.route.paramMap.subscribe(function (params) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                            var _a;
+                            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                                switch (_b.label) {
+                                    case 0:
+                                        if (!params.has('id')) return [3 /*break*/, 2];
+                                        _a = this;
+                                        return [4 /*yield*/, this.data.getArtistDetails(params.get('id'))];
+                                    case 1:
+                                        _a.artist = _b.sent();
+                                        console.log(this.artist);
+                                        _b.label = 2;
+                                    case 2: return [2 /*return*/];
+                                }
+                            });
+                        }); });
+                        if (!!this.artist) return [3 /*break*/, 2];
+                        _b = (_a = this.router).navigate;
+                        _c = ['/artist'];
+                        return [4 /*yield*/, this.data.getRandomArtistId()];
+                    case 1:
+                        _b.apply(_a, [_c.concat([(_d.sent())]), { replaceUrl: true }]);
+                        _d.label = 2;
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ArtistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-artist',
+            template: __webpack_require__(/*! ./artist.component.html */ "./src/app/views/artist.component.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], ArtistComponent);
+    return ArtistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/location.component.html":
+/*!***********************************************!*\
+  !*** ./src/app/views/location.component.html ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"location\" fxLayout=\"column\">\n  <gd-header *ngIf=\"location\" title='{{ location.name }}'\n    subtitle='{{ location.state }}' imageUrl=\"{{ location.image }}\">\n  </gd-header>\n  <div class=\"container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\" fxFlex=\"100\">\n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"1 1 33%\" fxFlex.sm=\"1 1 50%\">\n      <p *ngIf=\"data.event\">The Band played on {{ data.event.date }}</p>\n      <p>{{ location.comment }}</p>\n    </div>\n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"1 1 33%\" fxFlex.sm=\"1 1 50%\">\n      <img class=\"image\" [defaultImage]=\"'assets/gd_placeholder.png'\" [lazyLoad]=\"location.thumbnail\" fxFlex=\"1 1 auto\">\n    </div>\n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"1 1 33%\" fxFlex.sm=\"1 1 100%\">\n      <gd-map fxFlex=\"1 1 auto\" [style.height]=\"'100%'\" zoom=\"15\"\n        latitude=\"{{ location.geoloc.lat }}\" longitude=\"{{ location.geoloc.long }}\"></gd-map>\n    </div>\n  </div>\n  \n  <p class=\"gd-section\">All shows in {{ location.name }}:</p>\n  \n  <gd-shows [eventIds]=\"location.eventIds\"></gd-shows>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/views/location.component.ts":
+/*!*********************************************!*\
+  !*** ./src/app/views/location.component.ts ***!
+  \*********************************************/
+/*! exports provided: LocationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationComponent", function() { return LocationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+
+
+
+
+var LocationComponent = /** @class */ (function () {
+    function LocationComponent(data, router, route) {
+        this.data = data;
+        this.router = router;
+        this.route = route;
+    }
+    LocationComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.route.paramMap.subscribe(function (params) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                    var _a, _b, _c, _d;
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_e) {
+                        switch (_e.label) {
+                            case 0:
+                                if (!params.has('id')) return [3 /*break*/, 2];
+                                _a = this;
+                                return [4 /*yield*/, this.data.getLocation(params.get('id'))];
+                            case 1:
+                                _a.location = _e.sent();
+                                _e.label = 2;
+                            case 2:
+                                if (!!this.location) return [3 /*break*/, 4];
+                                _c = (_b = this.router).navigate;
+                                _d = ['/location'];
+                                return [4 /*yield*/, this.data.getRandomLocation()];
+                            case 3:
+                                _c.apply(_b, [_d.concat([(_e.sent()).id]), { replaceUrl: true }]);
+                                _e.label = 4;
+                            case 4: return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    LocationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-location',
+            template: __webpack_require__(/*! ./location.component.html */ "./src/app/views/location.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], LocationComponent);
+    return LocationComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/mapselect.component.html":
+/*!************************************************!*\
+  !*** ./src/app/views/mapselect.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div fxLayout=\"column\">\n\n<!-- \n<div *ngIf=\"venues\" class=\"gd-container\" fxLayout=\"column\" fxFlex=\"1 1 100%\" fxFlex.sm=\"1 1 100%\"> \n  <gd-showmap [venues]=\"venues\" fxFlex=\"1 1 auto\" [style.height]=\"'100%'\" zoom=\"2.5\"></gd-showmap>\n</div>\n-->\n<gd-header title='Map' subtitle=\"Selector\"></gd-header>\n \n<div class=\"gd-container\" fxLayout=\"row\" fxFlex=\"1 1 100%\" fxFlex.sm=\"1 1 100%\"> \n    <gd-showmap fxFlex=\"1 1 auto\" [style.height]=\"'100%'\" zoom=\"2.5\"></gd-showmap>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/views/mapselect.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/views/mapselect.component.ts ***!
+  \**********************************************/
+/*! exports provided: MapSelectComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapSelectComponent", function() { return MapSelectComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
+
+
+
+
+var MapSelectComponent = /** @class */ (function () {
+    function MapSelectComponent(data, sanitizer, router, route) {
+        this.data = data;
+        this.sanitizer = sanitizer;
+        this.router = router;
+        this.route = route;
+    }
+    MapSelectComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/];
+            });
+        });
+    };
+    MapSelectComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-mapselect',
+            template: __webpack_require__(/*! ./mapselect.component.html */ "./src/app/views/mapselect.component.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], MapSelectComponent);
+    return MapSelectComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/recording.component.html":
+/*!************************************************!*\
+  !*** ./src/app/views/recording.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"recording && event\" fxLayout=\"column\">\n  <gd-header *ngIf=\"recording && event\" title='{{ recording.etreeId }}'\n    subtitle='{{ event.location }}'>\n  </gd-header>\n  <div *ngIf=\"recording\" class=\"gd-container\" fxLayout=\"column\" class=\"topmargin\" >\n    <div fxLayout=\"column\" fxFlex class=\"gd-container\">\n      <ng-container *ngIf=\"event\">\n        Recorded at: {{ event.venue }}, {{ event.location }}, {{ event.state }}, {{ event.date }}<br></ng-container>\n      <ng-container *ngIf=\"recording.info.lineage\">\n        Lineage: {{ recording.info.lineage }}<br></ng-container>\n      <ng-container *ngIf=\"recording.info.source\">\n        Source: {{ recording.info.source }}<br></ng-container>\n      <ng-container *ngIf=\"recording.info.notes\">\n        Notes: {{ recording.info.notes }}<br/></ng-container>\n      <ng-container *ngIf=\"recording.info.keywords\">\n        Notes: {{ recording.info.keywords }}<br/></ng-container>\n      <br>\n      <ng-container *ngIf=\"recording.tracks\">\n        Tracks:\n        <div *ngFor=\"let t of recording.tracks\">\n          <span [routerLink]=\"['/song', t.title]\"> {{ t.track }}: {{ t.title }}</span>\n          <button mat-icon-button (click)=\"openTrackOptionsDialog(t)\">\n            <mat-icon>more_horiz</mat-icon>\n          </button>\n        </div><br/>\n      </ng-container>\n\n     <a href=\"{{ 'https://archive.org/details/' + recording.etreeId }}\" target=\"_blank\">  <img src=\"https://archive.org/images/glogo.png\" [style.object-fit]=\"'contain'\"></a>\n     \n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/views/recording.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/views/recording.component.ts ***!
+  \**********************************************/
+/*! exports provided: RecordingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecordingComponent", function() { return RecordingComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
+/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
+
+
+
+
+
+
+var RecordingComponent = /** @class */ (function () {
+    function RecordingComponent(data, router, route, dialog, player) {
+        this.data = data;
+        this.router = router;
+        this.route = route;
+        this.dialog = dialog;
+        this.player = player;
+    }
+    RecordingComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.route.paramMap.subscribe(function (params) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                    var _a, _b, _c, _d, _e;
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_f) {
+                        switch (_f.label) {
+                            case 0:
+                                if (!params.has('id')) return [3 /*break*/, 3];
+                                _a = this;
+                                return [4 /*yield*/, this.data.getRecording(params.get('id'))];
+                            case 1:
+                                _a.recording = _f.sent();
+                                _b = this;
+                                return [4 /*yield*/, this.data.getEventInfoForRecording(this.recording.id)];
+                            case 2:
+                                _b.event = _f.sent();
+                                console.log(this.recording);
+                                console.log(this.event);
+                                _f.label = 3;
+                            case 3:
+                                if (!!this.recording) return [3 /*break*/, 5];
+                                _d = (_c = this.router).navigate;
+                                _e = ['/recording'];
+                                return [4 /*yield*/, this.data.getRandomRecording()];
+                            case 4:
+                                _d.apply(_c, [_e.concat([(_f.sent()).id]), { replaceUrl: true }]);
+                                _f.label = 5;
+                            case 5: return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    RecordingComponent.prototype.openTrackOptionsDialog = function (audio) {
+        var _this = this;
+        this.recording.tracks;
+        this.dialog.openMultiFunction(
+        //song.name+"', "+this.event.venue.name+", "+this.event.date,
+        audio.track + " " + audio.title, ["add to playlist"], [function () { return _this.addTrackToPlaylist(audio); }]);
+    };
+    RecordingComponent.prototype.addTrackToPlaylist = function (audio) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var info, track;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.data.getEventInfo(this.event.id)];
+                    case 1:
+                        info = _a.sent();
+                        return [4 /*yield*/, this.data.getTrackFromAudio(audio, info, this.recording.etreeId)];
+                    case 2:
+                        track = _a.sent();
+                        if (track)
+                            this.player.addToPlaylist(track);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    RecordingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-recording',
+            template: __webpack_require__(/*! ./recording.component.html */ "./src/app/views/recording.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _services_dialog_service__WEBPACK_IMPORTED_MODULE_5__["DialogService"],
+            _services_player_service__WEBPACK_IMPORTED_MODULE_4__["PlayerService"]])
+    ], RecordingComponent);
+    return RecordingComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/show.component.html":
+/*!*******************************************!*\
+  !*** ./src/app/views/show.component.html ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"event\" fxLayout=\"column\">\n  <gd-header style=\"position: fixed; width: 100%\" *ngIf=\"event\" title='{{event.location.name}}, {{event.location.state}}' subtitle='{{event.date}}'\n    imageUrl=\"{{eventImage}}\">\n    <gd-weather [weather]=\"event.weather\"></gd-weather>\n  </gd-header>\n  <div class=\"gd-container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\" class=\"topmargin\" >\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\" [routerLink]=\"['/location', event.location.id]\">\n      <h2 class=\"titlef\">Location: <span class=\"normweight\">{{ event.location.name }}</span></h2>\n      <img class=\"image\" *ngIf=\"event.location.thumbnail\" [lazyLoad]=\"event.location.thumbnail\" fxFlex=\"1 1 auto\">\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\" [routerLink]=\"['/venue', event.venue.id]\">\n      <h2 class=\"titlef\">Venue: <span class=\"normweight\">{{ event.venue.name }}</span></h2>\n      <img class=\"image\" *ngIf=\"event.venue.thumbnail\" [lazyLoad]=\"event.venue.thumbnail\" fxFlex=\"1 1 auto\">\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n        <h2 class=\"titlef\">Setlist </h2>\n      <div fxLayout=\"column\" *ngFor=\"let set of event.setlist\">\n        <h3>{{ set.name }}</h3>\n        <!-- <div *ngFor=\"let song of set.songs\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\"> -->\n        <div *ngFor=\"let song of set.songs, let i = index\" fxLayout=\"row\">\n          <span [routerLink]=\"['/song', song.id]\">{{( \"0\"+(i+1)).slice(-2) }} {{ song.name }}</span>\n          <button mat-icon-button (click)=\"openSongOptionsDialog(song, set.name, i+1)\">\n            <mat-icon>more_horiz</mat-icon>\n          </button>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n      <h2 class=\"titlef\">Lineup</h2>\n        <div *ngFor=\"let p of event.performers\" [routerLink]=\"['/artist', p.id]\"> \n          <img class=\"image\" [lazyLoad]=\"p.thumbnail\"\n          [style.width]=\"'70px'\" [style.height]=\"'70px'\"> \n          <span>&nbsp;&nbsp;&nbsp;&nbsp;{{ p.name }} ({{ p.instruments.join(', ') }})</span>\n        </div>\n \n    <!--div fxLayout=\"column\" fxFlex=\"1 1 auto\">\n      <iframe [src]=\"recordingUrls[0]\" [style.min-width]=\"'350px'\" [style.height]=\"'100%'\" frameborder=\"0\"></iframe>\n    </div-->\n    \n  </div>\n  \n  <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n    <h2 class=\"titlef\">News of the week</h2>\n    <div *ngFor=\"let n of event.news\">\n      <a [href]=\"n.url\" target=\"_blank\" [style.text-decoration]=\"'none'\">\n        {{ n.date+\": \"+n.title+\" (\"+n.source+\")\" }}\n      </a>\n    </div>\n  </div>\n  \n  <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n    <h2 class=\"titlef\">Available recordings</h2>\n    <div *ngFor=\"let r of event.recordings\">\n      <span [routerLink]=\"['/recording', r.id]\">{{ r.etreeId }}</span>\n      <button mat-icon-button (click)=\"openRecordingOptionsDialog(r)\">\n        <mat-icon>more_horiz</mat-icon>\n      </button>\n    </div>\n  </div>\n  \n\n    <!-- \n  <h2 *ngIf=\"photos.length\" class=\"gd-section\"><span class=\"titlef\">Photos from the show</span></h2>\n  \n  <div *ngIf=\"photos.length\" class=\"gd-container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\">\n    <div *ngFor=\"let s of photos\" class=\"gd-container\" fxLayout=\"column\" fxFlex=\"33\" fxFlex.xs=\"100\">\n      <img style=\"max-width: 200px;\" class=\"image\" [lazyLoad]=\"s\" [style.object-fit]=\"'contain'\">\n    </div>\n  </div>\n-->\n  \n\n<h2 *ngIf=\"photos.length\" class=\"gd-section\"><span class=\"titlef\">Photos</span></h2>\n  <div *ngIf=\"photos.length\" class=\"gd-container\" fxLayout=\"row wrap\"\n      fxLayout.xs=\"column\" fxLayoutAlign=\"start start\">\n    <div *ngFor=\"let s of photos\" class=\"gd-artifact\" fxLayout=\"column\" fxFlex>\n        <figure>\n          <div *ngIf=\"s.source; then thenBlock else elseBlock\"></div>\n          <ng-template #thenBlock>\n            <a href=\"{{ s.source }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"s.image\" [style.object-fit]=\"'contain'\"></a>\n          </ng-template>\n          <ng-template #elseBlock>\n            <img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"s.image\" [style.object-fit]=\"'contain'\">\n          </ng-template>\n          <figcaption class=\"p1\">({{ s.collection }} )</figcaption>\n        </figure>\n    </div>\n  </div>\n</div>\n\n\n  <h2 *ngIf=\"artifacts.length\" class=\"gd-section\"><span class=\"titlef\">Other Artifacts</span></h2>\n\n  <div *ngIf=\"artifacts.length\" class=\"gd-container\" fxLayout=\"row wrap\"\n      fxLayout.xs=\"column\" fxLayoutAlign=\"start start\">\n    <div *ngFor=\"let a of artifacts\" class=\"gd-artifact\" fxLayout=\"column\" fxFlex>\n        <figure>\n        <div *ngIf=\"a.source; then thenBlock else elseBlock\"></div>\n        <ng-template #thenBlock>\n          <a href=\"{{ a.source }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"a.image\" [style.object-fit]=\"'contain'\"></a>\n        </ng-template>\n        <ng-template #elseBlock>\n            <a href=\"{{ a.image }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"a.image\" [style.object-fit]=\"'contain'\"></a>\n        </ng-template>\n        <figcaption class=\"p1\">{{ a.type }} ({{ a.collection }} )</figcaption>\n      </figure>\n\n\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/views/show.component.ts":
+/*!*****************************************!*\
+  !*** ./src/app/views/show.component.ts ***!
+  \*****************************************/
+/*! exports provided: ShowComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowComponent", function() { return ShowComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _services_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/types */ "./src/app/services/types.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
+/* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
+
+
+
+
+
+
+
+
+var ShowComponent = /** @class */ (function () {
+    function ShowComponent(data, sanitizer, router, route, dialog, player) {
+        this.data = data;
+        this.sanitizer = sanitizer;
+        this.router = router;
+        this.route = route;
+        this.dialog = dialog;
+        this.player = player;
+    }
+    ShowComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.route.paramMap.subscribe(function (params) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                    var _a, poster, pass, ticket, _b, _c, _d;
+                    var _this = this;
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_e) {
+                        switch (_e.label) {
+                            case 0:
+                                if (!params.has('id')) return [3 /*break*/, 2];
+                                _a = this;
+                                return [4 /*yield*/, this.data.getEventDetails(params.get('id'))];
+                            case 1:
+                                _a.event = _e.sent();
+                                this.event.date = this.data.formatDate(this.event.date);
+                                this.recordingUrls = this.event.recordings.map(function (r) {
+                                    return _this.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.etreeId + "&playlist=1");
+                                });
+                                this.photos = this.event.artifacts
+                                    .filter(function (a) { return a.type === _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Photo; }); //.map(a => a.image);
+                                this.artifacts = this.event.artifacts.filter(function (a) { return a.type !== _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Photo; });
+                                poster = this.event.artifacts.filter(function (a) { return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Poster; })[0];
+                                pass = this.event.artifacts.filter(function (a) { return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Pass; })[0];
+                                ticket = this.event.artifacts.filter(function (a) { return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Ticket; })[0];
+                                this.eventImage = this.photos.length ? this.photos[0].image
+                                    : poster ? poster.image : pass ? pass.image : ticket ? ticket.image
+                                        : this.event.location.thumbnail;
+                                console.log(this.event);
+                                return [3 /*break*/, 4];
+                            case 2:
+                                _c = (_b = this.router).navigate;
+                                _d = ['/show'];
+                                return [4 /*yield*/, this.data.getRandomEventId()];
+                            case 3:
+                                _c.apply(_b, [_d.concat([_e.sent()]), { replaceUrl: true }]);
+                                _e.label = 4;
+                            case 4: return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    ShowComponent.prototype.openSongOptionsDialog = function (song, set, idx) {
+        var _this = this;
+        this.dialog.openMultiFunction(
+        //song.name+"', "+this.event.venue.name+", "+this.event.date,
+        set + "/Track " + idx + ": " + '"' + song.name + '"', ["add to playlist", "go to song"], [function () { return _this.addSongToPlaylist(song); },
+            function () { return _this.router.navigate(['/song', song.id]); }]);
+    };
+    ShowComponent.prototype.openRecordingOptionsDialog = function (recording) {
+        var _this = this;
+        this.dialog.openMultiFunction("Recording " + recording.etreeId, ["add all to playlist", "go to recording"], [function () { return _this.addRecordingToPlaylist(recording); },
+            function () { return _this.router.navigate(['/recording', recording.id]); }]);
+    };
+    ShowComponent.prototype.addSongToPlaylist = function (song) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var info, track;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.data.getEventInfo(this.event.id)];
+                    case 1:
+                        info = _a.sent();
+                        return [4 /*yield*/, this.data.getTrack(song, info)];
+                    case 2:
+                        track = _a.sent();
+                        if (track)
+                            this.player.addToPlaylist(track);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ShowComponent.prototype.addRecordingToPlaylist = function (recording) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var info, tracks;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.data.getEventInfo(this.event.id)];
+                    case 1:
+                        info = _a.sent();
+                        return [4 /*yield*/, this.data.getRecordingTracks(recording, info)];
+                    case 2:
+                        tracks = _a.sent();
+                        if (tracks)
+                            tracks.forEach(function (t) { return _this.player.addToPlaylist(t); });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ShowComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-show',
+            template: __webpack_require__(/*! ./show.component.html */ "./src/app/views/show.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_5__["DataService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _services_dialog_service__WEBPACK_IMPORTED_MODULE_6__["DialogService"], _services_player_service__WEBPACK_IMPORTED_MODULE_7__["PlayerService"]])
+    ], ShowComponent);
+    return ShowComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/song.component.html":
+/*!*******************************************!*\
+  !*** ./src/app/views/song.component.html ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"song\" fxLayout=\"column\">\n  <gd-header *ngIf=\"song\" title=\"{{ song.name }}\"\n    subtitle=\"{{ subtitle }}\"></gd-header>\n  <div fxLayout=\"column\" class=\"gd-container\">\n    \n    <div fxLayout=\"column\" fxFlex class=\"gd-container\">\n      <ng-container *ngIf=\"song.composedBy && song.composedBy.length\">\n        Composed by:\n        <div *ngFor=\"let a of song.composedBy\"\n          [routerLink]=\"['/artist', a.id]\">{{a.name}}</div><br/>\n      </ng-container>\n      <ng-container *ngIf=\"song.lyricsBy && song.lyricsBy.length\">\n        Lyrics by:\n        <div *ngFor=\"let a of song.lyricsBy\"\n          [routerLink]=\"['/artist', a.id]\">{{a.name}}</div><br/>\n      </ng-container>\n      <ng-container *ngIf=\"firstPlayed\">\n        First played on: {{ firstPlayed }}<br/></ng-container>\n      <ng-container *ngIf=\"lastPlayed\">\n        Last played on: {{ lastPlayed }}<br/></ng-container>\n      <ng-container *ngIf=\"timesPlayed\">\n        Number of performances: {{ timesPlayed }}<br/></ng-container>\n      <ng-container *ngIf=\"totalRecordings\">\n        Total number of recordings: {{ totalRecordings }}<br/></ng-container>\n    </div>\n    \n    <p class=\"gd-container\">All performances of {{song.name}}:</p>\n    \n    <gd-shows [eventIds]=\"song.eventIds\" [onOptions]=\"openOptionsDialog.bind(this)\"></gd-shows>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/views/song.component.ts":
+/*!*****************************************!*\
+  !*** ./src/app/views/song.component.ts ***!
+  \*****************************************/
+/*! exports provided: SongComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SongComponent", function() { return SongComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
+/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
+
+
+
+
+
+
+
+var SongComponent = /** @class */ (function () {
+    function SongComponent(data, player, router, route, dialog) {
+        this.data = data;
+        this.player = player;
+        this.router = router;
+        this.route = route;
+        this.dialog = dialog;
+    }
+    SongComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.route.paramMap.subscribe(function (params) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                    var _a, _b, _c, _d, _e;
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_f) {
+                        switch (_f.label) {
+                            case 0:
+                                if (!params.has('id')) return [3 /*break*/, 3];
+                                _a = this;
+                                return [4 /*yield*/, this.data.getSong(params.get('id'))];
+                            case 1:
+                                _a.song = _f.sent();
+                                this.subtitle = lodash__WEBPACK_IMPORTED_MODULE_1__["uniq"](this.song.composedBy.concat(this.song.lyricsBy)
+                                    .map(function (a) { return a.name; })).join(', ');
+                                _b = this;
+                                return [4 /*yield*/, this.data.getEventInfos(this.song.eventIds)];
+                            case 2:
+                                _b.events = _f.sent();
+                                if (this.events.length) {
+                                    this.firstPlayed = this.events[0].date;
+                                    this.lastPlayed = this.events[this.events.length - 1].date;
+                                    this.timesPlayed = this.events.length;
+                                    this.totalRecordings = lodash__WEBPACK_IMPORTED_MODULE_1__["sum"](this.events.map(function (e) { return e.recordings.length; }));
+                                }
+                                _f.label = 3;
+                            case 3:
+                                if (!!this.song) return [3 /*break*/, 5];
+                                _d = (_c = this.router).navigate;
+                                _e = ['/song'];
+                                return [4 /*yield*/, this.data.getRandomSong()];
+                            case 4:
+                                _d.apply(_c, [_e.concat([(_f.sent()).id]), { replaceUrl: true }]);
+                                _f.label = 5;
+                            case 5: return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    SongComponent.prototype.openOptionsDialog = function (event) {
+        var _this = this;
+        this.dialog.openMultiFunction(this.song.name + "', " + event.venue + ", " + event.date, ["Add to playlist", "Go to show"], [function () { return _this.openRecordingsDialog(event); },
+            function () { return _this.router.navigate(['/show', event.id]); }]);
+    };
+    SongComponent.prototype.openRecordingsDialog = function (event) {
+        var _this = this;
+        this.dialog.openSingleFunction("Recordings of '" + this.song.name + "', " + event.venue + ", " + event.date, event.recordings.map(function (r) { return r.etreeId; }), function (r) { return _this.addRecordingToPlaylist(r, event); });
+    };
+    SongComponent.prototype.addRecordingToPlaylist = function (recordingId, event) {
+        var _this = this;
+        this.data.getTracks(this.song, event, recordingId)
+            .forEach(function (t) { return _this.player.addToPlaylist(t); });
+    };
+    SongComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'gd-song',
+            template: __webpack_require__(/*! ./song.component.html */ "./src/app/views/song.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"], _services_player_service__WEBPACK_IMPORTED_MODULE_5__["PlayerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _services_dialog_service__WEBPACK_IMPORTED_MODULE_6__["DialogService"]])
+    ], SongComponent);
+    return SongComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/venue.component.html":
+/*!********************************************!*\
+  !*** ./src/app/views/venue.component.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"venue\" fxLayout=\"column\">\n  <gd-header *ngIf=\"venue\" title='{{ venue.name }}'\n    subtitle='{{ location }}' imageUrl=\"{{ venue.image }}\">\n  </gd-header>\n  <div class=\"container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\" fxFlex=\"100\">\n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"1 1 33%\" fxFlex.sm=\"1 1 50%\">\n      <p *ngIf=\"data.event\">The Band played on {{ data.event.date }}</p>\n      <p>{{ venue.comment }}</p>\n    </div>\n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"1 1 33%\" fxFlex.sm=\"1 1 50%\">\n      <img class=\"image\" [lazyLoad]=\"venue.thumbnail\" fxFlex=\"1 1 auto\">\n    </div>\n    <div *ngIf=\"venue.geoloc\" class=\"gd-container\" fxLayout=\"column\" fxFlex=\"1 1 33%\" fxFlex.sm=\"1 1 100%\">\n      <gd-map fxFlex=\"1 1 auto\" [style.height]=\"'100%'\" zoom=\"15\"\n        latitude=\"{{ venue.geoloc.lat }}\" longitude=\"{{ venue.geoloc.long }}\"></gd-map>\n    </div>\n  </div>\n  \n  <p class=\"gd-section\">All shows at the {{ venue.name }}:</p>\n  \n  <gd-shows [eventIds]=\"venue.eventIds\"></gd-shows>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/views/venue.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/views/venue.component.ts ***!
+  \******************************************/
+/*! exports provided: VenueComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VenueComponent", function() { return VenueComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+
+
+
+
+var VenueComponent = /** @class */ (function () {
+    function VenueComponent(data, router, route) {
+        this.data = data;
+        this.router = router;
+        this.route = route;
+    }
+    VenueComponent.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.route.paramMap.subscribe(function (params) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                    var _a, _b, _c, _d, _e;
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_f) {
+                        switch (_f.label) {
+                            case 0:
+                                if (!params.has('id')) return [3 /*break*/, 3];
+                                _a = this;
+                                return [4 /*yield*/, this.data.getVenue(params.get('id'))];
+                            case 1:
+                                _a.venue = _f.sent();
+                                _b = this;
+                                return [4 /*yield*/, this.data.getEventInfo(this.venue.eventIds[0])];
+                            case 2:
+                                _b.location = (_f.sent()).location;
+                                _f.label = 3;
+                            case 3:
+                                if (!!this.venue) return [3 /*break*/, 5];
+                                _d = (_c = this.router).navigate;
+                                _e = ['/venue'];
+                                return [4 /*yield*/, this.data.getRandomVenue()];
+                            case 4:
+                                _d.apply(_c, [_e.concat([(_f.sent()).id]), { replaceUrl: true }]);
+                                _f.label = 5;
+                            case 5: return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    VenueComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-venue',
+            template: __webpack_require__(/*! ./venue.component.html */ "./src/app/views/venue.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], VenueComponent);
+    return VenueComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/environments/environment.ts":
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+var environment = {
+    production: false
+};
+/*
+ * For easier debugging in development mode, you can import the following file
+ * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+ *
+ * This import should be commented out in production mode because it will have a negative impact
+ * on performance if an error is thrown.
+ */
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ "./src/leaflet-fusesearch/src/leaflet.fusesearch.js":
+/*!**********************************************************!*\
+  !*** ./src/leaflet-fusesearch/src/leaflet.fusesearch.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+// From http://www.tutorialspoint.com/javascript/array_map.htm
+
+if (!Array.prototype.map)
+{
+  Array.prototype.map = function(fun /*, thisp*/)
+  {
+    var len = this.length;
+    if (typeof fun !== "function")
+      throw new TypeError();
+
+    var res = new Array(len);
+    var thisp = arguments[1];
+    for (var i = 0; i < len; i++)
+    {
+      if (i in this)
+        res[i] = fun.call(thisp, this[i], i, this);
+    }
+
+    return res;
+  };
+}
+
+L.Control.FuseSearch = L.Control.extend({
+    
+    includes: L.Evented.prototype,
+    
+    options: {
+        position: 'topright',
+        title: 'Search',
+        panelTitle: '',
+        placeholder: 'Search',
+        caseSensitive: false,
+        threshold: 0.3,
+        maxResultLength: null,
+        showResultFct: null,
+        showInvisibleFeatures: true,
+        shouldSort: true
+    },
+    
+    initialize: function(options) {
+        L.setOptions(this, options);
+        this._panelOnLeftSide = (this.options.position.indexOf("left") !== -1);
+    },
+    
+    onAdd: function(map) {
+        
+        var ctrl = this._createControl();
+        this._createPanel(map);
+        this._setEventListeners();
+        map.invalidateSize();
+        
+        return ctrl;
+    },
+    
+    onRemove: function(map) {
+        
+        this.hidePanel(map);
+        this._clearEventListeners();
+        this._clearPanel(map);
+        this._clearControl();
+        
+        return this;
+    },
+    
+    _createControl: function() {
+
+        var className = 'leaflet-fusesearch-control',
+            container = L.DomUtil.create('div', className);
+
+        // Control to open the search panel
+        var butt = this._openButton = L.DomUtil.create('a', 'button', container);
+        butt.href = '#';
+        butt.title = this.options.title;
+        var stop = L.DomEvent.stopPropagation;
+        L.DomEvent.on(butt, 'click', stop)
+                  .on(butt, 'mousedown', stop)
+                  .on(butt, 'touchstart', stop)
+                  .on(butt, 'mousewheel', stop)
+                  .on(butt, 'MozMousePixelScroll', stop);
+        L.DomEvent.on(butt, 'click', L.DomEvent.preventDefault);
+        L.DomEvent.on(butt, 'click', this.showPanel, this);
+
+        return container;
+    },
+    
+    _clearControl: function() {
+        // Unregister events to prevent memory leak
+        var butt = this._openButton;
+        var stop = L.DomEvent.stopPropagation;
+        L.DomEvent.off(butt, 'click', stop)
+                  .off(butt, 'mousedown', stop)
+                  .off(butt, 'touchstart', stop)
+                  .off(butt, 'mousewheel', stop)
+                  .off(butt, 'MozMousePixelScroll', stop);
+        L.DomEvent.off(butt, 'click', L.DomEvent.preventDefault);
+        L.DomEvent.off(butt, 'click', this.showPanel);
+    },
+    
+    _createPanel: function(map) {
+        var _this = this;
+
+        // Create the search panel
+        var mapContainer = map.getContainer();
+        var className = 'leaflet-fusesearch-panel',
+            pane = this._panel = L.DomUtil.create('div', className, mapContainer);
+        
+        // Make sure we don't drag the map when we interact with the content
+        var stop = L.DomEvent.stopPropagation;
+        L.DomEvent.on(pane, 'click', stop)
+                .on(pane, 'dblclick', stop)
+                .on(pane, 'mousedown', stop)
+                .on(pane, 'touchstart', stop)
+                .on(pane, 'mousewheel', stop)
+                .on(pane, 'MozMousePixelScroll', stop);
+
+        // place the pane on the same side as the control
+        if (this._panelOnLeftSide) {
+            L.DomUtil.addClass(pane, 'left');
+        } else {
+            L.DomUtil.addClass(pane, 'right');
+        }
+
+        // Intermediate container to get the box sizing right
+        var container = L.DomUtil.create('div', 'content', pane);
+        
+        var header = L.DomUtil.create('div', 'header', container);
+        if (this.options.panelTitle) {
+           var title = L.DomUtil.create('p', 'panel-title', header);
+            title.innerHTML = this.options.panelTitle;
+        }
+        
+        // Search image and input field
+        L.DomUtil.create('img', 'search-image', header);
+        this._input = L.DomUtil.create('input', 'search-input', header);
+        this._input.maxLength = 30;
+        this._input.placeholder = this.options.placeholder;
+        this._input.onkeyup = function(evt) {
+            var searchString = evt.currentTarget.value;
+            _this.searchFeatures(searchString);
+        };
+
+        // Close button
+        var close = this._closeButton = L.DomUtil.create('a', 'close', header);
+        close.innerHTML = '&times;';
+        L.DomEvent.on(close, 'click', this.hidePanel, this);
+        
+        // Where the result will be listed
+        this._resultList = L.DomUtil.create('div', 'result-list', container); 
+        
+        return pane;
+    },
+    
+    _clearPanel: function(map) {
+
+        // Unregister event handlers
+        var stop = L.DomEvent.stopPropagation;
+        L.DomEvent.off(this._panel, 'click', stop)
+                  .off(this._panel, 'dblclick', stop)
+                  .off(this._panel, 'mousedown', stop)
+                  .off(this._panel, 'touchstart', stop)
+                  .off(this._panel, 'mousewheel', stop)
+                  .off(this._panel, 'MozMousePixelScroll', stop);
+
+        L.DomEvent.off(this._closeButton, 'click', this.hidePanel);
+        
+        var mapContainer = map.getContainer();
+        mapContainer.removeChild(this._panel);
+        
+        this._panel = null;
+    },
+    
+    _setEventListeners : function() {
+        var that = this;
+        var input = this._input;
+        this._map.addEventListener('overlayadd', function() {
+            that.searchFeatures(input.value);
+        });
+        this._map.addEventListener('overlayremove', function() {
+            that.searchFeatures(input.value);
+        });
+    },
+    
+    _clearEventListeners: function() {
+        this._map.removeEventListener('overlayadd');
+        this._map.removeEventListener('overlayremove');        
+    },
+    
+    isPanelVisible: function () {
+        return L.DomUtil.hasClass(this._panel, 'visible');
+    },
+
+    showPanel: function () {
+        if (! this.isPanelVisible()) {
+            L.DomUtil.addClass(this._panel, 'visible');
+            // Preserve map centre
+            this._map.panBy([this.getOffset() * 0.5, 0], {duration: 0.5});
+            this.fire('show');
+            this._input.select();
+            // Search again as visibility of features might have changed
+            this.searchFeatures(this._input.value);
+        }
+    },
+
+    hidePanel: function (e) {
+        if (this.isPanelVisible()) {
+            L.DomUtil.removeClass(this._panel, 'visible');
+            // Move back the map centre - only if we still hold this._map
+            // as this might already have been cleared up by removeFrom()
+            if (null !== this._map) {
+                this._map.panBy([this.getOffset() * -0.5, 0], {duration: 0.5});
+            };
+            this.fire('hide');
+            if(e) {
+                L.DomEvent.stopPropagation(e);
+            }
+        }
+    },
+    
+    getOffset: function() {
+        if (this._panelOnLeftSide) {
+            return - this._panel.offsetWidth;
+        } else {
+            return this._panel.offsetWidth;
+        }
+    },
+
+    indexFeatures: function(data, keys) {
+
+        var jsonFeatures = data.features || data;
+        
+        this._keys = keys;
+        var properties = jsonFeatures.map(function(feature) {
+            // Keep track of the original feature
+            feature.properties._feature = feature;
+            return feature.properties;
+        });
+        
+        var options = {
+            keys: keys,
+            caseSensitive: this.options.caseSensitive,
+            threshold : this.options.threshold
+        };
+        
+        this._fuseIndex = new Fuse(properties, options);
+    },
+    
+    searchFeatures: function(string) {
+        
+        var result = this._fuseIndex.search(string);
+
+        // Empty result list
+        var listItems = document.querySelectorAll(".result-item");
+        for (var i = 0 ; i < listItems.length ; i++) {
+            listItems[i].remove();
+        }
+
+        var resultList = document.querySelector('.result-list');
+        var num = 0;
+        var max = this.options.maxResultLength;
+        for (var i in result) {
+            var props = result[i];
+            var feature = props._feature;
+            var popup = this._getFeaturePopupIfVisible(feature);
+            
+            if (undefined !== popup || this.options.showInvisibleFeatures) {
+                this.createResultItem(props, resultList, popup);
+                if (undefined !== max && ++num === max)
+                    break;
+            }
+        }
+    },
+    
+    refresh: function() {
+        // Reapply the search on the indexed features - useful if features have been filtered out
+        if (this.isPanelVisible()) {
+            this.searchFeatures(this._input.value);
+        }
+    },
+    
+    _getFeaturePopupIfVisible: function(feature) {
+        var layer = feature.layer;
+        if (undefined !== layer && this._map.hasLayer(layer)) {
+            return layer.getPopup();
+        }
+    },
+    
+    createResultItem: function(props, container, popup) {
+
+        var _this = this;
+        var feature = props._feature;
+
+        // Create a container and open the associated popup on click
+        var resultItem = L.DomUtil.create('p', 'result-item', container);
+        
+        if (undefined !== popup) {
+            L.DomUtil.addClass(resultItem, 'clickable');
+            resultItem.onclick = function() {
+                
+                if (window.matchMedia("(max-width:480px)").matches) {
+                    _this.hidePanel();
+                    feature.layer.openPopup();
+                } else {
+                    _this._panAndPopup(feature, popup);
+                }
+            };
+        }
+
+        // Fill in the container with the user-supplied function if any,
+        // otherwise display the feature properties used for the search.
+        if (null !== this.options.showResultFct) {
+            this.options.showResultFct(feature, resultItem);
+        } else {
+            str = '<b>' + props[this._keys[0]] + '</b>';
+            for (var i = 1; i < this._keys.length; i++) {
+                str += '<br/>' + props[this._keys[i]];
+            }
+            resultItem.innerHTML = str;
+        };
+
+        return resultItem;
+    },
+    
+    _panAndPopup : function(feature, popup) {
+        // Temporarily adapt the map padding so that the popup is not hidden by the search pane
+        if (this._panelOnLeftSide) {
+            var oldPadding = popup.options.autoPanPaddingTopLeft;
+            var newPadding = new L.Point(- this.getOffset(), 10);
+            popup.options.autoPanPaddingTopLeft = newPadding;
+            feature.layer.openPopup();
+            popup.options.autoPanPaddingTopLeft = oldPadding;
+        } else {
+            var oldPadding = popup.options.autoPanPaddingBottomRight;
+            var newPadding = new L.Point(this.getOffset(), 10);
+            popup.options.autoPanPaddingBottomRight = newPadding;
+            feature.layer.openPopup();
+            popup.options.autoPanPaddingBottomRight = oldPadding;
+        }
+    }
+});
+
+L.control.fuseSearch = function(options) {
+    return new L.Control.FuseSearch(options);
+};
+
+
+/***/ }),
+
+/***/ "./src/main.ts":
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+}
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+    .catch(function (err) { return console.error(err); });
+
+
+/***/ }),
+
+/***/ 0:
+/*!***************************!*\
+  !*** multi ./src/main.ts ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! /Users/flo/Projects/Code/FAST/grateful-dead/web-app2/src/main.ts */"./src/main.ts");
+
+
+/***/ })
+
+},[[0,"runtime","vendor"]]]);
+//# sourceMappingURL=main.js.map
