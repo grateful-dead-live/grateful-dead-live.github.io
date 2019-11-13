@@ -678,9 +678,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var DeadApiService = /** @class */ (function () {
+    //private API_URL = "http://localhost:8060/";
     function DeadApiService() {
-        //private API_URL = "https://grateful-dead-api.herokuapp.com/";
-        this.API_URL = "http://localhost:8060/";
+        this.API_URL = "https://grateful-dead-api.herokuapp.com/";
     }
     DeadApiService.prototype.getEvents = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
