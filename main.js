@@ -1530,7 +1530,7 @@ var ShowMapComponent = /** @class */ (function () {
             var dates = s.map(function (e) { return [e.date, e.id]; });
             dates.sort();
             dates.forEach(function (e) {
-                htmlstring += '<a style="color: black;" href="/show/' + e[1] + '">' + e[0] + '</a><br>';
+                htmlstring += '<a style="color: black;" href="/#/show/' + e[1] + '">' + e[0] + '</a><br>';
                 datestring += e[0] + ' ';
             });
             return [datestring, htmlstring];
@@ -1566,7 +1566,7 @@ var ShowMapComponent = /** @class */ (function () {
                     'properties': {
                         'name': v.name,
                         'dates': datestring,
-                        'popupContent': '<b><a style="color: black;" href="/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml
+                        'popupContent': '<b><a style="color: black;" href="/#/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml
                     },
                     'geometry': {
                         'type': 'Point',
@@ -1628,7 +1628,7 @@ var ShowMapComponent = /** @class */ (function () {
                         'name': venue,
                         'tour': tour,
                         'dates': datestring,
-                        'popupContent': '<b><a style="color: black; "href="/venue/' + venue_id + '">' + venue + '</a></b>' + venuehtml
+                        'popupContent': '<b><a style="color: black; "href="/#/venue/' + venue_id + '">' + venue + '</a></b>' + venuehtml
                     },
                     'geometry': {
                         'type': 'Point',
