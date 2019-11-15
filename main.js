@@ -184,6 +184,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/player.service */ "./src/app/services/player.service.ts");
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/dialog.service */ "./src/app/services/dialog.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
 
 
 
@@ -257,7 +259,8 @@ var AppModule = /** @class */ (function () {
                 _services_dead_api_service__WEBPACK_IMPORTED_MODULE_28__["DeadApiService"],
                 _services_data_service__WEBPACK_IMPORTED_MODULE_29__["DataService"],
                 _services_player_service__WEBPACK_IMPORTED_MODULE_30__["PlayerService"],
-                _services_dialog_service__WEBPACK_IMPORTED_MODULE_31__["DialogService"]
+                _services_dialog_service__WEBPACK_IMPORTED_MODULE_31__["DialogService"],
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_32__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_32__["HashLocationStrategy"] }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
             entryComponents: [_shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_25__["ListDialogComponent"], _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_26__["SearchDialogComponent"]]
