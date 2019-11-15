@@ -681,9 +681,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var DeadApiService = /** @class */ (function () {
+    //private API_URL = "http://localhost:8060/";
     function DeadApiService() {
-        //private API_URL = "https://grateful-dead-api.herokuapp.com/";
-        this.API_URL = "http://localhost:8060/";
+        this.API_URL = "https://grateful-dead-api.herokuapp.com/";
     }
     DeadApiService.prototype.getEvents = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
@@ -1406,7 +1406,7 @@ var SearchDialogComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"center\">\n\n<select [(ngModel)]=\"selectedTour\" (ngModelChange)=\"tourChanged($event)\" >\n    <option *ngFor=\"let l of layerNames\" ngValue=\"{{l}}\"> {{l}}</option>\n</select>\n</div>\n\n\n<div id=\"MapContainer\" \n    leaflet\n    [leafletOptions]=\"mapOptions\"\n    (leafletMapReady)=\"onMapReady($event)\">\n</div>\n\n"
+module.exports = "<div class=\"center\">\n<select [(ngModel)]=\"selectedTour\" (ngModelChange)=\"tourChanged($event)\" >\n    <option *ngFor=\"let l of layerNames\" ngValue=\"{{l}}\"> {{l}}</option>\n</select>\n</div>\n\n\n<div id=\"MapContainer\" \n    leaflet\n    [leafletOptions]=\"mapOptions\"\n    (leafletMapReady)=\"onMapReady($event)\">\n</div>\n\n"
 
 /***/ }),
 
