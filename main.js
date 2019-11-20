@@ -44,6 +44,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_artist_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/artist.component */ "./src/app/views/artist.component.ts");
 /* harmony import */ var _views_artifacts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/artifacts.component */ "./src/app/views/artifacts.component.ts");
 /* harmony import */ var _views_mapselect_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/mapselect.component */ "./src/app/views/mapselect.component.ts");
+/* harmony import */ var _views_start_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./views/start.component */ "./src/app/views/start.component.ts");
+
 
 
 
@@ -56,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: '', redirectTo: '/show', pathMatch: 'full' },
+    { path: '', redirectTo: '/start', pathMatch: 'full' },
     { path: 'show', component: _views_show_component__WEBPACK_IMPORTED_MODULE_3__["ShowComponent"] },
     { path: 'show/:id', component: _views_show_component__WEBPACK_IMPORTED_MODULE_3__["ShowComponent"] },
     { path: 'location', component: _views_location_component__WEBPACK_IMPORTED_MODULE_4__["LocationComponent"] },
@@ -71,7 +73,8 @@ var routes = [
     { path: 'artist/:id', component: _views_artist_component__WEBPACK_IMPORTED_MODULE_8__["ArtistComponent"] },
     { path: 'artifacts', component: _views_artifacts_component__WEBPACK_IMPORTED_MODULE_9__["ArtifactsComponent"] },
     { path: 'artifacts/:types', component: _views_artifacts_component__WEBPACK_IMPORTED_MODULE_9__["ArtifactsComponent"] },
-    { path: 'mapselect', component: _views_mapselect_component__WEBPACK_IMPORTED_MODULE_10__["MapSelectComponent"] }
+    { path: 'mapselect', component: _views_mapselect_component__WEBPACK_IMPORTED_MODULE_10__["MapSelectComponent"] },
+    { path: 'start', component: _views_start_component__WEBPACK_IMPORTED_MODULE_11__["StartComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -96,7 +99,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"column\" fxFlexFill>\n  <div fxFlex><router-outlet></router-outlet></div>\n  <footer><gd-player></gd-player></footer>\n</div>"
+module.exports = "<div fxLayout=\"column\" fxFlexFill>\n  <div fxFlex><router-outlet></router-outlet></div>\n  <footer *ngIf=\"start\"><gd-player></gd-player></footer>\n</div>"
 
 /***/ }),
 
@@ -123,17 +126,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(router) {
+        var _this = this;
+        router.events.forEach(function (event) {
+            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationStart"]) {
+                _this.start = event.url !== "/";
+            }
+        });
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.sass */ "./src/app/app.component.sass")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -172,19 +184,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_artist_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/artist.component */ "./src/app/views/artist.component.ts");
 /* harmony import */ var _views_artifacts_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./views/artifacts.component */ "./src/app/views/artifacts.component.ts");
 /* harmony import */ var _views_mapselect_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/mapselect.component */ "./src/app/views/mapselect.component.ts");
-/* harmony import */ var _shared_header_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./shared/header.component */ "./src/app/shared/header.component.ts");
-/* harmony import */ var _shared_map_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./shared/map.component */ "./src/app/shared/map.component.ts");
-/* harmony import */ var _shared_weather_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./shared/weather.component */ "./src/app/shared/weather.component.ts");
-/* harmony import */ var _shared_shows_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./shared/shows.component */ "./src/app/shared/shows.component.ts");
-/* harmony import */ var _shared_player_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./shared/player.component */ "./src/app/shared/player.component.ts");
-/* harmony import */ var _shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./shared/list-dialog.component */ "./src/app/shared/list-dialog.component.ts");
-/* harmony import */ var _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./shared/search-dialog.component */ "./src/app/shared/search-dialog.component.ts");
-/* harmony import */ var _shared_showmap_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./shared/showmap.component */ "./src/app/shared/showmap.component.ts");
-/* harmony import */ var _services_dead_api_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/dead-api.service */ "./src/app/services/dead-api.service.ts");
-/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
-/* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/player.service */ "./src/app/services/player.service.ts");
-/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/dialog.service */ "./src/app/services/dialog.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _views_start_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./views/start.component */ "./src/app/views/start.component.ts");
+/* harmony import */ var _shared_header_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./shared/header.component */ "./src/app/shared/header.component.ts");
+/* harmony import */ var _shared_map_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./shared/map.component */ "./src/app/shared/map.component.ts");
+/* harmony import */ var _shared_weather_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./shared/weather.component */ "./src/app/shared/weather.component.ts");
+/* harmony import */ var _shared_shows_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./shared/shows.component */ "./src/app/shared/shows.component.ts");
+/* harmony import */ var _shared_player_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./shared/player.component */ "./src/app/shared/player.component.ts");
+/* harmony import */ var _shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./shared/list-dialog.component */ "./src/app/shared/list-dialog.component.ts");
+/* harmony import */ var _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./shared/search-dialog.component */ "./src/app/shared/search-dialog.component.ts");
+/* harmony import */ var _shared_showmap_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./shared/showmap.component */ "./src/app/shared/showmap.component.ts");
+/* harmony import */ var _services_dead_api_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./services/dead-api.service */ "./src/app/services/dead-api.service.ts");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/player.service */ "./src/app/services/player.service.ts");
+/* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./services/dialog.service */ "./src/app/services/dialog.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
 
 
 
@@ -232,15 +246,16 @@ var AppModule = /** @class */ (function () {
                 _views_recording_component__WEBPACK_IMPORTED_MODULE_16__["RecordingComponent"],
                 _views_artist_component__WEBPACK_IMPORTED_MODULE_17__["ArtistComponent"],
                 _views_artifacts_component__WEBPACK_IMPORTED_MODULE_18__["ArtifactsComponent"],
-                _shared_header_component__WEBPACK_IMPORTED_MODULE_20__["HeaderComponent"],
-                _shared_map_component__WEBPACK_IMPORTED_MODULE_21__["MapComponent"],
-                _shared_weather_component__WEBPACK_IMPORTED_MODULE_22__["WeatherComponent"],
-                _shared_shows_component__WEBPACK_IMPORTED_MODULE_23__["ShowsComponent"],
-                _shared_player_component__WEBPACK_IMPORTED_MODULE_24__["PlayerComponent"],
-                _shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_25__["ListDialogComponent"],
-                _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_26__["SearchDialogComponent"],
-                _shared_showmap_component__WEBPACK_IMPORTED_MODULE_27__["ShowMapComponent"],
-                _views_mapselect_component__WEBPACK_IMPORTED_MODULE_19__["MapSelectComponent"]
+                _shared_header_component__WEBPACK_IMPORTED_MODULE_21__["HeaderComponent"],
+                _shared_map_component__WEBPACK_IMPORTED_MODULE_22__["MapComponent"],
+                _shared_weather_component__WEBPACK_IMPORTED_MODULE_23__["WeatherComponent"],
+                _shared_shows_component__WEBPACK_IMPORTED_MODULE_24__["ShowsComponent"],
+                _shared_player_component__WEBPACK_IMPORTED_MODULE_25__["PlayerComponent"],
+                _shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_26__["ListDialogComponent"],
+                _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_27__["SearchDialogComponent"],
+                _shared_showmap_component__WEBPACK_IMPORTED_MODULE_28__["ShowMapComponent"],
+                _views_mapselect_component__WEBPACK_IMPORTED_MODULE_19__["MapSelectComponent"],
+                _views_start_component__WEBPACK_IMPORTED_MODULE_20__["StartComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
@@ -256,14 +271,14 @@ var AppModule = /** @class */ (function () {
                 _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_9__["LeafletModule"].forRoot()
             ],
             providers: [
-                _services_dead_api_service__WEBPACK_IMPORTED_MODULE_28__["DeadApiService"],
-                _services_data_service__WEBPACK_IMPORTED_MODULE_29__["DataService"],
-                _services_player_service__WEBPACK_IMPORTED_MODULE_30__["PlayerService"],
-                _services_dialog_service__WEBPACK_IMPORTED_MODULE_31__["DialogService"],
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_32__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_32__["HashLocationStrategy"] }
+                _services_dead_api_service__WEBPACK_IMPORTED_MODULE_29__["DeadApiService"],
+                _services_data_service__WEBPACK_IMPORTED_MODULE_30__["DataService"],
+                _services_player_service__WEBPACK_IMPORTED_MODULE_31__["PlayerService"],
+                _services_dialog_service__WEBPACK_IMPORTED_MODULE_32__["DialogService"],
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_33__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_33__["HashLocationStrategy"] }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
-            entryComponents: [_shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_25__["ListDialogComponent"], _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_26__["SearchDialogComponent"]]
+            entryComponents: [_shared_list_dialog_component__WEBPACK_IMPORTED_MODULE_26__["ListDialogComponent"], _shared_search_dialog_component__WEBPACK_IMPORTED_MODULE_27__["SearchDialogComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -292,6 +307,7 @@ var VIEWS = [
     { name: "Artists", url: "/artist" },
     { name: "Artifacts", url: "/artifacts" },
     { name: "Map", url: "/mapselect" },
+    { name: "Start Page", url: "/start" },
 ];
 
 
@@ -1726,7 +1742,7 @@ var ShowMapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"column\" class=\"gd-container\">\n  <div *ngFor=\"let e of events\" fxLayout=\"row\" fxLayoutAlign=\" center\">\n    <img fxLayout=\"column\" class=\"image field\" fxFlex=\"1 1 15%\"\n      [style.width]=\"'80px'\" [style.height]=\"'60px'\"\n      [defaultImage]=\"'assets/gd_placeholder.png'\"\n      [lazyLoad]=\"e.artifacts[0] ? e.artifacts[0].thumbnail || e.artifacts[0].image: null\"\n      [style.object-fit]=\"'cover'\"\n      [routerLink]=\"['/show', e.id]\">\n      <div fxLayout=\"column\" fxFlex=\"1 1 10%\" fxLayoutAlign=\"center\"\n      [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n        {{ e.date }}\n      </div>\n      <div fxLayout=\"column\" fxFlex=\"1 1 25%\" fxLayoutAlign=\"center\"\n      [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n        {{ e.venue }} \n      </div>\n      <span class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.location }}\n    </span>\n\n\n    <!--\n    <div fxLayout=\"column\" fxFlex=\"1 1 25%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.date }}\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"1 1 30%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.venue }}\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"1 1 20%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.location }}\n    </div>\n    <button mat-icon-button fxLayout=\"column\" class=\"field\" fxFlex=\"1 1 10%\"\n      (click)=\"onOptions(e)\"><mat-icon>more_horiz</mat-icon>\n    </button>\n    -->\n  </div>\n</div>"
+module.exports = "<div fxLayout=\"column\" class=\"gd-container\">\n  <div *ngFor=\"let e of events\" fxLayout=\"row\" fxLayoutAlign=\" center\">\n    <img fxLayout=\"column\" class=\"image field\" fxFlex=\"1 1 15%\"\n      [style.width]=\"'80px'\" [style.height]=\"'60px'\"\n      [defaultImage]=\"'assets/gd_placeholder.png'\"\n      [lazyLoad]=\"e.artifacts[0] ? e.artifacts[0].thumbnail || e.artifacts[0].image: null\"\n      [style.object-fit]=\"'cover'\"\n      [routerLink]=\"['/show', e.id]\">\n      <div fxLayout=\"column\" fxFlex=\"1 1 10%\" fxLayoutAlign=\"center\"\n      [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n        {{ e.date }}\n      </div>\n      <div fxLayout=\"column\" fxFlex=\"1 1 25%\" fxLayoutAlign=\"center\"\n      [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n        {{ e.venue }} \n      </div>\n      <span class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.location }}\n    </span>\n    <button mat-icon-button fxLayout=\"column\" class=\"field\" fxFlex=\"1 1 10%\"\n      (click)=\"onOptions(e)\"><mat-icon>more_horiz</mat-icon>\n    </button>\n\n\n    <!--\n    <div fxLayout=\"column\" fxFlex=\"1 1 25%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.date }}\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"1 1 30%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.venue }}\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"1 1 20%\" fxLayoutAlign=\"center\"\n        [ngStyle.xs]=\"{'font-size': '80%'}\" class=\"field\"\n        [routerLink]=\"['/show', e.id]\">\n      {{ e.location }}\n    </div>\n    <button mat-icon-button fxLayout=\"column\" class=\"field\" fxFlex=\"1 1 10%\"\n      (click)=\"onOptions(e)\"><mat-icon>more_horiz</mat-icon>\n    </button>\n    -->\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2290,7 +2306,7 @@ var RecordingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"event\" fxLayout=\"column\">\n  <gd-header style=\"position: fixed; width: 100%\" *ngIf=\"event\" title='{{event.location.name}}, {{event.location.state}}' subtitle='{{event.date}}'\n    imageUrl=\"{{eventImage}}\">\n    <gd-weather [weather]=\"event.weather\"></gd-weather>\n  </gd-header>\n  <div class=\"gd-container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\" class=\"topmargin\" >\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\" [routerLink]=\"['/location', event.location.id]\">\n      <h2 class=\"titlef\">Location: <span class=\"normweight\">{{ event.location.name }}</span></h2>\n      <img class=\"image\" *ngIf=\"event.location.thumbnail\" [lazyLoad]=\"event.location.thumbnail\" fxFlex=\"1 1 auto\">\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\" [routerLink]=\"['/venue', event.venue.id]\">\n      <h2 class=\"titlef\">Venue: <span class=\"normweight\">{{ event.venue.name }}</span></h2>\n      <img class=\"image\" *ngIf=\"event.venue.thumbnail\" [lazyLoad]=\"event.venue.thumbnail\" fxFlex=\"1 1 auto\">\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n        <h2 class=\"titlef\">Setlist </h2>\n      <div fxLayout=\"column\" *ngFor=\"let set of event.setlist\">\n        <h3>{{ set.name }}</h3>\n        <!-- <div *ngFor=\"let song of set.songs\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\"> -->\n        <div *ngFor=\"let song of set.songs, let i = index\" fxLayout=\"row\">\n          <span [routerLink]=\"['/song', song.id]\">{{( \"0\"+(i+1)).slice(-2) }} {{ song.name }}</span>\n          <button mat-icon-button (click)=\"openSongOptionsDialog(song, set.name, i+1)\">\n            <mat-icon>more_horiz</mat-icon>\n          </button>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n      <h2 class=\"titlef\">Lineup</h2>\n        <div *ngFor=\"let p of event.performers\" [routerLink]=\"['/artist', p.id]\"> \n          <img class=\"image\" [lazyLoad]=\"p.thumbnail\"\n          [style.width]=\"'70px'\" [style.height]=\"'70px'\"> \n          <span>&nbsp;&nbsp;&nbsp;&nbsp;{{ p.name }} ({{ p.instruments.join(', ') }})</span>\n        </div>\n \n    <!--div fxLayout=\"column\" fxFlex=\"1 1 auto\">\n      <iframe [src]=\"recordingUrls[0]\" [style.min-width]=\"'350px'\" [style.height]=\"'100%'\" frameborder=\"0\"></iframe>\n    </div-->\n    \n  </div>\n  \n  <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n    <h2 class=\"titlef\">News of the week</h2>\n    <div *ngFor=\"let n of event.news\">\n      <a [href]=\"n.url\" target=\"_blank\" [style.text-decoration]=\"'none'\">\n        {{ n.date+\": \"+n.title+\" (\"+n.source+\")\" }}\n      </a>\n    </div>\n  </div>\n  \n  <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n    <h2 class=\"titlef\">Available recordings</h2>\n    <div *ngFor=\"let r of event.recordings\">\n      <span [routerLink]=\"['/recording', r.id]\">{{ r.etreeId }}</span>\n      <button mat-icon-button (click)=\"openRecordingOptionsDialog(r)\">\n        <mat-icon>more_horiz</mat-icon>\n      </button>\n    </div>\n  </div>\n  \n\n    <!-- \n  <h2 *ngIf=\"photos.length\" class=\"gd-section\"><span class=\"titlef\">Photos from the show</span></h2>\n  \n  <div *ngIf=\"photos.length\" class=\"gd-container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\">\n    <div *ngFor=\"let s of photos\" class=\"gd-container\" fxLayout=\"column\" fxFlex=\"33\" fxFlex.xs=\"100\">\n      <img style=\"max-width: 200px;\" class=\"image\" [lazyLoad]=\"s\" [style.object-fit]=\"'contain'\">\n    </div>\n  </div>\n-->\n  \n\n<h2 *ngIf=\"photos.length\" class=\"gd-section\"><span class=\"titlef\">Photos</span></h2>\n  <div *ngIf=\"photos.length\" class=\"gd-container\" fxLayout=\"row wrap\"\n      fxLayout.xs=\"column\" fxLayoutAlign=\"start start\">\n    <div *ngFor=\"let s of photos\" class=\"gd-artifact\" fxLayout=\"column\" fxFlex>\n        <figure>\n          <div *ngIf=\"s.source; then thenBlock else elseBlock\"></div>\n          <ng-template #thenBlock>\n            <a href=\"{{ s.source }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"s.image\" [style.object-fit]=\"'contain'\"></a>\n          </ng-template>\n          <ng-template #elseBlock>\n            <img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"s.image\" [style.object-fit]=\"'contain'\">\n          </ng-template>\n          <figcaption class=\"p1\">({{ s.collection }} )</figcaption>\n        </figure>\n    </div>\n  </div>\n</div>\n\n\n  <h2 *ngIf=\"artifacts.length\" class=\"gd-section\"><span class=\"titlef\">Other Artifacts</span></h2>\n\n  <div *ngIf=\"artifacts.length\" class=\"gd-container\" fxLayout=\"row wrap\"\n      fxLayout.xs=\"column\" fxLayoutAlign=\"start start\">\n    <div *ngFor=\"let a of artifacts\" class=\"gd-artifact\" fxLayout=\"column\" fxFlex>\n        <figure>\n        <div *ngIf=\"a.source; then thenBlock else elseBlock\"></div>\n        <ng-template #thenBlock>\n          <a href=\"{{ a.source }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"a.image\" [style.object-fit]=\"'contain'\"></a>\n        </ng-template>\n        <ng-template #elseBlock>\n            <a href=\"{{ a.image }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"a.image\" [style.object-fit]=\"'contain'\"></a>\n        </ng-template>\n        <figcaption class=\"p1\">{{ a.type }} ({{ a.collection }} )</figcaption>\n      </figure>\n\n\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"event\" fxLayout=\"column\">\n  <gd-header style=\"position: fixed; width: 100%\" *ngIf=\"event\" title='{{event.location.name}}, {{event.location.state}}' subtitle='{{event.date}}'\n    imageUrl=\"{{eventImage}}\">\n    <gd-weather [weather]=\"event.weather\"></gd-weather>\n  </gd-header>\n  <div class=\"gd-container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\" class=\"topmargin\" >\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\" [routerLink]=\"['/location', event.location.id]\">\n      <h2 class=\"titlef\">Location: <span class=\"normweight\">{{ event.location.name }}</span></h2>\n      <img class=\"image\" *ngIf=\"event.location.thumbnail\" [lazyLoad]=\"event.location.thumbnail\" fxFlex=\"1 1 auto\"  [style.object-fit]=\"'contain'\">\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\" [routerLink]=\"['/venue', event.venue.id]\">\n      <h2 class=\"titlef\">Venue: <span class=\"normweight\">{{ event.venue.name }}</span></h2>\n      <img class=\"image\" *ngIf=\"event.venue.thumbnail\" [lazyLoad]=\"event.venue.thumbnail\" fxFlex=\"1 1 auto\"  [style.object-fit]=\"'contain'\">\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n        <h2 class=\"titlef\">Setlist </h2>\n      <div fxLayout=\"column\" *ngFor=\"let set of event.setlist\">\n        <h3>{{ set.name }}</h3>\n        <!-- <div *ngFor=\"let song of set.songs\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\"> -->\n        <div *ngFor=\"let song of set.songs, let i = index\" fxLayout=\"row\">\n          <span [routerLink]=\"['/song', song.id]\">{{( \"0\"+(i+1)).slice(-2) }} {{ song.name }}</span>\n          <button mat-icon-button (click)=\"openSongOptionsDialog(song, set.name, i+1)\">\n            <mat-icon>more_horiz</mat-icon>\n          </button>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n      <h2 class=\"titlef\">Lineup</h2>\n        <div *ngFor=\"let p of event.performers\" [routerLink]=\"['/artist', p.id]\"> \n          <img class=\"image\" [lazyLoad]=\"p.thumbnail\"\n          [style.width]=\"'70px'\" [style.height]=\"'70px'\"> \n          <span>&nbsp;&nbsp;&nbsp;&nbsp;{{ p.name }} ({{ p.instruments.join(', ') }})</span>\n        </div>\n \n    <!--div fxLayout=\"column\" fxFlex=\"1 1 auto\">\n      <iframe [src]=\"recordingUrls[0]\" [style.min-width]=\"'350px'\" [style.height]=\"'100%'\" frameborder=\"0\"></iframe>\n    </div-->\n    \n  </div>\n  \n  <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n    <h2 class=\"titlef\">News of the week</h2>\n    <div *ngFor=\"let n of event.news\">\n      <a [href]=\"n.url\" target=\"_blank\" [style.text-decoration]=\"'none'\">\n        {{ n.date+\": \"+n.title+\" (\"+n.source+\")\" }}\n      </a>\n    </div>\n  </div>\n  \n  <div class=\"gd-container\" fxLayout=\"column\" fxFlex=\"50\">\n    <h2 class=\"titlef\">Available recordings</h2>\n    <div *ngFor=\"let r of event.recordings\">\n      <span [routerLink]=\"['/recording', r.id]\">{{ r.etreeId }}</span>\n      <button mat-icon-button (click)=\"openRecordingOptionsDialog(r)\">\n        <mat-icon>more_horiz</mat-icon>\n      </button>\n    </div>\n  </div>\n  \n\n    <!-- \n  <h2 *ngIf=\"photos.length\" class=\"gd-section\"><span class=\"titlef\">Photos from the show</span></h2>\n  \n  <div *ngIf=\"photos.length\" class=\"gd-container\" fxLayout=\"row wrap\" fxLayout.xs=\"column\">\n    <div *ngFor=\"let s of photos\" class=\"gd-container\" fxLayout=\"column\" fxFlex=\"33\" fxFlex.xs=\"100\">\n      <img style=\"max-width: 200px;\" class=\"image\" [lazyLoad]=\"s\" [style.object-fit]=\"'contain'\">\n    </div>\n  </div>\n-->\n  \n\n<h2 *ngIf=\"photos.length\" class=\"gd-section\"><span class=\"titlef\">Photos</span></h2>\n  <div *ngIf=\"photos.length\" class=\"gd-container\" fxLayout=\"row wrap\"\n      fxLayout.xs=\"column\" fxLayoutAlign=\"start start\">\n    <div *ngFor=\"let s of photos\" class=\"gd-artifact\" fxLayout=\"column\" fxFlex>\n        <figure>\n          <div *ngIf=\"s.source; then thenBlock else elseBlock\"></div>\n          <ng-template #thenBlock>\n            <a href=\"{{ s.source }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"s.image\" [style.object-fit]=\"'contain'\"></a>\n          </ng-template>\n          <ng-template #elseBlock>\n            <img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"s.image\" [style.object-fit]=\"'contain'\">\n          </ng-template>\n          <figcaption class=\"p1\">({{ s.collection }})</figcaption>\n        </figure>\n    </div>\n  </div>\n</div>\n\n\n  <h2 *ngIf=\"artifacts.length\" class=\"gd-section\"><span class=\"titlef\">Other Artifacts</span></h2>\n\n  <div *ngIf=\"artifacts.length\" class=\"gd-container\" fxLayout=\"row wrap\"\n      fxLayout.xs=\"column\" fxLayoutAlign=\"start start\">\n    <div *ngFor=\"let a of artifacts\" class=\"gd-artifact\" fxLayout=\"column\" fxFlex>\n        <figure>\n        <div *ngIf=\"a.source; then thenBlock else elseBlock\"></div>\n        <ng-template #thenBlock>\n          <a href=\"{{ a.source }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"a.image\" [style.object-fit]=\"'contain'\"></a>\n        </ng-template>\n        <ng-template #elseBlock>\n            <a href=\"{{ a.image }}\" target=\"_blank\"><img style=\"height: 200px;\" class=\"image\" [lazyLoad]=\"a.image\" [style.object-fit]=\"'contain'\"></a>\n        </ng-template>\n        <figcaption class=\"p1\">{{ a.type }} ({{ a.collection }})</figcaption>\n      </figure>\n\n\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2550,6 +2566,66 @@ var SongComponent = /** @class */ (function () {
             _services_dialog_service__WEBPACK_IMPORTED_MODULE_6__["DialogService"]])
     ], SongComponent);
     return SongComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/start.component.html":
+/*!********************************************!*\
+  !*** ./src/app/views/start.component.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<html lang=\"en\">\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Lato\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<style>\nbody {font-family: \"Lato\", sans-serif}\n</style>\n<body>\n\n<!-- Page content -->\n<div class=\"w3-content\" style=\"max-width:2000px;margin-top:32px\">\n\n \n\n  <!-- The Band Section -->\n  <div class=\"w3-container w3-content w3-center w3-padding-16\" style=\"max-width:800px\" id=\"top\">\n    <!-- <h2 class=\"w3-wide\" [routerLink]=\"['/mapselect']\">THE GRATEFUL DEAD CONCERT EXPLORER</h2> -->\n    <img src=\"/assets/gd_logo1_start.png\" class=\"w3-round w3-margin-bottom\" alt=\"grateful dead explorer logo\" style=\"width:65%\" [routerLink]=\"['/mapselect']\">\n    <p class=\"w3-opacity\"><i><u [routerLink]=\"['/mapselect']\">click to enter</u></i></p>\n      </div>\n\n  <div class=\"w3-container w3-content w3-center\" style=\"max-width:800px\" id=\"overviewstart\">\n      <p class=\"w3-justify\">\n          The Grateful Dead Concert Explorer is a Web application that enables user to navigate and explore digital libraries of live music recordings and discover and share associated artifacts that are dynamically linked within the application. It aims to demonstrate how Semantic Audio and Linked Data technologies can produce an improved user experience for browsing and exploring live music collections, by collecting information from a variety of different Web sources and amploying Music Information Retrieval (MIR) techniques. \n        </p>\n          <p class=\"w3-justify\">\n          This prototype demonstrator focusses on the concerts of the Grateful Dead, motivated by the ongoing interest in detailed descriptions of their performances, evidenced by the large amount of information available on the Web detailing various aspects of those events. The application links the large number of concert recordings by the Grateful Dead available in the Internet Archive with audio analysis data and retrieves additional information and artifacts (e.g. band lineup, photos, scans of tickets and posters, reviews) from existing Web sources, to explore and visualise the collection. The project demonstrates mechanisms for musicians and the music industry to provide services for consumers to enjoy live music performances recognizing the social and cultural value of live music and fan communities.\n      </p>\n      <p class=\"w3-justify\">\n        This is an ongoing project in its early stages. The technologies exploited in this work that were developed in the <a href=\"http://www.semanticaudio.ac.uk/\" target=\"_blank\"><u>EPSRC FAST IMPaCt</u></a> project include:\n      </p>\n      <ul class=\"w3-justify\">\n          <li>Ontological data models for the representation of performed music as cultural artefacts, and its linkage to associated non-musical artefacts</li>\n          <li>Music information retrieval and processing algorithms for the automatic generation of playlists and audio mixes based on user-selected criteria</li>\n          <li>Music-structure analysis for the comparison of performances</li>\n          <li>Audio alignment of different user-generated recordings of live-music performances</li>\n      </ul>\n      <p class=\"w3-justify\">\n      The main functions of the current version are described in the following.\n    </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"mapstart\">\n      <h3 class=\"w3-wide\">Map View</h3>\n      <img class=\"image w3-round w3-margin-bottom\" lazyLoad=\"/assets/screens/scr_map.png\" alt=\"map view\" style=\"width:90%\">\n      <p class=\"w3-justify\">\n        The <i>Map View</i> shows the world map with markers indicating the locations of concerts. Clicking on a marker opens a menu with links to the pages for the venue (<a href=\"#venuestart\"><u><i>Venue View</i></u></a>), and to the pages for the concerts at that location (<a href=\"#showstart\"><u><i>Show View</i></u></a>). While by default all concert locations are displayed, specific tours can be seleceted from the pull down menu on the top left. When selecting a tour, only the concerts from the tour are displayed on the map and connected by arrows indicating the order of concerts. The map also has a seperate search function covering the concerts on the map.\n      </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"showstart\">\n      <h3 class=\"w3-wide\">Show View</h3>\n      <img class=\"image w3-round w3-margin-bottom\" lazyLoad=\"/assets/screens/scr_show.png\" alt=\"show view\" style=\"width:90%\">\n      <p class=\"w3-justify\">\n        The <i>Show View</i> shows information about a specific concert, including the location, venue, the setlist, the lineup and the additional recordings available in the archive. The button next to the recording IDs opens a dialogue to either go to the <a href=\"#recordingstart\"><u><i>Recording View</i></u></a> for the selected recording, or add all songs of the concert recording to the playlist of the <a href=\"#playerstart\"><u>audio player</u></a>. One can navigate to other pages by clicking on any item, for instance, clicking on the venue opens the <a href=\"#venuestart\"><u><i>Venue View</i></u></a> for the respective venue. Clicking on the button next to a song opens a dialogue to either go to the <a href=\"#songstart\"><u><i>Song View</i></u></a> or add the song to the playlist of the <a href=\"#playerstart\"><u>audio player</u></a>. Clicking on photos or other artifacts either opens a higher resolution image or opens the source page at the <a href=\"https://www.gdao.org/\" target=\"_blank\"><u>Grateful Dead Archive Online (GDAO)</u></a> in a new tab.\n      </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"songstart\">\n      <h3 class=\"w3-wide\">Song View</h3>\n      <img class=\"image w3-round w3-margin-bottom\" lazyLoad=\"/assets/screens/scr_song.png\" alt=\"song view\" style=\"width:90%\">\n      <p class=\"w3-justify\">\n        The <i>Song View</i> shows information about a selected song. This includes the composers at the top of the page and the number of performances and recordings available. Clicking on an item in the list of shows opens the <a href=\"#showstart\"><u><i>Show View</i></u></a>. The button next to the location opens a dialogue which additionally lets the user add the song from the resepctive show to the playlist of the <a href=\"#playerstart\"><u>audio player</u></a>. The dialogue shows all available recordings from the selected concert.\n      </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"locationstart\">\n      <h3 class=\"w3-wide\">Location View</h3>\n      <img class=\"image w3-round w3-margin-bottom\" lazyLoad=\"/assets/screens/scr_location.png\" alt=\"location view\" style=\"width:90%\">\n      <p class=\"w3-justify\">\n        The <i>Location View</i> shows information about a city where concerts were held. The list of shows provides links to the <a href=\"#showstart\"><u><i>Show View</i></u></a> for all shows at that location.\n      </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"venuestart\">\n      <h3 class=\"w3-wide\">Venue View</h3>\n      <img class=\"image w3-round w3-margin-bottom\" lazyLoad=\"/assets/screens/scr_venue.png\" alt=\"venue view\" style=\"width:90%\">\n      <p class=\"w3-justify\">\n          The <i>Venue View</i> shows information about a venue where concerts were held. The list of shows provides links to the <a href=\"#showstart\"><u><i>Show View</i></u></a> for all shows at that venue.\n      </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"recordingstart\">\n      <h3 class=\"w3-wide\">Recording View</h3>\n      <img class=\"image w3-round w3-margin-bottom\" lazyLoad=\"/assets/screens/scr_recording.png\" alt=\"recording view\" style=\"width:90%\">\n      <p class=\"w3-justify\">\n        The <i>Recording View</i> shows information about a specific recording from the <a href=\"https://archive.org/details/etree\" target=\"_blank\"><u>Live Music Archive</u></a> at the <a href=\"https://archive.org/\" target=\"_blank\"><u>Internet Archive</u></a>. The information includes source and lineage information of the recording,a s well as the list of songs. Clicking on the button next to a song opens a dialogue to add the seleted song to the playlist of the <a href=\"#playerstart\"><u>audio player</u></a>. \n      </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"playerstart\">\n      <h3 class=\"w3-wide\">Audio Player</h3>\n      <img class=\"image w3-round w3-margin-bottom\" lazyLoad=\"/assets/screens/scr_player.png\" alt=\"audio player\" style=\"width:90%\">\n      <p class=\"w3-justify\">\n        The audio player at the bottom of the page streams audio directly from the <a href=\"https://archive.org/details/etree\" target=\"_blank\"><u>Live Music Archive</u></a>. Songs can be added to the playlist from the Web application where songs are listed, for instance in the <a href=\"#showstart\"><u><i>Show View</i></u></a>, <a href=\"#recordingstart\"><u><i>Recording View</i></u></a> or <a href=\"#songstart\"><u><i>Song View</i></u></a>. In addition to the standard functions (play, stop, mute, etc.), the rightmost button with the eye symbol expands/hides the waveform view and playlist. The button left from it adds a random song from the archive to the playlist.  \n      </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-32\" style=\"max-width:800px\" id=\"additionalstart\">\n      <h3 class=\"w3-wide\">Additional Functions</h3>\n      <p class=\"w3-justify\">\n        Not all fucntions of the demo application are listed here, and there are more functions planned to be implemented in the near future. For instance, the automatic generation of playlist mixes based on user-defined parameters and audio feature analysis results. \n      </p>\n        <p class=\"w3-justify\">\n        A demo of a an automated mix playing excerpts of recordings of a specified song spanning the careerof the Grateful Dead in a seamless mix while retrieving and displaying artifacts in real-time can be found <a href=\"https://grateful-dead-live.github.io/plunderphonics/\" target=\"_blank\"><u><b>here</b></u></a>. \n      </p>\n      <p class=\"w3-justify\">\n      \n    </p>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center w3-padding-16\" style=\"max-width:800px\" id=\"logostart\">\n      <a href=\"https://archive.org\" target=\"_blank\"> <img src=\"https://archive.org/images/glogo.png\" class=\"w3-round w3-margin-right\" alt=\"internet archive logo\" style=\"width:8%\"></a>\n      <a href=\"http://c4dm.eecs.qmul.ac.uk\" target=\"_blank\"> <img src=\"https://sites.google.com/site/mathemusicalconversations/_/rsrc/1396930666900/about/c4dm_qml-logo.jpg\" class=\"w3-round w3-margin-right w3-margin-left\" alt=\"c4dm qmul logo\" style=\"width:18%\"></a>\n      <a href=\"https://epsrc.ukri.org/\" target=\"_blank\"> <img src=\"/assets/epsrc.jpg\" class=\"w3-round w3-margin-right w3-margin-left\" alt=\"epsrc logo\" style=\"width:17%\"></a>\n      <a href=\"https://gdao.org\" target=\"_blank\"> <img src=\"https://www.gdao.org/themes/gdao-theme/images/logo-gdao.png\" class=\"w3-round w3-margin-left\" alt=\"gdao logo\" style=\"width:8%\"></a>\n  </div>\n\n  <div class=\"w3-container w3-content w3-center\" style=\"max-width:800px\" id=\"emailstart\">\n      <a href=\"{{ 'mai' + 'lto' + ':' + part1 + part2 + part3 + part4 + part5 + part6 + part7 }}\"><u>Email us</u> </a>\n  </div>\n  \n\n<!-- End Page Content -->\n</div>\n\n\n\n</body>\n</html>\n"
+
+/***/ }),
+
+/***/ "./src/app/views/start.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/views/start.component.ts ***!
+  \******************************************/
+/*! exports provided: StartComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StartComponent", function() { return StartComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
+
+
+
+var StartComponent = /** @class */ (function () {
+    function StartComponent(sanitizer, router, route) {
+        this.sanitizer = sanitizer;
+        this.router = router;
+        this.route = route;
+    }
+    StartComponent.prototype.ngOnInit = function () {
+        this.part1 = "gdc";
+        this.part2 = "oncert";
+        this.part3 = "explo";
+        this.part4 = "rer";
+        var at = Math.pow(2, 6);
+        this.part5 = String.fromCharCode(at);
+        this.part6 = "gmai";
+        this.part7 = "l.com";
+    };
+    StartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'gd-start',
+            template: __webpack_require__(/*! ./start.component.html */ "./src/app/views/start.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], StartComponent);
+    return StartComponent;
 }());
 
 
