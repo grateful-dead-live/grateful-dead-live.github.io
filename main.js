@@ -1365,7 +1365,7 @@ var PlayerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"left\">  <b>{{searchString}}</b></div>\n\n<div class=\"type\" *ngIf=\"result.song.length != 0\">Songs:</div>\n<div class=\"result\" *ngFor=\"let r of result.song, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/song', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.venue.length != 0\">Venues:</div>\n<div class=\"result\" *ngFor=\"let r of result.venue, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/venue', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.show.length != 0\">Shows:</div>\n<div class=\"result\" *ngFor=\"let r of result.show, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/show', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n\n\n\n\n\n"
+module.exports = "<div class=\"left\">  <b>{{searchString}}</b></div>\n\n<div class=\"type\" *ngIf=\"result.song.length != 0\">Songs:</div>\n<div class=\"result\" *ngFor=\"let r of result.song, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/song', r[1]]\"> {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.venue.length != 0\">Venues:</div>\n<div class=\"result\" *ngFor=\"let r of result.venue, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/venue', r[1]]\"> {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.show.length != 0\">Shows:</div>\n<div class=\"result\" *ngFor=\"let r of result.show, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/show', r[1]]\"> {{r[0]}}</span>\n</div>\n\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -1413,6 +1413,9 @@ var SearchDialogComponent = /** @class */ (function () {
         var s = { 'show': [], 'venue': [], 'song': [] };
         r.forEach(function (i) {
             s[i.type].push([i.title, i.uri]);
+        });
+        Object.keys(s).forEach(function (k) {
+            s[k].sort();
         });
         console.log(s);
         return s;
