@@ -1092,7 +1092,7 @@ var HeaderComponent = /** @class */ (function () {
                     case 1:
                         result = _a.sent();
                         if (result.length > 0) {
-                            this.openDialog(result);
+                            this.openDialog(result, e);
                         }
                         this.searchState = 0;
                         return [2 /*return*/];
@@ -1100,13 +1100,14 @@ var HeaderComponent = /** @class */ (function () {
             });
         });
     };
-    HeaderComponent.prototype.openDialog = function (r) {
+    HeaderComponent.prototype.openDialog = function (r, s) {
         var dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialogConfig"]();
         dialogConfig.position = { right: '0', top: '0' };
         dialogConfig.maxHeight = 400;
         dialogConfig.data = {
             id: 1,
-            result: r
+            result: r,
+            searchString: s
         };
         //dialogConfig.disableClose = true;
         //dialogConfig.autoFocus = true;
@@ -1364,7 +1365,7 @@ var PlayerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"left\">  <b>Search results</b></div>\n\n<div class=\"type\" *ngIf=\"result.song.length != 0\">Songs:</div>\n<div class=\"result\" *ngFor=\"let r of result.song, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/song', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.venue.length != 0\">Venues:</div>\n<div class=\"result\" *ngFor=\"let r of result.venue, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/venue', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.show.length != 0\">Shows:</div>\n<div class=\"result\" *ngFor=\"let r of result.show, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/show', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n\n\n\n\n\n"
+module.exports = "<div class=\"left\">  <b>{{searchString}}</b></div>\n\n<div class=\"type\" *ngIf=\"result.song.length != 0\">Songs:</div>\n<div class=\"result\" *ngFor=\"let r of result.song, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/song', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.venue.length != 0\">Venues:</div>\n<div class=\"result\" *ngFor=\"let r of result.venue, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/venue', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n<div class=\"type\" *ngIf=\"result.show.length != 0\">Shows:</div>\n<div class=\"result\" *ngFor=\"let r of result.show, let i = index\">\n  <span style=\"cursor:pointer\" [routerLink]=\"['/show', r[1]]\"> {{i+1}}. {{r[0]}}</span>\n</div>\n\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -1400,6 +1401,7 @@ var SearchDialogComponent = /** @class */ (function () {
         this.dialogRef = dialogRef;
         //this.result = data.result; //this.sortItems(data.result);
         this.result = this.sortItems(data.result);
+        this.searchString = data.searchString;
     }
     SearchDialogComponent.prototype.onCancelClick = function () {
         this.dialogRef.close();
