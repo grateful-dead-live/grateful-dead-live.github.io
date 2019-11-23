@@ -272,7 +272,8 @@ var AppModule = /** @class */ (function () {
                 _angular_material_menu__WEBPACK_IMPORTED_MODULE_7__["MatMenuModule"],
                 ng_lazyload_image__WEBPACK_IMPORTED_MODULE_8__["LazyLoadImageModule"],
                 _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_9__["LeafletModule"].forRoot(),
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatProgressSpinnerModule"]
             ],
             providers: [
                 _services_dead_api_service__WEBPACK_IMPORTED_MODULE_29__["DeadApiService"],
@@ -1024,7 +1025,7 @@ var ArtifactType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"title\" fxLayout=\"row\" fxLayout.xs=\"column\"\n    [style.background-color]=\"'#ededed'\" [style.background-size]=\"'cover'\"\n    [style.background-position]=\"'center'\" [style.padding]=\"'3px'\">\n  <div class=\"container\" fxLayout=\"column\" fxFlex=\"1 1 auto\">\n    <span>\n        <button mat-button [matMenuTriggerFor]=\"menu\"><img src=\"assets/gd_logo2.png\" height=\"25\"></button>\n        <mat-menu #menu=\"matMenu\">\n          <!-- <button *ngFor=\"let v of views\" mat-menu-item [routerLink]=\"[v.url]\">{{v.name}}</button> -->\n          <button mat-menu-item routerLink=\"/mapselect\">Concert Map</button>\n          <button mat-menu-item routerLink=\"/start\">Start Page</button>\n        </mat-menu>\n    </span>\n  </div>\n\n\n  <div class=\"container hf1\" fxLayout=\"column\" fxFlex=\"1 1 auto\" [style.padding]=\"'4px'\">\n    <span>\n      {{ title }} – {{ subtitle }}\n    </span>\n    \n  </div>\n  <!--<div fxFlex=\"5 1 auto\"></div>-->\n  <ng-content></ng-content>\n\n  <input #searchfield placeholder=\"Search\" (keydown.enter)=\"onSubmit(searchfield.value)\">\n \n\n</div>"
+module.exports = "<div *ngIf=\"title\" fxLayout=\"row\" fxLayout.xs=\"column\"\n    [style.background-color]=\"'#ededed'\" [style.background-size]=\"'cover'\"\n    [style.background-position]=\"'center'\" [style.padding]=\"'3px'\">\n  <div class=\"container\" fxLayout=\"column\" fxFlex=\"1 1 auto\">\n    <span>\n        <button mat-button [matMenuTriggerFor]=\"menu\"><img src=\"assets/gd_logo2.png\" height=\"25\"></button>\n        <mat-menu #menu=\"matMenu\">\n          <!-- <button *ngFor=\"let v of views\" mat-menu-item [routerLink]=\"[v.url]\">{{v.name}}</button> -->\n          <button mat-menu-item routerLink=\"/mapselect\">Concert Map</button>\n          <button mat-menu-item routerLink=\"/start\">Start Page</button>\n        </mat-menu>\n    </span>\n  </div>\n\n\n  <div class=\"container hf1\" fxLayout=\"column\" fxFlex=\"1 1 auto\" [style.padding]=\"'4px'\">\n    <span>\n      {{ title }} – {{ subtitle }}\n    </span>\n    \n  </div>\n  <!--<div fxFlex=\"5 1 auto\"></div>-->\n  <ng-content></ng-content>\n\n  <div *ngIf=\"searchState\" [style.margin-top]=\"'5px'\"><mat-spinner diameter=\"20\"></mat-spinner></div>\n  <input [disabled]=\"searchState==1\" id=\"search\" #searchfield placeholder=\"Search\" (keydown.enter)=\"onSubmit(searchfield.value)\">\n  \n\n \n\n</div>"
 
 /***/ }),
 
@@ -1075,6 +1076,7 @@ var HeaderComponent = /** @class */ (function () {
         this.views = _globals__WEBPACK_IMPORTED_MODULE_3__["VIEWS"];
     }
     HeaderComponent.prototype.ngOnInit = function () {
+        this.searchState = 0;
         this.image = this.sanitizer.bypassSecurityTrustStyle('url(' + this.imageUrl + ')');
         this.titleService.setTitle('Grateful Live - ' + this.title + ', ' + this.subtitle);
     };
@@ -1085,12 +1087,14 @@ var HeaderComponent = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         console.log(e);
+                        this.searchState = 1;
                         return [4 /*yield*/, this.data.getSearchResult(e)];
                     case 1:
                         result = _a.sent();
                         if (result.length > 0) {
                             this.openDialog(result);
                         }
+                        this.searchState = 0;
                         return [2 /*return*/];
                 }
             });
