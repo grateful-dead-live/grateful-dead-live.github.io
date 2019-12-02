@@ -7022,8 +7022,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/thomas/Documents/projects/grateful_dead_2019_git/web-app2/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-polyfills.js");
-module.exports = __webpack_require__(/*! /Users/thomas/Documents/projects/grateful_dead_2019_git/web-app2/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-jit-polyfills.js");
+__webpack_require__(/*! /Volumes/Journal/projects/grateful_dead_2019_git/web-app2/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-polyfills.js");
+module.exports = __webpack_require__(/*! /Volumes/Journal/projects/grateful_dead_2019_git/web-app2/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es2015-jit-polyfills.js");
 
 
 /***/ })
