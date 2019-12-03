@@ -1443,7 +1443,7 @@ var SearchDialogComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<style>\n.loader {\n  -webkit-animation: spin 1s linear infinite;\n          animation: spin 1s linear infinite;\n  border: 3px solid #ddd;\n  border-top: 3px solid #42a5f5;\n  border-radius: 50%;\n  height: 75px;\n  width: 75px;\n  margin-left: 12px;\n}\n\n@-webkit-keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n\n}\n</style>\n\n<div *ngIf=\"!loaded\" class=\"wait\">\n     <div class=\"loader\"></div>\n</div>\n\n<div *ngIf=\"timeOut && !loaded\" class=\"wait\"><br>Loading seems to take a while! You can wait longer or go back and try again.</div>\n\n<div id=\"maploaded\">\n    <div class=\"center\">\n    <select [(ngModel)]=\"selectedTour\" (ngModelChange)=\"tourChanged($event)\">\n        <option *ngFor=\"let l of layerNames\" ngValue=\"{{l}}\"> {{l}}</option>\n    </select>\n    </div>\n\n    <div id=\"MapContainer\" \n        leaflet\n        [leafletOptions]=\"mapOptions\"\n        (leafletMapReady)=\"onMapReady($event)\">\n    </div>\n</div> \n\n\n"
+module.exports = "<style>\n.loader {\n  -webkit-animation: spin 1s linear infinite;\n          animation: spin 1s linear infinite;\n  border: 3px solid #ddd;\n  border-top: 3px solid #42a5f5;\n  border-radius: 50%;\n  height: 75px;\n  width: 75px;\n  margin-left: 12px;\n}\n\n@-webkit-keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n\n}\n</style>\n\n<div *ngIf=\"!loaded\" class=\"wait\">\n     <div class=\"loader\"></div>\n</div>\n\n<div *ngIf=\"timeOut && !loaded\" class=\"wait\"><br>Loading seems to take a while! retrying...</div>\n\n<div id=\"maploaded\">\n    <div class=\"center\">\n    <select [(ngModel)]=\"selectedTour\" (ngModelChange)=\"tourChanged($event)\">\n        <option *ngFor=\"let l of layerNames\" ngValue=\"{{l}}\"> {{l}}</option>\n    </select>\n    </div>\n\n    <div id=\"MapContainer\" \n        leaflet\n        [leafletOptions]=\"mapOptions\"\n        (leafletMapReady)=\"onMapReady($event)\">\n    </div>\n</div> \n\n\n"
 
 /***/ }),
 
@@ -1520,35 +1520,32 @@ var ShowMapComponent = /** @class */ (function () {
     };
     ShowMapComponent.prototype.onMapReady = function (map) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var _a, i, _b, tours, geoJsonData, tourGeoJsonData, all;
+            var i, _a, tours, geoJsonData, tourGeoJsonData, all;
             var _this = this;
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_c) {
-                switch (_c.label) {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
                     case 0:
                         setTimeout(function () {
                             _this.timeOut = true;
                         }, 35000);
                         this.document.getElementById("maploaded").style.visibility = "hidden";
                         this.map = map;
+                        i = 0;
+                        _b.label = 1;
+                    case 1:
+                        if (!(this.venues == undefined || this.venues.length == 0)) return [3 /*break*/, 3];
+                        console.log("retry " + i);
                         _a = this;
                         return [4 /*yield*/, this.data.getVenueCoordinates()];
-                    case 1:
-                        _a.venues = _c.sent();
-                        i = 1;
-                        _c.label = 2;
                     case 2:
-                        if (!(this.venues == undefined)) return [3 /*break*/, 4];
-                        console.log("retry " + i);
-                        _b = this;
-                        return [4 /*yield*/, this.data.getVenueCoordinates()];
-                    case 3:
-                        _b.venues = _c.sent();
+                        _a.venues = _b.sent();
                         console.log(this.venues);
                         i++;
-                        return [3 /*break*/, 2];
-                    case 4: return [4 /*yield*/, this.data.getTourCoordinates()];
-                    case 5:
-                        tours = _c.sent();
+                        return [3 /*break*/, 1];
+                    case 3: return [4 /*yield*/, this.data.getTourCoordinates()];
+                    case 4:
+                        tours = _b.sent();
+                        console.log(tours);
                         geoJsonData = this.getGeoJson(this.venues);
                         tourGeoJsonData = this.getTourJson(tours);
                         all = this.groupLayers(geoJsonData);
