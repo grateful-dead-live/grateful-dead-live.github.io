@@ -1443,7 +1443,7 @@ var SearchDialogComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<style>\n.loader {\n  -webkit-animation: spin 1s linear infinite;\n          animation: spin 1s linear infinite;\n  border: 3px solid #ddd;\n  border-top: 3px solid #42a5f5;\n  border-radius: 50%;\n  height: 75px;\n  width: 75px;\n  margin-left: 12px;\n}\n\n@-webkit-keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n\n}\n</style>\n\n<div *ngIf=\"!loaded\" class=\"wait\">\n     <div class=\"loader\"></div>\n</div>\n\n<div *ngIf=\"timeOut && !loaded\" class=\"wait\"><br>Loading seems to take a while! retrying...</div>\n\n<div id=\"maploaded\">\n    <div class=\"center\">\n    <select [(ngModel)]=\"selectedTour\" (ngModelChange)=\"tourChanged($event)\">\n        <option *ngFor=\"let l of layerNames\" ngValue=\"{{l}}\"> {{l}}</option>\n    </select>\n    </div>\n\n    <div id=\"MapContainer\" \n        leaflet\n        [leafletOptions]=\"mapOptions\"\n        (leafletMapReady)=\"onMapReady($event)\">\n    </div>\n</div> \n\n\n"
+module.exports = "<style>\n.loader {\n  -webkit-animation: spin 1s linear infinite;\n          animation: spin 1s linear infinite;\n  border: 3px solid #ddd;\n  border-top: 3px solid #42a5f5;\n  border-radius: 50%;\n  height: 75px;\n  width: 75px;\n  margin-left: 12px;\n}\n\n@-webkit-keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  to {\n    border-top-color: #ec407a;\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n\n}\n</style>\n\n<div *ngIf=\"!loaded\" class=\"wait\">\n     <div class=\"loader\"></div>\n</div>\n\n<div *ngIf=\"!timeOut && !loaded\" class=\"wait\"><br>connecting to database</div>\n<div *ngIf=\"timeOut && !loaded\" class=\"wait\"><br>loading seems to take a while! retrying...</div>\n\n<div id=\"maploaded\" [style.visibility]=\"!loaded ? 'hidden' : 'visible' \">\n    <div class=\"center\">\n    <select [(ngModel)]=\"selectedTour\" (ngModelChange)=\"tourChanged($event)\">\n        <option *ngFor=\"let l of layerNames\" ngValue=\"{{l}}\"> {{l}}</option>\n    </select>\n    </div>\n\n    <div id=\"MapContainer\" \n        leaflet\n        [leafletOptions]=\"mapOptions\"\n        (leafletMapReady)=\"onMapReady($event)\">\n    </div>\n</div> \n\n\n"
 
 /***/ }),
 
@@ -1472,17 +1472,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../leaflet-fusesearch/src/leaflet.fusesearch.js */ "./src/leaflet-fusesearch/src/leaflet.fusesearch.js");
-/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! leaflet-polylinedecorator */ "./node_modules/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js");
-/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_8__);
-
-
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../leaflet-fusesearch/src/leaflet.fusesearch.js */ "./src/leaflet-fusesearch/src/leaflet.fusesearch.js");
+/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! leaflet-polylinedecorator */ "./node_modules/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js");
+/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -1493,10 +1490,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ShowMapComponent = /** @class */ (function () {
-    function ShowMapComponent(data, sanitizer, document) {
+    function ShowMapComponent(data, sanitizer) {
         this.data = data;
         this.sanitizer = sanitizer;
-        this.document = document;
     }
     ShowMapComponent.prototype.ngOnInit = function () {
         this.loaded = false;
@@ -1528,7 +1524,7 @@ var ShowMapComponent = /** @class */ (function () {
                         setTimeout(function () {
                             _this.timeOut = true;
                         }, 35000);
-                        this.document.getElementById("maploaded").style.visibility = "hidden";
+                        //this.document.getElementById("maploaded").style.visibility = "hidden";
                         this.map = map;
                         i = 0;
                         _b.label = 1;
@@ -1574,7 +1570,6 @@ var ShowMapComponent = /** @class */ (function () {
                         this.searchCtrl.indexFeatures(this.geoJsons['all shows'], ['name', 'dates']);
                         this.selectedTour = 'all shows';
                         this.loaded = true;
-                        this.document.getElementById("maploaded").style.visibility = "visible";
                         this.fitZoom();
                         return [2 /*return*/];
                 }
@@ -1729,7 +1724,7 @@ var ShowMapComponent = /** @class */ (function () {
     };
     ShowMapComponent.prototype.connectTheDots = function (e) {
         var c = [];
-        e.forEach(function (i) { return c.push(lodash__WEBPACK_IMPORTED_MODULE_5__["clone"](i.geometry.coordinates).reverse()); });
+        e.forEach(function (i) { return c.push(lodash__WEBPACK_IMPORTED_MODULE_4__["clone"](i.geometry.coordinates).reverse()); });
         this.tourLine = L.polyline(c, { color: '#1D3A87', weight: 3 }).addTo(this.map);
         console.log(this.tourLine);
         this.lineDecorator = L.polylineDecorator(this.tourLine, {
@@ -1768,8 +1763,7 @@ var ShowMapComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./showmap.component.html */ "./src/app/shared/showmap.component.html"),
             styles: [__webpack_require__(/*! ./showmap.component.sass */ "./src/app/shared/showmap.component.sass")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"], Document])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
     ], ShowMapComponent);
     return ShowMapComponent;
 }());
