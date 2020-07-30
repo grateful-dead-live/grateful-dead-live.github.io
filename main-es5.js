@@ -5407,11 +5407,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/tslib/tslib.es6.js");
 
     var DeadApiService = /*#__PURE__*/function () {
+      //private API_URL = "http://localhost:8060/";
       function DeadApiService() {
         _classCallCheck(this, DeadApiService);
 
-        //private API_URL = "https://grateful-dead-api.herokuapp.com/";
-        this.API_URL = "http://localhost:8060/";
+        this.API_URL = "https://grateful-dead-api.herokuapp.com/";
       }
 
       _createClass(DeadApiService, [{

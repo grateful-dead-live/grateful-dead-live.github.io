@@ -1930,9 +1930,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 
 class DeadApiService {
+    //private API_URL = "http://localhost:8060/";
     constructor() {
-        //private API_URL = "https://grateful-dead-api.herokuapp.com/";
-        this.API_URL = "http://localhost:8060/";
+        this.API_URL = "https://grateful-dead-api.herokuapp.com/";
     }
     getEvents() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
