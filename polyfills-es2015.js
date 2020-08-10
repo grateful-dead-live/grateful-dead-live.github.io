@@ -3033,7 +3033,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Journal/projects/grateful_dead_2019_git/web-app2/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /Users/thomas/Documents/projects/grateful_dead_2019_git/web-app2/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
