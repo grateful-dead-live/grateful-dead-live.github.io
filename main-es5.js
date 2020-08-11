@@ -2540,7 +2540,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                     m = _context5.sent;
-                    console.log(m);
 
                     if (m.startsWith('250')) {
                       dm = 'Report sent';
@@ -2552,7 +2551,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       return null;
                     });
 
-                  case 6:
+                  case 5:
                   case "end":
                     return _context5.stop();
                 }
@@ -2626,7 +2625,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/config.ts ***!
     \***************************/
 
-  /*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, DOMAIN */
+  /*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, API_URL, FRONTEND_URL */
 
   /***/
   function srcAppConfigTs(module, __webpack_exports__, __webpack_require__) {
@@ -2666,16 +2665,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony export (binding) */
 
 
-    __webpack_require__.d(__webpack_exports__, "DOMAIN", function () {
-      return DOMAIN;
+    __webpack_require__.d(__webpack_exports__, "API_URL", function () {
+      return API_URL;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FRONTEND_URL", function () {
+      return FRONTEND_URL;
     });
 
     var AUTH0DOMAIN = 'gdconcertexplorer.eu.auth0.com';
     var AUTH0CLIENTID = 'MgqjkApiGjSzMcFwjzUiyoNJK6z8iWEb';
     var EMAILADDRESS = 'gdconcertexplorer@gmail.com';
     var TRACKINGID = 'UA-165369751-1';
-    var TRACKING = false;
-    var DOMAIN = 'http://localhost:4200/';
+    var TRACKING = false; //export const API_URL = 'http://localhost:8060/';
+
+    var API_URL = 'https://grateful-dead-api.herokuapp.com/'; //export const FRONTEND_URL = 'http://localhost:4200/';
+
+    var FRONTEND_URL = 'https://grateful-dead-live.github.io/';
     /***/
   },
 
@@ -3677,7 +3685,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var currVal_13 = 7;
 
-        var currVal_14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.domain + "playlist/" + _v.context.$implicit.id, "");
+        var currVal_14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.frontend_url + "#/playlist/" + _v.context.$implicit.id, "");
 
         var currVal_15 = "Grateful Dead Concert Explorer Playlist";
         var currVal_16 = "Grateful Dead, Live Music, Jerry Garcia";
@@ -3958,8 +3966,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.route = route;
         this.dialog = dialog;
         this.player = player;
-        this.domain = _config__WEBPACK_IMPORTED_MODULE_7__["DOMAIN"];
-      } //protected playlists: any;
+        this.frontend_url = _config__WEBPACK_IMPORTED_MODULE_7__["FRONTEND_URL"];
+      } //public domain = DOMAIN;
+      //protected playlists: any;
 
 
       _createClass(ProfileComponent, [{
@@ -5406,13 +5415,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! tslib */
     "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
 
     var DeadApiService = /*#__PURE__*/function () {
-      //private API_URL = "http://localhost:8060/";
       function DeadApiService() {
         _classCallCheck(this, DeadApiService);
 
-        this.API_URL = "https://grateful-dead-api.herokuapp.com/";
+        //private API_URL = "https://grateful-dead-api.herokuapp.com/";
+        //private API_URL = "http://localhost:8060/";
+        this.api_url = _config__WEBPACK_IMPORTED_MODULE_1__["API_URL"];
       }
 
       _createClass(DeadApiService, [{
@@ -5547,7 +5563,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context65.prev = _context65.next) {
                   case 0:
-                    return _context65.abrupt("return", fetch(this.API_URL + path).then(function (r) {
+                    return _context65.abrupt("return", fetch(this.api_url + path).then(function (r) {
                       return r.text();
                     }).then(function (t) {
                       return JSON.parse(t);
@@ -5571,7 +5587,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context66.prev = _context66.next) {
                   case 0:
-                    return _context66.abrupt("return", fetch(this.API_URL + path).then(function (r) {
+                    return _context66.abrupt("return", fetch(this.api_url + path).then(function (r) {
                       return r.text();
                     })["catch"](function (e) {
                       return console.log(e);
