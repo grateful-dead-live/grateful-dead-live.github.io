@@ -16402,7 +16402,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "onClickPhoto",
         value: function onClickPhoto(p) {
           this.currentPhoto = p;
-          this.lightbox.openLightboxArray(this.artifactsLightbox, p.index);
+          this.lightbox.openLightboxArray(this.photosLightbox, p.index);
         }
       }, {
         key: "onClickArtifact",
