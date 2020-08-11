@@ -18409,7 +18409,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var max = this.options.maxResultLength;
 
         for (var i in result) {
-          var props = result[i];
+          var props = result[i].item; // fix: added .item
+
           var feature = props._feature;
 
           var popup = this._getFeaturePopupIfVisible(feature);
