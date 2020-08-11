@@ -2540,6 +2540,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                     m = _context5.sent;
+                    console.log(m);
 
                     if (m.startsWith('250')) {
                       dm = 'Report sent';
@@ -2551,7 +2552,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       return null;
                     });
 
-                  case 5:
+                  case 6:
                   case "end":
                     return _context5.stop();
                 }

@@ -1006,6 +1006,7 @@ class CommentsComponent {
     reportComment(msg) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             var m = yield this.data.sendCommentReport(msg, this.currentUserId);
+            console.log(m);
             if (m.startsWith('250')) {
                 var dm = 'Report sent';
             }
