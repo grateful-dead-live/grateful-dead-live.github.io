@@ -6438,6 +6438,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.storePlaylist();
         }
       }, {
+        key: "clearPlaylist",
+        value: function clearPlaylist() {
+          this.playlist = [];
+          this.storePlaylist();
+        }
+      }, {
         key: "getCurrentTrack",
         value: function getCurrentTrack() {
           return this.playlist[this.currentTrackIndex] || {
@@ -8847,21 +8853,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_PlayerComponent_4(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["disabled", "true"], ["fxFlex", ""], ["mat-flat-button", ""], ["style", "color: rgb(194, 192, 192)"]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
-        var ad = true;
-        var _co = _v.component;
-
-        if ("click" === en) {
-          var pd_0 = _co.onSavePlaylist() !== false;
-          ad = pd_0 && ad;
-        }
-
-        return ad;
-      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["disabled", "true"], ["fxFlex", ""], ["mat-flat-button", ""], ["style", "color: rgb(194, 192, 192)"]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], {
         disabled: [0, "disabled"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" save playlist "]))], function (_ck, _v) {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" load "]))], function (_ck, _v) {
         var currVal_2 = "";
 
         _ck(_v, 1, 0, currVal_2);
@@ -8883,14 +8879,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _co = _v.component;
 
         if ("click" === en) {
-          var pd_0 = _co.onSavePlaylist() !== false;
+          var pd_0 = _co.onLoadPlaylist() !== false;
           ad = pd_0 && ad;
         }
 
         return ad;
       }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" save playlist "]))], function (_ck, _v) {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" load "]))], function (_ck, _v) {
         var currVal_2 = "";
 
         _ck(_v, 1, 0, currVal_2);
@@ -8903,21 +8899,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_PlayerComponent_6(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["disabled", "true"], ["fxFlex", ""], ["mat-flat-button", ""], ["style", "color: rgb(194, 192, 192)"]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
-        var ad = true;
-        var _co = _v.component;
-
-        if ("click" === en) {
-          var pd_0 = _co.onLoadPlaylist() !== false;
-          ad = pd_0 && ad;
-        }
-
-        return ad;
-      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["disabled", "true"], ["fxFlex", ""], ["mat-flat-button", ""], ["style", "color: rgb(194, 192, 192)"]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], {
         disabled: [0, "disabled"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" load playlist "]))], function (_ck, _v) {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" save "]))], function (_ck, _v) {
         var currVal_2 = "";
 
         _ck(_v, 1, 0, currVal_2);
@@ -8939,14 +8925,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _co = _v.component;
 
         if ("click" === en) {
-          var pd_0 = _co.onLoadPlaylist() !== false;
+          var pd_0 = _co.onSavePlaylist() !== false;
           ad = pd_0 && ad;
         }
 
         return ad;
       }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" load playlist "]))], function (_ck, _v) {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" save "]))], function (_ck, _v) {
         var currVal_2 = "";
 
         _ck(_v, 1, 0, currVal_2);
@@ -8958,7 +8944,53 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       });
     }
 
+    function View_PlayerComponent_8(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["disabled", "true"], ["fxFlex", ""], ["mat-flat-button", ""], ["style", "color: rgb(194, 192, 192)"]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
+        fxFlex: [0, "fxFlex"]
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], {
+        disabled: [0, "disabled"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" clear "]))], function (_ck, _v) {
+        var currVal_2 = "";
+
+        _ck(_v, 1, 0, currVal_2);
+
+        var currVal_3 = "true";
+
+        _ck(_v, 2, 0, currVal_3);
+      }, function (_ck, _v) {
+        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).disabled || null;
+        var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._animationMode === "NoopAnimations";
+
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+      });
+    }
+
     function View_PlayerComponent_9(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("click" === en) {
+          var pd_0 = _co.onClearPlaylist() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_5__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
+        fxFlex: [0, "fxFlex"]
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, [" clear "]))], function (_ck, _v) {
+        var currVal_2 = "";
+
+        _ck(_v, 1, 0, currVal_2);
+      }, function (_ck, _v) {
+        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).disabled || null;
+        var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2)._animationMode === "NoopAnimations";
+
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+      });
+    }
+
+    function View_PlayerComponent_11(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -8972,7 +9004,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["song"]))], null, null);
     }
 
-    function View_PlayerComponent_10(_l) {
+    function View_PlayerComponent_12(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -8986,7 +9018,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["show"]))], null, null);
     }
 
-    function View_PlayerComponent_11(_l) {
+    function View_PlayerComponent_13(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -9000,7 +9032,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["recording"]))], null, null);
     }
 
-    function View_PlayerComponent_8(_l) {
+    function View_PlayerComponent_10(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 21, "div", [["class", "playlist"], ["style", "text-align:left; margin-left: 3px;"]], [[8, "hidden", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "span", [], [[4, "color", null]], [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
@@ -9038,11 +9070,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         items: 1
       }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵqud"](603979776, 3, {
         lazyContent: 0
-      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_PlayerComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_PlayerComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_PlayerComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_PlayerComponent_12)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_PlayerComponent_11)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, 0, 1, null, View_PlayerComponent_13)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](20, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
@@ -9155,7 +9187,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         model: [0, "model"]
       }, {
         update: "ngModelChange"
-      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 49, "div", [["fxLayout", "row"], ["style", "margin-top: 10px; margin-left: 3px; margin-right: 3px;"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
+      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 53, "div", [["fxLayout", "row"], ["style", "margin-top: 10px; margin-left: 3px; margin-right: 3px;"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
         fxLayout: [0, "fxLayout"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 6, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
         var ad = true;
@@ -9290,9 +9322,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         ngIf: [0, "ngIf"]
       }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PlayerComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](60, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](61, 0, null, null, 3, "div", [["fxLayout", "column"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](62, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PlayerComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](62, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PlayerComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](64, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](65, 0, null, null, 3, "div", [["fxLayout", "column"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](66, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_7__["MediaMarshaller"]], {
         fxLayout: [0, "fxLayout"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PlayerComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](64, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_PlayerComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](68, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_15__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
         ngForOf: [0, "ngForOf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
@@ -9361,29 +9397,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _ck(_v, 52, 0, currVal_62, currVal_63, currVal_64, currVal_65);
 
-        var currVal_66 = _co.currentUser.userId && _co.player.playlist.length == 0;
+        var currVal_66 = _co.currentUser.userId && (!_co.player.playlists || _co.player.playlists.length == 0);
 
         _ck(_v, 54, 0, currVal_66);
 
-        var currVal_67 = _co.currentUser.userId && _co.player.playlist.length > 0;
+        var currVal_67 = _co.currentUser.userId && (!_co.player.playlists || _co.player.playlists.length > 0);
 
         _ck(_v, 56, 0, currVal_67);
 
-        var currVal_68 = _co.currentUser.userId && (!_co.player.playlists || _co.player.playlists.length == 0);
+        var currVal_68 = _co.currentUser.userId && _co.player.playlist.length == 0;
 
         _ck(_v, 58, 0, currVal_68);
 
-        var currVal_69 = _co.currentUser.userId && (!_co.player.playlists || _co.player.playlists.length > 0);
+        var currVal_69 = _co.currentUser.userId && _co.player.playlist.length > 0;
 
         _ck(_v, 60, 0, currVal_69);
 
-        var currVal_70 = "column";
+        var currVal_70 = _co.currentUser.userId && _co.player.playlist.length == 0;
 
         _ck(_v, 62, 0, currVal_70);
 
-        var currVal_71 = _co.player.playlist;
+        var currVal_71 = _co.currentUser.userId && _co.player.playlist.length > 0;
 
         _ck(_v, 64, 0, currVal_71);
+
+        var currVal_72 = "column";
+
+        _ck(_v, 66, 0, currVal_72);
+
+        var currVal_73 = _co.player.playlist;
+
+        _ck(_v, 68, 0, currVal_73);
       }, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.loaded && !_co.minimized ? "120px" : "20px";
@@ -9690,14 +9734,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.player.volume(v);
         }
       }, {
-        key: "delTrack",
-        value: function delTrack(i) {
+        key: "onClearPlaylist",
+        value: function onClearPlaylist() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee104() {
             return regeneratorRuntime.wrap(function _callee104$(_context104) {
               while (1) {
                 switch (_context104.prev = _context104.next) {
                   case 0:
-                    this.player.deleteFromPlaylist(i);
+                    this.player.clearPlaylist();
 
                   case 1:
                   case "end":
@@ -9708,20 +9752,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "onSavePlaylist",
-        value: function onSavePlaylist() {
+        key: "delTrack",
+        value: function delTrack(i) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee105() {
-            var _this22 = this;
-
             return regeneratorRuntime.wrap(function _callee105$(_context105) {
               while (1) {
                 switch (_context105.prev = _context105.next) {
                   case 0:
-                    this.dialog.openInputDialog(function (name) {
-                      if (name) {
-                        _this22.savePlaylist(name);
-                      }
-                    });
+                    this.player.deleteFromPlaylist(i);
 
                   case 1:
                   case "end":
@@ -9732,14 +9770,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "onLoadPlaylist",
-        value: function onLoadPlaylist() {
+        key: "onSavePlaylist",
+        value: function onSavePlaylist() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee106() {
+            var _this22 = this;
+
             return regeneratorRuntime.wrap(function _callee106$(_context106) {
               while (1) {
                 switch (_context106.prev = _context106.next) {
                   case 0:
-                    this.loadPlaylist();
+                    this.dialog.openInputDialog(function (name) {
+                      if (name) {
+                        _this22.savePlaylist(name);
+                      }
+                    });
 
                   case 1:
                   case "end":
@@ -9750,29 +9794,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "savePlaylist",
-        value: function savePlaylist(name) {
+        key: "onLoadPlaylist",
+        value: function onLoadPlaylist() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee107() {
-            var id;
             return regeneratorRuntime.wrap(function _callee107$(_context107) {
               while (1) {
                 switch (_context107.prev = _context107.next) {
                   case 0:
-                    console.log('saving playlist');
-                    id = this.makeid();
-                    _context107.next = 4;
-                    return this.data.addPlaylist(name, this.player.playlist, id, this.currentUser.userId, new Date().getTime());
+                    this.loadPlaylist();
 
-                  case 4:
-                    _context107.next = 6;
-                    return this.player.getPlaylists(this.currentUser.userId);
-
-                  case 6:
+                  case 1:
                   case "end":
                     return _context107.stop();
                 }
               }
             }, _callee107, this);
+          }));
+        }
+      }, {
+        key: "savePlaylist",
+        value: function savePlaylist(name) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee108() {
+            var id;
+            return regeneratorRuntime.wrap(function _callee108$(_context108) {
+              while (1) {
+                switch (_context108.prev = _context108.next) {
+                  case 0:
+                    console.log('saving playlist');
+                    id = this.makeid();
+                    _context108.next = 4;
+                    return this.data.addPlaylist(name, this.player.playlist, id, this.currentUser.userId, new Date().getTime());
+
+                  case 4:
+                    _context108.next = 6;
+                    return this.player.getPlaylists(this.currentUser.userId);
+
+                  case 6:
+                  case "end":
+                    return _context108.stop();
+                }
+              }
+            }, _callee108, this);
           }));
         }
         /*
@@ -10763,13 +10825,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onMapReady",
         value: function onMapReady(map) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee108() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee109() {
             var _this24 = this;
 
             var i, tours, geoJsonData, tourGeoJsonData, all;
-            return regeneratorRuntime.wrap(function _callee108$(_context108) {
+            return regeneratorRuntime.wrap(function _callee109$(_context109) {
               while (1) {
-                switch (_context108.prev = _context108.next) {
+                switch (_context109.prev = _context109.next) {
                   case 0:
                     setTimeout(function () {
                       _this24.timeOut = true;
@@ -10780,28 +10842,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 3:
                     if (!(this.venues == undefined || this.venues.length == 0)) {
-                      _context108.next = 12;
+                      _context109.next = 12;
                       break;
                     }
 
                     // retry heroku fetch
                     console.log("retry " + i);
-                    _context108.next = 7;
+                    _context109.next = 7;
                     return this.data.getVenueCoordinates();
 
                   case 7:
-                    this.venues = _context108.sent;
+                    this.venues = _context109.sent;
                     console.log(this.venues);
                     i++;
-                    _context108.next = 3;
+                    _context109.next = 3;
                     break;
 
                   case 12:
-                    _context108.next = 14;
+                    _context109.next = 14;
                     return this.data.getTourCoordinates();
 
                   case 14:
-                    tours = _context108.sent;
+                    tours = _context109.sent;
                     console.log(tours);
                     geoJsonData = this.getGeoJson(this.venues);
                     tourGeoJsonData = this.getTourJson(tours);
@@ -10840,10 +10902,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 32:
                   case "end":
-                    return _context108.stop();
+                    return _context109.stop();
                 }
               }
-            }, _callee108, this);
+            }, _callee109, this);
           }));
         }
       }, {
@@ -11586,23 +11648,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShowsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee109() {
-            return regeneratorRuntime.wrap(function _callee109$(_context109) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee110() {
+            return regeneratorRuntime.wrap(function _callee110$(_context110) {
               while (1) {
-                switch (_context109.prev = _context109.next) {
+                switch (_context110.prev = _context110.next) {
                   case 0:
-                    _context109.next = 2;
+                    _context110.next = 2;
                     return this.data.getEventInfos(this.eventIds);
 
                   case 2:
-                    this.events = _context109.sent;
+                    this.events = _context110.sent;
 
                   case 3:
                   case "end":
-                    return _context109.stop();
+                    return _context110.stop();
                 }
               }
-            }, _callee109, this);
+            }, _callee110, this);
           }));
         }
       }]);
@@ -12312,12 +12374,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ArtifactsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee111() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee112() {
             var _this28 = this;
 
-            return regeneratorRuntime.wrap(function _callee111$(_context111) {
+            return regeneratorRuntime.wrap(function _callee112$(_context112) {
               while (1) {
-                switch (_context111.prev = _context111.next) {
+                switch (_context112.prev = _context112.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -12340,57 +12402,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this28, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee110() {
-                        return regeneratorRuntime.wrap(function _callee110$(_context110) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this28, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee111() {
+                        return regeneratorRuntime.wrap(function _callee111$(_context111) {
                           while (1) {
-                            switch (_context110.prev = _context110.next) {
+                            switch (_context111.prev = _context111.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context110.next = 3;
+                                  _context111.next = 3;
                                   break;
                                 }
 
-                                _context110.next = 14;
+                                _context111.next = 14;
                                 break;
 
                               case 3:
                                 if (!params.has('types')) {
-                                  _context110.next = 10;
+                                  _context111.next = 10;
                                   break;
                                 }
 
                                 this.types = JSON.parse(params.get('types'));
-                                _context110.next = 7;
+                                _context111.next = 7;
                                 return this.data.getRandomArtifacts(this.types, 6);
 
                               case 7:
-                                this.artifacts = _context110.sent;
-                                _context110.next = 14;
+                                this.artifacts = _context111.sent;
+                                _context111.next = 14;
                                 break;
 
                               case 10:
-                                _context110.next = 12;
+                                _context111.next = 12;
                                 return this.data.getRandomArtifacts(null, 6);
 
                               case 12:
-                                this.artifacts = _context110.sent;
+                                this.artifacts = _context111.sent;
                                 console.log(this.artifacts);
 
                               case 14:
                               case "end":
-                                return _context110.stop();
+                                return _context111.stop();
                             }
                           }
-                        }, _callee110, this);
+                        }, _callee111, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context111.stop();
+                    return _context112.stop();
                 }
               }
-            }, _callee111, this);
+            }, _callee112, this);
           }));
         }
       }]);
@@ -12854,12 +12916,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ArtistComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee113() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee114() {
             var _this29 = this;
 
-            return regeneratorRuntime.wrap(function _callee113$(_context113) {
+            return regeneratorRuntime.wrap(function _callee114$(_context114) {
               while (1) {
-                switch (_context113.prev = _context113.next) {
+                switch (_context114.prev = _context114.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -12882,29 +12944,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this29, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee112() {
-                        return regeneratorRuntime.wrap(function _callee112$(_context112) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this29, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee113() {
+                        return regeneratorRuntime.wrap(function _callee113$(_context113) {
                           while (1) {
-                            switch (_context112.prev = _context112.next) {
+                            switch (_context113.prev = _context113.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context112.next = 5;
+                                  _context113.next = 5;
                                   break;
                                 }
 
-                                _context112.next = 3;
+                                _context113.next = 3;
                                 return this.data.getArtistDetails(params.get('id'));
 
                               case 3:
-                                this.artist = _context112.sent;
+                                this.artist = _context113.sent;
                                 console.log(this.artist);
 
                               case 5:
                               case "end":
-                                return _context112.stop();
+                                return _context113.stop();
                             }
                           }
-                        }, _callee112, this);
+                        }, _callee113, this);
                       }));
                     });
                     /* // not working
@@ -12916,10 +12978,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                   case "end":
-                    return _context113.stop();
+                    return _context114.stop();
                 }
               }
-            }, _callee113, this);
+            }, _callee114, this);
           }));
         }
       }]);
@@ -13600,60 +13662,60 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           } */
 
           this.route.paramMap.subscribe(function (params) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this30, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee114() {
-              return regeneratorRuntime.wrap(function _callee114$(_context114) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this30, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee115() {
+              return regeneratorRuntime.wrap(function _callee115$(_context115) {
                 while (1) {
-                  switch (_context114.prev = _context114.next) {
+                  switch (_context115.prev = _context115.next) {
                     case 0:
                       if (!params.has('id')) {
-                        _context114.next = 10;
+                        _context115.next = 10;
                         break;
                       }
 
-                      _context114.next = 3;
+                      _context115.next = 3;
                       return this.data.getLocation(params.get('id'));
 
                     case 3:
-                      this.location = _context114.sent;
+                      this.location = _context115.sent;
 
                       if (!this.location.state) {
-                        _context114.next = 10;
+                        _context115.next = 10;
                         break;
                       }
 
-                      _context114.next = 7;
+                      _context115.next = 7;
                       return this.data.getYoutubeList(this.location.id, ['Grateful Dead', this.location.name]);
 
                     case 7:
-                      this.videos = _context114.sent;
+                      this.videos = _context115.sent;
                       this.currentVideoId = this.videos[0].videoId;
                       console.log(this.videos);
 
                     case 10:
                       if (this.location) {
-                        _context114.next = 18;
+                        _context115.next = 18;
                         break;
                       }
 
-                      _context114.t0 = this.router;
-                      _context114.next = 14;
+                      _context115.t0 = this.router;
+                      _context115.next = 14;
                       return this.data.getRandomLocation();
 
                     case 14:
-                      _context114.t1 = _context114.sent.id;
-                      _context114.t2 = ['/location', _context114.t1];
-                      _context114.t3 = {
+                      _context115.t1 = _context115.sent.id;
+                      _context115.t2 = ['/location', _context115.t1];
+                      _context115.t3 = {
                         replaceUrl: true
                       };
 
-                      _context114.t0.navigate.call(_context114.t0, _context114.t2, _context114.t3);
+                      _context115.t0.navigate.call(_context115.t0, _context115.t2, _context115.t3);
 
                     case 18:
                     case "end":
-                      return _context114.stop();
+                      return _context115.stop();
                   }
                 }
-              }, _callee114, this);
+              }, _callee115, this);
             }));
           });
         }
@@ -14258,12 +14320,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PlaylistComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee116() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee117() {
             var _this34 = this;
 
-            return regeneratorRuntime.wrap(function _callee116$(_context116) {
+            return regeneratorRuntime.wrap(function _callee117$(_context117) {
               while (1) {
-                switch (_context116.prev = _context116.next) {
+                switch (_context117.prev = _context117.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -14277,10 +14339,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       }
                     });
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this34, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee115() {
-                        return regeneratorRuntime.wrap(function _callee115$(_context115) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this34, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee116() {
+                        return regeneratorRuntime.wrap(function _callee116$(_context116) {
                           while (1) {
-                            switch (_context115.prev = _context115.next) {
+                            switch (_context116.prev = _context116.next) {
                               case 0:
                                 if (params.has('id')) {
                                   this.getPlaylist(params.get('id'));
@@ -14288,35 +14350,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 1:
                               case "end":
-                                return _context115.stop();
+                                return _context116.stop();
                             }
                           }
-                        }, _callee115, this);
+                        }, _callee116, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context116.stop();
+                    return _context117.stop();
                 }
               }
-            }, _callee116, this);
+            }, _callee117, this);
           }));
         }
       }, {
         key: "getPlaylist",
         value: function getPlaylist(playlistId) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee117() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee118() {
             var res;
-            return regeneratorRuntime.wrap(function _callee117$(_context117) {
+            return regeneratorRuntime.wrap(function _callee118$(_context118) {
               while (1) {
-                switch (_context117.prev = _context117.next) {
+                switch (_context118.prev = _context118.next) {
                   case 0:
-                    _context117.next = 2;
+                    _context118.next = 2;
                     return this.data.getPlaylist(playlistId);
 
                   case 2:
-                    res = _context117.sent;
+                    res = _context118.sent;
                     this.playlist = res.playlists[0];
                     console.log(this.playlist);
                     this.player.playlist = _toConsumableArray(this.playlist.playlist);
@@ -14324,10 +14386,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 7:
                   case "end":
-                    return _context117.stop();
+                    return _context118.stop();
                 }
               }
-            }, _callee117, this);
+            }, _callee118, this);
           }));
         }
       }]);
@@ -14904,27 +14966,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
 
           this.route.paramMap.subscribe(function (params) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee118() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee119() {
               var tracklist;
-              return regeneratorRuntime.wrap(function _callee118$(_context118) {
+              return regeneratorRuntime.wrap(function _callee119$(_context119) {
                 while (1) {
-                  switch (_context118.prev = _context118.next) {
+                  switch (_context119.prev = _context119.next) {
                     case 0:
                       if (!params.has('id')) {
-                        _context118.next = 9;
+                        _context119.next = 9;
                         break;
                       }
 
-                      _context118.next = 3;
+                      _context119.next = 3;
                       return this.data.getRecordingInfo(params.get('id'));
 
                     case 3:
-                      this.recordinginfo = _context118.sent;
-                      _context118.next = 6;
+                      this.recordinginfo = _context119.sent;
+                      _context119.next = 6;
                       return this.data.getTracklist(params.get('id'));
 
                     case 6:
-                      tracklist = _context118.sent;
+                      tracklist = _context119.sent;
                       tracklist.forEach(function (t) {
                         if (t.song) {
                           t['id'] = t.song[0].song_id;
@@ -14938,10 +15000,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 9:
                     case "end":
-                      return _context118.stop();
+                      return _context119.stop();
                   }
                 }
-              }, _callee118, this);
+              }, _callee119, this);
             }));
           });
         }
@@ -14974,21 +15036,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTrackToPlaylist",
         value: function addTrackToPlaylist(audio) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee119() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee120() {
             var track;
-            return regeneratorRuntime.wrap(function _callee119$(_context119) {
+            return regeneratorRuntime.wrap(function _callee120$(_context120) {
               while (1) {
-                switch (_context119.prev = _context119.next) {
+                switch (_context120.prev = _context120.next) {
                   case 0:
                     track = this.data.toPlayerTrack(this.recordinginfo.venue_name, this.recordinginfo.location_name, this.recordinginfo.date, this.recordinginfo.show_id, this.recordinginfo.etree_id, audio, this.recordinginfo.recording_id);
                     this.player.addToPlaylist(track);
 
                   case 2:
                   case "end":
-                    return _context119.stop();
+                    return _context120.stop();
                 }
               }
-            }, _callee119, this);
+            }, _callee120, this);
           }));
         }
       }, {
@@ -16112,12 +16174,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShowComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee121() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee122() {
             var _this38 = this;
 
-            return regeneratorRuntime.wrap(function _callee121$(_context121) {
+            return regeneratorRuntime.wrap(function _callee122$(_context122) {
               while (1) {
-                switch (_context121.prev = _context121.next) {
+                switch (_context122.prev = _context122.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -16140,24 +16202,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }*/
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this38, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee120() {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this38, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee121() {
                         var _this39 = this;
 
                         var poster, pass, ticket, gl;
-                        return regeneratorRuntime.wrap(function _callee120$(_context120) {
+                        return regeneratorRuntime.wrap(function _callee121$(_context121) {
                           while (1) {
-                            switch (_context120.prev = _context120.next) {
+                            switch (_context121.prev = _context121.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context120.next = 19;
+                                  _context121.next = 19;
                                   break;
                                 }
 
-                                _context120.next = 3;
+                                _context121.next = 3;
                                 return this.data.getEventDetails(params.get('id'));
 
                               case 3:
-                                this.event = _context120.sent;
+                                this.event = _context121.sent;
                                 this.event.date = this.event.date;
                                 this.formatDate = this.data.formatDate(this.event.date);
                                 this.recordingUrls = this.event.recordings.map(function (r) {
@@ -16198,38 +16260,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                 }
 
                                 this.changeDetectorRef.detectChanges();
-                                _context120.next = 26;
+                                _context121.next = 26;
                                 break;
 
                               case 19:
-                                _context120.t0 = this.router;
-                                _context120.next = 22;
+                                _context121.t0 = this.router;
+                                _context121.next = 22;
                                 return this.data.getRandomEventId();
 
                               case 22:
-                                _context120.t1 = _context120.sent;
-                                _context120.t2 = ['/show', _context120.t1];
-                                _context120.t3 = {
+                                _context121.t1 = _context121.sent;
+                                _context121.t2 = ['/show', _context121.t1];
+                                _context121.t3 = {
                                   replaceUrl: true
                                 };
 
-                                _context120.t0.navigate.call(_context120.t0, _context120.t2, _context120.t3);
+                                _context121.t0.navigate.call(_context121.t0, _context121.t2, _context121.t3);
 
                               case 26:
                               case "end":
-                                return _context120.stop();
+                                return _context121.stop();
                             }
                           }
-                        }, _callee120, this);
+                        }, _callee121, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context121.stop();
+                    return _context122.stop();
                 }
               }
-            }, _callee121, this);
+            }, _callee122, this);
           }));
         }
         /*
@@ -16297,13 +16359,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTrackToPlaylist",
         value: function addTrackToPlaylist(song, recordingEtreeId, recordingId) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee122() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee123() {
             var _this43 = this;
 
             var eventInfo, songDetails;
-            return regeneratorRuntime.wrap(function _callee122$(_context122) {
+            return regeneratorRuntime.wrap(function _callee123$(_context123) {
               while (1) {
-                switch (_context122.prev = _context122.next) {
+                switch (_context123.prev = _context123.next) {
                   case 0:
                     eventInfo = {
                       id: this.event.id,
@@ -16315,21 +16377,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       artifacts: null //this.artifacts
 
                     };
-                    _context122.next = 3;
+                    _context123.next = 3;
                     return this.data.getSong(song.id);
 
                   case 3:
-                    songDetails = _context122.sent;
+                    songDetails = _context123.sent;
                     this.data.getTracks(songDetails, eventInfo, recordingEtreeId, recordingId).forEach(function (t) {
                       return _this43.player.addToPlaylist(t);
                     });
 
                   case 5:
                   case "end":
-                    return _context122.stop();
+                    return _context123.stop();
                 }
               }
-            }, _callee122, this);
+            }, _callee123, this);
           }));
         }
         /*
@@ -16343,19 +16405,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addRecordingToPlaylist",
         value: function addRecordingToPlaylist(recording) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee123() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee124() {
             var _this44 = this;
 
             var tracklist;
-            return regeneratorRuntime.wrap(function _callee123$(_context123) {
+            return regeneratorRuntime.wrap(function _callee124$(_context124) {
               while (1) {
-                switch (_context123.prev = _context123.next) {
+                switch (_context124.prev = _context124.next) {
                   case 0:
-                    _context123.next = 2;
+                    _context124.next = 2;
                     return this.data.getTracklist(recording.id);
 
                   case 2:
-                    tracklist = _context123.sent;
+                    tracklist = _context124.sent;
                     tracklist.forEach(function (t) {
                       if (t.song) {
                         t['id'] = t.song[0].song_id;
@@ -16371,20 +16433,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 5:
                   case "end":
-                    return _context123.stop();
+                    return _context124.stop();
                 }
               }
-            }, _callee123, this);
+            }, _callee124, this);
           }));
         }
       }, {
         key: "addRecordingTrackToPlaylist",
         value: function addRecordingTrackToPlaylist(audio, recording) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee124() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee125() {
             var track;
-            return regeneratorRuntime.wrap(function _callee124$(_context124) {
+            return regeneratorRuntime.wrap(function _callee125$(_context125) {
               while (1) {
-                switch (_context124.prev = _context124.next) {
+                switch (_context125.prev = _context125.next) {
                   case 0:
                     //console.log(audio)
                     track = this.data.toPlayerTrack(this.event.venue.name, this.event.location.name, this.event.date, this.event.id, recording.etreeId, audio, recording.id);
@@ -16392,10 +16454,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                   case "end":
-                    return _context124.stop();
+                    return _context125.stop();
                 }
               }
-            }, _callee124, this);
+            }, _callee125, this);
           }));
         }
       }, {
@@ -16921,12 +16983,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SongComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee126() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee127() {
             var _this45 = this;
 
-            return regeneratorRuntime.wrap(function _callee126$(_context126) {
+            return regeneratorRuntime.wrap(function _callee127$(_context127) {
               while (1) {
-                switch (_context126.prev = _context126.next) {
+                switch (_context127.prev = _context127.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -16949,29 +17011,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this45, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee125() {
-                        return regeneratorRuntime.wrap(function _callee125$(_context125) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this45, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee126() {
+                        return regeneratorRuntime.wrap(function _callee126$(_context126) {
                           while (1) {
-                            switch (_context125.prev = _context125.next) {
+                            switch (_context126.prev = _context126.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context125.next = 9;
+                                  _context126.next = 9;
                                   break;
                                 }
 
-                                _context125.next = 3;
+                                _context126.next = 3;
                                 return this.data.getSong(params.get('id'));
 
                               case 3:
-                                this.song = _context125.sent;
+                                this.song = _context126.sent;
                                 this.subtitle = lodash__WEBPACK_IMPORTED_MODULE_1__["uniq"](this.song.composedBy.concat(this.song.lyricsBy).map(function (a) {
                                   return a.name;
                                 })).join(', ');
-                                _context125.next = 7;
+                                _context126.next = 7;
                                 return this.data.getEventInfos(this.song.eventIds);
 
                               case 7:
-                                this.events = _context125.sent;
+                                this.events = _context126.sent;
 
                                 if (this.events.length) {
                                   this.firstPlayed = this.events[0].date;
@@ -16984,38 +17046,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 9:
                                 if (this.song) {
-                                  _context125.next = 17;
+                                  _context126.next = 17;
                                   break;
                                 }
 
-                                _context125.t0 = this.router;
-                                _context125.next = 13;
+                                _context126.t0 = this.router;
+                                _context126.next = 13;
                                 return this.data.getRandomSong();
 
                               case 13:
-                                _context125.t1 = _context125.sent.id;
-                                _context125.t2 = ['/song', _context125.t1];
-                                _context125.t3 = {
+                                _context126.t1 = _context126.sent.id;
+                                _context126.t2 = ['/song', _context126.t1];
+                                _context126.t3 = {
                                   replaceUrl: true
                                 };
 
-                                _context125.t0.navigate.call(_context125.t0, _context125.t2, _context125.t3);
+                                _context126.t0.navigate.call(_context126.t0, _context126.t2, _context126.t3);
 
                               case 17:
                               case "end":
-                                return _context125.stop();
+                                return _context126.stop();
                             }
                           }
-                        }, _callee125, this);
+                        }, _callee126, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context126.stop();
+                    return _context127.stop();
                 }
               }
-            }, _callee126, this);
+            }, _callee127, this);
           }));
         }
       }, {
@@ -18027,12 +18089,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(VenueComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee128() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee129() {
             var _this50 = this;
 
-            return regeneratorRuntime.wrap(function _callee128$(_context128) {
+            return regeneratorRuntime.wrap(function _callee129$(_context129) {
               while (1) {
-                switch (_context128.prev = _context128.next) {
+                switch (_context129.prev = _context129.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -18046,74 +18108,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       }
                     });
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this50, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee127() {
-                        return regeneratorRuntime.wrap(function _callee127$(_context127) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this50, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee128() {
+                        return regeneratorRuntime.wrap(function _callee128$(_context128) {
                           while (1) {
-                            switch (_context127.prev = _context127.next) {
+                            switch (_context128.prev = _context128.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context127.next = 13;
+                                  _context128.next = 13;
                                   break;
                                 }
 
-                                _context127.next = 3;
+                                _context128.next = 3;
                                 return this.data.getVenue(params.get('id'));
 
                               case 3:
-                                this.venue = _context127.sent;
-                                _context127.next = 6;
+                                this.venue = _context128.sent;
+                                _context128.next = 6;
                                 return this.data.getEventInfo(this.venue.eventIds[0]);
 
                               case 6:
-                                this.location = _context127.sent.location;
+                                this.location = _context128.sent.location;
 
                                 if (!this.venue) {
-                                  _context127.next = 13;
+                                  _context128.next = 13;
                                   break;
                                 }
 
-                                _context127.next = 10;
+                                _context128.next = 10;
                                 return this.data.getYoutubeList(this.venue.id, ['Grateful Dead', this.location, this.venue.name]);
 
                               case 10:
-                                this.videos = _context127.sent;
+                                this.videos = _context128.sent;
                                 this.currentVideoId = this.videos[0].videoId;
                                 console.log(this.videos);
 
                               case 13:
                                 if (this.venue) {
-                                  _context127.next = 21;
+                                  _context128.next = 21;
                                   break;
                                 }
 
-                                _context127.t0 = this.router;
-                                _context127.next = 17;
+                                _context128.t0 = this.router;
+                                _context128.next = 17;
                                 return this.data.getRandomVenue();
 
                               case 17:
-                                _context127.t1 = _context127.sent.id;
-                                _context127.t2 = ['/venue', _context127.t1];
-                                _context127.t3 = {
+                                _context128.t1 = _context128.sent.id;
+                                _context128.t2 = ['/venue', _context128.t1];
+                                _context128.t3 = {
                                   replaceUrl: true
                                 };
 
-                                _context127.t0.navigate.call(_context127.t0, _context127.t2, _context127.t3);
+                                _context128.t0.navigate.call(_context128.t0, _context128.t2, _context128.t3);
 
                               case 21:
                               case "end":
-                                return _context127.stop();
+                                return _context128.stop();
                             }
                           }
-                        }, _callee127, this);
+                        }, _callee128, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context128.stop();
+                    return _context129.stop();
                 }
               }
-            }, _callee128, this);
+            }, _callee129, this);
           }));
         }
       }, {
