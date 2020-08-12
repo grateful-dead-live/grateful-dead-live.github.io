@@ -2680,9 +2680,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EMAILADDRESS = 'gdconcertexplorer@gmail.com';
     var TRACKINGID = 'UA-165369751-1';
     var TRACKING = false; //export const API_URL = 'http://localhost:8060/';
+    //export const FRONTEND_URL = 'http://localhost:4200/';
 
-    var API_URL = 'https://grateful-dead-api.herokuapp.com/'; //export const FRONTEND_URL = 'http://localhost:4200/';
-
+    var API_URL = 'https://grateful-dead-api.herokuapp.com/';
     var FRONTEND_URL = 'https://grateful-dead-live.github.io/';
     /***/
   },
@@ -9742,8 +9742,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 switch (_context104.prev = _context104.next) {
                   case 0:
                     this.player.clearPlaylist();
+                    this.minimized = true;
 
-                  case 1:
+                  case 2:
                   case "end":
                     return _context104.stop();
                 }

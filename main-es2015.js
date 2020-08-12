@@ -1065,8 +1065,8 @@ const EMAILADDRESS = 'gdconcertexplorer@gmail.com';
 const TRACKINGID = 'UA-165369751-1';
 const TRACKING = false;
 //export const API_URL = 'http://localhost:8060/';
-const API_URL = 'https://grateful-dead-api.herokuapp.com/';
 //export const FRONTEND_URL = 'http://localhost:4200/';
+const API_URL = 'https://grateful-dead-api.herokuapp.com/';
 const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 
 
@@ -3388,6 +3388,7 @@ class PlayerComponent {
     onClearPlaylist() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.player.clearPlaylist();
+            this.minimized = true;
         });
     }
     delTrack(i) {
