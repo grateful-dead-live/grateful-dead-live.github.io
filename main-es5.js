@@ -3688,7 +3688,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var currVal_14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.frontend_url + "#/playlist/" + _v.context.$implicit.id, "");
 
         var currVal_15 = "Grateful Dead Concert Explorer Playlist";
-        var currVal_16 = "Grateful Dead, Live Music, Jerry Garcia";
+        var currVal_16 = "GratefulDead, Playlist";
         var currVal_17 = 0 - 7;
 
         _ck(_v, 16, 0, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17);
