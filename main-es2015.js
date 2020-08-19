@@ -913,11 +913,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class CommentsComponent {
     constructor(data, router, dialog, changeDetectorRef) {
         this.data = data;
@@ -1047,7 +1055,7 @@ class CommentsComponent {
 /*!***************************!*\
   !*** ./src/app/config.ts ***!
   \***************************/
-/*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, API_URL, FRONTEND_URL */
+/*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, API_URL, FRONTEND_URL, DEBUG */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1059,15 +1067,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRACKING", function() { return TRACKING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FRONTEND_URL", function() { return FRONTEND_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEBUG", function() { return DEBUG; });
 const AUTH0DOMAIN = 'gdconcertexplorer.eu.auth0.com';
 const AUTH0CLIENTID = 'MgqjkApiGjSzMcFwjzUiyoNJK6z8iWEb';
 const EMAILADDRESS = 'gdconcertexplorer@gmail.com';
 const TRACKINGID = 'UA-165369751-1';
 const TRACKING = false;
 //export const API_URL = 'http://localhost:8060/';
-//export const FRONTEND_URL = 'http://localhost:4200/';
-const API_URL = 'https://grateful-dead-api.herokuapp.com/';
-const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
+const API_URL = 'http://25.86.166.144:8060/';
+const FRONTEND_URL = 'http://localhost:4200/';
+//export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
+//export const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
+const DEBUG = true;
 
 
 /***/ }),
@@ -1463,6 +1474,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_7__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class ProfileComponent {
     constructor(auth, data, resolve, route, dialog, player) {
         this.auth = auth;
@@ -1599,9 +1616,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _dead_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dead-api.service */ "./src/app/services/dead-api.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_3__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 const ARCHIVE_URI = 'https://archive.org/download/';
 class DataService {
     constructor(apiService) {
@@ -1936,6 +1961,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_1__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class DeadApiService {
     constructor() {
         //private API_URL = "https://grateful-dead-api.herokuapp.com/";
@@ -2298,10 +2329,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _google_analytics_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./google-analytics.service */ "./src/app/services/google-analytics.service.ts");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_4__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class PlayerService {
     constructor(googleAnalyticsService, data, dialog) {
         this.googleAnalyticsService = googleAnalyticsService;
@@ -2705,6 +2744,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 //import { VIEWS } from '../globals';
@@ -2715,6 +2755,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//import { CookieService } from 'ngx-cookie-service';
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_8__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class HeaderComponent {
     //protected number_liked: number;
     constructor(sanitizer, titleService, dialog, data, router, auth, player) {
@@ -3340,12 +3388,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
 
 
+// import { CookieService } from 'ngx-cookie-service';
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_6__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class PlayerComponent {
     constructor(player, data, dialog, auth, router) {
         this.player = player;
@@ -3387,6 +3444,7 @@ class PlayerComponent {
     }
     onClearPlaylist() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.player.stop();
             this.player.clearPlaylist();
             this.minimized = true;
         });
@@ -3548,7 +3606,15 @@ var styles = [".result[_ngcontent-%COMP%] {\n  font-size: 13px;\n  text-align: l
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchDialogComponent", function() { return SearchDialogComponent; });
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/fesm2015/dialog.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_1__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class SearchDialogComponent {
     constructor(dialogRef, data) {
         this.dialogRef = dialogRef;
@@ -3766,17 +3832,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../leaflet-fusesearch/src/leaflet.fusesearch.js */ "./src/leaflet-fusesearch/src/leaflet.fusesearch.js");
-/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! leaflet-polylinedecorator */ "./node_modules/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js");
-/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../leaflet-fusesearch/src/leaflet.fusesearch.js */ "./src/leaflet-fusesearch/src/leaflet.fusesearch.js");
+/* harmony import */ var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! leaflet-polylinedecorator */ "./node_modules/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js");
+/* harmony import */ var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 //import * as Fuse from 'fuse.js'; // imported in angular.json
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_4__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 
 
 
@@ -4378,10 +4452,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_4__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class ArtifactsComponent {
     constructor(data, route, auth) {
         this.data = data;
@@ -4525,11 +4607,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _auth_resolve__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../auth.resolve */ "./src/app/auth.resolve.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class ArtistComponent {
     constructor(data, router, route, auth, resolve) {
         this.data = data;
@@ -4692,11 +4782,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class LocationComponent {
     constructor(data, router, route, auth, dialog) {
         this.data = data;
@@ -4828,9 +4926,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_3__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class MapSelectComponent {
     constructor(data, sanitizer, auth) {
         this.data = data;
@@ -4937,11 +5043,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class PlaylistComponent {
     constructor(data, router, route, player, auth) {
         this.data = data;
@@ -5101,6 +5215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
@@ -5108,6 +5223,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_7__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class RecordingComponent {
     constructor(data, router, route, dialog, player, auth) {
         this.data = data;
@@ -5384,6 +5506,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _services_lightbox_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/lightbox.service */ "./src/app/services/lightbox.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
@@ -5394,6 +5517,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_10__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class ShowComponent {
     constructor(data, sanitizer, router, route, dialog, player, auth, changeDetectorRef, lightbox) {
         this.data = data;
@@ -5665,6 +5795,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_player_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/player.service */ "./src/app/services/player.service.ts");
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
@@ -5672,6 +5803,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_7__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class SongComponent {
     constructor(data, player, router, route, dialog, auth) {
         this.data = data;
@@ -5810,6 +5948,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_2__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class StartComponent {
     constructor(sanitizer, auth) {
         this.sanitizer = sanitizer;
@@ -5957,11 +6101,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _services_dialog_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/dialog.service */ "./src/app/services/dialog.service.ts");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./src/app/config.ts");
 
 
 
 
 
+
+console.log = function (s) {
+    if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+    }
+    ;
+};
 class VenueComponent {
     constructor(data, router, route, auth, dialog) {
         this.data = data;

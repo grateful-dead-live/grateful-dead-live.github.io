@@ -2327,6 +2327,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_dialog_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../services/dialog.service */
     "./src/app/services/dialog.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var CommentsComponent = /*#__PURE__*/function () {
       function CommentsComponent(data, router, dialog, changeDetectorRef) {
@@ -2625,7 +2639,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/config.ts ***!
     \***************************/
 
-  /*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, API_URL, FRONTEND_URL */
+  /*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, API_URL, FRONTEND_URL, DEBUG */
 
   /***/
   function srcAppConfigTs(module, __webpack_exports__, __webpack_require__) {
@@ -2674,16 +2688,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     __webpack_require__.d(__webpack_exports__, "FRONTEND_URL", function () {
       return FRONTEND_URL;
     });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DEBUG", function () {
+      return DEBUG;
+    });
 
     var AUTH0DOMAIN = 'gdconcertexplorer.eu.auth0.com';
     var AUTH0CLIENTID = 'MgqjkApiGjSzMcFwjzUiyoNJK6z8iWEb';
     var EMAILADDRESS = 'gdconcertexplorer@gmail.com';
     var TRACKINGID = 'UA-165369751-1';
     var TRACKING = false; //export const API_URL = 'http://localhost:8060/';
-    //export const FRONTEND_URL = 'http://localhost:4200/';
 
-    var API_URL = 'https://grateful-dead-api.herokuapp.com/';
-    var FRONTEND_URL = 'https://grateful-dead-live.github.io/';
+    var API_URL = 'http://25.86.166.144:8060/';
+    var FRONTEND_URL = 'http://localhost:4200/'; //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
+    //export const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
+
+    var DEBUG = true;
     /***/
   },
 
@@ -3956,6 +3978,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../config */
     "./src/app/config.ts");
 
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_7__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
+
     var ProfileComponent = /*#__PURE__*/function () {
       function ProfileComponent(auth, data, resolve, route, dialog, player) {
         _classCallCheck(this, ProfileComponent);
@@ -4288,6 +4318,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _dead_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./dead-api.service */
     "./src/app/services/dead-api.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_3__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var ARCHIVE_URI = 'https://archive.org/download/';
 
@@ -5422,6 +5466,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ../config */
     "./src/app/config.ts");
 
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_1__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
+
     var DeadApiService = /*#__PURE__*/function () {
       function DeadApiService() {
         _classCallCheck(this, DeadApiService);
@@ -6401,6 +6453,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_dialog_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../services/dialog.service */
     "./src/app/services/dialog.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_4__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var PlayerService = /*#__PURE__*/function () {
       function PlayerService(googleAnalyticsService, data, dialog) {
@@ -7624,9 +7690,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _services_player_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../services/player.service */
-    "./src/app/services/player.service.ts"); //import { VIEWS } from '../globals';
-    //import * as Fuse from 'fuse.js';
+    "./src/app/services/player.service.ts");
+    /* harmony import */
 
+
+    var _config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts"); //import { VIEWS } from '../globals';
+    //import * as Fuse from 'fuse.js';
+    //import { CookieService } from 'ngx-cookie-service';
+
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_8__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var HeaderComponent = /*#__PURE__*/function () {
       //protected number_liked: number;
@@ -9655,6 +9736,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts"); // import { CookieService } from 'ngx-cookie-service';
+
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_6__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var PlayerComponent = /*#__PURE__*/function () {
       function PlayerComponent(player, data, dialog, auth, router) {
@@ -9741,10 +9837,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context104.prev = _context104.next) {
                   case 0:
+                    this.player.stop();
                     this.player.clearPlaylist();
                     this.minimized = true;
 
-                  case 2:
+                  case 3:
                   case "end":
                     return _context104.stop();
                 }
@@ -10176,6 +10273,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/fesm2015/dialog.js");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_1__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var SearchDialogComponent = /*#__PURE__*/function () {
       function SearchDialogComponent(dialogRef, data) {
@@ -10764,34 +10875,48 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+    /* harmony import */
+
+
+    var leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! leaflet */
     "./node_modules/leaflet/dist/leaflet-src.js");
     /* harmony import */
 
 
-    var leaflet__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_4__);
+    var leaflet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_5__);
     /* harmony import */
 
 
-    var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ../../leaflet-fusesearch/src/leaflet.fusesearch.js */
     "./src/leaflet-fusesearch/src/leaflet.fusesearch.js");
     /* harmony import */
 
 
-    var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_5__);
+    var _leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_leaflet_fusesearch_src_leaflet_fusesearch_js__WEBPACK_IMPORTED_MODULE_6__);
     /* harmony import */
 
 
-    var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! leaflet-polylinedecorator */
     "./node_modules/leaflet-polylinedecorator/dist/leaflet.polylineDecorator.js");
     /* harmony import */
 
 
-    var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_6__); //import * as Fuse from 'fuse.js'; // imported in angular.json
+    var leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(leaflet_polylinedecorator__WEBPACK_IMPORTED_MODULE_7__); //import * as Fuse from 'fuse.js'; // imported in angular.json
 
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_4__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var ShowMapComponent = /*#__PURE__*/function () {
       function ShowMapComponent(data, sanitizer) {
@@ -12358,6 +12483,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../auth.service */
     "./src/app/auth.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_4__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var ArtifactsComponent = /*#__PURE__*/function () {
       function ArtifactsComponent(data, route, auth) {
@@ -12898,6 +13037,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _auth_resolve__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../auth.resolve */
     "./src/app/auth.resolve.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var ArtistComponent = /*#__PURE__*/function () {
       function ArtistComponent(data, router, route, auth, resolve) {
@@ -13622,6 +13775,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_dialog_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../services/dialog.service */
     "./src/app/services/dialog.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var LocationComponent = /*#__PURE__*/function () {
       function LocationComponent(data, router, route, auth, dialog) {
@@ -14008,6 +14175,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../auth.service */
     "./src/app/auth.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_3__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var MapSelectComponent = /*#__PURE__*/function () {
       function MapSelectComponent(data, sanitizer, auth) {
@@ -14302,6 +14483,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../auth.service */
     "./src/app/auth.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var PlaylistComponent = /*#__PURE__*/function () {
       function PlaylistComponent(data, router, route, player, auth) {
@@ -14923,6 +15118,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _auth_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ../auth.service */
     "./src/app/auth.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_7__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var RecordingComponent = /*#__PURE__*/function () {
       function RecordingComponent(data, router, route, dialog, player, auth) {
@@ -16152,6 +16361,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_lightbox_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ../services/lightbox.service */
     "./src/app/services/lightbox.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_10__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var ShowComponent = /*#__PURE__*/function () {
       function ShowComponent(data, sanitizer, router, route, dialog, player, auth, changeDetectorRef, lightbox) {
@@ -16964,6 +17187,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _auth_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ../auth.service */
     "./src/app/auth.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_7__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var SongComponent = /*#__PURE__*/function () {
       function SongComponent(data, player, router, route, dialog, auth) {
@@ -17385,6 +17622,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../config */
     "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_2__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var StartComponent = /*#__PURE__*/function () {
       function StartComponent(sanitizer, auth) {
@@ -18071,6 +18316,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_dialog_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../services/dialog.service */
     "./src/app/services/dialog.service.ts");
+    /* harmony import */
+
+
+    var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../config */
+    "./src/app/config.ts");
+
+    console.log = function (s) {
+      if (_config__WEBPACK_IMPORTED_MODULE_5__["DEBUG"]) {
+        console.warn(s);
+      }
+
+      ;
+    };
 
     var VenueComponent = /*#__PURE__*/function () {
       function VenueComponent(data, router, route, auth, dialog) {
