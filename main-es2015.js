@@ -1075,9 +1075,9 @@ const TRACKINGID = 'UA-165369751-1';
 const TRACKING = false;
 //export const API_URL = 'http://localhost:8060/';
 const API_URL = 'http://25.86.166.144:8060/';
-const FRONTEND_URL = 'http://localhost:4200/';
+//export const FRONTEND_URL = 'http://localhost:4200/';
 //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
-//export const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
+const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 const DEBUG = true;
 
 
