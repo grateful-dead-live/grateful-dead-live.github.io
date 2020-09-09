@@ -2735,11 +2735,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TRACKING = false; //export const API_URL = 'http://localhost:8060/';
     //export const API_URL = 'http://25.86.166.144:8060/';
     //export const FRONTEND_URL = 'http://localhost:4200/';
+    //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
 
-    var API_URL = 'https://grateful-dead-api.herokuapp.com/'; //export const API_URL = 'http://82.5.176.6:8060/';
-
+    var API_URL = 'http://82.5.176.6:8060/';
     var FRONTEND_URL = 'https://grateful-dead-live.github.io/';
-    var DEBUG = false;
+    var DEBUG = true;
     /***/
   },
 
