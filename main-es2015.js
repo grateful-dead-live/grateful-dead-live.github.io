@@ -1081,7 +1081,7 @@ const TRACKING = false;
 //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
 //export const FRONTEND_URL = 'http://localhost:4200/';
 const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
-const API_URL = 'http://82.5.176.6:8060/';
+const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8060/';
 const DEBUG = true;
 
 

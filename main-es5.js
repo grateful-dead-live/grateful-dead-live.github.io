@@ -2738,7 +2738,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     //export const FRONTEND_URL = 'http://localhost:4200/';
 
     var FRONTEND_URL = 'https://grateful-dead-live.github.io/';
-    var API_URL = 'http://82.5.176.6:8060/';
+    var API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8060/';
     var DEBUG = true;
     /***/
   },
