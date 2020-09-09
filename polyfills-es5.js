@@ -18898,7 +18898,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! /Users/thomas/Documents/projects/grateful_dead_2019_git/web-app2/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+    /*! /Volumes/Journal/projects/grateful_dead_2019_git/web-app2/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
     __webpack_require__(
@@ -18906,7 +18906,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/zone.js/dist/zone-legacy.js");
 
     module.exports = __webpack_require__(
-    /*! /Users/thomas/Documents/projects/grateful_dead_2019_git/web-app2/src/polyfills.ts */
+    /*! /Volumes/Journal/projects/grateful_dead_2019_git/web-app2/src/polyfills.ts */
     "./src/polyfills.ts");
     /***/
   }
