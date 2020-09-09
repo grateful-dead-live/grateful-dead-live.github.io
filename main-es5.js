@@ -1790,32 +1790,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, null);
     }
 
-    function View_ChatterBoxComponent_0(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 24, "div", [["class", "vis-chat-window"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [["class", "vis-chat-window-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "vis-chat-window-header-text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Comments "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, [["scrollMe", 1]], null, 4, "div", [["class", "vis-chat-window-body"]], [[8, "scrollTop", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ChatterBoxComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
-        ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ChatterBoxComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
-        ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 15, "div", [["class", "vis-chat-window-footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 12, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 7, "textarea", [["id", "vis-comment-textField"]], [[8, "placeholder", 0], [1, "maxlength", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "keyup"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) {
+    function View_ChatterBoxComponent_6(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 7, "textarea", [["id", "vis-comment-textField"]], [[8, "placeholder", 0], [1, "maxlength", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "keyup"], [null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
         if ("input" === en) {
-          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12)._handleInput($event.target.value) !== false;
+          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1)._handleInput($event.target.value) !== false;
           ad = pd_0 && ad;
         }
 
         if ("blur" === en) {
-          var pd_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12).onTouched() !== false;
+          var pd_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1).onTouched() !== false;
           ad = pd_1 && ad;
         }
 
         if ("compositionstart" === en) {
-          var pd_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12)._compositionStart() !== false;
+          var pd_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1)._compositionStart() !== false;
           ad = pd_2 && ad;
         }
 
         if ("compositionend" === en) {
-          var pd_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12)._compositionEnd($event.target.value) !== false;
+          var pd_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 1)._compositionEnd($event.target.value) !== false;
           ad = pd_3 && ad;
         }
 
@@ -1830,17 +1826,53 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [2, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["COMPOSITION_BUFFER_MODE"]]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 540672, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["MaxLengthValidator"], [], {
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], [2, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["COMPOSITION_BUFFER_MODE"]]], null, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 540672, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["MaxLengthValidator"], [], {
         maxlength: [0, "maxlength"]
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALIDATORS"], function (p0_0) {
         return [p0_0];
       }, [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["MaxLengthValidator"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](1024, null, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALUE_ACCESSOR"], function (p0_0) {
         return [p0_0];
-      }, [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], [[8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALIDATORS"]], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALUE_ACCESSOR"]]], {
+      }, [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 671744, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], [[8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALIDATORS"]], [8, null], [6, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALUE_ACCESSOR"]]], {
         model: [0, "model"]
       }, {
         update: "ngModelChange"
-      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControl"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "button", [["type", "button"]], null, [[null, "click"]], function (_v, en, $event) {
+      }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](2048, null, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControl"], null, [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](7, 16384, null, 0, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], [[4, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControl"]]], null, null)], function (_ck, _v) {
+        var _co = _v.component;
+
+        var currVal_9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.inputMaxLength, "");
+
+        _ck(_v, 2, 0, currVal_9);
+
+        var currVal_10 = _co.commentText;
+
+        _ck(_v, 5, 0, currVal_10);
+      }, function (_ck, _v) {
+        var _co = _v.component;
+
+        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.placeholderText, "");
+
+        var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).maxlength ? _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).maxlength : null;
+
+        var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7).ngClassUntouched;
+
+        var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7).ngClassTouched;
+
+        var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7).ngClassPristine;
+
+        var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7).ngClassDirty;
+
+        var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7).ngClassValid;
+
+        var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7).ngClassInvalid;
+
+        var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 7).ngClassPending;
+
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8);
+      });
+    }
+
+    function View_ChatterBoxComponent_7(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "button", [["type", "button"]], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -1850,7 +1882,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["send"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 1, "button", [["style", "float: right; margin-right: 16px;"]], null, [[null, "click"]], function (_v, en, $event) {
+      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["send"]))], null, null);
+    }
+
+    function View_ChatterBoxComponent_8(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "character-count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, [" ", " / ", " characters "]))], null, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.typedCommentTextLength;
+        var currVal_1 = _co.inputMaxLength;
+
+        _ck(_v, 1, 0, currVal_0, currVal_1);
+      });
+    }
+
+    function View_ChatterBoxComponent_0(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 18, "div", [["class", "vis-chat-window"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 2, "div", [["class", "vis-chat-window-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 1, "div", [["class", "vis-chat-window-header-text"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Comments "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, [["scrollMe", 1]], null, 4, "div", [["class", "vis-chat-window-body"]], [[8, "scrollTop", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ChatterBoxComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ChatterBoxComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 9, "div", [["class", "vis-chat-window-footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 6, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ChatterBoxComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ChatterBoxComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 1, "button", [["style", "float: right; margin-right: 16px;"]], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -1860,7 +1914,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["refresh"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 1, "div", [["class", "character-count"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](24, null, [" ", " / ", " characters "]))], function (_ck, _v) {
+      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["refresh"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ChatterBoxComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        ngIf: [0, "ngIf"]
+      }, null)], function (_ck, _v) {
         var _co = _v.component;
         var currVal_1 = _co.showErrorDiv;
 
@@ -1870,44 +1926,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _ck(_v, 8, 0, currVal_2);
 
-        var currVal_12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.inputMaxLength, "");
+        var currVal_3 = _co.currentUserId;
 
-        _ck(_v, 13, 0, currVal_12);
+        _ck(_v, 12, 0, currVal_3);
 
-        var currVal_13 = _co.commentText;
+        var currVal_4 = _co.currentUserId;
 
-        _ck(_v, 16, 0, currVal_13);
+        _ck(_v, 14, 0, currVal_4);
+
+        var currVal_5 = _co.currentUserId;
+
+        _ck(_v, 18, 0, currVal_5);
       }, function (_ck, _v) {
-        var _co = _v.component;
-
         var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 4).scrollHeight;
 
         _ck(_v, 4, 0, currVal_0);
-
-        var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.placeholderText, "");
-
-        var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13).maxlength ? _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13).maxlength : null;
-
-        var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).ngClassUntouched;
-
-        var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).ngClassTouched;
-
-        var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).ngClassPristine;
-
-        var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).ngClassDirty;
-
-        var currVal_9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).ngClassValid;
-
-        var currVal_10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).ngClassInvalid;
-
-        var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).ngClassPending;
-
-        _ck(_v, 11, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11);
-
-        var currVal_14 = _co.typedCommentTextLength;
-        var currVal_15 = _co.inputMaxLength;
-
-        _ck(_v, 24, 0, currVal_14, currVal_15);
       });
     }
 
@@ -2702,8 +2735,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TRACKING = false; //export const API_URL = 'http://localhost:8060/';
     //export const API_URL = 'http://25.86.166.144:8060/';
     //export const FRONTEND_URL = 'http://localhost:4200/';
+    //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
 
-    var API_URL = 'https://grateful-dead-api.herokuapp.com/';
+    var API_URL = 'http://82.5.176.6:8060/';
     var FRONTEND_URL = 'https://grateful-dead-live.github.io/';
     var DEBUG = true;
     /***/
@@ -6359,9 +6393,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.lightbox = lightbox;
         this.lightboxConfig = lightboxConfig;
-        lightboxConfig.wrapAround = true; //lightboxConfig.showZoom = true;  
-        // results in ExpressionChangedAfterItHasBeenCheckedError
-        // workaround: set [hidden]=\"!ui.showZoomButton\"> to [hidden]=\"ui.showZoomButton\"> in lightbox.component.metadata.json
+        lightboxConfig.wrapAround = true;
+        lightboxConfig.showZoom = true;
       }
 
       _createClass(LightboxService, [{
@@ -13104,7 +13137,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             switch (_context113.prev = _context113.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context113.next = 5;
+                                  _context113.next = 6;
                                   break;
                                 }
 
@@ -13113,9 +13146,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 3:
                                 this.artist = _context113.sent;
-                                console.log(this.artist);
+                                _context113.next = 7;
+                                break;
 
-                              case 5:
+                              case 6:
+                                this.router.navigate(['/mapselect'], {
+                                  replaceUrl: true
+                                });
+
+                              case 7:
+                                if (params.has('id') && !this.artist.name) {
+                                  this.router.navigate(['/mapselect'], {
+                                    replaceUrl: true
+                                  });
+                                }
+
+                              case 8:
                               case "end":
                                 return _context113.stop();
                             }
@@ -13836,7 +13882,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   switch (_context115.prev = _context115.next) {
                     case 0:
                       if (!params.has('id')) {
-                        _context115.next = 10;
+                        _context115.next = 6;
                         break;
                       }
 
@@ -13845,40 +13891,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 3:
                       this.location = _context115.sent;
+                      _context115.next = 7;
+                      break;
 
-                      if (!this.location.state) {
-                        _context115.next = 10;
+                    case 6:
+                      this.router.navigate(['/mapselect'], {
+                        replaceUrl: true
+                      });
+
+                    case 7:
+                      if (!(params.has('id') && this.location.state)) {
+                        _context115.next = 15;
                         break;
                       }
 
-                      _context115.next = 7;
+                      _context115.next = 10;
                       return this.data.getYoutubeList(this.location.id, ['Grateful Dead', this.location.name]);
 
-                    case 7:
+                    case 10:
                       this.videos = _context115.sent;
                       this.currentVideoId = this.videos[0].videoId;
                       console.log(this.videos);
+                      _context115.next = 16;
+                      break;
 
-                    case 10:
-                      if (this.location) {
-                        _context115.next = 18;
-                        break;
-                      }
-
-                      _context115.t0 = this.router;
-                      _context115.next = 14;
-                      return this.data.getRandomLocation();
-
-                    case 14:
-                      _context115.t1 = _context115.sent.id;
-                      _context115.t2 = ['/location', _context115.t1];
-                      _context115.t3 = {
+                    case 15:
+                      this.router.navigate(['/mapselect'], {
                         replaceUrl: true
-                      };
+                      });
 
-                      _context115.t0.navigate.call(_context115.t0, _context115.t2, _context115.t3);
-
-                    case 18:
+                    case 16:
                     case "end":
                       return _context115.stop();
                   }
@@ -15183,7 +15225,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   switch (_context119.prev = _context119.next) {
                     case 0:
                       if (!params.has('id')) {
-                        _context119.next = 9;
+                        _context119.next = 6;
                         break;
                       }
 
@@ -15192,10 +15234,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 3:
                       this.recordinginfo = _context119.sent;
-                      _context119.next = 6;
-                      return this.data.getTracklist(params.get('id'));
+                      _context119.next = 7;
+                      break;
 
                     case 6:
+                      this.router.navigate(['/mapselect'], {
+                        replaceUrl: true
+                      });
+
+                    case 7:
+                      if (!(params.has('id') && this.recordinginfo)) {
+                        _context119.next = 15;
+                        break;
+                      }
+
+                      _context119.next = 10;
+                      return this.data.getTracklist(params.get('id'));
+
+                    case 10:
                       tracklist = _context119.sent;
                       tracklist.forEach(function (t) {
                         if (t.song) {
@@ -15208,7 +15264,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       this.tracklist = tracklist; //console.log(this.recordinginfo)
                       //console.log(this.tracklist);
 
-                    case 9:
+                      _context119.next = 16;
+                      break;
+
+                    case 15:
+                      this.router.navigate(['/mapselect'], {
+                        replaceUrl: true
+                      });
+
+                    case 16:
                     case "end":
                       return _context119.stop();
                   }
@@ -16435,7 +16499,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             switch (_context121.prev = _context121.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context121.next = 19;
+                                  _context121.next = 6;
                                   break;
                                 }
 
@@ -16444,64 +16508,63 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 3:
                                 this.event = _context121.sent;
-                                this.event.date = this.event.date;
-                                this.formatDate = this.data.formatDate(this.event.date);
-                                this.recordingUrls = this.event.recordings.map(function (r) {
-                                  return _this39.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.etreeId + "&playlist=1");
-                                });
-                                console.log(this.event);
-                                this.photos = this.event.artifacts.filter(function (a) {
-                                  return a.type === _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Photo;
-                                }); //.map(a => a.image);
-
-                                this.artifacts = this.event.artifacts.filter(function (a) {
-                                  return a.type !== _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Photo;
-                                });
-                                poster = this.event.artifacts.filter(function (a) {
-                                  return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Poster;
-                                })[0];
-                                pass = this.event.artifacts.filter(function (a) {
-                                  return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Pass;
-                                })[0];
-                                ticket = this.event.artifacts.filter(function (a) {
-                                  return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Ticket;
-                                })[0];
-                                this.eventImage = this.photos.length ? this.photos[0].image : poster ? poster.image : pass ? pass.image : ticket ? ticket.image : this.event.location.thumbnail;
-
-                                if (this.photos.length > 0) {
-                                  gl = this.lightbox.makeGallery(this.photos);
-                                  this.photosLightbox = gl[0];
-                                  this.photos = gl[1];
-                                  this.currentPhoto = this.photos[0];
-                                }
-
-                                if (this.artifacts.length) {
-                                  gl = this.lightbox.makeGallery(this.artifacts);
-                                  this.artifactsLightbox = gl[0];
-                                  this.artifacts = gl[1];
-                                  this.currentArtifact = this.artifacts[0];
-                                  console.log(this.currentArtifact);
-                                }
-
-                                this.changeDetectorRef.detectChanges();
-                                _context121.next = 26;
+                                _context121.next = 7;
                                 break;
 
-                              case 19:
-                                _context121.t0 = this.router;
-                                _context121.next = 22;
-                                return this.data.getRandomEventId();
-
-                              case 22:
-                                _context121.t1 = _context121.sent;
-                                _context121.t2 = ['/show', _context121.t1];
-                                _context121.t3 = {
+                              case 6:
+                                this.router.navigate(['/mapselect'], {
                                   replaceUrl: true
-                                };
+                                });
 
-                                _context121.t0.navigate.call(_context121.t0, _context121.t2, _context121.t3);
+                              case 7:
+                                if (this.event.date) {
+                                  this.formatDate = this.data.formatDate(this.event.date);
+                                  this.recordingUrls = this.event.recordings.map(function (r) {
+                                    return _this39.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.etreeId + "&playlist=1");
+                                  });
+                                  console.log(this.event);
+                                  this.photos = this.event.artifacts.filter(function (a) {
+                                    return a.type === _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Photo;
+                                  }); //.map(a => a.image);
 
-                              case 26:
+                                  this.artifacts = this.event.artifacts.filter(function (a) {
+                                    return a.type !== _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Photo;
+                                  });
+                                  poster = this.event.artifacts.filter(function (a) {
+                                    return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Poster;
+                                  })[0];
+                                  pass = this.event.artifacts.filter(function (a) {
+                                    return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Pass;
+                                  })[0];
+                                  ticket = this.event.artifacts.filter(function (a) {
+                                    return a.type == _services_types__WEBPACK_IMPORTED_MODULE_4__["ArtifactType"].Ticket;
+                                  })[0];
+                                  this.eventImage = this.photos.length ? this.photos[0].image : poster ? poster.image : pass ? pass.image : ticket ? ticket.image : this.event.location.thumbnail;
+
+                                  if (this.photos.length > 0) {
+                                    gl = this.lightbox.makeGallery(this.photos);
+                                    this.photosLightbox = gl[0];
+                                    this.photos = gl[1];
+                                    this.currentPhoto = this.photos[0];
+                                  }
+
+                                  if (this.artifacts.length) {
+                                    gl = this.lightbox.makeGallery(this.artifacts);
+                                    this.artifactsLightbox = gl[0];
+                                    this.artifacts = gl[1];
+                                    this.currentArtifact = this.artifacts[0];
+                                    console.log(this.currentArtifact);
+                                  }
+
+                                  this.changeDetectorRef.detectChanges();
+                                } else {
+                                  //this.router.navigate(['/show', await this.data.getRandomEventId()],
+                                  this.router.navigate(['/mapselect'], {
+                                    replaceUrl: true
+                                  });
+                                }
+
+                              case 8:
                               case "end":
                                 return _context121.stop();
                             }
@@ -18374,7 +18437,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             switch (_context128.prev = _context128.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context128.next = 13;
+                                  _context128.next = 6;
                                   break;
                                 }
 
@@ -18383,43 +18446,49 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 3:
                                 this.venue = _context128.sent;
-                                _context128.next = 6;
-                                return this.data.getEventInfo(this.venue.eventIds[0]);
+                                _context128.next = 7;
+                                break;
 
                               case 6:
-                                this.location = _context128.sent.location;
+                                this.router.navigate(['/mapselect'], {
+                                  replaceUrl: true
+                                });
 
-                                if (!this.venue) {
-                                  _context128.next = 13;
+                              case 7:
+                                if (!(params.has('id') && this.venue.name)) {
+                                  _context128.next = 20;
                                   break;
                                 }
 
-                                _context128.next = 10;
+                                console.log(this.venue); //this.venue = await this.data.getVenue(params.get('id'));
+
+                                _context128.next = 11;
+                                return this.data.getEventInfo(this.venue.eventIds[0]);
+
+                              case 11:
+                                this.location = _context128.sent.location;
+
+                                if (!this.venue) {
+                                  _context128.next = 18;
+                                  break;
+                                }
+
+                                _context128.next = 15;
                                 return this.data.getYoutubeList(this.venue.id, ['Grateful Dead', this.location, this.venue.name]);
 
-                              case 10:
+                              case 15:
                                 this.videos = _context128.sent;
                                 this.currentVideoId = this.videos[0].videoId;
                                 console.log(this.videos);
 
-                              case 13:
-                                if (this.venue) {
-                                  _context128.next = 21;
-                                  break;
-                                }
+                              case 18:
+                                _context128.next = 21;
+                                break;
 
-                                _context128.t0 = this.router;
-                                _context128.next = 17;
-                                return this.data.getRandomVenue();
-
-                              case 17:
-                                _context128.t1 = _context128.sent.id;
-                                _context128.t2 = ['/venue', _context128.t1];
-                                _context128.t3 = {
+                              case 20:
+                                this.router.navigate(['/mapselect'], {
                                   replaceUrl: true
-                                };
-
-                                _context128.t0.navigate.call(_context128.t0, _context128.t2, _context128.t3);
+                                });
 
                               case 21:
                               case "end":
@@ -18429,6 +18498,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }, _callee128, this);
                       }));
                     });
+                    /*
+                    this.route.paramMap.subscribe(async params => {
+                      if (params.has('id')) {
+                        this.venue = await this.data.getVenue(params.get('id'));
+                        this.location = (await this.data.getEventInfo(this.venue.eventIds[0])).location;
+                        if (this.venue) {
+                          this.videos = await this.data.getYoutubeList(this.venue.id, ['Grateful Dead', this.location, this.venue.name]);
+                          this.currentVideoId = this.videos[0].videoId;
+                          console.log(this.videos);
+                        }
+                      }
+                      if (!this.venue) {
+                        this.router.navigate(['/venue', (await this.data.getRandomVenue()).id],
+                          { replaceUrl: true });
+                      }
+                    }); */
 
                   case 2:
                   case "end":
