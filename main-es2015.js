@@ -1082,7 +1082,7 @@ const TRACKING = false;
 //export const FRONTEND_URL = 'http://localhost:4200/';
 const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/';
-const DEBUG = true;
+const DEBUG = false;
 
 
 /***/ }),
