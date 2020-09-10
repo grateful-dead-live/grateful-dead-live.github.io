@@ -11131,7 +11131,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 'properties': {
                   'name': v.name,
                   'dates': datestring,
-                  'popupContent': '<b><a style="color: black;" href="/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml // removed #/ url
+                  'popupContent': '<b><a style="color: black;" href="/#/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml // removed #/ url
 
                 },
                 'geometry': {
@@ -11215,7 +11215,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   'name': venue,
                   'tour': tour,
                   'dates': datestring,
-                  'popupContent': '<b><a style="color: black; "href="/venue/' + venue_id + '">' + venue + '</a></b>' + venuehtml // removed #/ url
+                  'popupContent': '<b><a style="color: black; "href="/#/venue/' + venue_id + '">' + venue + '</a></b>' + venuehtml // removed #/ url
 
                 },
                 'geometry': {
