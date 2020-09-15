@@ -2733,14 +2733,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EMAILADDRESS = 'gdconcertexplorer@gmail.com';
     var TRACKINGID = 'UA-165369751-1';
     var TRACKING = false; //export const API_URL = 'http://localhost:8060/';
+    //export const API_URL = 'http://c4dm.eecs.qmul.ac.uk/dead/';
     //export const API_URL = 'http://25.86.166.144:8060/';
     //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
     //export const FRONTEND_URL = 'http://localhost:4200/';
 
-    var FRONTEND_URL = 'https://grateful-dead-live.github.io/';
-    var API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
+    var FRONTEND_URL = 'https://grateful-dead-live.github.io/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/'
 
-    var DEBUG = false;
+    var API_URL = 'https://cors-anywhere.herokuapp.com/http://138.37.95.164/api/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
+
+    var DEBUG = true;
     /***/
   },
 
