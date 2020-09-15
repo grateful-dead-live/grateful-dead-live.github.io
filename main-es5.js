@@ -2742,7 +2742,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var API_URL = 'https://cors-anywhere.herokuapp.com/http://138.37.95.164/api/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
-    var DEBUG = true;
+    var DEBUG = false;
     /***/
   },
 
