@@ -2766,7 +2766,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var API_URL = 'https://cors-anywhere.herokuapp.com/http://138.37.95.164/api/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
-    var DEBUG = false;
+    var DEBUG = true;
     /***/
   },
 
@@ -5505,6 +5505,60 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, _callee61, this);
           }));
         }
+      }, {
+        key: "getVenueIndex",
+        value: function getVenueIndex() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee62() {
+            return regeneratorRuntime.wrap(function _callee62$(_context62) {
+              while (1) {
+                switch (_context62.prev = _context62.next) {
+                  case 0:
+                    return _context62.abrupt("return", this.apiService.getVenueIndex());
+
+                  case 1:
+                  case "end":
+                    return _context62.stop();
+                }
+              }
+            }, _callee62, this);
+          }));
+        }
+      }, {
+        key: "getLocationIndex",
+        value: function getLocationIndex() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee63() {
+            return regeneratorRuntime.wrap(function _callee63$(_context63) {
+              while (1) {
+                switch (_context63.prev = _context63.next) {
+                  case 0:
+                    return _context63.abrupt("return", this.apiService.getLocationIndex());
+
+                  case 1:
+                  case "end":
+                    return _context63.stop();
+                }
+              }
+            }, _callee63, this);
+          }));
+        }
+      }, {
+        key: "getSongIndex",
+        value: function getSongIndex() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee64() {
+            return regeneratorRuntime.wrap(function _callee64$(_context64) {
+              while (1) {
+                switch (_context64.prev = _context64.next) {
+                  case 0:
+                    return _context64.abrupt("return", this.apiService.getSongIndex());
+
+                  case 1:
+                  case "end":
+                    return _context64.stop();
+                }
+              }
+            }, _callee64, this);
+          }));
+        }
       }]);
 
       return DataService;
@@ -5565,66 +5619,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DeadApiService, [{
         key: "getEvents",
         value: function getEvents() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee62() {
-            return regeneratorRuntime.wrap(function _callee62$(_context62) {
-              while (1) {
-                switch (_context62.prev = _context62.next) {
-                  case 0:
-                    return _context62.abrupt("return", this.getJsonFromApi('events'));
-
-                  case 1:
-                  case "end":
-                    return _context62.stop();
-                }
-              }
-            }, _callee62, this);
-          }));
-        }
-      }, {
-        key: "getVenueCoordinates",
-        value: function getVenueCoordinates() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee63() {
-            return regeneratorRuntime.wrap(function _callee63$(_context63) {
-              while (1) {
-                switch (_context63.prev = _context63.next) {
-                  case 0:
-                    return _context63.abrupt("return", this.getJsonFromApi('coordinates'));
-
-                  case 1:
-                  case "end":
-                    return _context63.stop();
-                }
-              }
-            }, _callee63, this);
-          }));
-        }
-      }, {
-        key: "getTourCoordinates",
-        value: function getTourCoordinates() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee64() {
-            return regeneratorRuntime.wrap(function _callee64$(_context64) {
-              while (1) {
-                switch (_context64.prev = _context64.next) {
-                  case 0:
-                    return _context64.abrupt("return", this.getJsonFromApi('tours'));
-
-                  case 1:
-                  case "end":
-                    return _context64.stop();
-                }
-              }
-            }, _callee64, this);
-          }));
-        }
-      }, {
-        key: "getEventDetails",
-        value: function getEventDetails(eventId) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee65() {
             return regeneratorRuntime.wrap(function _callee65$(_context65) {
               while (1) {
                 switch (_context65.prev = _context65.next) {
                   case 0:
-                    return _context65.abrupt("return", this.getJsonFromApi('details?event=' + encodeURIComponent(eventId)));
+                    return _context65.abrupt("return", this.getJsonFromApi('events'));
 
                   case 1:
                   case "end":
@@ -5632,6 +5632,60 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             }, _callee65, this);
+          }));
+        }
+      }, {
+        key: "getVenueCoordinates",
+        value: function getVenueCoordinates() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee66() {
+            return regeneratorRuntime.wrap(function _callee66$(_context66) {
+              while (1) {
+                switch (_context66.prev = _context66.next) {
+                  case 0:
+                    return _context66.abrupt("return", this.getJsonFromApi('coordinates'));
+
+                  case 1:
+                  case "end":
+                    return _context66.stop();
+                }
+              }
+            }, _callee66, this);
+          }));
+        }
+      }, {
+        key: "getTourCoordinates",
+        value: function getTourCoordinates() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee67() {
+            return regeneratorRuntime.wrap(function _callee67$(_context67) {
+              while (1) {
+                switch (_context67.prev = _context67.next) {
+                  case 0:
+                    return _context67.abrupt("return", this.getJsonFromApi('tours'));
+
+                  case 1:
+                  case "end":
+                    return _context67.stop();
+                }
+              }
+            }, _callee67, this);
+          }));
+        }
+      }, {
+        key: "getEventDetails",
+        value: function getEventDetails(eventId) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee68() {
+            return regeneratorRuntime.wrap(function _callee68$(_context68) {
+              while (1) {
+                switch (_context68.prev = _context68.next) {
+                  case 0:
+                    return _context68.abrupt("return", this.getJsonFromApi('details?event=' + encodeURIComponent(eventId)));
+
+                  case 1:
+                  case "end":
+                    return _context68.stop();
+                }
+              }
+            }, _callee68, this);
           }));
         }
       }, {
@@ -5689,76 +5743,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getJsonFromApi",
         value: function getJsonFromApi(path) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee66() {
-            return regeneratorRuntime.wrap(function _callee66$(_context66) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee69() {
+            return regeneratorRuntime.wrap(function _callee69$(_context69) {
               while (1) {
-                switch (_context66.prev = _context66.next) {
+                switch (_context69.prev = _context69.next) {
                   case 0:
-                    return _context66.abrupt("return", fetch(this.api_url + path).then(function (r) {
+                    return _context69.abrupt("return", fetch(this.api_url + path).then(function (r) {
                       return r.text();
                     }).then(function (t) {
                       return JSON.parse(t);
                     })["catch"](function (e) {
                       return console.log(e);
                     }));
-
-                  case 1:
-                  case "end":
-                    return _context66.stop();
-                }
-              }
-            }, _callee66, this);
-          }));
-        }
-      }, {
-        key: "getTextFromApi",
-        value: function getTextFromApi(path) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee67() {
-            return regeneratorRuntime.wrap(function _callee67$(_context67) {
-              while (1) {
-                switch (_context67.prev = _context67.next) {
-                  case 0:
-                    return _context67.abrupt("return", fetch(this.api_url + path).then(function (r) {
-                      return r.text();
-                    })["catch"](function (e) {
-                      return console.log(e);
-                    }));
-
-                  case 1:
-                  case "end":
-                    return _context67.stop();
-                }
-              }
-            }, _callee67, this);
-          }));
-        }
-      }, {
-        key: "getSearchResult",
-        value: function getSearchResult(q) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee68() {
-            return regeneratorRuntime.wrap(function _callee68$(_context68) {
-              while (1) {
-                switch (_context68.prev = _context68.next) {
-                  case 0:
-                    return _context68.abrupt("return", this.getJsonFromApi('search?q=' + encodeURIComponent(q)));
-
-                  case 1:
-                  case "end":
-                    return _context68.stop();
-                }
-              }
-            }, _callee68, this);
-          }));
-        }
-      }, {
-        key: "addBookmark",
-        value: function addBookmark(userid, route, time, title) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee69() {
-            return regeneratorRuntime.wrap(function _callee69$(_context69) {
-              while (1) {
-                switch (_context69.prev = _context69.next) {
-                  case 0:
-                    return _context69.abrupt("return", this.getTextFromApi('addBookmark?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
 
                   case 1:
                   case "end":
@@ -5769,14 +5765,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "delBookmark",
-        value: function delBookmark(userid, route) {
+        key: "getTextFromApi",
+        value: function getTextFromApi(path) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee70() {
             return regeneratorRuntime.wrap(function _callee70$(_context70) {
               while (1) {
                 switch (_context70.prev = _context70.next) {
                   case 0:
-                    return _context70.abrupt("return", this.getTextFromApi('delBookmark?userid=' + userid + '&route=' + route));
+                    return _context70.abrupt("return", fetch(this.api_url + path).then(function (r) {
+                      return r.text();
+                    })["catch"](function (e) {
+                      return console.log(e);
+                    }));
 
                   case 1:
                   case "end":
@@ -5787,14 +5787,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getBookmarks",
-        value: function getBookmarks(userid) {
+        key: "getSearchResult",
+        value: function getSearchResult(q) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee71() {
             return regeneratorRuntime.wrap(function _callee71$(_context71) {
               while (1) {
                 switch (_context71.prev = _context71.next) {
                   case 0:
-                    return _context71.abrupt("return", this.getJsonFromApi('getBookmarks?userid=' + userid));
+                    return _context71.abrupt("return", this.getJsonFromApi('search?q=' + encodeURIComponent(q)));
 
                   case 1:
                   case "end":
@@ -5805,14 +5805,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "checkBookmark",
-        value: function checkBookmark(userid, route) {
+        key: "addBookmark",
+        value: function addBookmark(userid, route, time, title) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee72() {
             return regeneratorRuntime.wrap(function _callee72$(_context72) {
               while (1) {
                 switch (_context72.prev = _context72.next) {
                   case 0:
-                    return _context72.abrupt("return", this.getTextFromApi('checkBookmark?userid=' + userid + '&route=' + route));
+                    return _context72.abrupt("return", this.getTextFromApi('addBookmark?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
 
                   case 1:
                   case "end":
@@ -5823,14 +5823,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getComments",
-        value: function getComments(route) {
+        key: "delBookmark",
+        value: function delBookmark(userid, route) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee73() {
             return regeneratorRuntime.wrap(function _callee73$(_context73) {
               while (1) {
                 switch (_context73.prev = _context73.next) {
                   case 0:
-                    return _context73.abrupt("return", this.getJsonFromApi('getComments?route=' + route));
+                    return _context73.abrupt("return", this.getTextFromApi('delBookmark?userid=' + userid + '&route=' + route));
 
                   case 1:
                   case "end":
@@ -5841,14 +5841,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "like",
-        value: function like(userid, route, time, title) {
+        key: "getBookmarks",
+        value: function getBookmarks(userid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee74() {
             return regeneratorRuntime.wrap(function _callee74$(_context74) {
               while (1) {
                 switch (_context74.prev = _context74.next) {
                   case 0:
-                    return _context74.abrupt("return", this.getTextFromApi('like?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
+                    return _context74.abrupt("return", this.getJsonFromApi('getBookmarks?userid=' + userid));
 
                   case 1:
                   case "end":
@@ -5859,14 +5859,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "unlike",
-        value: function unlike(userid, route) {
+        key: "checkBookmark",
+        value: function checkBookmark(userid, route) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee75() {
             return regeneratorRuntime.wrap(function _callee75$(_context75) {
               while (1) {
                 switch (_context75.prev = _context75.next) {
                   case 0:
-                    return _context75.abrupt("return", this.getTextFromApi('unlike?userid=' + userid + '&route=' + route));
+                    return _context75.abrupt("return", this.getTextFromApi('checkBookmark?userid=' + userid + '&route=' + route));
 
                   case 1:
                   case "end":
@@ -5877,14 +5877,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "checkLike",
-        value: function checkLike(userid, route) {
+        key: "getComments",
+        value: function getComments(route) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee76() {
             return regeneratorRuntime.wrap(function _callee76$(_context76) {
               while (1) {
                 switch (_context76.prev = _context76.next) {
                   case 0:
-                    return _context76.abrupt("return", this.getTextFromApi('checkLike?userid=' + userid + '&route=' + route));
+                    return _context76.abrupt("return", this.getJsonFromApi('getComments?route=' + route));
 
                   case 1:
                   case "end":
@@ -5895,14 +5895,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "countLikes",
-        value: function countLikes(route) {
+        key: "like",
+        value: function like(userid, route, time, title) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee77() {
             return regeneratorRuntime.wrap(function _callee77$(_context77) {
               while (1) {
                 switch (_context77.prev = _context77.next) {
                   case 0:
-                    return _context77.abrupt("return", this.getTextFromApi('countLikes?route=' + route));
+                    return _context77.abrupt("return", this.getTextFromApi('like?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
 
                   case 1:
                   case "end":
@@ -5913,14 +5913,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getLikes",
-        value: function getLikes(userid) {
+        key: "unlike",
+        value: function unlike(userid, route) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee78() {
             return regeneratorRuntime.wrap(function _callee78$(_context78) {
               while (1) {
                 switch (_context78.prev = _context78.next) {
                   case 0:
-                    return _context78.abrupt("return", this.getJsonFromApi('getLikes?userid=' + userid));
+                    return _context78.abrupt("return", this.getTextFromApi('unlike?userid=' + userid + '&route=' + route));
 
                   case 1:
                   case "end":
@@ -5931,18 +5931,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "addComment",
-        value: function addComment(comment, route, userid, title) {
+        key: "checkLike",
+        value: function checkLike(userid, route) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee79() {
-            var cmt;
             return regeneratorRuntime.wrap(function _callee79$(_context79) {
               while (1) {
                 switch (_context79.prev = _context79.next) {
                   case 0:
-                    cmt = encodeURIComponent(JSON.stringify(comment));
-                    return _context79.abrupt("return", this.getTextFromApi('addComment?comment=' + cmt + '&route=' + route + '&userid=' + userid + '&title=' + title));
+                    return _context79.abrupt("return", this.getTextFromApi('checkLike?userid=' + userid + '&route=' + route));
 
-                  case 2:
+                  case 1:
                   case "end":
                     return _context79.stop();
                 }
@@ -5951,14 +5949,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "checkComment",
-        value: function checkComment(msgId) {
+        key: "countLikes",
+        value: function countLikes(route) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee80() {
             return regeneratorRuntime.wrap(function _callee80$(_context80) {
               while (1) {
                 switch (_context80.prev = _context80.next) {
                   case 0:
-                    return _context80.abrupt("return", this.getJsonFromApi('checkComment?msgId=' + msgId));
+                    return _context80.abrupt("return", this.getTextFromApi('countLikes?route=' + route));
 
                   case 1:
                   case "end":
@@ -5969,14 +5967,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getUserComments",
-        value: function getUserComments(userid) {
+        key: "getLikes",
+        value: function getLikes(userid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee81() {
             return regeneratorRuntime.wrap(function _callee81$(_context81) {
               while (1) {
                 switch (_context81.prev = _context81.next) {
                   case 0:
-                    return _context81.abrupt("return", this.getJsonFromApi('getUserComments?userid=' + userid));
+                    return _context81.abrupt("return", this.getJsonFromApi('getLikes?userid=' + userid));
 
                   case 1:
                   case "end":
@@ -5987,16 +5985,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "sendCommentReport",
-        value: function sendCommentReport(comment, userid) {
+        key: "addComment",
+        value: function addComment(comment, route, userid, title) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee82() {
+            var cmt;
             return regeneratorRuntime.wrap(function _callee82$(_context82) {
               while (1) {
                 switch (_context82.prev = _context82.next) {
                   case 0:
-                    return _context82.abrupt("return", this.getTextFromApi('sendCommentReport?comment=' + comment + '&userid=' + userid));
+                    cmt = encodeURIComponent(JSON.stringify(comment));
+                    return _context82.abrupt("return", this.getTextFromApi('addComment?comment=' + cmt + '&route=' + route + '&userid=' + userid + '&title=' + title));
 
-                  case 1:
+                  case 2:
                   case "end":
                     return _context82.stop();
                 }
@@ -6005,14 +6005,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "addPlaylist",
-        value: function addPlaylist(name, playlist, playlistid, userid, time) {
+        key: "checkComment",
+        value: function checkComment(msgId) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee83() {
             return regeneratorRuntime.wrap(function _callee83$(_context83) {
               while (1) {
                 switch (_context83.prev = _context83.next) {
                   case 0:
-                    return _context83.abrupt("return", this.getTextFromApi('addPlaylist?name=' + name + '&playlist=' + playlist + '&playlistid=' + playlistid + '&userid=' + userid + '&time=' + time));
+                    return _context83.abrupt("return", this.getJsonFromApi('checkComment?msgId=' + msgId));
 
                   case 1:
                   case "end":
@@ -6023,14 +6023,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getPlaylists",
-        value: function getPlaylists(userid) {
+        key: "getUserComments",
+        value: function getUserComments(userid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee84() {
             return regeneratorRuntime.wrap(function _callee84$(_context84) {
               while (1) {
                 switch (_context84.prev = _context84.next) {
                   case 0:
-                    return _context84.abrupt("return", this.getJsonFromApi('getPlaylists?userid=' + userid));
+                    return _context84.abrupt("return", this.getJsonFromApi('getUserComments?userid=' + userid));
 
                   case 1:
                   case "end":
@@ -6041,14 +6041,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getPlaylist",
-        value: function getPlaylist(playlistid) {
+        key: "sendCommentReport",
+        value: function sendCommentReport(comment, userid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee85() {
             return regeneratorRuntime.wrap(function _callee85$(_context85) {
               while (1) {
                 switch (_context85.prev = _context85.next) {
                   case 0:
-                    return _context85.abrupt("return", this.getJsonFromApi('getPlaylist?playlistid=' + playlistid));
+                    return _context85.abrupt("return", this.getTextFromApi('sendCommentReport?comment=' + comment + '&userid=' + userid));
 
                   case 1:
                   case "end":
@@ -6059,14 +6059,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "delPlaylist",
-        value: function delPlaylist(userid, playlistid) {
+        key: "addPlaylist",
+        value: function addPlaylist(name, playlist, playlistid, userid, time) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee86() {
             return regeneratorRuntime.wrap(function _callee86$(_context86) {
               while (1) {
                 switch (_context86.prev = _context86.next) {
                   case 0:
-                    return _context86.abrupt("return", this.getTextFromApi('delPlaylist?userid=' + userid + '&playlistid=' + playlistid));
+                    return _context86.abrupt("return", this.getTextFromApi('addPlaylist?name=' + name + '&playlist=' + playlist + '&playlistid=' + playlistid + '&userid=' + userid + '&time=' + time));
 
                   case 1:
                   case "end":
@@ -6077,14 +6077,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "deleteComment",
-        value: function deleteComment(msgid, userid) {
+        key: "getPlaylists",
+        value: function getPlaylists(userid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee87() {
             return regeneratorRuntime.wrap(function _callee87$(_context87) {
               while (1) {
                 switch (_context87.prev = _context87.next) {
                   case 0:
-                    return _context87.abrupt("return", this.getTextFromApi('deleteComment?msgid=' + msgid + '&userid=' + userid));
+                    return _context87.abrupt("return", this.getJsonFromApi('getPlaylists?userid=' + userid));
 
                   case 1:
                   case "end":
@@ -6095,14 +6095,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getRecordingInfo",
-        value: function getRecordingInfo(recordingid) {
+        key: "getPlaylist",
+        value: function getPlaylist(playlistid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee88() {
             return regeneratorRuntime.wrap(function _callee88$(_context88) {
               while (1) {
                 switch (_context88.prev = _context88.next) {
                   case 0:
-                    return _context88.abrupt("return", this.getJsonFromApi('getRecordingInfo?recordingid=' + recordingid));
+                    return _context88.abrupt("return", this.getJsonFromApi('getPlaylist?playlistid=' + playlistid));
 
                   case 1:
                   case "end":
@@ -6113,14 +6113,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getTracklist",
-        value: function getTracklist(recordingid) {
+        key: "delPlaylist",
+        value: function delPlaylist(userid, playlistid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee89() {
             return regeneratorRuntime.wrap(function _callee89$(_context89) {
               while (1) {
                 switch (_context89.prev = _context89.next) {
                   case 0:
-                    return _context89.abrupt("return", this.getJsonFromApi('getTracklist?recordingid=' + recordingid));
+                    return _context89.abrupt("return", this.getTextFromApi('delPlaylist?userid=' + userid + '&playlistid=' + playlistid));
 
                   case 1:
                   case "end":
@@ -6131,18 +6131,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getYoutubeList",
-        value: function getYoutubeList(id, searcharray) {
+        key: "deleteComment",
+        value: function deleteComment(msgid, userid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee90() {
-            var s;
             return regeneratorRuntime.wrap(function _callee90$(_context90) {
               while (1) {
                 switch (_context90.prev = _context90.next) {
                   case 0:
-                    s = encodeURIComponent(JSON.stringify(searcharray));
-                    return _context90.abrupt("return", this.getJsonFromApi('youtube?id=' + id + '&searcharray=' + s));
+                    return _context90.abrupt("return", this.getTextFromApi('deleteComment?msgid=' + msgid + '&userid=' + userid));
 
-                  case 2:
+                  case 1:
                   case "end":
                     return _context90.stop();
                 }
@@ -6151,14 +6149,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "getShowIndex",
-        value: function getShowIndex() {
+        key: "getRecordingInfo",
+        value: function getRecordingInfo(recordingid) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee91() {
             return regeneratorRuntime.wrap(function _callee91$(_context91) {
               while (1) {
                 switch (_context91.prev = _context91.next) {
                   case 0:
-                    return _context91.abrupt("return", this.getJsonFromApi('showindex'));
+                    return _context91.abrupt("return", this.getJsonFromApi('getRecordingInfo?recordingid=' + recordingid));
 
                   case 1:
                   case "end":
@@ -6166,6 +6164,116 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             }, _callee91, this);
+          }));
+        }
+      }, {
+        key: "getTracklist",
+        value: function getTracklist(recordingid) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee92() {
+            return regeneratorRuntime.wrap(function _callee92$(_context92) {
+              while (1) {
+                switch (_context92.prev = _context92.next) {
+                  case 0:
+                    return _context92.abrupt("return", this.getJsonFromApi('getTracklist?recordingid=' + recordingid));
+
+                  case 1:
+                  case "end":
+                    return _context92.stop();
+                }
+              }
+            }, _callee92, this);
+          }));
+        }
+      }, {
+        key: "getYoutubeList",
+        value: function getYoutubeList(id, searcharray) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee93() {
+            var s;
+            return regeneratorRuntime.wrap(function _callee93$(_context93) {
+              while (1) {
+                switch (_context93.prev = _context93.next) {
+                  case 0:
+                    s = encodeURIComponent(JSON.stringify(searcharray));
+                    return _context93.abrupt("return", this.getJsonFromApi('youtube?id=' + id + '&searcharray=' + s));
+
+                  case 2:
+                  case "end":
+                    return _context93.stop();
+                }
+              }
+            }, _callee93, this);
+          }));
+        }
+      }, {
+        key: "getShowIndex",
+        value: function getShowIndex() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee94() {
+            return regeneratorRuntime.wrap(function _callee94$(_context94) {
+              while (1) {
+                switch (_context94.prev = _context94.next) {
+                  case 0:
+                    return _context94.abrupt("return", this.getJsonFromApi('showindex'));
+
+                  case 1:
+                  case "end":
+                    return _context94.stop();
+                }
+              }
+            }, _callee94, this);
+          }));
+        }
+      }, {
+        key: "getVenueIndex",
+        value: function getVenueIndex() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee95() {
+            return regeneratorRuntime.wrap(function _callee95$(_context95) {
+              while (1) {
+                switch (_context95.prev = _context95.next) {
+                  case 0:
+                    return _context95.abrupt("return", this.getJsonFromApi('venueindex'));
+
+                  case 1:
+                  case "end":
+                    return _context95.stop();
+                }
+              }
+            }, _callee95, this);
+          }));
+        }
+      }, {
+        key: "getLocationIndex",
+        value: function getLocationIndex() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee96() {
+            return regeneratorRuntime.wrap(function _callee96$(_context96) {
+              while (1) {
+                switch (_context96.prev = _context96.next) {
+                  case 0:
+                    return _context96.abrupt("return", this.getJsonFromApi('locationindex'));
+
+                  case 1:
+                  case "end":
+                    return _context96.stop();
+                }
+              }
+            }, _callee96, this);
+          }));
+        }
+      }, {
+        key: "getSongIndex",
+        value: function getSongIndex() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee97() {
+            return regeneratorRuntime.wrap(function _callee97$(_context97) {
+              while (1) {
+                switch (_context97.prev = _context97.next) {
+                  case 0:
+                    return _context97.abrupt("return", this.getJsonFromApi('songindex'));
+
+                  case 1:
+                  case "end":
+                    return _context97.stop();
+                }
+              }
+            }, _callee97, this);
           }));
         }
       }]);
@@ -6237,10 +6345,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DialogService, [{
         key: "openMultiFunction",
         value: function openMultiFunction(title, options, funcs) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee92() {
-            return regeneratorRuntime.wrap(function _callee92$(_context92) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee98() {
+            return regeneratorRuntime.wrap(function _callee98$(_context98) {
               while (1) {
-                switch (_context92.prev = _context92.next) {
+                switch (_context98.prev = _context98.next) {
                   case 0:
                     this.open(title, options).subscribe(function (result) {
                       if (result) {
@@ -6250,19 +6358,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 1:
                   case "end":
-                    return _context92.stop();
+                    return _context98.stop();
                 }
               }
-            }, _callee92, this);
+            }, _callee98, this);
           }));
         }
       }, {
         key: "openSingleFunction",
         value: function openSingleFunction(title, options, func) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee93() {
-            return regeneratorRuntime.wrap(function _callee93$(_context93) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee99() {
+            return regeneratorRuntime.wrap(function _callee99$(_context99) {
               while (1) {
-                switch (_context93.prev = _context93.next) {
+                switch (_context99.prev = _context99.next) {
                   case 0:
                     this.open(title, options).subscribe(function (result) {
                       return func(result);
@@ -6270,10 +6378,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 1:
                   case "end":
-                    return _context93.stop();
+                    return _context99.stop();
                 }
               }
-            }, _callee93, this);
+            }, _callee99, this);
           }));
         }
       }, {
@@ -6295,11 +6403,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openInputDialog",
         value: function openInputDialog(callback) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee94() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee100() {
             var dialogRef;
-            return regeneratorRuntime.wrap(function _callee94$(_context94) {
+            return regeneratorRuntime.wrap(function _callee100$(_context100) {
               while (1) {
-                switch (_context94.prev = _context94.next) {
+                switch (_context100.prev = _context100.next) {
                   case 0:
                     dialogRef = this.dialog.open(_shared_input_dialog_component__WEBPACK_IMPORTED_MODULE_3__["InputDialogComponent"], {
                       width: '250px',
@@ -6313,10 +6421,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                   case "end":
-                    return _context94.stop();
+                    return _context100.stop();
                 }
               }
-            }, _callee94, this);
+            }, _callee100, this);
           }));
         }
       }]);
@@ -6699,25 +6807,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "playPlaylist",
         value: function playPlaylist() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee95() {
-            return regeneratorRuntime.wrap(function _callee95$(_context95) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee101() {
+            return regeneratorRuntime.wrap(function _callee101$(_context101) {
               while (1) {
-                switch (_context95.prev = _context95.next) {
+                switch (_context101.prev = _context101.next) {
                   case 0:
                     if (!(this.currentTrackIndex < this.playlist.length)) {
-                      _context95.next = 8;
+                      _context101.next = 8;
                       break;
                     }
 
                     console.log('Google Analytics');
                     this.googleAnalyticsService.eventEmitter("play", "audio_player", "play", this.getCurrentTrack().uri);
-                    _context95.next = 5;
+                    _context101.next = 5;
                     return this.playCurrentTrack();
 
                   case 5:
                     this.currentTrackIndex++; //this.playPlaylist();  // why was this here?
 
-                    _context95.next = 9;
+                    _context101.next = 9;
                     break;
 
                   case 8:
@@ -6725,22 +6833,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 9:
                   case "end":
-                    return _context95.stop();
+                    return _context101.stop();
                 }
               }
-            }, _callee95, this);
+            }, _callee101, this);
           }));
         }
       }, {
         key: "playCurrentTrack",
         value: function playCurrentTrack() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee96() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee102() {
             var _this19 = this;
 
             var audio;
-            return regeneratorRuntime.wrap(function _callee96$(_context96) {
+            return regeneratorRuntime.wrap(function _callee102$(_context102) {
               while (1) {
-                switch (_context96.prev = _context96.next) {
+                switch (_context102.prev = _context102.next) {
                   case 0:
                     audio = new Audio(this.playlist[this.currentTrackIndex].uri);
                     audio.muted = this.muted;
@@ -6753,16 +6861,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       _this19.currentTime = audio.currentTime;
                     };
 
-                    return _context96.abrupt("return", new Promise(function (resolve) {
+                    return _context102.abrupt("return", new Promise(function (resolve) {
                       return audio.onended = resolve;
                     }));
 
                   case 7:
                   case "end":
-                    return _context96.stop();
+                    return _context102.stop();
                 }
               }
-            }, _callee96, this);
+            }, _callee102, this);
           }));
         }
       }, {
@@ -6784,19 +6892,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getPlaylists",
         value: function getPlaylists(userId) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee97() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee103() {
             var _this20 = this;
 
             var result, p;
-            return regeneratorRuntime.wrap(function _callee97$(_context97) {
+            return regeneratorRuntime.wrap(function _callee103$(_context103) {
               while (1) {
-                switch (_context97.prev = _context97.next) {
+                switch (_context103.prev = _context103.next) {
                   case 0:
-                    _context97.next = 2;
+                    _context103.next = 2;
                     return this.data.getPlaylists(userId);
 
                   case 2:
-                    result = _context97.sent;
+                    result = _context103.sent;
 
                     if (result[0].playlists) {
                       p = result[0].playlists;
@@ -6812,21 +6920,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 4:
                   case "end":
-                    return _context97.stop();
+                    return _context103.stop();
                 }
               }
-            }, _callee97, this);
+            }, _callee103, this);
           }));
         }
       }, {
         key: "deletePlaylist",
         value: function deletePlaylist(userid, playlistid) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee98() {
-            return regeneratorRuntime.wrap(function _callee98$(_context98) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee104() {
+            return regeneratorRuntime.wrap(function _callee104$(_context104) {
               while (1) {
-                switch (_context98.prev = _context98.next) {
+                switch (_context104.prev = _context104.next) {
                   case 0:
-                    _context98.next = 2;
+                    _context104.next = 2;
                     return this.data.delPlaylist(userid, playlistid);
 
                   case 2:
@@ -6834,10 +6942,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 3:
                   case "end":
-                    return _context98.stop();
+                    return _context104.stop();
                 }
               }
-            }, _callee98, this);
+            }, _callee104, this);
           }));
         }
       }, {
@@ -7903,19 +8011,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onSubmit",
         value: function onSubmit(e) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee99() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee105() {
             var result;
-            return regeneratorRuntime.wrap(function _callee99$(_context99) {
+            return regeneratorRuntime.wrap(function _callee105$(_context105) {
               while (1) {
-                switch (_context99.prev = _context99.next) {
+                switch (_context105.prev = _context105.next) {
                   case 0:
                     console.log(e);
                     this.searchState = 1;
-                    _context99.next = 4;
+                    _context105.next = 4;
                     return this.data.getSearchResult(e);
 
                   case 4:
-                    result = _context99.sent;
+                    result = _context105.sent;
 
                     if (result.length > 0) {
                       this.openDialog(result, e);
@@ -7925,10 +8033,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 7:
                   case "end":
-                    return _context99.stop();
+                    return _context105.stop();
                 }
               }
-            }, _callee99, this);
+            }, _callee105, this);
           }));
         }
       }, {
@@ -7952,25 +8060,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onBookmarkButton",
         value: function onBookmarkButton() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee100() {
-            return regeneratorRuntime.wrap(function _callee100$(_context100) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee106() {
+            return regeneratorRuntime.wrap(function _callee106$(_context106) {
               while (1) {
-                switch (_context100.prev = _context100.next) {
+                switch (_context106.prev = _context106.next) {
                   case 0:
                     if (!(this.bookmarked == false)) {
-                      _context100.next = 5;
+                      _context106.next = 5;
                       break;
                     }
 
-                    _context100.next = 3;
+                    _context106.next = 3;
                     return this.data.addBookmark(this.userId, this.router.url, new Date().getTime(), this.title + ' ' + this.subtitle);
 
                   case 3:
-                    _context100.next = 7;
+                    _context106.next = 7;
                     break;
 
                   case 5:
-                    _context100.next = 7;
+                    _context106.next = 7;
                     return this.data.delBookmark(this.userId, this.router.url);
 
                   case 7:
@@ -7978,59 +8086,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 8:
                   case "end":
-                    return _context100.stop();
+                    return _context106.stop();
                 }
               }
-            }, _callee100, this);
+            }, _callee106, this);
           }));
         }
       }, {
         key: "checkBookmark",
         value: function checkBookmark() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee101() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee107() {
             var b;
-            return regeneratorRuntime.wrap(function _callee101$(_context101) {
+            return regeneratorRuntime.wrap(function _callee107$(_context107) {
               while (1) {
-                switch (_context101.prev = _context101.next) {
+                switch (_context107.prev = _context107.next) {
                   case 0:
-                    _context101.next = 2;
+                    _context107.next = 2;
                     return this.data.checkBookmark(this.userId, this.router.url);
 
                   case 2:
-                    b = _context101.sent;
+                    b = _context107.sent;
                     this.bookmarked = Boolean(JSON.parse(b));
                     console.log("bookmark: " + this.bookmarked);
 
                   case 5:
                   case "end":
-                    return _context101.stop();
+                    return _context107.stop();
                 }
               }
-            }, _callee101, this);
+            }, _callee107, this);
           }));
         }
       }, {
         key: "onLikeButton",
         value: function onLikeButton() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee102() {
-            return regeneratorRuntime.wrap(function _callee102$(_context102) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee108() {
+            return regeneratorRuntime.wrap(function _callee108$(_context108) {
               while (1) {
-                switch (_context102.prev = _context102.next) {
+                switch (_context108.prev = _context108.next) {
                   case 0:
                     if (!(this.liked == false)) {
-                      _context102.next = 5;
+                      _context108.next = 5;
                       break;
                     }
 
-                    _context102.next = 3;
+                    _context108.next = 3;
                     return this.data.like(this.userId, this.router.url, new Date().getTime(), this.title + ' ' + this.subtitle);
 
                   case 3:
-                    _context102.next = 7;
+                    _context108.next = 7;
                     break;
 
                   case 5:
-                    _context102.next = 7;
+                    _context108.next = 7;
                     return this.data.unlike(this.userId, this.router.url);
 
                   case 7:
@@ -8038,59 +8146,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 8:
                   case "end":
-                    return _context102.stop();
+                    return _context108.stop();
                 }
               }
-            }, _callee102, this);
+            }, _callee108, this);
           }));
         }
       }, {
         key: "checkLike",
         value: function checkLike() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee103() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee109() {
             var b;
-            return regeneratorRuntime.wrap(function _callee103$(_context103) {
+            return regeneratorRuntime.wrap(function _callee109$(_context109) {
               while (1) {
-                switch (_context103.prev = _context103.next) {
+                switch (_context109.prev = _context109.next) {
                   case 0:
-                    _context103.next = 2;
+                    _context109.next = 2;
                     return this.data.checkLike(this.userId, this.router.url);
 
                   case 2:
-                    b = _context103.sent;
+                    b = _context109.sent;
                     this.liked = Boolean(JSON.parse(b));
                     this.countLikes();
                     console.log("like: " + this.liked);
 
                   case 6:
                   case "end":
-                    return _context103.stop();
+                    return _context109.stop();
                 }
               }
-            }, _callee103, this);
+            }, _callee109, this);
           }));
         }
       }, {
         key: "countLikes",
         value: function countLikes() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee104() {
-            return regeneratorRuntime.wrap(function _callee104$(_context104) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee110() {
+            return regeneratorRuntime.wrap(function _callee110$(_context110) {
               while (1) {
-                switch (_context104.prev = _context104.next) {
+                switch (_context110.prev = _context110.next) {
                   case 0:
-                    _context104.next = 2;
+                    _context110.next = 2;
                     return this.data.countLikes(this.router.url);
 
                   case 2:
-                    this.likes = _context104.sent;
+                    this.likes = _context110.sent;
                     console.log("likes: " + this.likes);
 
                   case 4:
                   case "end":
-                    return _context104.stop();
+                    return _context110.stop();
                 }
               }
-            }, _callee104, this);
+            }, _callee110, this);
           }));
         }
       }]);
@@ -9635,7 +9743,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _ck(_v, 62, 0, currVal_70);
 
-        var currVal_71 = _co.currentUser.userId && _co.player.playlist.length > 0;
+        var currVal_71 = _co.player.playlist.length > 0;
 
         _ck(_v, 64, 0, currVal_71);
 
@@ -9939,26 +10047,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addRandomTrack",
         value: function addRandomTrack() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee105() {
-            return regeneratorRuntime.wrap(function _callee105$(_context105) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee111() {
+            return regeneratorRuntime.wrap(function _callee111$(_context111) {
               while (1) {
-                switch (_context105.prev = _context105.next) {
+                switch (_context111.prev = _context111.next) {
                   case 0:
-                    _context105.t0 = this.player;
-                    _context105.next = 3;
+                    _context111.t0 = this.player;
+                    _context111.next = 3;
                     return this.data.getRandomTrack();
 
                   case 3:
-                    _context105.t1 = _context105.sent;
+                    _context111.t1 = _context111.sent;
 
-                    _context105.t0.addToPlaylist.call(_context105.t0, _context105.t1);
+                    _context111.t0.addToPlaylist.call(_context111.t0, _context111.t1);
 
                   case 5:
                   case "end":
-                    return _context105.stop();
+                    return _context111.stop();
                 }
               }
-            }, _callee105, this);
+            }, _callee111, this);
           }));
         }
       }, {
@@ -9969,10 +10077,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onClearPlaylist",
         value: function onClearPlaylist() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee106() {
-            return regeneratorRuntime.wrap(function _callee106$(_context106) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee112() {
+            return regeneratorRuntime.wrap(function _callee112$(_context112) {
               while (1) {
-                switch (_context106.prev = _context106.next) {
+                switch (_context112.prev = _context112.next) {
                   case 0:
                     this.player.stop();
                     this.player.clearPlaylist();
@@ -9980,39 +10088,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 3:
                   case "end":
-                    return _context106.stop();
+                    return _context112.stop();
                 }
               }
-            }, _callee106, this);
+            }, _callee112, this);
           }));
         }
       }, {
         key: "delTrack",
         value: function delTrack(i) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee107() {
-            return regeneratorRuntime.wrap(function _callee107$(_context107) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee113() {
+            return regeneratorRuntime.wrap(function _callee113$(_context113) {
               while (1) {
-                switch (_context107.prev = _context107.next) {
+                switch (_context113.prev = _context113.next) {
                   case 0:
                     this.player.deleteFromPlaylist(i);
 
                   case 1:
                   case "end":
-                    return _context107.stop();
+                    return _context113.stop();
                 }
               }
-            }, _callee107, this);
+            }, _callee113, this);
           }));
         }
       }, {
         key: "onSavePlaylist",
         value: function onSavePlaylist() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee108() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee114() {
             var _this22 = this;
 
-            return regeneratorRuntime.wrap(function _callee108$(_context108) {
+            return regeneratorRuntime.wrap(function _callee114$(_context114) {
               while (1) {
-                switch (_context108.prev = _context108.next) {
+                switch (_context114.prev = _context114.next) {
                   case 0:
                     this.dialog.openInputDialog(function (name) {
                       if (name) {
@@ -10022,54 +10130,54 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 1:
                   case "end":
-                    return _context108.stop();
+                    return _context114.stop();
                 }
               }
-            }, _callee108, this);
+            }, _callee114, this);
           }));
         }
       }, {
         key: "onLoadPlaylist",
         value: function onLoadPlaylist() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee109() {
-            return regeneratorRuntime.wrap(function _callee109$(_context109) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee115() {
+            return regeneratorRuntime.wrap(function _callee115$(_context115) {
               while (1) {
-                switch (_context109.prev = _context109.next) {
+                switch (_context115.prev = _context115.next) {
                   case 0:
                     this.loadPlaylist();
 
                   case 1:
                   case "end":
-                    return _context109.stop();
+                    return _context115.stop();
                 }
               }
-            }, _callee109, this);
+            }, _callee115, this);
           }));
         }
       }, {
         key: "savePlaylist",
         value: function savePlaylist(name) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee110() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee116() {
             var id;
-            return regeneratorRuntime.wrap(function _callee110$(_context110) {
+            return regeneratorRuntime.wrap(function _callee116$(_context116) {
               while (1) {
-                switch (_context110.prev = _context110.next) {
+                switch (_context116.prev = _context116.next) {
                   case 0:
                     console.log('saving playlist');
                     id = this.makeid();
-                    _context110.next = 4;
+                    _context116.next = 4;
                     return this.data.addPlaylist(name, this.player.playlist, id, this.currentUser.userId, new Date().getTime());
 
                   case 4:
-                    _context110.next = 6;
+                    _context116.next = 6;
                     return this.player.getPlaylists(this.currentUser.userId);
 
                   case 6:
                   case "end":
-                    return _context110.stop();
+                    return _context116.stop();
                 }
               }
-            }, _callee110, this);
+            }, _callee116, this);
           }));
         }
         /*
@@ -11088,13 +11196,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onMapReady",
         value: function onMapReady(map) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee111() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee117() {
             var _this24 = this;
 
             var i, tours, geoJsonData, tourGeoJsonData, all;
-            return regeneratorRuntime.wrap(function _callee111$(_context111) {
+            return regeneratorRuntime.wrap(function _callee117$(_context117) {
               while (1) {
-                switch (_context111.prev = _context111.next) {
+                switch (_context117.prev = _context117.next) {
                   case 0:
                     setTimeout(function () {
                       _this24.timeOut = true;
@@ -11105,28 +11213,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 3:
                     if (!(this.venues == undefined || this.venues.length == 0)) {
-                      _context111.next = 12;
+                      _context117.next = 12;
                       break;
                     }
 
                     // retry heroku fetch
                     console.log("retry " + i);
-                    _context111.next = 7;
+                    _context117.next = 7;
                     return this.data.getVenueCoordinates();
 
                   case 7:
-                    this.venues = _context111.sent;
+                    this.venues = _context117.sent;
                     console.log(this.venues);
                     i++;
-                    _context111.next = 3;
+                    _context117.next = 3;
                     break;
 
                   case 12:
-                    _context111.next = 14;
+                    _context117.next = 14;
                     return this.data.getTourCoordinates();
 
                   case 14:
-                    tours = _context111.sent;
+                    tours = _context117.sent;
                     console.log(tours);
                     geoJsonData = this.getGeoJson(this.venues);
                     tourGeoJsonData = this.getTourJson(tours);
@@ -11165,10 +11273,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 32:
                   case "end":
-                    return _context111.stop();
+                    return _context117.stop();
                 }
               }
-            }, _callee111, this);
+            }, _callee117, this);
           }));
         }
       }, {
@@ -11911,23 +12019,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShowsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee112() {
-            return regeneratorRuntime.wrap(function _callee112$(_context112) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee118() {
+            return regeneratorRuntime.wrap(function _callee118$(_context118) {
               while (1) {
-                switch (_context112.prev = _context112.next) {
+                switch (_context118.prev = _context118.next) {
                   case 0:
-                    _context112.next = 2;
+                    _context118.next = 2;
                     return this.data.getEventInfos(this.eventIds);
 
                   case 2:
-                    this.events = _context112.sent;
+                    this.events = _context118.sent;
 
                   case 3:
                   case "end":
-                    return _context112.stop();
+                    return _context118.stop();
                 }
               }
-            }, _callee112, this);
+            }, _callee118, this);
           }));
         }
       }]);
@@ -12651,12 +12759,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ArtifactsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee114() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee120() {
             var _this28 = this;
 
-            return regeneratorRuntime.wrap(function _callee114$(_context114) {
+            return regeneratorRuntime.wrap(function _callee120$(_context120) {
               while (1) {
-                switch (_context114.prev = _context114.next) {
+                switch (_context120.prev = _context120.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -12679,57 +12787,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this28, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee113() {
-                        return regeneratorRuntime.wrap(function _callee113$(_context113) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this28, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee119() {
+                        return regeneratorRuntime.wrap(function _callee119$(_context119) {
                           while (1) {
-                            switch (_context113.prev = _context113.next) {
+                            switch (_context119.prev = _context119.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context113.next = 3;
+                                  _context119.next = 3;
                                   break;
                                 }
 
-                                _context113.next = 14;
+                                _context119.next = 14;
                                 break;
 
                               case 3:
                                 if (!params.has('types')) {
-                                  _context113.next = 10;
+                                  _context119.next = 10;
                                   break;
                                 }
 
                                 this.types = JSON.parse(params.get('types'));
-                                _context113.next = 7;
+                                _context119.next = 7;
                                 return this.data.getRandomArtifacts(this.types, 6);
 
                               case 7:
-                                this.artifacts = _context113.sent;
-                                _context113.next = 14;
+                                this.artifacts = _context119.sent;
+                                _context119.next = 14;
                                 break;
 
                               case 10:
-                                _context113.next = 12;
+                                _context119.next = 12;
                                 return this.data.getRandomArtifacts(null, 6);
 
                               case 12:
-                                this.artifacts = _context113.sent;
+                                this.artifacts = _context119.sent;
                                 console.log(this.artifacts);
 
                               case 14:
                               case "end":
-                                return _context113.stop();
+                                return _context119.stop();
                             }
                           }
-                        }, _callee113, this);
+                        }, _callee119, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context114.stop();
+                    return _context120.stop();
                 }
               }
-            }, _callee114, this);
+            }, _callee120, this);
           }));
         }
       }]);
@@ -13207,12 +13315,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ArtistComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee116() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee122() {
             var _this29 = this;
 
-            return regeneratorRuntime.wrap(function _callee116$(_context116) {
+            return regeneratorRuntime.wrap(function _callee122$(_context122) {
               while (1) {
-                switch (_context116.prev = _context116.next) {
+                switch (_context122.prev = _context122.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -13235,22 +13343,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this29, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee115() {
-                        return regeneratorRuntime.wrap(function _callee115$(_context115) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this29, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee121() {
+                        return regeneratorRuntime.wrap(function _callee121$(_context121) {
                           while (1) {
-                            switch (_context115.prev = _context115.next) {
+                            switch (_context121.prev = _context121.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context115.next = 6;
+                                  _context121.next = 6;
                                   break;
                                 }
 
-                                _context115.next = 3;
+                                _context121.next = 3;
                                 return this.data.getArtistDetails(params.get('id'));
 
                               case 3:
-                                this.artist = _context115.sent;
-                                _context115.next = 7;
+                                this.artist = _context121.sent;
+                                _context121.next = 7;
                                 break;
 
                               case 6:
@@ -13267,10 +13375,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 8:
                               case "end":
-                                return _context115.stop();
+                                return _context121.stop();
                             }
                           }
-                        }, _callee115, this);
+                        }, _callee121, this);
                       }));
                     });
                     /* // not working
@@ -13282,10 +13390,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                   case "end":
-                    return _context116.stop();
+                    return _context122.stop();
                 }
               }
-            }, _callee116, this);
+            }, _callee122, this);
           }));
         }
       }]);
@@ -13457,19 +13565,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       data: {}
     });
 
-    function View_IndexComponent_1(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" not implemented yet\n"]))], null, null);
-    }
-
     function View_IndexComponent_2(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" not implemented yet\n"]))], null, null);
-    }
-
-    function View_IndexComponent_3(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" not implemented yet\n"]))], null, null);
-    }
-
-    function View_IndexComponent_5(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
 
@@ -13481,21 +13577,125 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return ad;
       }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
         routerLink: [0, "routerLink"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " -- ", " -- ", " "]))], function (_ck, _v) {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " (", ") "]))], function (_ck, _v) {
+        var currVal_0 = _ck(_v, 3, 0, "/venue", _v.context.$implicit.venueId);
+
+        _ck(_v, 2, 0, currVal_0);
+      }, function (_ck, _v) {
+        var currVal_1 = _v.context.$implicit.venueName;
+        var currVal_2 = _v.context.$implicit.locationName;
+
+        _ck(_v, 4, 0, currVal_1, currVal_2);
+      });
+    }
+
+    function View_IndexComponent_1(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        ngForOf: [0, "ngForOf"]
+      }, null)], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.venues;
+
+        _ck(_v, 2, 0, currVal_0);
+      }, null);
+    }
+
+    function View_IndexComponent_4(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+
+        if ("click" === en) {
+          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onClick() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+        routerLink: [0, "routerLink"]
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " (", ") "]))], function (_ck, _v) {
+        var currVal_0 = _ck(_v, 3, 0, "/location", _v.context.$implicit.locationId);
+
+        _ck(_v, 2, 0, currVal_0);
+      }, function (_ck, _v) {
+        var currVal_1 = _v.context.$implicit.locationName;
+        var currVal_2 = _v.context.$implicit.country;
+
+        _ck(_v, 4, 0, currVal_1, currVal_2);
+      });
+    }
+
+    function View_IndexComponent_3(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        ngForOf: [0, "ngForOf"]
+      }, null)], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.locations;
+
+        _ck(_v, 2, 0, currVal_0);
+      }, null);
+    }
+
+    function View_IndexComponent_6(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+
+        if ("click" === en) {
+          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onClick() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+        routerLink: [0, "routerLink"]
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " "]))], function (_ck, _v) {
+        var currVal_0 = _ck(_v, 3, 0, "/song", _v.context.$implicit.songId);
+
+        _ck(_v, 2, 0, currVal_0);
+      }, function (_ck, _v) {
+        var currVal_1 = _v.context.$implicit.songName;
+
+        _ck(_v, 4, 0, currVal_1);
+      });
+    }
+
+    function View_IndexComponent_5(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        ngForOf: [0, "ngForOf"]
+      }, null)], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.songs;
+
+        _ck(_v, 2, 0, currVal_0);
+      }, null);
+    }
+
+    function View_IndexComponent_8(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+
+        if ("click" === en) {
+          var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 2).onClick() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+        routerLink: [0, "routerLink"]
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " ", ", ", " "]))], function (_ck, _v) {
         var currVal_0 = _ck(_v, 3, 0, "/show", _v.context.$implicit.showId);
 
         _ck(_v, 2, 0, currVal_0);
       }, function (_ck, _v) {
         var currVal_1 = _v.context.$implicit.date;
-        var currVal_2 = _v.context.$implicit.locationName;
-        var currVal_3 = _v.context.$implicit.venueName;
+        var currVal_2 = _v.context.$implicit.venueName;
+        var currVal_3 = _v.context.$implicit.locationName;
 
         _ck(_v, 4, 0, currVal_1, currVal_2, currVal_3);
       });
     }
 
-    function View_IndexComponent_4(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+    function View_IndexComponent_7(_l) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
         ngForOf: [0, "ngForOf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
@@ -13506,9 +13706,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_IndexComponent_0(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "gd-header", [["title", "Index"]], null, null, null, _shared_header_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["View_HeaderComponent_0"], _shared_header_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["RenderType_HeaderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 114688, null, 0, _shared_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["DomSanitizer"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["Title"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], _services_data_service__WEBPACK_IMPORTED_MODULE_8__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _services_player_service__WEBPACK_IMPORTED_MODULE_10__["PlayerService"]], {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "gd-header", [["style", "position: fixed; width: 100%"], ["title", "Index"]], null, null, null, _shared_header_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["View_HeaderComponent_0"], _shared_header_component_ngfactory__WEBPACK_IMPORTED_MODULE_4__["RenderType_HeaderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 114688, null, 0, _shared_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["DomSanitizer"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["Title"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], _services_data_service__WEBPACK_IMPORTED_MODULE_8__["DataService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _services_player_service__WEBPACK_IMPORTED_MODULE_10__["PlayerService"]], {
         title: [0, "title"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 16, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "p", [], [[4, "margin-bottom", null]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 16, "div", [["class", "topmargin"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -13518,9 +13718,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
+      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](5, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Shows"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], {
+        color: [0, "color"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Shows"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -13530,21 +13732,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
+      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Venues"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], {
+        color: [0, "color"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Venues"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
         if ("click" === en) {
-          var pd_0 = _co.onSelectButton("cities") !== false;
+          var pd_0 = _co.onSelectButton("locations") !== false;
           ad = pd_0 && ad;
         }
 
         return ad;
-      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
+      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Cities"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], {
+        color: [0, "color"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Locations"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](16, 0, null, null, 3, "button", [["class", "mat-focus-indicator"], ["fxFlex", ""], ["mat-flat-button", ""]], [[1, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
@@ -13554,73 +13760,99 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         return ad;
-      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
+      }, _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["View_MatButton_0"], _node_modules_angular_material_button_index_ngfactory__WEBPACK_IMPORTED_MODULE_11__["RenderType_MatButton"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_13__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], null, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Songs"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 180224, null, 0, _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_15__["FocusMonitor"], [2, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["ANIMATION_MODULE_TYPE"]]], {
+        color: [0, "color"]
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Songs"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](26, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
-      }, null)], function (_ck, _v) {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 0, "p", [], [[4, "margin-bottom", null]], null, null, null, null))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = "Index";
 
         _ck(_v, 1, 0, currVal_0);
 
-        var currVal_3 = "";
+        var currVal_4 = "";
 
-        _ck(_v, 4, 0, currVal_3);
+        _ck(_v, 5, 0, currVal_4);
 
-        var currVal_6 = "";
+        var currVal_5 = _co.selected == "shows" ? "warn" : "primary";
 
-        _ck(_v, 8, 0, currVal_6);
+        _ck(_v, 6, 0, currVal_5);
 
-        var currVal_9 = "";
+        var currVal_8 = "";
 
-        _ck(_v, 12, 0, currVal_9);
+        _ck(_v, 9, 0, currVal_8);
+
+        var currVal_9 = _co.selected == "venues" ? "warn" : "primary";
+
+        _ck(_v, 10, 0, currVal_9);
 
         var currVal_12 = "";
 
-        _ck(_v, 16, 0, currVal_12);
+        _ck(_v, 13, 0, currVal_12);
 
-        var currVal_13 = _co.selected == "venues";
+        var currVal_13 = _co.selected == "locations" ? "warn" : "primary";
 
-        _ck(_v, 20, 0, currVal_13);
+        _ck(_v, 14, 0, currVal_13);
 
-        var currVal_14 = _co.selected == "cities";
+        var currVal_16 = "";
 
-        _ck(_v, 22, 0, currVal_14);
+        _ck(_v, 17, 0, currVal_16);
 
-        var currVal_15 = _co.selected == "songs";
+        var currVal_17 = _co.selected == "songs" ? "warn" : "primary";
 
-        _ck(_v, 24, 0, currVal_15);
+        _ck(_v, 18, 0, currVal_17);
 
-        var currVal_16 = _co.selected == "shows";
+        var currVal_18 = _co.selected == "venues";
 
-        _ck(_v, 26, 0, currVal_16);
+        _ck(_v, 21, 0, currVal_18);
+
+        var currVal_19 = _co.selected == "locations";
+
+        _ck(_v, 23, 0, currVal_19);
+
+        var currVal_20 = _co.selected == "songs";
+
+        _ck(_v, 25, 0, currVal_20);
+
+        var currVal_21 = _co.selected == "shows";
+
+        _ck(_v, 27, 0, currVal_21);
       }, function (_ck, _v) {
-        var currVal_1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5).disabled || null;
-        var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 5)._animationMode === "NoopAnimations";
+        var currVal_1 = "50px";
 
-        _ck(_v, 3, 0, currVal_1, currVal_2);
+        _ck(_v, 2, 0, currVal_1);
 
-        var currVal_4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9).disabled || null;
-        var currVal_5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 9)._animationMode === "NoopAnimations";
+        var currVal_2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).disabled || null;
+        var currVal_3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6)._animationMode === "NoopAnimations";
 
-        _ck(_v, 7, 0, currVal_4, currVal_5);
+        _ck(_v, 4, 0, currVal_2, currVal_3);
 
-        var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13).disabled || null;
-        var currVal_8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 13)._animationMode === "NoopAnimations";
+        var currVal_6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 10).disabled || null;
+        var currVal_7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 10)._animationMode === "NoopAnimations";
 
-        _ck(_v, 11, 0, currVal_7, currVal_8);
+        _ck(_v, 8, 0, currVal_6, currVal_7);
 
-        var currVal_10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 17).disabled || null;
-        var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 17)._animationMode === "NoopAnimations";
+        var currVal_10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 14).disabled || null;
+        var currVal_11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 14)._animationMode === "NoopAnimations";
 
-        _ck(_v, 15, 0, currVal_10, currVal_11);
+        _ck(_v, 12, 0, currVal_10, currVal_11);
+
+        var currVal_14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).disabled || null;
+        var currVal_15 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18)._animationMode === "NoopAnimations";
+
+        _ck(_v, 16, 0, currVal_14, currVal_15);
+
+        var currVal_22 = "150px";
+
+        _ck(_v, 28, 0, currVal_22);
       });
     }
 
@@ -13707,7 +13939,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(IndexComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.selected = 'shows';
+          this.onSelectButton('shows');
+        }
       }, {
         key: "onSelectButton",
         value: function onSelectButton(s) {
@@ -13722,45 +13957,102 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               this.getVenues();
               break;
 
-            case 'cities':
-              this.getCities();
+            case 'locations':
+              this.getLocations();
               break;
 
-            case 'venues':
+            case 'songs':
               this.getSongs();
           }
         }
       }, {
         key: "getShows",
         value: function getShows() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee117() {
-            return regeneratorRuntime.wrap(function _callee117$(_context117) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee123() {
+            return regeneratorRuntime.wrap(function _callee123$(_context123) {
               while (1) {
-                switch (_context117.prev = _context117.next) {
+                switch (_context123.prev = _context123.next) {
                   case 0:
-                    _context117.next = 2;
+                    _context123.next = 2;
                     return this.data.getShowIndex();
 
                   case 2:
-                    this.shows = _context117.sent;
+                    this.shows = _context123.sent;
 
                   case 3:
                   case "end":
-                    return _context117.stop();
+                    return _context123.stop();
                 }
               }
-            }, _callee117, this);
+            }, _callee123, this);
           }));
         }
       }, {
         key: "getVenues",
-        value: function getVenues() {}
+        value: function getVenues() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee124() {
+            return regeneratorRuntime.wrap(function _callee124$(_context124) {
+              while (1) {
+                switch (_context124.prev = _context124.next) {
+                  case 0:
+                    _context124.next = 2;
+                    return this.data.getVenueIndex();
+
+                  case 2:
+                    this.venues = _context124.sent;
+
+                  case 3:
+                  case "end":
+                    return _context124.stop();
+                }
+              }
+            }, _callee124, this);
+          }));
+        }
       }, {
-        key: "getCities",
-        value: function getCities() {}
+        key: "getLocations",
+        value: function getLocations() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee125() {
+            return regeneratorRuntime.wrap(function _callee125$(_context125) {
+              while (1) {
+                switch (_context125.prev = _context125.next) {
+                  case 0:
+                    _context125.next = 2;
+                    return this.data.getLocationIndex();
+
+                  case 2:
+                    this.locations = _context125.sent;
+
+                  case 3:
+                  case "end":
+                    return _context125.stop();
+                }
+              }
+            }, _callee125, this);
+          }));
+        }
       }, {
         key: "getSongs",
-        value: function getSongs() {}
+        value: function getSongs() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee126() {
+            return regeneratorRuntime.wrap(function _callee126$(_context126) {
+              while (1) {
+                switch (_context126.prev = _context126.next) {
+                  case 0:
+                    _context126.next = 2;
+                    return this.data.getSongIndex();
+
+                  case 2:
+                    this.songs = _context126.sent;
+
+                  case 3:
+                  case "end":
+                    return _context126.stop();
+                }
+              }
+            }, _callee126, this);
+          }));
+        }
       }]);
 
       return IndexComponent;
@@ -14453,22 +14745,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           } */
 
           this.route.paramMap.subscribe(function (params) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this30, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee118() {
-              return regeneratorRuntime.wrap(function _callee118$(_context118) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this30, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee127() {
+              return regeneratorRuntime.wrap(function _callee127$(_context127) {
                 while (1) {
-                  switch (_context118.prev = _context118.next) {
+                  switch (_context127.prev = _context127.next) {
                     case 0:
                       if (!params.has('id')) {
-                        _context118.next = 6;
+                        _context127.next = 6;
                         break;
                       }
 
-                      _context118.next = 3;
+                      _context127.next = 3;
                       return this.data.getLocation(params.get('id'));
 
                     case 3:
-                      this.location = _context118.sent;
-                      _context118.next = 7;
+                      this.location = _context127.sent;
+                      _context127.next = 7;
                       break;
 
                     case 6:
@@ -14478,18 +14770,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 7:
                       if (!(params.has('id') && this.location.state)) {
-                        _context118.next = 15;
+                        _context127.next = 15;
                         break;
                       }
 
-                      _context118.next = 10;
+                      _context127.next = 10;
                       return this.data.getYoutubeList(this.location.id, ['Grateful Dead', this.location.name]);
 
                     case 10:
-                      this.videos = _context118.sent;
+                      this.videos = _context127.sent;
                       this.currentVideoId = this.videos[0].videoId;
                       console.log(this.videos);
-                      _context118.next = 16;
+                      _context127.next = 16;
                       break;
 
                     case 15:
@@ -14499,10 +14791,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 16:
                     case "end":
-                      return _context118.stop();
+                      return _context127.stop();
                   }
                 }
-              }, _callee118, this);
+              }, _callee127, this);
             }));
           });
         }
@@ -15135,12 +15427,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PlaylistComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee120() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee129() {
             var _this34 = this;
 
-            return regeneratorRuntime.wrap(function _callee120$(_context120) {
+            return regeneratorRuntime.wrap(function _callee129$(_context129) {
               while (1) {
-                switch (_context120.prev = _context120.next) {
+                switch (_context129.prev = _context129.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -15154,10 +15446,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       }
                     });
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this34, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee119() {
-                        return regeneratorRuntime.wrap(function _callee119$(_context119) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this34, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee128() {
+                        return regeneratorRuntime.wrap(function _callee128$(_context128) {
                           while (1) {
-                            switch (_context119.prev = _context119.next) {
+                            switch (_context128.prev = _context128.next) {
                               case 0:
                                 if (params.has('id')) {
                                   this.getPlaylist(params.get('id'));
@@ -15165,35 +15457,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 1:
                               case "end":
-                                return _context119.stop();
+                                return _context128.stop();
                             }
                           }
-                        }, _callee119, this);
+                        }, _callee128, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context120.stop();
+                    return _context129.stop();
                 }
               }
-            }, _callee120, this);
+            }, _callee129, this);
           }));
         }
       }, {
         key: "getPlaylist",
         value: function getPlaylist(playlistId) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee121() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee130() {
             var res;
-            return regeneratorRuntime.wrap(function _callee121$(_context121) {
+            return regeneratorRuntime.wrap(function _callee130$(_context130) {
               while (1) {
-                switch (_context121.prev = _context121.next) {
+                switch (_context130.prev = _context130.next) {
                   case 0:
-                    _context121.next = 2;
+                    _context130.next = 2;
                     return this.data.getPlaylist(playlistId);
 
                   case 2:
-                    res = _context121.sent;
+                    res = _context130.sent;
                     this.playlist = res.playlists[0];
                     console.log(this.playlist);
                     this.player.playlist = _toConsumableArray(this.playlist.playlist);
@@ -15201,10 +15493,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 7:
                   case "end":
-                    return _context121.stop();
+                    return _context130.stop();
                 }
               }
-            }, _callee121, this);
+            }, _callee130, this);
           }));
         }
       }]);
@@ -15795,23 +16087,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
 
           this.route.paramMap.subscribe(function (params) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee122() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee131() {
               var tracklist;
-              return regeneratorRuntime.wrap(function _callee122$(_context122) {
+              return regeneratorRuntime.wrap(function _callee131$(_context131) {
                 while (1) {
-                  switch (_context122.prev = _context122.next) {
+                  switch (_context131.prev = _context131.next) {
                     case 0:
                       if (!params.has('id')) {
-                        _context122.next = 6;
+                        _context131.next = 6;
                         break;
                       }
 
-                      _context122.next = 3;
+                      _context131.next = 3;
                       return this.data.getRecordingInfo(params.get('id'));
 
                     case 3:
-                      this.recordinginfo = _context122.sent;
-                      _context122.next = 7;
+                      this.recordinginfo = _context131.sent;
+                      _context131.next = 7;
                       break;
 
                     case 6:
@@ -15821,15 +16113,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 7:
                       if (!(params.has('id') && this.recordinginfo)) {
-                        _context122.next = 15;
+                        _context131.next = 15;
                         break;
                       }
 
-                      _context122.next = 10;
+                      _context131.next = 10;
                       return this.data.getTracklist(params.get('id'));
 
                     case 10:
-                      tracklist = _context122.sent;
+                      tracklist = _context131.sent;
                       tracklist.forEach(function (t) {
                         if (t.song) {
                           t['id'] = t.song[0].song_id;
@@ -15841,7 +16133,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       this.tracklist = tracklist; //console.log(this.recordinginfo)
                       //console.log(this.tracklist);
 
-                      _context122.next = 16;
+                      _context131.next = 16;
                       break;
 
                     case 15:
@@ -15851,10 +16143,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 16:
                     case "end":
-                      return _context122.stop();
+                      return _context131.stop();
                   }
                 }
-              }, _callee122, this);
+              }, _callee131, this);
             }));
           });
         }
@@ -15887,21 +16179,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTrackToPlaylist",
         value: function addTrackToPlaylist(audio) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee123() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee132() {
             var track;
-            return regeneratorRuntime.wrap(function _callee123$(_context123) {
+            return regeneratorRuntime.wrap(function _callee132$(_context132) {
               while (1) {
-                switch (_context123.prev = _context123.next) {
+                switch (_context132.prev = _context132.next) {
                   case 0:
                     track = this.data.toPlayerTrack(this.recordinginfo.venue_name, this.recordinginfo.location_name, this.recordinginfo.date, this.recordinginfo.show_id, this.recordinginfo.etree_id, audio, this.recordinginfo.recording_id);
                     this.player.addToPlaylist(track);
 
                   case 2:
                   case "end":
-                    return _context123.stop();
+                    return _context132.stop();
                 }
               }
-            }, _callee123, this);
+            }, _callee132, this);
           }));
         }
       }, {
@@ -17039,12 +17331,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShowComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee125() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee134() {
             var _this38 = this;
 
-            return regeneratorRuntime.wrap(function _callee125$(_context125) {
+            return regeneratorRuntime.wrap(function _callee134$(_context134) {
               while (1) {
-                switch (_context125.prev = _context125.next) {
+                switch (_context134.prev = _context134.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -17067,25 +17359,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }*/
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this38, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee124() {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this38, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee133() {
                         var _this39 = this;
 
                         var poster, pass, ticket, gl;
-                        return regeneratorRuntime.wrap(function _callee124$(_context124) {
+                        return regeneratorRuntime.wrap(function _callee133$(_context133) {
                           while (1) {
-                            switch (_context124.prev = _context124.next) {
+                            switch (_context133.prev = _context133.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context124.next = 6;
+                                  _context133.next = 6;
                                   break;
                                 }
 
-                                _context124.next = 3;
+                                _context133.next = 3;
                                 return this.data.getEventDetails(params.get('id'));
 
                               case 3:
-                                this.event = _context124.sent;
-                                _context124.next = 7;
+                                this.event = _context133.sent;
+                                _context133.next = 7;
                                 break;
 
                               case 6:
@@ -17143,19 +17435,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 8:
                               case "end":
-                                return _context124.stop();
+                                return _context133.stop();
                             }
                           }
-                        }, _callee124, this);
+                        }, _callee133, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context125.stop();
+                    return _context134.stop();
                 }
               }
-            }, _callee125, this);
+            }, _callee134, this);
           }));
         }
         /*
@@ -17223,13 +17515,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTrackToPlaylist",
         value: function addTrackToPlaylist(song, recordingEtreeId, recordingId) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee126() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee135() {
             var _this43 = this;
 
             var eventInfo, songDetails;
-            return regeneratorRuntime.wrap(function _callee126$(_context126) {
+            return regeneratorRuntime.wrap(function _callee135$(_context135) {
               while (1) {
-                switch (_context126.prev = _context126.next) {
+                switch (_context135.prev = _context135.next) {
                   case 0:
                     eventInfo = {
                       id: this.event.id,
@@ -17241,21 +17533,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       artifacts: null //this.artifacts
 
                     };
-                    _context126.next = 3;
+                    _context135.next = 3;
                     return this.data.getSong(song.id);
 
                   case 3:
-                    songDetails = _context126.sent;
+                    songDetails = _context135.sent;
                     this.data.getTracks(songDetails, eventInfo, recordingEtreeId, recordingId).forEach(function (t) {
                       return _this43.player.addToPlaylist(t);
                     });
 
                   case 5:
                   case "end":
-                    return _context126.stop();
+                    return _context135.stop();
                 }
               }
-            }, _callee126, this);
+            }, _callee135, this);
           }));
         }
         /*
@@ -17269,19 +17561,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addRecordingToPlaylist",
         value: function addRecordingToPlaylist(recording) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee127() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee136() {
             var _this44 = this;
 
             var tracklist;
-            return regeneratorRuntime.wrap(function _callee127$(_context127) {
+            return regeneratorRuntime.wrap(function _callee136$(_context136) {
               while (1) {
-                switch (_context127.prev = _context127.next) {
+                switch (_context136.prev = _context136.next) {
                   case 0:
-                    _context127.next = 2;
+                    _context136.next = 2;
                     return this.data.getTracklist(recording.id);
 
                   case 2:
-                    tracklist = _context127.sent;
+                    tracklist = _context136.sent;
                     tracklist.forEach(function (t) {
                       if (t.song) {
                         t['id'] = t.song[0].song_id;
@@ -17297,20 +17589,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 5:
                   case "end":
-                    return _context127.stop();
+                    return _context136.stop();
                 }
               }
-            }, _callee127, this);
+            }, _callee136, this);
           }));
         }
       }, {
         key: "addRecordingTrackToPlaylist",
         value: function addRecordingTrackToPlaylist(audio, recording) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee128() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee137() {
             var track;
-            return regeneratorRuntime.wrap(function _callee128$(_context128) {
+            return regeneratorRuntime.wrap(function _callee137$(_context137) {
               while (1) {
-                switch (_context128.prev = _context128.next) {
+                switch (_context137.prev = _context137.next) {
                   case 0:
                     //console.log(audio)
                     track = this.data.toPlayerTrack(this.event.venue.name, this.event.location.name, this.event.date, this.event.id, recording.etreeId, audio, recording.id);
@@ -17318,10 +17610,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                   case "end":
-                    return _context128.stop();
+                    return _context137.stop();
                 }
               }
-            }, _callee128, this);
+            }, _callee137, this);
           }));
         }
       }, {
@@ -17861,12 +18153,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SongComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee130() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee139() {
             var _this45 = this;
 
-            return regeneratorRuntime.wrap(function _callee130$(_context130) {
+            return regeneratorRuntime.wrap(function _callee139$(_context139) {
               while (1) {
-                switch (_context130.prev = _context130.next) {
+                switch (_context139.prev = _context139.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -17889,29 +18181,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this45, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee129() {
-                        return regeneratorRuntime.wrap(function _callee129$(_context129) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this45, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee138() {
+                        return regeneratorRuntime.wrap(function _callee138$(_context138) {
                           while (1) {
-                            switch (_context129.prev = _context129.next) {
+                            switch (_context138.prev = _context138.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context129.next = 9;
+                                  _context138.next = 9;
                                   break;
                                 }
 
-                                _context129.next = 3;
+                                _context138.next = 3;
                                 return this.data.getSong(params.get('id'));
 
                               case 3:
-                                this.song = _context129.sent;
+                                this.song = _context138.sent;
                                 this.subtitle = lodash__WEBPACK_IMPORTED_MODULE_1__["uniq"](this.song.composedBy.concat(this.song.lyricsBy).map(function (a) {
                                   return a.name;
                                 })).join(', ');
-                                _context129.next = 7;
+                                _context138.next = 7;
                                 return this.data.getEventInfos(this.song.eventIds);
 
                               case 7:
-                                this.events = _context129.sent;
+                                this.events = _context138.sent;
 
                                 if (this.events.length) {
                                   this.firstPlayed = this.events[0].date;
@@ -17924,38 +18216,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 9:
                                 if (this.song) {
-                                  _context129.next = 17;
+                                  _context138.next = 17;
                                   break;
                                 }
 
-                                _context129.t0 = this.router;
-                                _context129.next = 13;
+                                _context138.t0 = this.router;
+                                _context138.next = 13;
                                 return this.data.getRandomSong();
 
                               case 13:
-                                _context129.t1 = _context129.sent.id;
-                                _context129.t2 = ['/song', _context129.t1];
-                                _context129.t3 = {
+                                _context138.t1 = _context138.sent.id;
+                                _context138.t2 = ['/song', _context138.t1];
+                                _context138.t3 = {
                                   replaceUrl: true
                                 };
 
-                                _context129.t0.navigate.call(_context129.t0, _context129.t2, _context129.t3);
+                                _context138.t0.navigate.call(_context138.t0, _context138.t2, _context138.t3);
 
                               case 17:
                               case "end":
-                                return _context129.stop();
+                                return _context138.stop();
                             }
                           }
-                        }, _callee129, this);
+                        }, _callee138, this);
                       }));
                     });
 
                   case 2:
                   case "end":
-                    return _context130.stop();
+                    return _context139.stop();
                 }
               }
-            }, _callee130, this);
+            }, _callee139, this);
           }));
         }
       }, {
@@ -18989,12 +19281,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(VenueComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee132() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee141() {
             var _this50 = this;
 
-            return regeneratorRuntime.wrap(function _callee132$(_context132) {
+            return regeneratorRuntime.wrap(function _callee141$(_context141) {
               while (1) {
-                switch (_context132.prev = _context132.next) {
+                switch (_context141.prev = _context141.next) {
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
@@ -19008,22 +19300,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       }
                     });
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this50, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee131() {
-                        return regeneratorRuntime.wrap(function _callee131$(_context131) {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this50, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee140() {
+                        return regeneratorRuntime.wrap(function _callee140$(_context140) {
                           while (1) {
-                            switch (_context131.prev = _context131.next) {
+                            switch (_context140.prev = _context140.next) {
                               case 0:
                                 if (!params.has('id')) {
-                                  _context131.next = 6;
+                                  _context140.next = 6;
                                   break;
                                 }
 
-                                _context131.next = 3;
+                                _context140.next = 3;
                                 return this.data.getVenue(params.get('id'));
 
                               case 3:
-                                this.venue = _context131.sent;
-                                _context131.next = 7;
+                                this.venue = _context140.sent;
+                                _context140.next = 7;
                                 break;
 
                               case 6:
@@ -19033,33 +19325,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 7:
                                 if (!(params.has('id') && this.venue.name)) {
-                                  _context131.next = 20;
+                                  _context140.next = 20;
                                   break;
                                 }
 
                                 console.log(this.venue); //this.venue = await this.data.getVenue(params.get('id'));
 
-                                _context131.next = 11;
+                                _context140.next = 11;
                                 return this.data.getEventInfo(this.venue.eventIds[0]);
 
                               case 11:
-                                this.location = _context131.sent.location;
+                                this.location = _context140.sent.location;
 
                                 if (!this.venue) {
-                                  _context131.next = 18;
+                                  _context140.next = 18;
                                   break;
                                 }
 
-                                _context131.next = 15;
+                                _context140.next = 15;
                                 return this.data.getYoutubeList(this.venue.id, ['Grateful Dead', this.location, this.venue.name]);
 
                               case 15:
-                                this.videos = _context131.sent;
+                                this.videos = _context140.sent;
                                 this.currentVideoId = this.videos[0].videoId;
                                 console.log(this.videos);
 
                               case 18:
-                                _context131.next = 21;
+                                _context140.next = 21;
                                 break;
 
                               case 20:
@@ -19069,10 +19361,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 21:
                               case "end":
-                                return _context131.stop();
+                                return _context140.stop();
                             }
                           }
-                        }, _callee131, this);
+                        }, _callee140, this);
                       }));
                     });
                     /*
@@ -19094,10 +19386,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                   case "end":
-                    return _context132.stop();
+                    return _context141.stop();
                 }
               }
-            }, _callee132, this);
+            }, _callee141, this);
           }));
         }
       }, {
