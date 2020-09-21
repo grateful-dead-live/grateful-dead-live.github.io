@@ -2856,7 +2856,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FRONTEND_URL = 'https://grateful-dead-live.github.io/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/'
     //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/'
 
-    var API_URL = 'https://cors-anywhere.herokuapp.com/http://138.37.95.164/api/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
+    var API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
     var DEBUG = false;
     var SOCKETIO = false;
