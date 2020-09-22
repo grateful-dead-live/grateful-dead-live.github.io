@@ -2860,8 +2860,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
-    var DEBUG = true;
-    var SOCKETIO = true;
+    var DEBUG = false;
+    var SOCKETIO = false;
     /***/
   },
 
@@ -15324,7 +15324,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         fxFlex: [0, "fxFlex"]
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵdid"](9, 114688, null, 0, _shared_showmap_component__WEBPACK_IMPORTED_MODULE_13__["ShowMapComponent"], [_services_data_service__WEBPACK_IMPORTED_MODULE_7__["DataService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"]], {
         zoom: [0, "zoom"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵeld"](10, 0, null, null, 1, "gd-sharebuttons", [], null, null, null, _shared_sharebuttons_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["View_ShareButtonsComponent_0"], _shared_sharebuttons_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["RenderType_ShareButtonsComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵdid"](11, 114688, null, 0, _shared_sharebuttons_component__WEBPACK_IMPORTED_MODULE_15__["ShareButtonsComponent"], [], null, null)], function (_ck, _v) {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵeld"](10, 0, null, null, 1, "gd-sharebuttons", [["style", "position:fixed; bottom: 75px; right: 20px;"]], null, null, null, _shared_sharebuttons_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["View_ShareButtonsComponent_0"], _shared_sharebuttons_component_ngfactory__WEBPACK_IMPORTED_MODULE_14__["RenderType_ShareButtonsComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵdid"](11, 114688, null, 0, _shared_sharebuttons_component__WEBPACK_IMPORTED_MODULE_15__["ShareButtonsComponent"], [], null, null)], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = "column";
 
