@@ -2860,8 +2860,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
-    var DEBUG = false;
-    var SOCKETIO = false;
+    var DEBUG = true;
+    var SOCKETIO = true;
     /***/
   },
 

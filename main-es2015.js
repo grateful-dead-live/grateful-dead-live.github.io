@@ -1137,8 +1137,8 @@ const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'
 const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/';
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
-const DEBUG = false;
-const SOCKETIO = false;
+const DEBUG = true;
+const SOCKETIO = true;
 
 
 /***/ }),
