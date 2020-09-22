@@ -2860,7 +2860,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'; //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
-    var DEBUG = true;
+    var DEBUG = false;
     var SOCKETIO = false;
     /***/
   },
@@ -7154,10 +7154,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SocketioService, [{
         key: "setupSocketConnection",
         value: function setupSocketConnection() {
-          var connectionOptions = {//"force new connection" : true,
+          var connectionOptions = {
+            //"force new connection" : true,
             //"reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
             //"timeout" : 10000,                  //before connect_error and connect_timeout are emitted.
-            //"transports" : ["websocket"]
+            //"transports" : ['polling', 'websockets'],
+            path: '/dead/socket.io'
           };
           this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_0__(_config__WEBPACK_IMPORTED_MODULE_1__["API_URL"], connectionOptions); //this.socket.emit('comment', 'socket comment!');
           //this.socket.on('my broadcast', (data: string) => {
