@@ -1136,7 +1136,7 @@ const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/';
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'
 //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
-const DEBUG = true;
+const DEBUG = false;
 const SOCKETIO = false;
 
 
