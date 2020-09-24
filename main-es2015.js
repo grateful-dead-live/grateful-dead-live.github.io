@@ -1106,7 +1106,7 @@ class CommentsComponent {
 /*!***************************!*\
   !*** ./src/app/config.ts ***!
   \***************************/
-/*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, FRONTEND_URL, API_URL, DEBUG, SOCKETIO */
+/*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, lo, FRONTEND_URL, API_URL, DEBUG, SOCKETIO */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1116,6 +1116,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EMAILADDRESS", function() { return EMAILADDRESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRACKINGID", function() { return TRACKINGID; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRACKING", function() { return TRACKING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lo", function() { return lo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FRONTEND_URL", function() { return FRONTEND_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEBUG", function() { return DEBUG; });
@@ -1124,18 +1125,20 @@ const AUTH0DOMAIN = 'gdconcertexplorer.eu.auth0.com';
 const AUTH0CLIENTID = 'MgqjkApiGjSzMcFwjzUiyoNJK6z8iWEb';
 const EMAILADDRESS = 'gdconcertexplorer@gmail.com';
 const TRACKINGID = 'UA-165369751-1';
-const TRACKING = false;
+const TRACKING = 'false';
+const lo = false;
 //export const API_URL = 'http://localhost:8060/';
 //export const API_URL = 'http://c4dm.eecs.qmul.ac.uk/dead/';
 //export const API_URL = 'http://25.86.166.144:8060/';
 //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
 //export const FRONTEND_URL = 'http://localhost:4200/';
 const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
-const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/';
+//export const API_URL = 'https://cors-anywhere.herokuapp.com/http://82.5.176.6:8080/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://138.37.95.164/api/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'
 //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
+const API_URL = 'https://dead.ddnsfree.com/';
 const DEBUG = false;
 const SOCKETIO = false;
 
