@@ -2781,7 +2781,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/config.ts ***!
     \***************************/
 
-  /*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, lo, FRONTEND_URL, API_URL, DEBUG, SOCKETIO */
+  /*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, lo, FRONTEND_URL, API, API_URL, WSS_URL, DEBUG, SOCKETIO */
 
   /***/
   function srcAppConfigTs(module, __webpack_exports__, __webpack_require__) {
@@ -2833,8 +2833,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony export (binding) */
 
 
+    __webpack_require__.d(__webpack_exports__, "API", function () {
+      return API;
+    });
+    /* harmony export (binding) */
+
+
     __webpack_require__.d(__webpack_exports__, "API_URL", function () {
       return API_URL;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "WSS_URL", function () {
+      return WSS_URL;
     });
     /* harmony export (binding) */
 
@@ -2866,9 +2878,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
     //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
-    var API_URL = 'https://dead.ddnsfree.com/';
+    var API = 'dead.ddnsfree.com/';
+    var API_URL = 'https://' + API;
+    var WSS_URL = 'wss://' + API;
     var DEBUG = false;
-    var SOCKETIO = false;
+    var SOCKETIO = true;
     /***/
   },
 
@@ -7585,7 +7599,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             //path: '/dead/socket.io',
             //secure: true
           };
-          this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_0__(_config__WEBPACK_IMPORTED_MODULE_1__["API_URL"], connectionOptions); //this.socket.emit('comment', 'socket comment!');
+          this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_0__(_config__WEBPACK_IMPORTED_MODULE_1__["WSS_URL"], connectionOptions); //this.socket.emit('comment', 'socket comment!');
           //this.socket.on('my broadcast', (data: string) => {
           //  console.log(data);
           //});

@@ -1106,7 +1106,7 @@ class CommentsComponent {
 /*!***************************!*\
   !*** ./src/app/config.ts ***!
   \***************************/
-/*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, lo, FRONTEND_URL, API_URL, DEBUG, SOCKETIO */
+/*! exports provided: AUTH0DOMAIN, AUTH0CLIENTID, EMAILADDRESS, TRACKINGID, TRACKING, lo, FRONTEND_URL, API, API_URL, WSS_URL, DEBUG, SOCKETIO */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1118,7 +1118,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRACKING", function() { return TRACKING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lo", function() { return lo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FRONTEND_URL", function() { return FRONTEND_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API", function() { return API; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WSS_URL", function() { return WSS_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEBUG", function() { return DEBUG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SOCKETIO", function() { return SOCKETIO; });
 const AUTH0DOMAIN = 'gdconcertexplorer.eu.auth0.com';
@@ -1138,9 +1140,11 @@ const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'
 //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
-const API_URL = 'https://dead.ddnsfree.com/';
+const API = 'dead.ddnsfree.com/';
+const API_URL = 'https://' + API;
+const WSS_URL = 'wss://' + API;
 const DEBUG = false;
-const SOCKETIO = false;
+const SOCKETIO = true;
 
 
 /***/ }),
@@ -2745,7 +2749,7 @@ class SocketioService {
         //path: '/dead/socket.io',
         //secure: true
         };
-        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_0__(_config__WEBPACK_IMPORTED_MODULE_1__["API_URL"], connectionOptions);
+        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_0__(_config__WEBPACK_IMPORTED_MODULE_1__["WSS_URL"], connectionOptions);
         //this.socket.emit('comment', 'socket comment!');
         //this.socket.on('my broadcast', (data: string) => {
         //  console.log(data);
