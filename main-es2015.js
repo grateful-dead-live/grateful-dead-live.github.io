@@ -815,6 +815,7 @@ class ChatterBoxComponent {
     addComment(comment) {
         this.onKeyupEnter.emit(comment);
         this.commentText = '';
+        this.typedCommentTextLength = 0;
     }
     onKeyUp(input) {
         this.onKeyup.emit(input);
@@ -2742,12 +2743,10 @@ class SocketioService {
     constructor() { }
     setupSocketConnection() {
         var connectionOptions = {
-        //"force new connection" : true,
-        //"reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
-        //"timeout" : 10000,                  //before connect_error and connect_timeout are emitted.
-        //"transports" : ['websocket'],
-        //path: '/dead/socket.io',
-        //secure: true
+            //"force new connection" : true,
+            //"reconnectionAttempts": "Infinity", //avoid having user reconnect manually in order to prevent dead clients after a server restart
+            //"timeout" : 10000,                  //before connect_error and connect_timeout are emitted.
+            "transports": ['websocket'],
         };
         this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_0__(_config__WEBPACK_IMPORTED_MODULE_1__["WSS_URL"], connectionOptions);
         //this.socket.emit('comment', 'socket comment!');
