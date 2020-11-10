@@ -17564,7 +17564,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_ShowComponent_19(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "a", [["href", "http://www.psilo.com/dead/"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [["height", "50px"], ["src", "http://www.psilo.com/dead/images/logo_psilo.jpg"], ["width", "auto"]], null, null, null, null, null))], null, null);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "a", [["href", "https://www.deadstubs.com/"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [["height", "50px"], ["src", "https://www.deadstubs.com/images/logo_psilo.jpg"], ["width", "auto"]], null, null, null, null, null))], null, null);
     }
 
     function View_ShowComponent_16(_l) {
@@ -17698,7 +17698,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function View_ShowComponent_29(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "a", [["href", "http://www.psilo.com/dead/"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [["height", "50px"], ["src", "http://www.psilo.com/dead/images/logo_psilo.jpg"], ["width", "auto"]], null, null, null, null, null))], null, null);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "a", [["href", "https://www.deadstubs.com/"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [["height", "50px"], ["src", "https://www.deadstubs.com/images/logo_psilo.jpg"], ["width", "auto"]], null, null, null, null, null))], null, null);
     }
 
     function View_ShowComponent_26(_l) {
