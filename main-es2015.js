@@ -3446,8 +3446,9 @@ class MapComponent {
     ngOnInit() {
         this.options = {
             layers: [
-                //tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["tileLayer"])('https://a.tiles.mapbox.com/v3/smmaurer.k59p72bl/{z}/{x}/{y}.png', { maxZoom: 17, attribution: '...' }),
+                Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["tileLayer"])('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+                //tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p72bl/{z}/{x}/{y}.png',
+                { maxZoom: 17, attribution: '...' }),
                 Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["marker"])([this.latitude, this.longitude], {
                     icon: Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["icon"])({
                         iconSize: [25, 41],
@@ -4178,9 +4179,9 @@ class ShowMapComponent {
         this.mapOptions = {
             layers: [
                 //L.tileLayer('https://a.tiles.mapbox.com/v3/villeda.c4c63d13/{z}/{x}/{y}.png',
-                //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
                 //L.tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p4an0/{z}/{x}/{y}.png',
-                L.tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p72bl/{z}/{x}/{y}.png', 
+                //L.tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p72bl/{z}/{x}/{y}.png',
                 //L.tileLayer('https://a.tiles.mapbox.com/v3/smmaurer.k59p92aj/{z}/{x}/{y}.png',
                 //L.tileLayer('https://a.tiles.mapbox.com/v3/aj.03e9e12d/{z}/{x}/{y}.png',
                 { maxZoom: 18, attribution: '...' })
