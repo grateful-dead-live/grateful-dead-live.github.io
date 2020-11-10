@@ -5351,7 +5351,8 @@ class LocationComponent {
             }
             if (params.has('id') && this.location.state) {
                 this.videos = yield this.data.getYoutubeList(this.location.id, ['Grateful Dead', this.location.name]);
-                this.currentVideoId = this.videos[0].videoId;
+                if (this.videos)
+                    this.currentVideoId = this.videos[0].videoId;
                 console.log(this.videos);
             }
             else {
@@ -6780,7 +6781,8 @@ class VenueComponent {
                     this.location = (yield this.data.getEventInfo(this.venue.eventIds[0])).location;
                     if (this.venue) {
                         this.videos = yield this.data.getYoutubeList(this.venue.id, ['Grateful Dead', this.location, this.venue.name]);
-                        this.currentVideoId = this.videos[0].videoId;
+                        if (this.videos)
+                            this.currentVideoId = this.videos[0].videoId;
                         console.log(this.videos);
                     }
                 }

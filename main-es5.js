@@ -15562,7 +15562,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 10:
                       this.videos = _context127.sent;
-                      this.currentVideoId = this.videos[0].videoId;
+                      if (this.videos) this.currentVideoId = this.videos[0].videoId;
                       console.log(this.videos);
                       _context127.next = 16;
                       break;
@@ -20751,7 +20751,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 15:
                                 this.videos = _context140.sent;
-                                this.currentVideoId = this.videos[0].videoId;
+                                if (this.videos) this.currentVideoId = this.videos[0].videoId;
                                 console.log(this.videos);
 
                               case 18:
