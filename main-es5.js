@@ -2890,7 +2890,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AUTH0CLIENTID = 'MgqjkApiGjSzMcFwjzUiyoNJK6z8iWEb';
     var EMAILADDRESS = 'gdconcertexplorer@gmail.com';
     var TRACKINGID = 'UA-165369751-1';
-    var TRACKING = 'true';
+    var TRACKING = 'false';
     var lo = false; //export const API_URL = 'http://localhost:8060/';
     //export const API_URL = 'http://c4dm.eecs.qmul.ac.uk/dead/';
     //export const API_URL = 'http://25.86.166.144:8060/';
