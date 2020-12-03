@@ -18229,7 +18229,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function View_ShowComponent_17(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "br", [], null, null, null, null, null))], null, function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.currentPhoto.description;
+        var currVal_0 = _co.selectedPhoto.description;
 
         _ck(_v, 1, 0, currVal_0);
       });
@@ -18239,7 +18239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "a", [["target", "_blank"]], [[8, "href", 4]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [["height", "50px"], ["src", "https://www.gdao.org/themes/gdao-theme/images/logo-gdao.png"], ["width", "auto"]], null, null, null, null, null))], null, function (_ck, _v) {
         var _co = _v.component;
 
-        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.currentPhoto.source, "");
+        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.selectedPhoto.source, "");
 
         _ck(_v, 0, 0, currVal_0);
       });
@@ -18258,15 +18258,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         ngIf: [0, "ngIf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.currentPhoto.description;
+        var currVal_0 = _co.selectedPhoto.description;
 
         _ck(_v, 2, 0, currVal_0);
 
-        var currVal_1 = _co.currentPhoto.collection == "GDAO";
+        var currVal_1 = _co.selectedPhoto.collection == "GDAO";
 
         _ck(_v, 4, 0, currVal_1);
 
-        var currVal_2 = _co.currentPhoto.collection == "Psilo";
+        var currVal_2 = _co.selectedPhoto.collection == "Psilo";
 
         _ck(_v, 6, 0, currVal_2);
       }, null);
@@ -18277,13 +18277,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         fxLayout: [0, "fxLayout"]
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_14__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_15__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_15__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_14__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_15__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 5, "div", [["id", "galleryContainer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "div", [["class", "slides-wrapper"], ["ng2-carouselamos", ""], ["style", "width: 100%;"]], null, null, null, _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["View_Ng2CarouselamosComponent_0"], _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["RenderType_Ng2CarouselamosComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 4767744, null, 0, ng2_carouselamos__WEBPACK_IMPORTED_MODULE_30__["Ng2CarouselamosComponent"], [], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 5, "div", [["id", "galleryContainer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "div", [["class", "slides-wrapper"], ["ng2-carouselamos", ""], ["style", "width: 100%;"]], null, [[null, "onSelectedItem"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("onSelectedItem" === en) {
+          var pd_0 = (_co.selectedPhoto = $event.item) !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["View_Ng2CarouselamosComponent_0"], _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["RenderType_Ng2CarouselamosComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 4767744, null, 0, ng2_carouselamos__WEBPACK_IMPORTED_MODULE_30__["Ng2CarouselamosComponent"], [], {
         items: [0, "items"],
         width: [1, "width"],
         $prev: [2, "$prev"],
         $next: [3, "$next"],
         $item: [4, "$item"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["prev", 2]], null, 0, null, View_ShowComponent_11)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["next", 2]], null, 0, null, View_ShowComponent_13)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["item", 2]], null, 0, null, View_ShowComponent_15)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShowComponent_16)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_28__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, {
+        onSelectedItem: "onSelectedItem"
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["prev", 2]], null, 0, null, View_ShowComponent_11)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["next", 2]], null, 0, null, View_ShowComponent_13)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["item", 2]], null, 0, null, View_ShowComponent_15)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShowComponent_16)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_28__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
@@ -18306,7 +18318,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _ck(_v, 9, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
 
-        var currVal_7 = _co.currentPhoto;
+        var currVal_7 = _co.selectedPhoto;
 
         _ck(_v, 14, 0, currVal_7);
       }, null);
@@ -18363,7 +18375,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function View_ShowComponent_27(_l) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "span", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](1, null, ["", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 0, "br", [], null, null, null, null, null))], null, function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.currentArtifact.description;
+        var currVal_0 = _co.selectedArtifact.description;
 
         _ck(_v, 1, 0, currVal_0);
       });
@@ -18379,7 +18391,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, function (_ck, _v) {
         var _co = _v.component;
 
-        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.currentArtifact.source, "");
+        var currVal_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinlineInterpolate"](1, "", _co.selectedArtifact.source, "");
 
         _ck(_v, 0, 0, currVal_0);
       });
@@ -18404,15 +18416,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         ngIf: [0, "ngIf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_1 = _co.currentArtifact.description;
+        var currVal_1 = _co.selectedArtifact.description;
 
         _ck(_v, 4, 0, currVal_1);
 
-        var currVal_2 = _co.currentArtifact.collection == "GDAO";
+        var currVal_2 = _co.selectedArtifact.collection == "GDAO";
 
         _ck(_v, 6, 0, currVal_2);
 
-        var currVal_3 = _co.currentArtifact.collection == "Psilo";
+        var currVal_3 = _co.selectedArtifact.collection == "Psilo";
 
         _ck(_v, 8, 0, currVal_3);
       }, function (_ck, _v) {
@@ -18428,13 +18440,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         fxLayout: [0, "fxLayout"]
       }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_14__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_15__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_15__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_14__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_15__["MediaMarshaller"]], {
         fxFlex: [0, "fxFlex"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Other Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 5, "div", [["id", "galleryContainer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "div", [["class", "slides-wrapper"], ["ng2-carouselamos", ""], ["style", "width: 100%;"]], null, null, null, _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["View_Ng2CarouselamosComponent_0"], _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["RenderType_Ng2CarouselamosComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 4767744, null, 0, ng2_carouselamos__WEBPACK_IMPORTED_MODULE_30__["Ng2CarouselamosComponent"], [], {
+      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Other Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 5, "div", [["id", "galleryContainer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "div", [["class", "slides-wrapper"], ["ng2-carouselamos", ""], ["style", "width: 100%;"]], null, [[null, "onSelectedItem"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("onSelectedItem" === en) {
+          var pd_0 = (_co.selectedArtifact = $event.item) !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["View_Ng2CarouselamosComponent_0"], _node_modules_ng2_carouselamos_ng2_carouselamos_ngfactory__WEBPACK_IMPORTED_MODULE_29__["RenderType_Ng2CarouselamosComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 4767744, null, 0, ng2_carouselamos__WEBPACK_IMPORTED_MODULE_30__["Ng2CarouselamosComponent"], [], {
         items: [0, "items"],
         width: [1, "width"],
         $prev: [2, "$prev"],
         $next: [3, "$next"],
         $item: [4, "$item"]
-      }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["prev", 2]], null, 0, null, View_ShowComponent_21)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["next", 2]], null, 0, null, View_ShowComponent_23)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["item", 2]], null, 0, null, View_ShowComponent_25)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShowComponent_26)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_28__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+      }, {
+        onSelectedItem: "onSelectedItem"
+      }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["prev", 2]], null, 0, null, View_ShowComponent_21)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["next", 2]], null, 0, null, View_ShowComponent_23)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](0, [["item", 2]], null, 0, null, View_ShowComponent_25)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShowComponent_26)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_28__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
         ngIf: [0, "ngIf"]
       }, null)], function (_ck, _v) {
         var _co = _v.component;
@@ -18457,7 +18481,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _ck(_v, 9, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
 
-        var currVal_7 = _co.currentArtifact;
+        var currVal_7 = _co.selectedArtifact;
 
         _ck(_v, 14, 0, currVal_7);
       }, null);
@@ -18918,8 +18942,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                   if (this.photos.length > 0) {
                                     gl = this.lightbox.makeGallery(this.photos);
                                     this.photosLightbox = gl[0];
-                                    this.photos = gl[1];
-                                    this.currentPhoto = this.photos[0];
+                                    this.photos = gl[1]; //this.imageObject = this.lightbox.makeGallery2(this.photos);
                                   }
 
                                   if (this.artifacts.length) {
@@ -19122,16 +19145,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
-        key: "onClickPhoto",
-        value: function onClickPhoto(p) {
-          this.currentPhoto = p;
-          this.lightbox.openLightboxArray(this.photosLightbox, p.index);
-        }
-      }, {
         key: "onClickArtifact",
         value: function onClickArtifact(a) {
-          this.currentArtifact = a;
           this.lightbox.openLightboxArray(this.artifactsLightbox, a.index);
+        }
+      }, {
+        key: "onClickPhoto",
+        value: function onClickPhoto(p) {
+          this.lightbox.openLightboxArray(this.photosLightbox, p.index);
         }
       }]);
 
