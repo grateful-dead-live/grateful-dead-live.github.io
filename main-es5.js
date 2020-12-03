@@ -8686,15 +8686,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _ck(_v, 18, 0, currVal_20);
 
-        var currVal_21 = _co.userId;
+        var currVal_21 = _co.userId != "None";
 
         _ck(_v, 22, 0, currVal_21);
 
-        var currVal_22 = !_co.userId;
+        var currVal_22 = _co.userId == "None";
 
         _ck(_v, 24, 0, currVal_22);
 
-        var currVal_23 = _co.userId;
+        var currVal_23 = _co.userId != "None";
 
         _ck(_v, 26, 0, currVal_23);
 
