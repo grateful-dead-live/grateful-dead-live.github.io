@@ -3024,7 +3024,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var API_URL = 'https://' + API;
     var WSS_URL = 'wss://' + API;
-    var DEBUG = true;
+    var DEBUG = false;
     var SOCKETIO = true;
     /***/
   },

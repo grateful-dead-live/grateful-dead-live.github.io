@@ -1199,7 +1199,7 @@ const API = 'dead.ddnsfree.com/';
 //export const API_URL = 'http://localhost:8060/';
 const API_URL = 'https://' + API;
 const WSS_URL = 'wss://' + API;
-const DEBUG = true;
+const DEBUG = false;
 const SOCKETIO = true;
 
 
