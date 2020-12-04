@@ -3008,7 +3008,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EMAILADDRESS = 'gdconcertexplorer@gmail.com';
     var TRACKINGID = 'UA-165369751-1'; //export const GOOGLETAGID = 'GTM-TT7TKCZ';
 
-    var TRACKING = false; //export const API_URL = 'http://localhost:8060/';
+    var TRACKING = true; //export const API_URL = 'http://localhost:8060/';
     //export const API_URL = 'http://c4dm.eecs.qmul.ac.uk/dead/';
     //export const API_URL = 'http://25.86.166.144:8060/';
     //export const API_URL = 'https://grateful-dead-api.herokuapp.com/';
@@ -12353,8 +12353,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             dates.sort();
             dates.forEach(function (e) {
-              htmlstring += '<a style="color: black;" href="/#/show/' + e[1] + '">' + e[0] + '</a><br>'; // removed #/ url
-
+              htmlstring += '<a style="color: black;" href="/#/show/' + e[1] + '">' + e[0] + '</a><br>';
               datestring += e[0] + ' ';
             });
             return [datestring, htmlstring];
@@ -12363,9 +12362,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onEachFeature",
         value: function onEachFeature(feature, layer) {
+          var _this32 = this;
+
           if (feature.properties && feature.properties.popupContent) {
             layer.bindPopup(feature.properties.popupContent, {
               maxHeight: 160
+            }).bindTooltip(feature.properties.name);
+            layer.on('mouseover', function (e) {
+              var mytooltip = layer.getTooltip();
+
+              if (layer.isPopupOpen()) {
+                mytooltip.setOpacity(0.0);
+              } else {
+                mytooltip.setOpacity(0.9);
+              }
+            });
+            layer.on('click', function (e) {
+              var mytooltip = layer.getTooltip();
+              mytooltip.setOpacity(0.0);
+
+              _this32.googleAnalyticsService.eventEmitter("click_marker", "map_select", "click_marker", mytooltip._content);
             });
           }
 
@@ -12374,7 +12390,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getGeoJson",
         value: function getGeoJson(shows) {
-          var _this32 = this;
+          var _this33 = this;
 
           var geoJsonData = [];
           var latlongs = [];
@@ -12384,14 +12400,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               var _long = parseFloat(v["long"]);
 
-              while (_this32.searchForArray(latlongs, [lat, _long]) != -1) {
+              while (_this33.searchForArray(latlongs, [lat, _long]) != -1) {
                 // prevent markers in same place
                 lat += 0.001;
               }
 
               latlongs.push([lat, _long]);
 
-              var ds = _this32.dateStrings(v.shows);
+              var ds = _this33.dateStrings(v.shows);
 
               var datestring = ds[0];
               var venuehtml = ds[1];
@@ -12406,8 +12422,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 'properties': {
                   'name': v.name,
                   'dates': datestring,
-                  'popupContent': '<b><a style="color: black;" href="/#/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml // removed #/ url
-
+                  'popupContent': '<b><a style="color: black;" href="/#/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml
                 },
                 'geometry': {
                   'type': 'Point',
@@ -12422,7 +12437,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "groupLayers",
         value: function groupLayers(g) {
-          var _this33 = this;
+          var _this34 = this;
 
           var l = [];
           var myIcon = L.icon({
@@ -12433,7 +12448,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
           g.forEach(function (v) {
             var g = L.geoJSON(v, {
-              onEachFeature: _this33.onEachFeature,
+              onEachFeature: _this34.onEachFeature.bind(_this34),
               pointToLayer: function pointToLayer(feature, latlng) {
                 return L.marker(latlng, {
                   icon: myIcon,
@@ -12449,7 +12464,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getTourJson",
         value: function getTourJson(t) {
-          var _this34 = this;
+          var _this35 = this;
 
           var tours = [];
           Object.keys(t).forEach(function (tour) {
@@ -12462,7 +12477,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               var lat = parseFloat(t[tour][venue].lat);
 
-              while (_this34.searchForArray(latlongs, [lat, _long2]) != -1) {
+              while (_this35.searchForArray(latlongs, [lat, _long2]) != -1) {
                 // prevent markers in same place
                 lat += 0.001;
               }
@@ -12473,7 +12488,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return shows.push(show);
               });
 
-              var ds = _this34.dateStrings(shows);
+              var ds = _this35.dateStrings(shows);
 
               var datestring = ds[0];
               var venuehtml = ds[1];
@@ -14049,7 +14064,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee122() {
-            var _this35 = this;
+            var _this36 = this;
 
             return regeneratorRuntime.wrap(function _callee122$(_context122) {
               while (1) {
@@ -14057,12 +14072,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
-                        _this35.currentUser = {
+                        _this36.currentUser = {
                           userId: userProfile.sub.split("|")[1],
                           userName: userProfile['http://example.com/username']
                         };
                         gtag('set', {
-                          'user_id': _this35.currentUser.userId
+                          'user_id': _this36.currentUser.userId
                         });
                       }
                     });
@@ -14076,7 +14091,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee121() {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this36, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee121() {
                         return regeneratorRuntime.wrap(function _callee121$(_context121) {
                           while (1) {
                             switch (_context121.prev = _context121.next) {
@@ -14603,7 +14618,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee124() {
-            var _this36 = this;
+            var _this37 = this;
 
             return regeneratorRuntime.wrap(function _callee124$(_context124) {
               while (1) {
@@ -14611,12 +14626,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
-                        _this36.currentUser = {
+                        _this37.currentUser = {
                           userId: userProfile.sub.split("|")[1],
                           userName: userProfile['http://example.com/username']
                         };
                         gtag('set', {
-                          'user_id': _this36.currentUser.userId
+                          'user_id': _this37.currentUser.userId
                         });
                       }
                     });
@@ -14630,7 +14645,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this36, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee123() {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this37, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee123() {
                         return regeneratorRuntime.wrap(function _callee123$(_context123) {
                           while (1) {
                             switch (_context123.prev = _context123.next) {
@@ -15253,16 +15268,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(IndexComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this37 = this;
+          var _this38 = this;
 
           this.auth.userProfile$.subscribe(function (userProfile) {
             if (userProfile) {
-              _this37.currentUser = {
+              _this38.currentUser = {
                 userId: userProfile.sub.split("|")[1],
                 userName: userProfile['http://example.com/username']
               };
               gtag('set', {
-                'user_id': _this37.currentUser.userId
+                'user_id': _this38.currentUser.userId
               });
             }
           });
@@ -16061,16 +16076,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(LocationComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this38 = this;
+          var _this39 = this;
 
           this.auth.userProfile$.subscribe(function (userProfile) {
             if (userProfile) {
-              _this38.currentUser = {
+              _this39.currentUser = {
                 userId: userProfile.sub.split("|")[1],
                 userName: userProfile['http://example.com/username']
               };
               gtag('set', {
-                'user_id': _this38.currentUser.userId
+                'user_id': _this39.currentUser.userId
               });
             }
           });
@@ -16083,7 +16098,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           } */
 
           this.route.paramMap.subscribe(function (params) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this38, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee129() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this39, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee129() {
               return regeneratorRuntime.wrap(function _callee129$(_context129) {
                 while (1) {
                   switch (_context129.prev = _context129.next) {
@@ -16139,35 +16154,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openOptionsDialog",
         value: function openOptionsDialog(event) {
-          var _this39 = this;
+          var _this40 = this;
 
           this.dialog.openMultiFunction(event.venue + ", " + event.date, ["Go to show", "Go to recording"], [function () {
-            return _this39.router.navigate(['/show', event.id]);
+            return _this40.router.navigate(['/show', event.id]);
           }, function () {
-            return _this39.openRecordingsDialog(event);
+            return _this40.openRecordingsDialog(event);
           }]);
         }
       }, {
         key: "openRecordingsDialog",
         value: function openRecordingsDialog(event) {
-          var _this40 = this;
+          var _this41 = this;
 
           this.dialog.openMultiFunction("Recordings of '" + event.venue + ", " + event.date, event.recordings.map(function (r) {
             return r.etreeId;
           }), event.recordings.map(function (r) {
             return function () {
-              return _this40.router.navigate(['/recording', r.id]);
+              return _this41.router.navigate(['/recording', r.id]);
             };
           }));
         }
       }, {
         key: "selectVideo",
         value: function selectVideo() {
-          var _this41 = this;
+          var _this42 = this;
 
           this.videos.forEach(function (v, i) {
-            if (v.videoId === _this41.currentVideoId) {
-              _this41.currentVideoIndex = i;
+            if (v.videoId === _this42.currentVideoId) {
+              _this42.currentVideoIndex = i;
             }
           });
           this.googleAnalyticsService.eventEmitter("youtube select", "youtube", '' + this.currentVideoIndex + ' (' + this.currentVideoId + ')', this.router.url);
@@ -16460,16 +16475,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(MapSelectComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this42 = this;
+          var _this43 = this;
 
           this.auth.userProfile$.subscribe(function (userProfile) {
             if (userProfile) {
-              _this42.currentUser = {
+              _this43.currentUser = {
                 userId: userProfile.sub.split("|")[1],
                 userName: userProfile['http://example.com/username']
               };
               gtag('set', {
-                'user_id': _this42.currentUser.userId
+                'user_id': _this43.currentUser.userId
               });
             }
           });
@@ -16775,7 +16790,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee131() {
-            var _this43 = this;
+            var _this44 = this;
 
             return regeneratorRuntime.wrap(function _callee131$(_context131) {
               while (1) {
@@ -16783,17 +16798,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
-                        _this43.currentUser = {
+                        _this44.currentUser = {
                           userId: userProfile.sub.split("|")[1],
                           userName: userProfile['http://example.com/username']
                         };
                         gtag('set', {
-                          'user_id': _this43.currentUser.userId
+                          'user_id': _this44.currentUser.userId
                         });
                       }
                     });
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this43, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee130() {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this44, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee130() {
                         return regeneratorRuntime.wrap(function _callee130$(_context130) {
                           while (1) {
                             switch (_context130.prev = _context130.next) {
@@ -17469,16 +17484,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(RecordingComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this44 = this;
+          var _this45 = this;
 
           this.auth.userProfile$.subscribe(function (userProfile) {
             if (userProfile) {
-              _this44.currentUser = {
+              _this45.currentUser = {
                 userId: userProfile.sub.split("|")[1],
                 userName: userProfile['http://example.com/username']
               };
               gtag('set', {
-                'user_id': _this44.currentUser.userId
+                'user_id': _this45.currentUser.userId
               });
             }
           });
@@ -17492,7 +17507,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
 
           this.route.paramMap.subscribe(function (params) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this44, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee133() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this45, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee133() {
               var tracklist;
               return regeneratorRuntime.wrap(function _callee133$(_context133) {
                 while (1) {
@@ -17558,17 +17573,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openTrackOptionsDialog",
         value: function openTrackOptionsDialog(audio) {
-          var _this45 = this;
+          var _this46 = this;
 
           if (audio.id) {
             this.dialog.openMultiFunction(audio.track + " " + audio.title, ["add to playlist", "go to song"], [function () {
-              return _this45.addTrackToPlaylist(audio);
+              return _this46.addTrackToPlaylist(audio);
             }, function () {
-              return _this45.router.navigate(['/song', audio.id]);
+              return _this46.router.navigate(['/song', audio.id]);
             }]);
           } else {
             this.dialog.openMultiFunction(audio.track + " " + audio.title, ["add to playlist"], [function () {
-              return _this45.addTrackToPlaylist(audio);
+              return _this46.addTrackToPlaylist(audio);
             }]);
           }
         }
@@ -17604,10 +17619,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addAllToPlaylist",
         value: function addAllToPlaylist() {
-          var _this46 = this;
+          var _this47 = this;
 
           if (this.tracklist) this.tracklist.forEach(function (t) {
-            return _this46.addTrackToPlaylist(t);
+            return _this47.addTrackToPlaylist(t);
           });
         }
       }]);
@@ -18861,7 +18876,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee136() {
-            var _this47 = this;
+            var _this48 = this;
 
             return regeneratorRuntime.wrap(function _callee136$(_context136) {
               while (1) {
@@ -18869,12 +18884,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
-                        _this47.currentUser = {
+                        _this48.currentUser = {
                           userId: userProfile.sub.split("|")[1],
                           userName: userProfile['http://example.com/username']
                         };
                         gtag('set', {
-                          'user_id': _this47.currentUser.userId
+                          'user_id': _this48.currentUser.userId
                         });
                       }
                     });
@@ -18888,8 +18903,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }*/
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this47, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee135() {
-                        var _this48 = this;
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this48, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee135() {
+                        var _this49 = this;
 
                         var poster, pass, ticket, gl;
                         return regeneratorRuntime.wrap(function _callee135$(_context135) {
@@ -18918,7 +18933,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                 if (this.event.date) {
                                   this.formatDate = this.data.formatDate(this.event.date);
                                   this.recordingUrls = this.event.recordings.map(function (r) {
-                                    return _this48.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.etreeId + "&playlist=1");
+                                    return _this49.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.etreeId + "&playlist=1");
                                   });
                                   Object(_globals__WEBPACK_IMPORTED_MODULE_10__["logger"])(this.event);
                                   this.photos = this.event.artifacts.filter(function (a) {
@@ -18993,37 +19008,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openSongOptionsDialog",
         value: function openSongOptionsDialog(song, set, idx) {
-          var _this49 = this;
+          var _this50 = this;
 
           this.dialog.openMultiFunction( //song.name+"', "+this.event.venue.name+", "+this.event.date,
           set + "/Track " + idx + ": " + '"' + song.name + '"', ["add to playlist", "go to song"], [function () {
-            return _this49.openRecordingsDialog(song);
+            return _this50.openRecordingsDialog(song);
           }, function () {
-            return _this49.router.navigate(['/song', song.id]);
+            return _this50.router.navigate(['/song', song.id]);
           }]);
         }
       }, {
         key: "openRecordingsDialog",
         value: function openRecordingsDialog(song) {
-          var _this50 = this;
+          var _this51 = this;
 
           this.dialog.openMultiFunction("Recordings of '" + song.name + "', " + this.event.venue + ", " + this.event.date, this.event.recordings.map(function (r) {
             return r.etreeId;
           }), this.event.recordings.map(function (r) {
             return function () {
-              return _this50.addTrackToPlaylist(song, r.etreeId, r.id);
+              return _this51.addTrackToPlaylist(song, r.etreeId, r.id);
             };
           }));
         }
       }, {
         key: "openRecordingOptionsDialog",
         value: function openRecordingOptionsDialog(recording) {
-          var _this51 = this;
+          var _this52 = this;
 
           this.dialog.openMultiFunction("Recording " + recording.etreeId, ["add all to playlist", "go to recording"], [function () {
-            return _this51.addRecordingToPlaylist(recording);
+            return _this52.addRecordingToPlaylist(recording);
           }, function () {
-            return _this51.router.navigate(['/recording', recording.id]);
+            return _this52.router.navigate(['/recording', recording.id]);
           }]);
         }
         /*
@@ -19044,7 +19059,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "addTrackToPlaylist",
         value: function addTrackToPlaylist(song, recordingEtreeId, recordingId) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee137() {
-            var _this52 = this;
+            var _this53 = this;
 
             var eventInfo, songDetails;
             return regeneratorRuntime.wrap(function _callee137$(_context137) {
@@ -19067,7 +19082,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 3:
                     songDetails = _context137.sent;
                     this.data.getTracks(songDetails, eventInfo, recordingEtreeId, recordingId).forEach(function (t) {
-                      return _this52.player.addToPlaylist(t);
+                      return _this53.player.addToPlaylist(t);
                     });
 
                   case 5:
@@ -19090,7 +19105,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "addRecordingToPlaylist",
         value: function addRecordingToPlaylist(recording) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee138() {
-            var _this53 = this;
+            var _this54 = this;
 
             var tracklist;
             return regeneratorRuntime.wrap(function _callee138$(_context138) {
@@ -19112,7 +19127,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }); //logger(tracklist)
 
                     if (tracklist) tracklist.forEach(function (t) {
-                      return _this53.addRecordingTrackToPlaylist(t, recording);
+                      return _this54.addRecordingTrackToPlaylist(t, recording);
                     });
 
                   case 5:
@@ -19872,7 +19887,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee141() {
-            var _this54 = this;
+            var _this55 = this;
 
             return regeneratorRuntime.wrap(function _callee141$(_context141) {
               while (1) {
@@ -19880,12 +19895,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
-                        _this54.currentUser = {
+                        _this55.currentUser = {
                           userId: userProfile.sub.split("|")[1],
                           userName: userProfile['http://example.com/username']
                         };
                         gtag('set', {
-                          'user_id': _this54.currentUser.userId
+                          'user_id': _this55.currentUser.userId
                         });
                       }
                     });
@@ -19899,7 +19914,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
 
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this54, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee140() {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this55, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee140() {
                         return regeneratorRuntime.wrap(function _callee140$(_context140) {
                           while (1) {
                             switch (_context140.prev = _context140.next) {
@@ -19974,34 +19989,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openOptionsDialog",
         value: function openOptionsDialog(event) {
-          var _this55 = this;
+          var _this56 = this;
 
           this.dialog.openMultiFunction(this.song.name + "', " + event.venue + ", " + event.date, ["Add to playlist", "Go to show"], [function () {
-            return _this55.openRecordingsDialog(event);
+            return _this56.openRecordingsDialog(event);
           }, function () {
-            return _this55.router.navigate(['/show', event.id]);
+            return _this56.router.navigate(['/show', event.id]);
           }]);
         }
       }, {
         key: "openRecordingsDialog",
         value: function openRecordingsDialog(event) {
-          var _this56 = this;
+          var _this57 = this;
 
           this.dialog.openMultiFunction("Recordings of '" + this.song.name + "', " + event.venue + ", " + event.date, event.recordings.map(function (r) {
             return r.etreeId;
           }), event.recordings.map(function (r) {
             return function () {
-              return _this56.addRecordingToPlaylist(r.etreeId, event, r.id);
+              return _this57.addRecordingToPlaylist(r.etreeId, event, r.id);
             };
           }));
         }
       }, {
         key: "addRecordingToPlaylist",
         value: function addRecordingToPlaylist(recordingEtreeId, event, recordingId) {
-          var _this57 = this;
+          var _this58 = this;
 
           this.data.getTracks(this.song, event, recordingEtreeId, recordingId).forEach(function (t) {
-            return _this57.player.addToPlaylist(t);
+            return _this58.player.addToPlaylist(t);
           });
         }
       }]);
@@ -20690,17 +20705,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(StartComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this58 = this;
+          var _this59 = this;
 
           this.anchor.listen();
           this.auth.userProfile$.subscribe(function (userProfile) {
             if (userProfile) {
-              _this58.currentUser = {
+              _this59.currentUser = {
                 userId: userProfile.sub.split("|")[1],
                 userName: userProfile['http://example.com/username']
               };
               gtag('set', {
-                'user_id': _this58.currentUser.userId
+                'user_id': _this59.currentUser.userId
               });
             }
           });
@@ -21407,7 +21422,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee143() {
-            var _this59 = this;
+            var _this60 = this;
 
             return regeneratorRuntime.wrap(function _callee143$(_context143) {
               while (1) {
@@ -21415,17 +21430,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     this.auth.userProfile$.subscribe(function (userProfile) {
                       if (userProfile) {
-                        _this59.currentUser = {
+                        _this60.currentUser = {
                           userId: userProfile.sub.split("|")[1],
                           userName: userProfile['http://example.com/username']
                         };
                         gtag('set', {
-                          'user_id': _this59.currentUser.userId
+                          'user_id': _this60.currentUser.userId
                         });
                       }
                     });
                     this.route.paramMap.subscribe(function (params) {
-                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this59, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee142() {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this60, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee142() {
                         return regeneratorRuntime.wrap(function _callee142$(_context142) {
                           while (1) {
                             switch (_context142.prev = _context142.next) {
@@ -21520,35 +21535,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "openOptionsDialog",
         value: function openOptionsDialog(event) {
-          var _this60 = this;
+          var _this61 = this;
 
           this.dialog.openMultiFunction(event.venue + ", " + event.date, ["Go to show", "Go to recording"], [function () {
-            return _this60.router.navigate(['/show', event.id]);
+            return _this61.router.navigate(['/show', event.id]);
           }, function () {
-            return _this60.openRecordingsDialog(event);
+            return _this61.openRecordingsDialog(event);
           }]);
         }
       }, {
         key: "openRecordingsDialog",
         value: function openRecordingsDialog(event) {
-          var _this61 = this;
+          var _this62 = this;
 
           this.dialog.openMultiFunction("Recordings of '" + event.venue + ", " + event.date, event.recordings.map(function (r) {
             return r.etreeId;
           }), event.recordings.map(function (r) {
             return function () {
-              return _this61.router.navigate(['/recording', r.id]);
+              return _this62.router.navigate(['/recording', r.id]);
             };
           }));
         }
       }, {
         key: "selectVideo",
         value: function selectVideo() {
-          var _this62 = this;
+          var _this63 = this;
 
           this.videos.forEach(function (v, i) {
-            if (v.videoId === _this62.currentVideoId) {
-              _this62.currentVideoIndex = i;
+            if (v.videoId === _this63.currentVideoId) {
+              _this63.currentVideoIndex = i;
             }
           });
           this.googleAnalyticsService.eventEmitter("youtube select", "youtube", '' + this.currentVideoIndex + ' (' + this.currentVideoId + ')', this.router.url);

@@ -1183,7 +1183,7 @@ const AUTH0CLIENTID = 'MgqjkApiGjSzMcFwjzUiyoNJK6z8iWEb';
 const EMAILADDRESS = 'gdconcertexplorer@gmail.com';
 const TRACKINGID = 'UA-165369751-1';
 //export const GOOGLETAGID = 'GTM-TT7TKCZ';
-const TRACKING = false;
+const TRACKING = true;
 //export const API_URL = 'http://localhost:8060/';
 //export const API_URL = 'http://c4dm.eecs.qmul.ac.uk/dead/';
 //export const API_URL = 'http://25.86.166.144:8060/';
@@ -4336,7 +4336,7 @@ class ShowMapComponent {
             var dates = s.map(e => [e.date, e.id]);
             dates.sort();
             dates.forEach(e => {
-                htmlstring += '<a style="color: black;" href="/#/show/' + e[1] + '">' + e[0] + '</a><br>'; // removed #/ url
+                htmlstring += '<a style="color: black;" href="/#/show/' + e[1] + '">' + e[0] + '</a><br>';
                 datestring += e[0] + ' ';
             });
             return [datestring, htmlstring];
@@ -4344,7 +4344,21 @@ class ShowMapComponent {
     }
     onEachFeature(feature, layer) {
         if (feature.properties && feature.properties.popupContent) {
-            layer.bindPopup(feature.properties.popupContent, { maxHeight: 160 });
+            layer.bindPopup(feature.properties.popupContent, { maxHeight: 160 }).bindTooltip(feature.properties.name);
+            layer.on('mouseover', e => {
+                var mytooltip = layer.getTooltip();
+                if (layer.isPopupOpen()) {
+                    mytooltip.setOpacity(0.0);
+                }
+                else {
+                    mytooltip.setOpacity(0.9);
+                }
+            });
+            layer.on('click', e => {
+                var mytooltip = layer.getTooltip();
+                mytooltip.setOpacity(0.0);
+                this.googleAnalyticsService.eventEmitter("click_marker", "map_select", "click_marker", mytooltip._content);
+            });
         }
         feature.layer = layer;
     }
@@ -4371,7 +4385,7 @@ class ShowMapComponent {
                     'properties': {
                         'name': v.name,
                         'dates': datestring,
-                        'popupContent': '<b><a style="color: black;" href="/#/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml // removed #/ url
+                        'popupContent': '<b><a style="color: black;" href="/#/venue/' + v.id + '">' + v.name + '</a></b>' + venuehtml
                     },
                     'geometry': {
                         'type': 'Point',
@@ -4393,7 +4407,7 @@ class ShowMapComponent {
         });
         g.forEach(v => {
             var g = L.geoJSON(v, {
-                onEachFeature: this.onEachFeature,
+                onEachFeature: this.onEachFeature.bind(this),
                 pointToLayer: function (feature, latlng) {
                     return L.marker(latlng, { icon: myIcon, riseOnHover: true });
                 }
