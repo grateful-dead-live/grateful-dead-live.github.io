@@ -19488,7 +19488,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
 
-    var styles = [".current-photo[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 100%;\n  height: auto;\n  cursor: pointer;\n}\n\n.photo-text[_ngcontent-%COMP%] {\n  text-align: center;\n  margin-top: 20px;\n}\n\n.carousel-image[_ngcontent-%COMP%] {\n  border-style: solid;\n  border-width: 10px;\n  border-color: white;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL0pvdXJuYWwvcHJvamVjdHMvZ3JhdGVmdWxfZGVhZF8yMDE5X2dpdC93ZWItYXBwMi9zcmMvYXBwL3ZpZXdzL3Nob3cuY29tcG9uZW50LnNhc3MiLCJzcmMvYXBwL3ZpZXdzL3Nob3cuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxvQkFBaUI7S0FBakIsaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxZQUFZO0VBQ1osZUFBZTtBQ0NuQjs7QURDQTtFQUNJLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUNFcEI7O0FEQUE7RUFDSSxtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQ0d2QiIsImZpbGUiOiJzcmMvYXBwL3ZpZXdzL3Nob3cuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VycmVudC1waG90byB7XG4gICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiBhdXRvO1xuICAgIGN1cnNvcjogcG9pbnRlcjsgfVxuXG4ucGhvdG8tdGV4dCB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi10b3A6IDIwcHg7IH1cblxuLmNhcm91c2VsLWltYWdlIHtcbiAgICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICAgIGJvcmRlci13aWR0aDogMTBweDtcbiAgICBib3JkZXItY29sb3I6IHdoaXRlOyB9XG5cblxuXG5cblxuXG4iLCIuY3VycmVudC1waG90byB7XG4gIG9iamVjdC1maXQ6IGNvdmVyO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiBhdXRvO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5waG90by10ZXh0IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY2Fyb3VzZWwtaW1hZ2Uge1xuICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICBib3JkZXItd2lkdGg6IDEwcHg7XG4gIGJvcmRlci1jb2xvcjogd2hpdGU7XG59XG4iXX0= */"];
+    var styles = [".current-photo[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 100%;\n  height: auto;\n  cursor: pointer;\n}\n\n.photo-text[_ngcontent-%COMP%] {\n  text-align: center;\n  margin-top: 20px;\n}\n\n.carousel-image[_ngcontent-%COMP%] {\n  border-style: solid;\n  border-width: 8px;\n  border-color: #f5f5e1;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL0pvdXJuYWwvcHJvamVjdHMvZ3JhdGVmdWxfZGVhZF8yMDE5X2dpdC93ZWItYXBwMi9zcmMvYXBwL3ZpZXdzL3Nob3cuY29tcG9uZW50LnNhc3MiLCJzcmMvYXBwL3ZpZXdzL3Nob3cuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxvQkFBaUI7S0FBakIsaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxZQUFZO0VBQ1osZUFBZTtBQ0NuQjs7QURDQTtFQUNJLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUNFcEI7O0FEQUE7RUFDSSxtQkFBbUI7RUFDbkIsaUJBQWlCO0VBQ2pCLHFCQUFxQjtBQ0d6QiIsImZpbGUiOiJzcmMvYXBwL3ZpZXdzL3Nob3cuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VycmVudC1waG90byB7XG4gICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiBhdXRvO1xuICAgIGN1cnNvcjogcG9pbnRlcjsgfVxuXG4ucGhvdG8tdGV4dCB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi10b3A6IDIwcHg7IH1cblxuLmNhcm91c2VsLWltYWdlIHtcbiAgICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICAgIGJvcmRlci13aWR0aDogOHB4O1xuICAgIGJvcmRlci1jb2xvcjogI2Y1ZjVlMTsgfVxuXG5cblxuXG5cblxuIiwiLmN1cnJlbnQtcGhvdG8ge1xuICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogYXV0bztcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4ucGhvdG8tdGV4dCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmNhcm91c2VsLWltYWdlIHtcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcbiAgYm9yZGVyLXdpZHRoOiA4cHg7XG4gIGJvcmRlci1jb2xvcjogI2Y1ZjVlMTtcbn1cbiJdfQ== */"];
     /***/
   },
 
@@ -19595,7 +19595,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           userName: '',
           userId: 'None'
         };
-        this.tilts = [];
       }
 
       _createClass(ShowComponent, [{
@@ -19657,6 +19656,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 7:
                                 if (this.event.date) {
+                                  this.tilts = this.getTilts();
                                   this.formatDate = this.data.formatDate(this.event.date);
                                   this.recordingUrls = this.event.recordings.map(function (r) {
                                     return _this50.sanitizer.bypassSecurityTrustResourceUrl("https://archive.org/embed/" + r.etreeId + "&playlist=1");
@@ -19695,7 +19695,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                   }
 
                                   this.changeDetectorRef.detectChanges();
-                                  this.tilts = this.getTilts();
                                 } else {
                                   //this.router.navigate(['/show', await this.data.getRandomEventId()],
                                   this.router.navigate(['/mapselect'], {
@@ -19723,10 +19722,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getTilts",
         value: function getTilts() {
-          var tilts = [];
+          var t = [];
 
           for (var i = -30; i <= 30; i++) {
-            tilts.push(i);
+            t.push(i);
           }
 
           var shuffle = function shuffle(arr) {
@@ -19735,7 +19734,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, []);
           };
 
-          return shuffle(tilts);
+          return shuffle(t);
         }
         /*
         protected openSongOptionsDialog(song: SongInfo, set: string, idx: number) {
@@ -19916,16 +19915,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tilt",
         value: function tilt(i, t) {
-          var tl = this.tilts.length;
+          var tl = this.tilts.length; //if (tl > 0) {
+          //  while (i > tl){
+          //    i = i - tl + 1
+          //  }
+          //}  
 
-          if (tl > 0) {
-            while (i > tl) {
-              i = i - tl + 1;
-            }
-          }
+          i = (i % tl - 1 + tl - 1) % tl - 1; // wrap index around list length
 
           if (t == 'artifact') {
-            i = tl - i;
+            i = tl - i - 1;
           }
 
           return this.tilts[i];
