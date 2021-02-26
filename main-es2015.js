@@ -251,7 +251,7 @@ class AppComponent {
                 }
                 if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]) {
                     while (this.title.getTitle() === cached_title) { // wait for new page title
-                        yield this.sleep(50);
+                        yield this.sleep(250);
                         Object(_globals__WEBPACK_IMPORTED_MODULE_7__["logger"])('waiting for page title');
                     }
                     Object(_globals__WEBPACK_IMPORTED_MODULE_7__["logger"])('title: ' + this.title.getTitle());
@@ -1458,8 +1458,13 @@ const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'
 //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
-const API = 'dead.ddnsfree.com/';
-//export const API_URL = 'http://localhost:8060/';
+/*
+export const API = 'researcher1.fnf.archive.org:8060/'
+export const API_URL = 'http://' + API;
+export const WSS_URL = 'ws://' + API;
+*/
+const API = 'dead.ddnsfree.com:8060/';
+//export const API = 'dead.ddnsfree.com/'
 const API_URL = 'https://' + API;
 const WSS_URL = 'wss://' + API;
 const DEBUG = false;
