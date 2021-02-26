@@ -773,7 +773,7 @@ class AuthGuard {
         this.matDialog = matDialog;
     }
     canActivate(route, state) {
-        console.log(state);
+        //console.log(state)
         const cookie = this.getCookie();
         return this.authService.isAuthenticated$.toPromise().then(auth => {
             //if (auth && !cookie) {
@@ -796,7 +796,7 @@ class AuthGuard {
         const dialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
         dialogConfig.disableClose = true;
         dialogConfig.autoFocus = false;
-        console.log('modal');
+        //console.log('modal')
         this.matDialog.open(_register_modal_component__WEBPACK_IMPORTED_MODULE_3__["RegisterModalComponent"], dialogConfig);
     }
     getCookie() {
@@ -1458,15 +1458,15 @@ const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'
 //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
+const API = 'localhost:8060/';
+const API_URL = 'http://' + API;
+const WSS_URL = 'wss://dead.ddnsfree.com:8060/';
 /*
-export const API = 'researcher1.fnf.archive.org:8060/'
-export const API_URL = 'http://' + API;
-export const WSS_URL = 'ws://' + API;
-*/
-const API = 'dead.ddnsfree.com:8060/';
+export const API = 'dead.ddnsfree.com:8060/'
 //export const API = 'dead.ddnsfree.com/'
-const API_URL = 'https://' + API;
-const WSS_URL = 'wss://' + API;
+export const API_URL = 'https://' + API;
+export const WSS_URL = 'wss://' + API;
+*/
 const DEBUG = false;
 const SOCKETIO = true;
 

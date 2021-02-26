@@ -1818,7 +1818,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function canActivate(route, state) {
           var _this8 = this;
 
-          console.log(state);
+          //console.log(state)
           var cookie = this.getCookie();
           return this.authService.isAuthenticated$.toPromise().then(function (auth) {
             //if (auth && !cookie) {
@@ -1846,8 +1846,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function registerModal() {
           var dialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
           dialogConfig.disableClose = true;
-          dialogConfig.autoFocus = false;
-          console.log('modal');
+          dialogConfig.autoFocus = false; //console.log('modal')
+
           this.matDialog.open(_register_modal_component__WEBPACK_IMPORTED_MODULE_3__["RegisterModalComponent"], dialogConfig);
         }
       }, {
@@ -3584,16 +3584,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
     //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
+    var API = 'localhost:8060/';
+    var API_URL = 'http://' + API;
+    var WSS_URL = 'wss://dead.ddnsfree.com:8060/';
     /*
-    export const API = 'researcher1.fnf.archive.org:8060/'
-    export const API_URL = 'http://' + API;
-    export const WSS_URL = 'ws://' + API;
+    export const API = 'dead.ddnsfree.com:8060/'
+    //export const API = 'dead.ddnsfree.com/'
+    export const API_URL = 'https://' + API;
+    export const WSS_URL = 'wss://' + API;
     */
 
-    var API = 'dead.ddnsfree.com:8060/'; //export const API = 'dead.ddnsfree.com/'
-
-    var API_URL = 'https://' + API;
-    var WSS_URL = 'wss://' + API;
     var DEBUG = false;
     var SOCKETIO = true;
     /***/
