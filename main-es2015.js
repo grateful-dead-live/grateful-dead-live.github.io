@@ -1458,15 +1458,15 @@ const FRONTEND_URL = 'https://grateful-dead-live.github.io/';
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://c4dm-xenserv-virt6.eecs.qmul.ac.uk/api/'
 //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
 //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
-const API = 'localhost:8060/';
-const API_URL = 'http://' + API;
-const WSS_URL = 'wss://dead.ddnsfree.com:8060/';
 /*
-export const API = 'dead.ddnsfree.com:8060/'
-//export const API = 'dead.ddnsfree.com/'
-export const API_URL = 'https://' + API;
-export const WSS_URL = 'wss://' + API;
+export const API = 'localhost:8060/'
+export const API_URL = 'http://' + API;
+export const WSS_URL = 'wss://dead.ddnsfree.com:8060/';
 */
+const API = 'dead.ddnsfree.com:8060/';
+//export const API = 'dead.ddnsfree.com/'
+const API_URL = 'https://' + API;
+const WSS_URL = 'wss://' + API;
 const DEBUG = false;
 const SOCKETIO = true;
 

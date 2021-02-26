@@ -3584,16 +3584,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     //export const API_URL = 'https://c4dm.eecs.qmul.ac.uk/dead/'
     //export const API_URL = 'https://cors-anywhere.herokuapp.com/http://dead.ddnsfree.com:8080/'
 
-    var API = 'localhost:8060/';
-    var API_URL = 'http://' + API;
-    var WSS_URL = 'wss://dead.ddnsfree.com:8060/';
     /*
-    export const API = 'dead.ddnsfree.com:8060/'
-    //export const API = 'dead.ddnsfree.com/'
-    export const API_URL = 'https://' + API;
-    export const WSS_URL = 'wss://' + API;
+    export const API = 'localhost:8060/'
+    export const API_URL = 'http://' + API;
+    export const WSS_URL = 'wss://dead.ddnsfree.com:8060/';
     */
 
+    var API = 'dead.ddnsfree.com:8060/'; //export const API = 'dead.ddnsfree.com/'
+
+    var API_URL = 'https://' + API;
+    var WSS_URL = 'wss://' + API;
     var DEBUG = false;
     var SOCKETIO = true;
     /***/
