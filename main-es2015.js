@@ -4456,7 +4456,7 @@ class ShareButtonsComponent {
         this.router = router;
     }
     ngOnInit() {
-        this.url = 'https://' + _config__WEBPACK_IMPORTED_MODULE_1__["DOMAIN"] + this.router.url;
+        this.url = 'https://' + _config__WEBPACK_IMPORTED_MODULE_1__["DOMAIN"] + this.router.url + '/';
     }
 }
 

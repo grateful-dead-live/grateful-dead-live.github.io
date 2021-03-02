@@ -12527,7 +12527,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ShareButtonsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.url = 'https://' + _config__WEBPACK_IMPORTED_MODULE_1__["DOMAIN"] + this.router.url;
+          this.url = 'https://' + _config__WEBPACK_IMPORTED_MODULE_1__["DOMAIN"] + this.router.url + '/';
         }
       }]);
 
