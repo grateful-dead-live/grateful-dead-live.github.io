@@ -462,6 +462,7 @@
             } //console.log(i +' ' + this.tilts[i]);
 
 
+            console.log(this.tilts);
             return this.tilts[i];
           }
         }]);
@@ -8604,7 +8605,7 @@
           fxLayout: [0, "fxLayout"]
         }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_15__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_16__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_16__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_15__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_16__["MediaMarshaller"]], {
           fxFlex: [0, "fxFlex"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 4, "drag-scroll", [["style", "height: 310px;"]], [[4, "pointer-events", null]], [[null, "wheel"], ["window", "resize"]], function (_v, en, $event) {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 4, "drag-scroll", [], [[4, "pointer-events", null]], [[null, "wheel"], ["window", "resize"]], function (_v, en, $event) {
           var ad = true;
 
           if ("wheel" === en) {
@@ -8653,7 +8654,7 @@
         }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](4, {
           "transform": 0,
           "-webkit-transform": 1
-        }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 0, "img", [["height", "200px"], ["width", "auto"]], [[8, "src", 4]], [[null, "click"]], function (_v, en, $event) {
+        }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 0, "img", [["class", "scroll-image"]], [[8, "src", 4]], [[null, "click"]], function (_v, en, $event) {
           var ad = true;
           var _co = _v.component;
 
@@ -8664,11 +8665,11 @@
 
           return ad;
         }, null, null))], function (_ck, _v) {
-          var currVal_0 = _ck(_v, 2, 0, "rotate(deg" + _v.context.ngVar + ")", "rotate(" + _v.context.ngVar + "deg)");
+          var currVal_0 = _ck(_v, 2, 0, "rotate(" + _v.context.ngVar + "deg)", "rotate(" + _v.context.ngVar + "deg)");
 
           _ck(_v, 1, 0, currVal_0);
 
-          var currVal_1 = _ck(_v, 4, 0, "rotate(deg" + _v.context.ngVar + ")", "rotate(" + _v.context.ngVar + "deg)");
+          var currVal_1 = _ck(_v, 4, 0, "rotate(" + _v.context.ngVar + "deg)", "rotate(" + _v.context.ngVar + "deg)");
 
           _ck(_v, 3, 0, currVal_1);
         }, function (_ck, _v) {
@@ -8699,7 +8700,7 @@
           fxLayout: [0, "fxLayout"]
         }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_15__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_16__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_16__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_15__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_16__["MediaMarshaller"]], {
           fxFlex: [0, "fxFlex"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Other Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 4, "drag-scroll", [["style", "height: 310px;"]], [[4, "pointer-events", null]], [[null, "wheel"], ["window", "resize"]], function (_v, en, $event) {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 2, "h2", [["class", "gd-section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "span", [["class", "titlef"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Other Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 4, "drag-scroll", [], [[4, "pointer-events", null]], [[null, "wheel"], ["window", "resize"]], function (_v, en, $event) {
           var ad = true;
 
           if ("wheel" === en) {
@@ -12215,7 +12216,7 @@
           return ad;
         }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " ", ", ", " "]))], function (_ck, _v) {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " ", ", ", ", ", " photos, ", " artefacts "]))], function (_ck, _v) {
           var currVal_0 = _ck(_v, 3, 0, "/show", _v.context.$implicit.showId);
 
           _ck(_v, 2, 0, currVal_0);
@@ -12223,8 +12224,10 @@
           var currVal_1 = _v.context.$implicit.date;
           var currVal_2 = _v.context.$implicit.venueName;
           var currVal_3 = _v.context.$implicit.locationName;
+          var currVal_4 = _v.context.$implicit.photos;
+          var currVal_5 = _v.context.$implicit.artefacts;
 
-          _ck(_v, 4, 0, currVal_1, currVal_2, currVal_3);
+          _ck(_v, 4, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5);
         });
       }
 
@@ -15206,7 +15209,7 @@
 
       var API_URL = 'https://' + API;
       var WSS_URL = 'wss://' + API;
-      var DEBUG = true;
+      var DEBUG = false;
       var SOCKETIO = true;
       var DOMAIN = 'grateful-live.org';
       /***/
@@ -19813,7 +19816,7 @@
        */
 
 
-      var styles = ["@import url(\"https://fonts.googleapis.com/css2?family=Caveat&display=swap\");\n.current-photo[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 100%;\n  height: auto;\n  cursor: pointer;\n}\n.carousel-photo[_ngcontent-%COMP%] {\n  border-style: solid;\n  border-top-width: 8px;\n  border-left-width: 8px;\n  border-right-width: 8px;\n  border-bottom-width: 8px;\n  border-color: #f5f5e1;\n  width: 210px;\n  height: auto;\n}\n.photo-text[_ngcontent-%COMP%] {\n  transform: translate(0%, -112%);\n  -webkit-transform: translate(0%, -112%);\n  margin-left: 8px;\n  max-width: 207px;\n  width: 207px;\n  height: 32px;\n  font: 400 14px/0.8 \"Caveat\", cursive;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nob3cuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQVEsMkVBQUE7QUFHUjtFQUNJLG9CQUFBO0tBQUEsaUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUFESjtBQU9BO0VBQ0ksbUJBQUE7RUFDQSxxQkFBQTtFQUNBLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSx3QkFBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7QUFKSjtBQVNBO0VBQ0ksK0JBQUE7RUFDQSx1Q0FBQTtFQUVBLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUlBLG9DQUFBO0FBVkoiLCJmaWxlIjoic2hvdy5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PUNhdmVhdCZkaXNwbGF5PXN3YXAnKVxuXG4gICAgXG4uY3VycmVudC1waG90b1xuICAgIG9iamVjdC1maXQ6IGNvdmVyXG4gICAgd2lkdGg6IDEwMCVcbiAgICBoZWlnaHQ6IGF1dG9cbiAgICBjdXJzb3I6IHBvaW50ZXJcblxuLy8ucGhvdG8tdGV4dFxuLy8gICAgdGV4dC1hbGlnbjogY2VudGVyXG4vLyAgICBtYXJnaW4tdG9wOiAyMHB4XG5cbi5jYXJvdXNlbC1waG90b1xuICAgIGJvcmRlci1zdHlsZTogc29saWRcbiAgICBib3JkZXItdG9wLXdpZHRoOiA4cHhcbiAgICBib3JkZXItbGVmdC13aWR0aDogOHB4XG4gICAgYm9yZGVyLXJpZ2h0LXdpZHRoOiA4cHhcbiAgICBib3JkZXItYm90dG9tLXdpZHRoOiA4cHhcbiAgICBib3JkZXItY29sb3I6ICNmNWY1ZTFcbiAgICB3aWR0aDogMjEwcHhcbiAgICBoZWlnaHQ6IGF1dG9cbiAgICAvL2hlaWdodDogMjAwcHhcbiAgICAvL3dpZHRoOiBhdXRvXG4gICAgXG5cbi5waG90by10ZXh0XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCUsIC0xMTIlKVxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCUsIC0xMTIlKVxuICAgIC8vYm90dG9tOiAzNnB4XG4gICAgbWFyZ2luLWxlZnQ6IDhweFxuICAgIG1heC13aWR0aDogMjA3cHhcbiAgICB3aWR0aDogMjA3cHhcbiAgICBoZWlnaHQ6IDMycHhcbiAgICAvL2JvcmRlci1zdHlsZTogc29saWRcbiAgICAvL2JvcmRlci13aWR0aDogMXB4XG4gICAgLy9ib3JkZXItY29sb3I6IGJsYWNrXG4gICAgZm9udDogNDAwIDE0cHgvMC44ICdDYXZlYXQnLCBjdXJzaXZlXG5cblxuXG5cbiAgICBcblxuXG4iXX0= */"];
+      var styles = ["@import url(\"https://fonts.googleapis.com/css2?family=Caveat&display=swap\");\n.current-photo[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 100%;\n  height: auto;\n  cursor: pointer;\n}\n.carousel-photo[_ngcontent-%COMP%] {\n  border-style: solid;\n  border-top-width: 8px;\n  border-left-width: 8px;\n  border-right-width: 8px;\n  border-bottom-width: 8px;\n  border-color: #f5f5e1;\n  width: 210px;\n  height: auto;\n}\n.photo-text[_ngcontent-%COMP%] {\n  transform: translate(0%, -112%);\n  -webkit-transform: translate(0%, -112%);\n  margin-left: 8px;\n  max-width: 207px;\n  width: 207px;\n  height: 32px;\n  font: 400 14px/0.8 \"Caveat\", cursive;\n}\ndrag-scroll[_ngcontent-%COMP%] {\n  height: 310px;\n}\n.scroll-image[_ngcontent-%COMP%] {\n  max-width: 300px;\n  height: 210px;\n  -o-object-fit: contain;\n     object-fit: contain;\n  vertical-align: middle;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nob3cuY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQVEsMkVBQUE7QUFHUjtFQUNJLG9CQUFBO0tBQUEsaUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUFESjtBQU9BO0VBQ0ksbUJBQUE7RUFDQSxxQkFBQTtFQUNBLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSx3QkFBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7QUFKSjtBQVNBO0VBQ0ksK0JBQUE7RUFDQSx1Q0FBQTtFQUVBLGdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUlBLG9DQUFBO0FBVko7QUFZQTtFQUNFLGFBQUE7QUFURjtBQVdBO0VBQ0ksZ0JBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7S0FBQSxtQkFBQTtFQUNBLHNCQUFBO0FBUkoiLCJmaWxlIjoic2hvdy5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PUNhdmVhdCZkaXNwbGF5PXN3YXAnKVxuXG4gICAgXG4uY3VycmVudC1waG90b1xuICAgIG9iamVjdC1maXQ6IGNvdmVyXG4gICAgd2lkdGg6IDEwMCVcbiAgICBoZWlnaHQ6IGF1dG9cbiAgICBjdXJzb3I6IHBvaW50ZXJcblxuLy8ucGhvdG8tdGV4dFxuLy8gICAgdGV4dC1hbGlnbjogY2VudGVyXG4vLyAgICBtYXJnaW4tdG9wOiAyMHB4XG5cbi5jYXJvdXNlbC1waG90b1xuICAgIGJvcmRlci1zdHlsZTogc29saWRcbiAgICBib3JkZXItdG9wLXdpZHRoOiA4cHhcbiAgICBib3JkZXItbGVmdC13aWR0aDogOHB4XG4gICAgYm9yZGVyLXJpZ2h0LXdpZHRoOiA4cHhcbiAgICBib3JkZXItYm90dG9tLXdpZHRoOiA4cHhcbiAgICBib3JkZXItY29sb3I6ICNmNWY1ZTFcbiAgICB3aWR0aDogMjEwcHhcbiAgICBoZWlnaHQ6IGF1dG9cbiAgICAvL2hlaWdodDogMjAwcHhcbiAgICAvL3dpZHRoOiBhdXRvXG4gICAgXG5cbi5waG90by10ZXh0XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCUsIC0xMTIlKVxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCUsIC0xMTIlKVxuICAgIC8vYm90dG9tOiAzNnB4XG4gICAgbWFyZ2luLWxlZnQ6IDhweFxuICAgIG1heC13aWR0aDogMjA3cHhcbiAgICB3aWR0aDogMjA3cHhcbiAgICBoZWlnaHQ6IDMycHhcbiAgICAvL2JvcmRlci1zdHlsZTogc29saWRcbiAgICAvL2JvcmRlci13aWR0aDogMXB4XG4gICAgLy9ib3JkZXItY29sb3I6IGJsYWNrXG4gICAgZm9udDogNDAwIDE0cHgvMC44ICdDYXZlYXQnLCBjdXJzaXZlXG5cbmRyYWctc2Nyb2xsXG4gIGhlaWdodDogMzEwcHhcblxuLnNjcm9sbC1pbWFnZVxuICAgIG1heC13aWR0aDogMzAwcHggXG4gICAgaGVpZ2h0OiAyMTBweFxuICAgIG9iamVjdC1maXQ6IGNvbnRhaW5cbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlXG5cblxuICAgIFxuXG5cbiJdfQ== */"];
       /***/
     },
 
@@ -21203,13 +21206,18 @@
                 while (1) {
                   switch (_context142.prev = _context142.next) {
                     case 0:
-                      _context142.next = 2;
+                      if (this.shows) {
+                        _context142.next = 4;
+                        break;
+                      }
+
+                      _context142.next = 3;
                       return this.data.getShowIndex();
 
-                    case 2:
+                    case 3:
                       this.shows = _context142.sent;
 
-                    case 3:
+                    case 4:
                     case "end":
                       return _context142.stop();
                   }
@@ -21225,13 +21233,18 @@
                 while (1) {
                   switch (_context143.prev = _context143.next) {
                     case 0:
-                      _context143.next = 2;
+                      if (this.venues) {
+                        _context143.next = 4;
+                        break;
+                      }
+
+                      _context143.next = 3;
                       return this.data.getVenueIndex();
 
-                    case 2:
+                    case 3:
                       this.venues = _context143.sent;
 
-                    case 3:
+                    case 4:
                     case "end":
                       return _context143.stop();
                   }
@@ -21247,13 +21260,18 @@
                 while (1) {
                   switch (_context144.prev = _context144.next) {
                     case 0:
-                      _context144.next = 2;
+                      if (this.locations) {
+                        _context144.next = 4;
+                        break;
+                      }
+
+                      _context144.next = 3;
                       return this.data.getLocationIndex();
 
-                    case 2:
+                    case 3:
                       this.locations = _context144.sent;
 
-                    case 3:
+                    case 4:
                     case "end":
                       return _context144.stop();
                   }
@@ -21269,13 +21287,18 @@
                 while (1) {
                   switch (_context145.prev = _context145.next) {
                     case 0:
-                      _context145.next = 2;
+                      if (this.songs) {
+                        _context145.next = 4;
+                        break;
+                      }
+
+                      _context145.next = 3;
                       return this.data.getSongIndex();
 
-                    case 2:
+                    case 3:
                       this.songs = _context145.sent;
 
-                    case 3:
+                    case 4:
                     case "end":
                       return _context145.stop();
                   }
