@@ -459,10 +459,8 @@
 
             if (t == 'artifact') {
               i = tl - i - 1;
-            } //console.log(i +' ' + this.tilts[i]);
+            }
 
-
-            console.log(this.tilts);
             return this.tilts[i];
           }
         }]);
@@ -5169,6 +5167,56 @@
             }));
           }
         }, {
+          key: "getIndex",
+          value: function getIndex() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+              return regeneratorRuntime.wrap(function _callee36$(_context36) {
+                while (1) {
+                  switch (_context36.prev = _context36.next) {
+                    case 0:
+                      if (this.shows) {
+                        _context36.next = 13;
+                        break;
+                      }
+
+                      _context36.next = 3;
+                      return this.getShowIndex();
+
+                    case 3:
+                      this.shows = _context36.sent;
+                      _context36.next = 6;
+                      return this.getVenueIndex();
+
+                    case 6:
+                      this.venues = _context36.sent;
+                      _context36.next = 9;
+                      return this.getLocationIndex();
+
+                    case 9:
+                      this.locations = _context36.sent;
+                      _context36.next = 12;
+                      return this.getSongIndex();
+
+                    case 12:
+                      this.songs = _context36.sent;
+
+                    case 13:
+                      return _context36.abrupt("return", {
+                        'shows': this.shows,
+                        'venues': this.venues,
+                        'locations': this.locations,
+                        'songs': this.songs
+                      });
+
+                    case 14:
+                    case "end":
+                      return _context36.stop();
+                  }
+                }
+              }, _callee36, this);
+            }));
+          }
+        }, {
           key: "formatDate",
           value: function formatDate(date) {
             return new Date(date).toLocaleDateString("en-US", {
@@ -5190,30 +5238,12 @@
         }, {
           key: "getSearchResult",
           value: function getSearchResult(q) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
-              return regeneratorRuntime.wrap(function _callee36$(_context36) {
-                while (1) {
-                  switch (_context36.prev = _context36.next) {
-                    case 0:
-                      return _context36.abrupt("return", this.apiService.getSearchResult(q));
-
-                    case 1:
-                    case "end":
-                      return _context36.stop();
-                  }
-                }
-              }, _callee36, this);
-            }));
-          }
-        }, {
-          key: "addBookmark",
-          value: function addBookmark(userid, route, time, title) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
               return regeneratorRuntime.wrap(function _callee37$(_context37) {
                 while (1) {
                   switch (_context37.prev = _context37.next) {
                     case 0:
-                      return _context37.abrupt("return", this.apiService.addBookmark(userid, route, time, title));
+                      return _context37.abrupt("return", this.apiService.getSearchResult(q));
 
                     case 1:
                     case "end":
@@ -5224,14 +5254,14 @@
             }));
           }
         }, {
-          key: "delBookmark",
-          value: function delBookmark(userid, route) {
+          key: "addBookmark",
+          value: function addBookmark(userid, route, time, title) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
               return regeneratorRuntime.wrap(function _callee38$(_context38) {
                 while (1) {
                   switch (_context38.prev = _context38.next) {
                     case 0:
-                      return _context38.abrupt("return", this.apiService.delBookmark(userid, route));
+                      return _context38.abrupt("return", this.apiService.addBookmark(userid, route, time, title));
 
                     case 1:
                     case "end":
@@ -5242,14 +5272,14 @@
             }));
           }
         }, {
-          key: "getBookmarks",
-          value: function getBookmarks(userid) {
+          key: "delBookmark",
+          value: function delBookmark(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
               return regeneratorRuntime.wrap(function _callee39$(_context39) {
                 while (1) {
                   switch (_context39.prev = _context39.next) {
                     case 0:
-                      return _context39.abrupt("return", this.apiService.getBookmarks(userid));
+                      return _context39.abrupt("return", this.apiService.delBookmark(userid, route));
 
                     case 1:
                     case "end":
@@ -5260,14 +5290,14 @@
             }));
           }
         }, {
-          key: "checkBookmark",
-          value: function checkBookmark(userid, route) {
+          key: "getBookmarks",
+          value: function getBookmarks(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
               return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
                   switch (_context40.prev = _context40.next) {
                     case 0:
-                      return _context40.abrupt("return", this.apiService.checkBookmark(userid, route));
+                      return _context40.abrupt("return", this.apiService.getBookmarks(userid));
 
                     case 1:
                     case "end":
@@ -5278,14 +5308,14 @@
             }));
           }
         }, {
-          key: "like",
-          value: function like(userid, route, time, title) {
+          key: "checkBookmark",
+          value: function checkBookmark(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
               return regeneratorRuntime.wrap(function _callee41$(_context41) {
                 while (1) {
                   switch (_context41.prev = _context41.next) {
                     case 0:
-                      return _context41.abrupt("return", this.apiService.like(userid, route, time, title));
+                      return _context41.abrupt("return", this.apiService.checkBookmark(userid, route));
 
                     case 1:
                     case "end":
@@ -5296,14 +5326,14 @@
             }));
           }
         }, {
-          key: "unlike",
-          value: function unlike(userid, route) {
+          key: "like",
+          value: function like(userid, route, time, title) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
               return regeneratorRuntime.wrap(function _callee42$(_context42) {
                 while (1) {
                   switch (_context42.prev = _context42.next) {
                     case 0:
-                      return _context42.abrupt("return", this.apiService.unlike(userid, route));
+                      return _context42.abrupt("return", this.apiService.like(userid, route, time, title));
 
                     case 1:
                     case "end":
@@ -5314,14 +5344,14 @@
             }));
           }
         }, {
-          key: "checkLike",
-          value: function checkLike(userid, route) {
+          key: "unlike",
+          value: function unlike(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
               return regeneratorRuntime.wrap(function _callee43$(_context43) {
                 while (1) {
                   switch (_context43.prev = _context43.next) {
                     case 0:
-                      return _context43.abrupt("return", this.apiService.checkLike(userid, route));
+                      return _context43.abrupt("return", this.apiService.unlike(userid, route));
 
                     case 1:
                     case "end":
@@ -5332,14 +5362,14 @@
             }));
           }
         }, {
-          key: "countLikes",
-          value: function countLikes(route) {
+          key: "checkLike",
+          value: function checkLike(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
               return regeneratorRuntime.wrap(function _callee44$(_context44) {
                 while (1) {
                   switch (_context44.prev = _context44.next) {
                     case 0:
-                      return _context44.abrupt("return", this.apiService.countLikes(route));
+                      return _context44.abrupt("return", this.apiService.checkLike(userid, route));
 
                     case 1:
                     case "end":
@@ -5350,14 +5380,14 @@
             }));
           }
         }, {
-          key: "getLikes",
-          value: function getLikes(userid) {
+          key: "countLikes",
+          value: function countLikes(route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
               return regeneratorRuntime.wrap(function _callee45$(_context45) {
                 while (1) {
                   switch (_context45.prev = _context45.next) {
                     case 0:
-                      return _context45.abrupt("return", this.apiService.getLikes(userid));
+                      return _context45.abrupt("return", this.apiService.countLikes(route));
 
                     case 1:
                     case "end":
@@ -5368,14 +5398,14 @@
             }));
           }
         }, {
-          key: "getComments",
-          value: function getComments(route) {
+          key: "getLikes",
+          value: function getLikes(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
               return regeneratorRuntime.wrap(function _callee46$(_context46) {
                 while (1) {
                   switch (_context46.prev = _context46.next) {
                     case 0:
-                      return _context46.abrupt("return", this.apiService.getComments(route));
+                      return _context46.abrupt("return", this.apiService.getLikes(userid));
 
                     case 1:
                     case "end":
@@ -5386,14 +5416,14 @@
             }));
           }
         }, {
-          key: "addComment",
-          value: function addComment(comment, route, userid, title) {
+          key: "getComments",
+          value: function getComments(route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee47() {
               return regeneratorRuntime.wrap(function _callee47$(_context47) {
                 while (1) {
                   switch (_context47.prev = _context47.next) {
                     case 0:
-                      return _context47.abrupt("return", this.apiService.addComment(comment, route, userid, title));
+                      return _context47.abrupt("return", this.apiService.getComments(route));
 
                     case 1:
                     case "end":
@@ -5404,14 +5434,14 @@
             }));
           }
         }, {
-          key: "checkComment",
-          value: function checkComment(msgId) {
+          key: "addComment",
+          value: function addComment(comment, route, userid, title) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee48() {
               return regeneratorRuntime.wrap(function _callee48$(_context48) {
                 while (1) {
                   switch (_context48.prev = _context48.next) {
                     case 0:
-                      return _context48.abrupt("return", this.apiService.checkComment(msgId));
+                      return _context48.abrupt("return", this.apiService.addComment(comment, route, userid, title));
 
                     case 1:
                     case "end":
@@ -5422,14 +5452,14 @@
             }));
           }
         }, {
-          key: "getUserComments",
-          value: function getUserComments(userid) {
+          key: "checkComment",
+          value: function checkComment(msgId) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee49() {
               return regeneratorRuntime.wrap(function _callee49$(_context49) {
                 while (1) {
                   switch (_context49.prev = _context49.next) {
                     case 0:
-                      return _context49.abrupt("return", this.apiService.getUserComments(userid));
+                      return _context49.abrupt("return", this.apiService.checkComment(msgId));
 
                     case 1:
                     case "end":
@@ -5440,18 +5470,16 @@
             }));
           }
         }, {
-          key: "sendCommentReport",
-          value: function sendCommentReport(msg, userid) {
+          key: "getUserComments",
+          value: function getUserComments(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee50() {
-              var comment;
               return regeneratorRuntime.wrap(function _callee50$(_context50) {
                 while (1) {
                   switch (_context50.prev = _context50.next) {
                     case 0:
-                      comment = encodeURIComponent(JSON.stringify(msg));
-                      return _context50.abrupt("return", this.apiService.sendCommentReport(comment, userid));
+                      return _context50.abrupt("return", this.apiService.getUserComments(userid));
 
-                    case 2:
+                    case 1:
                     case "end":
                       return _context50.stop();
                   }
@@ -5460,8 +5488,8 @@
             }));
           }
         }, {
-          key: "sendFeedback",
-          value: function sendFeedback(msg, userid) {
+          key: "sendCommentReport",
+          value: function sendCommentReport(msg, userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee51() {
               var comment;
               return regeneratorRuntime.wrap(function _callee51$(_context51) {
@@ -5469,7 +5497,7 @@
                   switch (_context51.prev = _context51.next) {
                     case 0:
                       comment = encodeURIComponent(JSON.stringify(msg));
-                      return _context51.abrupt("return", this.apiService.sendFeedback(comment, userid));
+                      return _context51.abrupt("return", this.apiService.sendCommentReport(comment, userid));
 
                     case 2:
                     case "end":
@@ -5480,16 +5508,16 @@
             }));
           }
         }, {
-          key: "addPlaylist",
-          value: function addPlaylist(name, playlist, playlistid, userid, time) {
+          key: "sendFeedback",
+          value: function sendFeedback(msg, userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
-              var p;
+              var comment;
               return regeneratorRuntime.wrap(function _callee52$(_context52) {
                 while (1) {
                   switch (_context52.prev = _context52.next) {
                     case 0:
-                      p = encodeURIComponent(JSON.stringify(playlist));
-                      return _context52.abrupt("return", this.apiService.addPlaylist(name, p, playlistid, userid, time));
+                      comment = encodeURIComponent(JSON.stringify(msg));
+                      return _context52.abrupt("return", this.apiService.sendFeedback(comment, userid));
 
                     case 2:
                     case "end":
@@ -5500,16 +5528,18 @@
             }));
           }
         }, {
-          key: "getPlaylists",
-          value: function getPlaylists(userid) {
+          key: "addPlaylist",
+          value: function addPlaylist(name, playlist, playlistid, userid, time) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
+              var p;
               return regeneratorRuntime.wrap(function _callee53$(_context53) {
                 while (1) {
                   switch (_context53.prev = _context53.next) {
                     case 0:
-                      return _context53.abrupt("return", this.apiService.getPlaylists(userid));
+                      p = encodeURIComponent(JSON.stringify(playlist));
+                      return _context53.abrupt("return", this.apiService.addPlaylist(name, p, playlistid, userid, time));
 
-                    case 1:
+                    case 2:
                     case "end":
                       return _context53.stop();
                   }
@@ -5518,14 +5548,14 @@
             }));
           }
         }, {
-          key: "getPlaylist",
-          value: function getPlaylist(playlistid) {
+          key: "getPlaylists",
+          value: function getPlaylists(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee54() {
               return regeneratorRuntime.wrap(function _callee54$(_context54) {
                 while (1) {
                   switch (_context54.prev = _context54.next) {
                     case 0:
-                      return _context54.abrupt("return", this.apiService.getPlaylist(playlistid));
+                      return _context54.abrupt("return", this.apiService.getPlaylists(userid));
 
                     case 1:
                     case "end":
@@ -5536,14 +5566,14 @@
             }));
           }
         }, {
-          key: "delPlaylist",
-          value: function delPlaylist(userid, playlistid) {
+          key: "getPlaylist",
+          value: function getPlaylist(playlistid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee55() {
               return regeneratorRuntime.wrap(function _callee55$(_context55) {
                 while (1) {
                   switch (_context55.prev = _context55.next) {
                     case 0:
-                      return _context55.abrupt("return", this.apiService.delPlaylist(userid, playlistid));
+                      return _context55.abrupt("return", this.apiService.getPlaylist(playlistid));
 
                     case 1:
                     case "end":
@@ -5554,14 +5584,14 @@
             }));
           }
         }, {
-          key: "deleteComment",
-          value: function deleteComment(msgid, userid) {
+          key: "delPlaylist",
+          value: function delPlaylist(userid, playlistid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee56() {
               return regeneratorRuntime.wrap(function _callee56$(_context56) {
                 while (1) {
                   switch (_context56.prev = _context56.next) {
                     case 0:
-                      return _context56.abrupt("return", this.apiService.deleteComment(msgid, userid));
+                      return _context56.abrupt("return", this.apiService.delPlaylist(userid, playlistid));
 
                     case 1:
                     case "end":
@@ -5572,14 +5602,14 @@
             }));
           }
         }, {
-          key: "getRecordingInfo",
-          value: function getRecordingInfo(recordingid) {
+          key: "deleteComment",
+          value: function deleteComment(msgid, userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee57() {
               return regeneratorRuntime.wrap(function _callee57$(_context57) {
                 while (1) {
                   switch (_context57.prev = _context57.next) {
                     case 0:
-                      return _context57.abrupt("return", this.apiService.getRecordingInfo(recordingid));
+                      return _context57.abrupt("return", this.apiService.deleteComment(msgid, userid));
 
                     case 1:
                     case "end":
@@ -5590,14 +5620,14 @@
             }));
           }
         }, {
-          key: "getTracklist",
-          value: function getTracklist(recordingid) {
+          key: "getRecordingInfo",
+          value: function getRecordingInfo(recordingid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee58() {
               return regeneratorRuntime.wrap(function _callee58$(_context58) {
                 while (1) {
                   switch (_context58.prev = _context58.next) {
                     case 0:
-                      return _context58.abrupt("return", this.apiService.getTracklist(recordingid));
+                      return _context58.abrupt("return", this.apiService.getRecordingInfo(recordingid));
 
                     case 1:
                     case "end":
@@ -5605,6 +5635,24 @@
                   }
                 }
               }, _callee58, this);
+            }));
+          }
+        }, {
+          key: "getTracklist",
+          value: function getTracklist(recordingid) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee59() {
+              return regeneratorRuntime.wrap(function _callee59$(_context59) {
+                while (1) {
+                  switch (_context59.prev = _context59.next) {
+                    case 0:
+                      return _context59.abrupt("return", this.apiService.getTracklist(recordingid));
+
+                    case 1:
+                    case "end":
+                      return _context59.stop();
+                  }
+                }
+              }, _callee59, this);
             }));
           }
         }, {
@@ -5625,30 +5673,12 @@
         }, {
           key: "getYoutubeList",
           value: function getYoutubeList(id, searchArray) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee59() {
-              return regeneratorRuntime.wrap(function _callee59$(_context59) {
-                while (1) {
-                  switch (_context59.prev = _context59.next) {
-                    case 0:
-                      return _context59.abrupt("return", this.apiService.getYoutubeList(id, searchArray));
-
-                    case 1:
-                    case "end":
-                      return _context59.stop();
-                  }
-                }
-              }, _callee59, this);
-            }));
-          }
-        }, {
-          key: "getShowIndex",
-          value: function getShowIndex() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee60() {
               return regeneratorRuntime.wrap(function _callee60$(_context60) {
                 while (1) {
                   switch (_context60.prev = _context60.next) {
                     case 0:
-                      return _context60.abrupt("return", this.apiService.getShowIndex());
+                      return _context60.abrupt("return", this.apiService.getYoutubeList(id, searchArray));
 
                     case 1:
                     case "end":
@@ -5659,14 +5689,14 @@
             }));
           }
         }, {
-          key: "getVenueIndex",
-          value: function getVenueIndex() {
+          key: "getShowIndex",
+          value: function getShowIndex() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee61() {
               return regeneratorRuntime.wrap(function _callee61$(_context61) {
                 while (1) {
                   switch (_context61.prev = _context61.next) {
                     case 0:
-                      return _context61.abrupt("return", this.apiService.getVenueIndex());
+                      return _context61.abrupt("return", this.apiService.getShowIndex());
 
                     case 1:
                     case "end":
@@ -5677,14 +5707,14 @@
             }));
           }
         }, {
-          key: "getLocationIndex",
-          value: function getLocationIndex() {
+          key: "getVenueIndex",
+          value: function getVenueIndex() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee62() {
               return regeneratorRuntime.wrap(function _callee62$(_context62) {
                 while (1) {
                   switch (_context62.prev = _context62.next) {
                     case 0:
-                      return _context62.abrupt("return", this.apiService.getLocationIndex());
+                      return _context62.abrupt("return", this.apiService.getVenueIndex());
 
                     case 1:
                     case "end":
@@ -5695,14 +5725,14 @@
             }));
           }
         }, {
-          key: "getSongIndex",
-          value: function getSongIndex() {
+          key: "getLocationIndex",
+          value: function getLocationIndex() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee63() {
               return regeneratorRuntime.wrap(function _callee63$(_context63) {
                 while (1) {
                   switch (_context63.prev = _context63.next) {
                     case 0:
-                      return _context63.abrupt("return", this.apiService.getSongIndex());
+                      return _context63.abrupt("return", this.apiService.getLocationIndex());
 
                     case 1:
                     case "end":
@@ -5710,6 +5740,24 @@
                   }
                 }
               }, _callee63, this);
+            }));
+          }
+        }, {
+          key: "getSongIndex",
+          value: function getSongIndex() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee64() {
+              return regeneratorRuntime.wrap(function _callee64$(_context64) {
+                while (1) {
+                  switch (_context64.prev = _context64.next) {
+                    case 0:
+                      return _context64.abrupt("return", this.apiService.getSongIndex());
+
+                    case 1:
+                    case "end":
+                      return _context64.stop();
+                  }
+                }
+              }, _callee64, this);
             }));
           }
         }, {
@@ -6878,26 +6926,26 @@
         }, {
           key: "addRandomTrack",
           value: function addRandomTrack() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee64() {
-              return regeneratorRuntime.wrap(function _callee64$(_context64) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee65() {
+              return regeneratorRuntime.wrap(function _callee65$(_context65) {
                 while (1) {
-                  switch (_context64.prev = _context64.next) {
+                  switch (_context65.prev = _context65.next) {
                     case 0:
-                      _context64.t0 = this.player;
-                      _context64.next = 3;
+                      _context65.t0 = this.player;
+                      _context65.next = 3;
                       return this.data.getRandomTrack();
 
                     case 3:
-                      _context64.t1 = _context64.sent;
+                      _context65.t1 = _context65.sent;
 
-                      _context64.t0.addToPlaylist.call(_context64.t0, _context64.t1);
+                      _context65.t0.addToPlaylist.call(_context65.t0, _context65.t1);
 
                     case 5:
                     case "end":
-                      return _context64.stop();
+                      return _context65.stop();
                   }
                 }
-              }, _callee64, this);
+              }, _callee65, this);
             }));
           }
         }, {
@@ -6908,10 +6956,10 @@
         }, {
           key: "onClearPlaylist",
           value: function onClearPlaylist() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee65() {
-              return regeneratorRuntime.wrap(function _callee65$(_context65) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee66() {
+              return regeneratorRuntime.wrap(function _callee66$(_context66) {
                 while (1) {
-                  switch (_context65.prev = _context65.next) {
+                  switch (_context66.prev = _context66.next) {
                     case 0:
                       this.player.stop();
                       this.player.clearPlaylist();
@@ -6920,24 +6968,6 @@
 
                     case 4:
                     case "end":
-                      return _context65.stop();
-                  }
-                }
-              }, _callee65, this);
-            }));
-          }
-        }, {
-          key: "delTrack",
-          value: function delTrack(i) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee66() {
-              return regeneratorRuntime.wrap(function _callee66$(_context66) {
-                while (1) {
-                  switch (_context66.prev = _context66.next) {
-                    case 0:
-                      this.player.deleteFromPlaylist(i);
-
-                    case 1:
-                    case "end":
                       return _context66.stop();
                   }
                 }
@@ -6945,20 +6975,14 @@
             }));
           }
         }, {
-          key: "onSavePlaylist",
-          value: function onSavePlaylist() {
+          key: "delTrack",
+          value: function delTrack(i) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee67() {
-              var _this17 = this;
-
               return regeneratorRuntime.wrap(function _callee67$(_context67) {
                 while (1) {
                   switch (_context67.prev = _context67.next) {
                     case 0:
-                      this.dialog.openInputDialog(function (name) {
-                        if (name) {
-                          _this17.savePlaylist(name);
-                        }
-                      });
+                      this.player.deleteFromPlaylist(i);
 
                     case 1:
                     case "end":
@@ -6969,14 +6993,20 @@
             }));
           }
         }, {
-          key: "onLoadPlaylist",
-          value: function onLoadPlaylist() {
+          key: "onSavePlaylist",
+          value: function onSavePlaylist() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee68() {
+              var _this17 = this;
+
               return regeneratorRuntime.wrap(function _callee68$(_context68) {
                 while (1) {
                   switch (_context68.prev = _context68.next) {
                     case 0:
-                      this.loadPlaylist();
+                      this.dialog.openInputDialog(function (name) {
+                        if (name) {
+                          _this17.savePlaylist(name);
+                        }
+                      });
 
                     case 1:
                     case "end":
@@ -6987,21 +7017,39 @@
             }));
           }
         }, {
-          key: "savePlaylist",
-          value: function savePlaylist(name) {
+          key: "onLoadPlaylist",
+          value: function onLoadPlaylist() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee69() {
-              var id;
               return regeneratorRuntime.wrap(function _callee69$(_context69) {
                 while (1) {
                   switch (_context69.prev = _context69.next) {
                     case 0:
+                      this.loadPlaylist();
+
+                    case 1:
+                    case "end":
+                      return _context69.stop();
+                  }
+                }
+              }, _callee69, this);
+            }));
+          }
+        }, {
+          key: "savePlaylist",
+          value: function savePlaylist(name) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee70() {
+              var id;
+              return regeneratorRuntime.wrap(function _callee70$(_context70) {
+                while (1) {
+                  switch (_context70.prev = _context70.next) {
+                    case 0:
                       Object(_globals__WEBPACK_IMPORTED_MODULE_7__["logger"])('saving playlist');
                       id = this.makeid();
-                      _context69.next = 4;
+                      _context70.next = 4;
                       return this.data.addPlaylist(name, this.player.playlist, id, this.currentUser.userId, new Date().getTime());
 
                     case 4:
-                      _context69.next = 6;
+                      _context70.next = 6;
                       return this.player.getPlaylists(this.currentUser.userId);
 
                     case 6:
@@ -7009,10 +7057,10 @@
 
                     case 7:
                     case "end":
-                      return _context69.stop();
+                      return _context70.stop();
                   }
                 }
-              }, _callee69, this);
+              }, _callee70, this);
             }));
           }
         }, {
@@ -10445,12 +10493,12 @@
         _createClass(VenueComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee71() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee72() {
               var _this19 = this;
 
-              return regeneratorRuntime.wrap(function _callee71$(_context71) {
+              return regeneratorRuntime.wrap(function _callee72$(_context72) {
                 while (1) {
-                  switch (_context71.prev = _context71.next) {
+                  switch (_context72.prev = _context72.next) {
                     case 0:
                       this.auth.userProfile$.subscribe(function (userProfile) {
                         if (userProfile) {
@@ -10464,22 +10512,22 @@
                         }
                       });
                       this.route.paramMap.subscribe(function (params) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this19, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee70() {
-                          return regeneratorRuntime.wrap(function _callee70$(_context70) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this19, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee71() {
+                          return regeneratorRuntime.wrap(function _callee71$(_context71) {
                             while (1) {
-                              switch (_context70.prev = _context70.next) {
+                              switch (_context71.prev = _context71.next) {
                                 case 0:
                                   if (!params.has('id')) {
-                                    _context70.next = 6;
+                                    _context71.next = 6;
                                     break;
                                   }
 
-                                  _context70.next = 3;
+                                  _context71.next = 3;
                                   return this.data.getVenue(params.get('id'));
 
                                 case 3:
-                                  this.venue = _context70.sent;
-                                  _context70.next = 7;
+                                  this.venue = _context71.sent;
+                                  _context71.next = 7;
                                   break;
 
                                 case 6:
@@ -10489,33 +10537,33 @@
 
                                 case 7:
                                   if (!(params.has('id') && this.venue.name)) {
-                                    _context70.next = 20;
+                                    _context71.next = 20;
                                     break;
                                   }
 
                                   Object(_globals__WEBPACK_IMPORTED_MODULE_6__["logger"])(this.venue); //this.venue = await this.data.getVenue(params.get('id'));
 
-                                  _context70.next = 11;
+                                  _context71.next = 11;
                                   return this.data.getEventInfo(this.venue.eventIds[0]);
 
                                 case 11:
-                                  this.location = _context70.sent.location;
+                                  this.location = _context71.sent.location;
 
                                   if (!this.venue) {
-                                    _context70.next = 18;
+                                    _context71.next = 18;
                                     break;
                                   }
 
-                                  _context70.next = 15;
+                                  _context71.next = 15;
                                   return this.data.getYoutubeList(this.venue.id, ['Grateful Dead', this.location, this.venue.name]);
 
                                 case 15:
-                                  this.videos = _context70.sent;
+                                  this.videos = _context71.sent;
                                   if (this.videos) this.currentVideoId = this.videos[0].videoId;
                                   Object(_globals__WEBPACK_IMPORTED_MODULE_6__["logger"])(this.videos);
 
                                 case 18:
-                                  _context70.next = 21;
+                                  _context71.next = 21;
                                   break;
 
                                 case 20:
@@ -10525,10 +10573,10 @@
 
                                 case 21:
                                 case "end":
-                                  return _context70.stop();
+                                  return _context71.stop();
                               }
                             }
-                          }, _callee70, this);
+                          }, _callee71, this);
                         }));
                       });
                       /*
@@ -10550,10 +10598,10 @@
 
                     case 2:
                     case "end":
-                      return _context71.stop();
+                      return _context72.stop();
                   }
                 }
-              }, _callee71, this);
+              }, _callee72, this);
             }));
           }
         }, {
@@ -12100,7 +12148,11 @@
         data: {}
       });
 
-      function View_IndexComponent_2(_l) {
+      function View_IndexComponent_1(_l) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "div", [["class", "wait"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 0, "img", [["src", "/assets/bearsanimated.webp"], ["width", "160"]], null, null, null, null, null))], null, null);
+      }
+
+      function View_IndexComponent_4(_l) {
         return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
@@ -12199,8 +12251,8 @@
         });
       }
 
-      function View_IndexComponent_1(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 16, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 15, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 12, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+      function View_IndexComponent_3(_l) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 13, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 10, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
           var _co = _v.component;
 
@@ -12230,7 +12282,7 @@
           }
 
           return ad;
-        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Events"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Shows"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
           var _co = _v.component;
 
@@ -12250,17 +12302,17 @@
           }
 
           return ad;
-        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "th", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
           var currVal_0 = _co.venues;
 
-          _ck(_v, 16, 0, currVal_0);
+          _ck(_v, 14, 0, currVal_0);
         }, null);
       }
 
-      function View_IndexComponent_4(_l) {
+      function View_IndexComponent_6(_l) {
         return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
@@ -12359,7 +12411,7 @@
         });
       }
 
-      function View_IndexComponent_3(_l) {
+      function View_IndexComponent_5(_l) {
         return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 13, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 10, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
           var _co = _v.component;
@@ -12390,7 +12442,7 @@
           }
 
           return ad;
-        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Events"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Shows"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
           var _co = _v.component;
 
@@ -12410,7 +12462,7 @@
           }
 
           return ad;
-        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
@@ -12420,7 +12472,7 @@
         }, null);
       }
 
-      function View_IndexComponent_6(_l) {
+      function View_IndexComponent_8(_l) {
         return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
@@ -12462,7 +12514,7 @@
         });
       }
 
-      function View_IndexComponent_5(_l) {
+      function View_IndexComponent_7(_l) {
         return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 7, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 4, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
           var _co = _v.component;
@@ -12483,7 +12535,7 @@
           }
 
           return ad;
-        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Events"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Performances"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
@@ -12493,7 +12545,7 @@
         }, null);
       }
 
-      function View_IndexComponent_8(_l) {
+      function View_IndexComponent_10(_l) {
         return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
@@ -12592,7 +12644,7 @@
         });
       }
 
-      function View_IndexComponent_7(_l) {
+      function View_IndexComponent_9(_l) {
         return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 13, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 10, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
           var _co = _v.component;
@@ -12643,13 +12695,42 @@
           }
 
           return ad;
-        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_10)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
           var currVal_0 = _co.shows;
 
           _ck(_v, 14, 0, currVal_0);
+        }, null);
+      }
+
+      function View_IndexComponent_2(_l) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+          ngIf: [0, "ngIf"]
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](4, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+          ngIf: [0, "ngIf"]
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+          ngIf: [0, "ngIf"]
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_9)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+          ngIf: [0, "ngIf"]
+        }, null)], function (_ck, _v) {
+          var _co = _v.component;
+          var currVal_0 = _co.selected == "venues";
+
+          _ck(_v, 2, 0, currVal_0);
+
+          var currVal_1 = _co.selected == "locations";
+
+          _ck(_v, 4, 0, currVal_1);
+
+          var currVal_2 = _co.selected == "songs";
+
+          _ck(_v, 6, 0, currVal_2);
+
+          var currVal_3 = _co.selected == "shows";
+
+          _ck(_v, 8, 0, currVal_3);
         }, null);
       }
 
@@ -12715,13 +12796,9 @@
           color: [0, "color"]
         }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, 0, ["Songs"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_1)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
           ngIf: [0, "ngIf"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_3)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
           ngIf: [0, "ngIf"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_5)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
-          ngIf: [0, "ngIf"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_7)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
-          ngIf: [0, "ngIf"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](28, 0, null, null, 0, "p", [], [[4, "margin-bottom", null]], null, null, null, null))], function (_ck, _v) {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](24, 0, null, null, 0, "p", [], [[4, "margin-bottom", null]], null, null, null, null))], function (_ck, _v) {
           var _co = _v.component;
           var currVal_0 = "Index";
 
@@ -12761,21 +12838,13 @@
 
           _ck(_v, 18, 0, currVal_22);
 
-          var currVal_23 = _co.selected == "venues";
+          var currVal_23 = _co.loaded == false;
 
           _ck(_v, 21, 0, currVal_23);
 
-          var currVal_24 = _co.selected == "locations";
+          var currVal_24 = _co.loaded == true;
 
           _ck(_v, 23, 0, currVal_24);
-
-          var currVal_25 = _co.selected == "songs";
-
-          _ck(_v, 25, 0, currVal_25);
-
-          var currVal_26 = _co.selected == "shows";
-
-          _ck(_v, 27, 0, currVal_26);
         }, function (_ck, _v) {
           var currVal_2 = "50px";
 
@@ -12809,9 +12878,9 @@
 
           _ck(_v, 16, 0, currVal_18, currVal_19, currVal_20);
 
-          var currVal_27 = "150px";
+          var currVal_25 = "150px";
 
-          _ck(_v, 28, 0, currVal_27);
+          _ck(_v, 24, 0, currVal_25);
         });
       }
 
@@ -13006,25 +13075,25 @@
         }, {
           key: "playPlaylist",
           value: function playPlaylist() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee72() {
-              return regeneratorRuntime.wrap(function _callee72$(_context72) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee73() {
+              return regeneratorRuntime.wrap(function _callee73$(_context73) {
                 while (1) {
-                  switch (_context72.prev = _context72.next) {
+                  switch (_context73.prev = _context73.next) {
                     case 0:
                       if (!(this.currentTrackIndex < this.playlist.length)) {
-                        _context72.next = 8;
+                        _context73.next = 8;
                         break;
                       }
 
                       Object(_globals__WEBPACK_IMPORTED_MODULE_4__["logger"])('Google Analytics');
                       this.googleAnalyticsService.eventEmitter("play", "audio_player", "play", this.getCurrentTrack().uri);
-                      _context72.next = 5;
+                      _context73.next = 5;
                       return this.playCurrentTrack();
 
                     case 5:
                       this.currentTrackIndex++; //this.playPlaylist();  // why was this here?
 
-                      _context72.next = 9;
+                      _context73.next = 9;
                       break;
 
                     case 8:
@@ -13032,22 +13101,22 @@
 
                     case 9:
                     case "end":
-                      return _context72.stop();
+                      return _context73.stop();
                   }
                 }
-              }, _callee72, this);
+              }, _callee73, this);
             }));
           }
         }, {
           key: "playCurrentTrack",
           value: function playCurrentTrack() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee73() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee74() {
               var _this27 = this;
 
               var audio;
-              return regeneratorRuntime.wrap(function _callee73$(_context73) {
+              return regeneratorRuntime.wrap(function _callee74$(_context74) {
                 while (1) {
-                  switch (_context73.prev = _context73.next) {
+                  switch (_context74.prev = _context74.next) {
                     case 0:
                       audio = new Audio(this.playlist[this.currentTrackIndex].uri);
                       audio.muted = this.muted;
@@ -13060,16 +13129,16 @@
                         _this27.currentTime = audio.currentTime;
                       };
 
-                      return _context73.abrupt("return", new Promise(function (resolve) {
+                      return _context74.abrupt("return", new Promise(function (resolve) {
                         return audio.onended = resolve;
                       }));
 
                     case 7:
                     case "end":
-                      return _context73.stop();
+                      return _context74.stop();
                   }
                 }
-              }, _callee73, this);
+              }, _callee74, this);
             }));
           }
         }, {
@@ -13091,19 +13160,19 @@
         }, {
           key: "getPlaylists",
           value: function getPlaylists(userId) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee74() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee75() {
               var _this28 = this;
 
               var result, p;
-              return regeneratorRuntime.wrap(function _callee74$(_context74) {
+              return regeneratorRuntime.wrap(function _callee75$(_context75) {
                 while (1) {
-                  switch (_context74.prev = _context74.next) {
+                  switch (_context75.prev = _context75.next) {
                     case 0:
-                      _context74.next = 2;
+                      _context75.next = 2;
                       return this.data.getPlaylists(userId);
 
                     case 2:
-                      result = _context74.sent;
+                      result = _context75.sent;
 
                       if (result[0].playlists) {
                         p = result[0].playlists;
@@ -13119,21 +13188,21 @@
 
                     case 4:
                     case "end":
-                      return _context74.stop();
+                      return _context75.stop();
                   }
                 }
-              }, _callee74, this);
+              }, _callee75, this);
             }));
           }
         }, {
           key: "deletePlaylist",
           value: function deletePlaylist(userid, playlistid) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee75() {
-              return regeneratorRuntime.wrap(function _callee75$(_context75) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee76() {
+              return regeneratorRuntime.wrap(function _callee76$(_context76) {
                 while (1) {
-                  switch (_context75.prev = _context75.next) {
+                  switch (_context76.prev = _context76.next) {
                     case 0:
-                      _context75.next = 2;
+                      _context76.next = 2;
                       return this.data.delPlaylist(userid, playlistid);
 
                     case 2:
@@ -13141,10 +13210,10 @@
 
                     case 3:
                     case "end":
-                      return _context75.stop();
+                      return _context76.stop();
                   }
                 }
-              }, _callee75, this);
+              }, _callee76, this);
             }));
           }
         }, {
@@ -14759,32 +14828,32 @@
 
             if (_config__WEBPACK_IMPORTED_MODULE_3__["TRACKING"]) {
               this.router.events.subscribe(function (event) {
-                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this30, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee76() {
-                  return regeneratorRuntime.wrap(function _callee76$(_context76) {
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this30, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee77() {
+                  return regeneratorRuntime.wrap(function _callee77$(_context77) {
                     while (1) {
-                      switch (_context76.prev = _context76.next) {
+                      switch (_context77.prev = _context77.next) {
                         case 0:
                           if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"]) {
                             cached_title = this.title.getTitle(); //logger('cached: ' + cached_title);
                           }
 
                           if (!(event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"])) {
-                            _context76.next = 11;
+                            _context77.next = 11;
                             break;
                           }
 
                         case 2:
                           if (!(this.title.getTitle() === cached_title)) {
-                            _context76.next = 8;
+                            _context77.next = 8;
                             break;
                           }
 
-                          _context76.next = 5;
+                          _context77.next = 5;
                           return this.sleep(100);
 
                         case 5:
                           Object(_globals__WEBPACK_IMPORTED_MODULE_7__["logger"])('waiting for page title');
-                          _context76.next = 2;
+                          _context77.next = 2;
                           break;
 
                         case 8:
@@ -14798,10 +14867,10 @@
 
                         case 11:
                         case "end":
-                          return _context76.stop();
+                          return _context77.stop();
                       }
                     }
-                  }, _callee76, this);
+                  }, _callee77, this);
                 }));
               });
             }
@@ -15140,12 +15209,12 @@
         _createClass(ArtifactsComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee78() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee79() {
               var _this31 = this;
 
-              return regeneratorRuntime.wrap(function _callee78$(_context78) {
+              return regeneratorRuntime.wrap(function _callee79$(_context79) {
                 while (1) {
-                  switch (_context78.prev = _context78.next) {
+                  switch (_context79.prev = _context79.next) {
                     case 0:
                       this.auth.userProfile$.subscribe(function (userProfile) {
                         if (userProfile) {
@@ -15168,57 +15237,57 @@
                       */
 
                       this.route.paramMap.subscribe(function (params) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this31, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee77() {
-                          return regeneratorRuntime.wrap(function _callee77$(_context77) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this31, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee78() {
+                          return regeneratorRuntime.wrap(function _callee78$(_context78) {
                             while (1) {
-                              switch (_context77.prev = _context77.next) {
+                              switch (_context78.prev = _context78.next) {
                                 case 0:
                                   if (!params.has('id')) {
-                                    _context77.next = 3;
+                                    _context78.next = 3;
                                     break;
                                   }
 
-                                  _context77.next = 14;
+                                  _context78.next = 14;
                                   break;
 
                                 case 3:
                                   if (!params.has('types')) {
-                                    _context77.next = 10;
+                                    _context78.next = 10;
                                     break;
                                   }
 
                                   this.types = JSON.parse(params.get('types'));
-                                  _context77.next = 7;
+                                  _context78.next = 7;
                                   return this.data.getRandomArtifacts(this.types, 6);
 
                                 case 7:
-                                  this.artifacts = _context77.sent;
-                                  _context77.next = 14;
+                                  this.artifacts = _context78.sent;
+                                  _context78.next = 14;
                                   break;
 
                                 case 10:
-                                  _context77.next = 12;
+                                  _context78.next = 12;
                                   return this.data.getRandomArtifacts(null, 6);
 
                                 case 12:
-                                  this.artifacts = _context77.sent;
+                                  this.artifacts = _context78.sent;
                                   Object(_globals__WEBPACK_IMPORTED_MODULE_4__["logger"])(this.artifacts);
 
                                 case 14:
                                 case "end":
-                                  return _context77.stop();
+                                  return _context78.stop();
                               }
                             }
-                          }, _callee77, this);
+                          }, _callee78, this);
                         }));
                       });
 
                     case 2:
                     case "end":
-                      return _context78.stop();
+                      return _context79.stop();
                   }
                 }
-              }, _callee78, this);
+              }, _callee79, this);
             }));
           }
         }]);
@@ -15427,12 +15496,12 @@
         _createClass(PlaylistComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee80() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee81() {
               var _this32 = this;
 
-              return regeneratorRuntime.wrap(function _callee80$(_context80) {
+              return regeneratorRuntime.wrap(function _callee81$(_context81) {
                 while (1) {
-                  switch (_context80.prev = _context80.next) {
+                  switch (_context81.prev = _context81.next) {
                     case 0:
                       this.auth.userProfile$.subscribe(function (userProfile) {
                         if (userProfile) {
@@ -15446,10 +15515,10 @@
                         }
                       });
                       this.route.paramMap.subscribe(function (params) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this32, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee79() {
-                          return regeneratorRuntime.wrap(function _callee79$(_context79) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this32, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee80() {
+                          return regeneratorRuntime.wrap(function _callee80$(_context80) {
                             while (1) {
-                              switch (_context79.prev = _context79.next) {
+                              switch (_context80.prev = _context80.next) {
                                 case 0:
                                   if (params.has('id')) {
                                     this.getPlaylist(params.get('id'));
@@ -15457,35 +15526,35 @@
 
                                 case 1:
                                 case "end":
-                                  return _context79.stop();
+                                  return _context80.stop();
                               }
                             }
-                          }, _callee79, this);
+                          }, _callee80, this);
                         }));
                       });
 
                     case 2:
                     case "end":
-                      return _context80.stop();
+                      return _context81.stop();
                   }
                 }
-              }, _callee80, this);
+              }, _callee81, this);
             }));
           }
         }, {
           key: "getPlaylist",
           value: function getPlaylist(playlistId) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee81() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee82() {
               var res;
-              return regeneratorRuntime.wrap(function _callee81$(_context81) {
+              return regeneratorRuntime.wrap(function _callee82$(_context82) {
                 while (1) {
-                  switch (_context81.prev = _context81.next) {
+                  switch (_context82.prev = _context82.next) {
                     case 0:
-                      _context81.next = 2;
+                      _context82.next = 2;
                       return this.data.getPlaylist(playlistId);
 
                     case 2:
-                      res = _context81.sent;
+                      res = _context82.sent;
                       this.playlist = res.playlists[0];
                       Object(_globals__WEBPACK_IMPORTED_MODULE_5__["logger"])(this.playlist);
                       this.player.playlist = _toConsumableArray(this.playlist.playlist);
@@ -15493,10 +15562,10 @@
 
                     case 7:
                     case "end":
-                      return _context81.stop();
+                      return _context82.stop();
                   }
                 }
-              }, _callee81, this);
+              }, _callee82, this);
             }));
           }
         }]);
@@ -15750,19 +15819,19 @@
         }, {
           key: "getBookmarks",
           value: function getBookmarks() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee82() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee83() {
               var _this34 = this;
 
               var result, m;
-              return regeneratorRuntime.wrap(function _callee82$(_context82) {
+              return regeneratorRuntime.wrap(function _callee83$(_context83) {
                 while (1) {
-                  switch (_context82.prev = _context82.next) {
+                  switch (_context83.prev = _context83.next) {
                     case 0:
-                      _context82.next = 2;
+                      _context83.next = 2;
                       return this.data.getBookmarks(this.currentUser.userId);
 
                     case 2:
-                      result = _context82.sent;
+                      result = _context83.sent;
 
                       if (result[0].bookmarks) {
                         m = result[0].bookmarks;
@@ -15779,28 +15848,28 @@
 
                     case 5:
                     case "end":
-                      return _context82.stop();
+                      return _context83.stop();
                   }
                 }
-              }, _callee82, this);
+              }, _callee83, this);
             }));
           }
         }, {
           key: "getLikes",
           value: function getLikes() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee83() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee84() {
               var _this35 = this;
 
               var result, l;
-              return regeneratorRuntime.wrap(function _callee83$(_context83) {
+              return regeneratorRuntime.wrap(function _callee84$(_context84) {
                 while (1) {
-                  switch (_context83.prev = _context83.next) {
+                  switch (_context84.prev = _context84.next) {
                     case 0:
-                      _context83.next = 2;
+                      _context84.next = 2;
                       return this.data.getLikes(this.currentUser.userId);
 
                     case 2:
-                      result = _context83.sent;
+                      result = _context84.sent;
 
                       if (result[0].likes) {
                         l = result[0].likes;
@@ -15817,26 +15886,26 @@
 
                     case 5:
                     case "end":
-                      return _context83.stop();
+                      return _context84.stop();
                   }
                 }
-              }, _callee83, this);
+              }, _callee84, this);
             }));
           }
         }, {
           key: "getComments",
           value: function getComments() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee84() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee85() {
               var result, res;
-              return regeneratorRuntime.wrap(function _callee84$(_context84) {
+              return regeneratorRuntime.wrap(function _callee85$(_context85) {
                 while (1) {
-                  switch (_context84.prev = _context84.next) {
+                  switch (_context85.prev = _context85.next) {
                     case 0:
-                      _context84.next = 2;
+                      _context85.next = 2;
                       return this.data.getUserComments(this.currentUser.userId);
 
                     case 2:
-                      result = _context84.sent;
+                      result = _context85.sent;
 
                       if (result[0].comments) {
                         res = [];
@@ -15857,10 +15926,10 @@
 
                     case 4:
                     case "end":
-                      return _context84.stop();
+                      return _context85.stop();
                   }
                 }
-              }, _callee84, this);
+              }, _callee85, this);
             }));
           }
         }, {
@@ -15878,20 +15947,20 @@
             var _this36 = this;
 
             this.dialog.openMultiFunction('Are you sure you want to delete playlist "' + name + '"?', ["yes", "no"], [function () {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this36, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee85() {
-                return regeneratorRuntime.wrap(function _callee85$(_context85) {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this36, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee86() {
+                return regeneratorRuntime.wrap(function _callee86$(_context86) {
                   while (1) {
-                    switch (_context85.prev = _context85.next) {
+                    switch (_context86.prev = _context86.next) {
                       case 0:
-                        _context85.next = 2;
+                        _context86.next = 2;
                         return this.player.deletePlaylist(this.currentUser.userId, playlistid);
 
                       case 2:
                       case "end":
-                        return _context85.stop();
+                        return _context86.stop();
                     }
                   }
-                }, _callee85, this);
+                }, _callee86, this);
               }));
             }, function () {
               return null;
@@ -15922,12 +15991,12 @@
         }, {
           key: "deleteBookmark",
           value: function deleteBookmark(bookmark) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee86() {
-              return regeneratorRuntime.wrap(function _callee86$(_context86) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee87() {
+              return regeneratorRuntime.wrap(function _callee87$(_context87) {
                 while (1) {
-                  switch (_context86.prev = _context86.next) {
+                  switch (_context87.prev = _context87.next) {
                     case 0:
-                      _context86.next = 2;
+                      _context87.next = 2;
                       return this.data.delBookmark(this.currentUser.userId, bookmark.route);
 
                     case 2:
@@ -15935,10 +16004,10 @@
 
                     case 3:
                     case "end":
-                      return _context86.stop();
+                      return _context87.stop();
                   }
                 }
-              }, _callee86, this);
+              }, _callee87, this);
             }));
           }
         }, {
@@ -15955,12 +16024,12 @@
         }, {
           key: "unlike",
           value: function unlike(like) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee87() {
-              return regeneratorRuntime.wrap(function _callee87$(_context87) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee88() {
+              return regeneratorRuntime.wrap(function _callee88$(_context88) {
                 while (1) {
-                  switch (_context87.prev = _context87.next) {
+                  switch (_context88.prev = _context88.next) {
                     case 0:
-                      _context87.next = 2;
+                      _context88.next = 2;
                       return this.data.unlike(this.currentUser.userId, like.route);
 
                     case 2:
@@ -15968,10 +16037,10 @@
 
                     case 3:
                     case "end":
-                      return _context87.stop();
+                      return _context88.stop();
                   }
                 }
-              }, _callee87, this);
+              }, _callee88, this);
             }));
           }
         }]);
@@ -17284,12 +17353,12 @@
         _createClass(PrivacyPolicyComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee88() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee89() {
               var _this45 = this;
 
-              return regeneratorRuntime.wrap(function _callee88$(_context88) {
+              return regeneratorRuntime.wrap(function _callee89$(_context89) {
                 while (1) {
-                  switch (_context88.prev = _context88.next) {
+                  switch (_context89.prev = _context89.next) {
                     case 0:
                       this.auth.userProfile$.subscribe(function (userProfile) {
                         if (userProfile) {
@@ -17306,10 +17375,10 @@
 
                     case 2:
                     case "end":
-                      return _context88.stop();
+                      return _context89.stop();
                   }
                 }
-              }, _callee88, this);
+              }, _callee89, this);
             }));
           }
         }, {
@@ -18138,14 +18207,14 @@
         }, {
           key: "sendMessage",
           value: function sendMessage(msgPayload) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee89() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee90() {
               var msgId, timestamp, payload;
-              return regeneratorRuntime.wrap(function _callee89$(_context89) {
+              return regeneratorRuntime.wrap(function _callee90$(_context90) {
                 while (1) {
-                  switch (_context89.prev = _context89.next) {
+                  switch (_context90.prev = _context90.next) {
                     case 0:
                       if (!msgPayload) {
-                        _context89.next = 18;
+                        _context90.next = 18;
                         break;
                       }
 
@@ -18159,26 +18228,26 @@
                         userName: this.userName,
                         userId: this.currentUserId
                       };
-                      _context89.prev = 4;
-                      _context89.next = 7;
+                      _context90.prev = 4;
+                      _context90.next = 7;
                       return this.addComment(payload);
 
                     case 7:
-                      _context89.next = 12;
+                      _context90.next = 12;
                       break;
 
                     case 9:
-                      _context89.prev = 9;
-                      _context89.t0 = _context89["catch"](4);
-                      console.error(_context89.t0);
+                      _context90.prev = 9;
+                      _context90.t0 = _context90["catch"](4);
+                      console.error(_context90.t0);
 
                     case 12:
-                      _context89.next = 14;
+                      _context90.next = 14;
                       return this.checkComment(msgId);
 
                     case 14:
-                      if (!_context89.sent) {
-                        _context89.next = 18;
+                      if (!_context90.sent) {
+                        _context90.next = 18;
                         break;
                       }
 
@@ -18193,10 +18262,10 @@
 
                     case 18:
                     case "end":
-                      return _context89.stop();
+                      return _context90.stop();
                   }
                 }
-              }, _callee89, this, [[4, 9]]);
+              }, _callee90, this, [[4, 9]]);
             }));
           }
         }, {
@@ -18206,17 +18275,17 @@
         }, {
           key: "getComments",
           value: function getComments() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee90() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee91() {
               var res, i;
-              return regeneratorRuntime.wrap(function _callee90$(_context90) {
+              return regeneratorRuntime.wrap(function _callee91$(_context91) {
                 while (1) {
-                  switch (_context90.prev = _context90.next) {
+                  switch (_context91.prev = _context91.next) {
                     case 0:
-                      _context90.next = 2;
+                      _context91.next = 2;
                       return this.data.getComments(this.router.url);
 
                     case 2:
-                      res = _context90.sent;
+                      res = _context91.sent;
 
                       if (res != []) {
                         res.sort(function (a, b) {
@@ -18236,25 +18305,6 @@
 
                     case 5:
                     case "end":
-                      return _context90.stop();
-                  }
-                }
-              }, _callee90, this);
-            }));
-          }
-        }, {
-          key: "addComment",
-          value: function addComment(p) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee91() {
-              return regeneratorRuntime.wrap(function _callee91$(_context91) {
-                while (1) {
-                  switch (_context91.prev = _context91.next) {
-                    case 0:
-                      _context91.next = 2;
-                      return this.data.addComment(p, this.router.url, this.currentUserId, this.title);
-
-                    case 2:
-                    case "end":
                       return _context91.stop();
                   }
                 }
@@ -18262,31 +18312,50 @@
             }));
           }
         }, {
-          key: "checkComment",
-          value: function checkComment(msgId) {
+          key: "addComment",
+          value: function addComment(p) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee92() {
-              var b;
               return regeneratorRuntime.wrap(function _callee92$(_context92) {
                 while (1) {
                   switch (_context92.prev = _context92.next) {
                     case 0:
-                      _context92.t0 = Boolean;
-                      _context92.t1 = Number;
-                      _context92.next = 4;
-                      return this.data.checkComment(msgId);
+                      _context92.next = 2;
+                      return this.data.addComment(p, this.router.url, this.currentUserId, this.title);
 
-                    case 4:
-                      _context92.t2 = _context92.sent;
-                      _context92.t3 = (0, _context92.t1)(_context92.t2);
-                      b = (0, _context92.t0)(_context92.t3);
-                      return _context92.abrupt("return", b);
-
-                    case 8:
+                    case 2:
                     case "end":
                       return _context92.stop();
                   }
                 }
               }, _callee92, this);
+            }));
+          }
+        }, {
+          key: "checkComment",
+          value: function checkComment(msgId) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee93() {
+              var b;
+              return regeneratorRuntime.wrap(function _callee93$(_context93) {
+                while (1) {
+                  switch (_context93.prev = _context93.next) {
+                    case 0:
+                      _context93.t0 = Boolean;
+                      _context93.t1 = Number;
+                      _context93.next = 4;
+                      return this.data.checkComment(msgId);
+
+                    case 4:
+                      _context93.t2 = _context93.sent;
+                      _context93.t3 = (0, _context93.t1)(_context93.t2);
+                      b = (0, _context93.t0)(_context93.t3);
+                      return _context93.abrupt("return", b);
+
+                    case 8:
+                    case "end":
+                      return _context93.stop();
+                  }
+                }
+              }, _callee93, this);
             }));
           }
         }, {
@@ -18323,17 +18392,17 @@
         }, {
           key: "reportComment",
           value: function reportComment(msg) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee93() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee94() {
               var m, dm;
-              return regeneratorRuntime.wrap(function _callee93$(_context93) {
+              return regeneratorRuntime.wrap(function _callee94$(_context94) {
                 while (1) {
-                  switch (_context93.prev = _context93.next) {
+                  switch (_context94.prev = _context94.next) {
                     case 0:
-                      _context93.next = 2;
+                      _context94.next = 2;
                       return this.data.sendCommentReport(msg, this.currentUserId);
 
                     case 2:
-                      m = _context93.sent;
+                      m = _context94.sent;
 
                       if (m.startsWith('250')) {
                         dm = 'Report sent';
@@ -18347,32 +18416,32 @@
 
                     case 5:
                     case "end":
-                      return _context93.stop();
+                      return _context94.stop();
                   }
                 }
-              }, _callee93, this);
+              }, _callee94, this);
             }));
           }
         }, {
           key: "deleteComment",
           value: function deleteComment(msg) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee94() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee95() {
               var d, i;
-              return regeneratorRuntime.wrap(function _callee94$(_context94) {
+              return regeneratorRuntime.wrap(function _callee95$(_context95) {
                 while (1) {
-                  switch (_context94.prev = _context94.next) {
+                  switch (_context95.prev = _context95.next) {
                     case 0:
-                      _context94.next = 2;
+                      _context95.next = 2;
                       return this.data.deleteComment(msg.msgId, this.currentUserId);
 
                     case 2:
-                      d = _context94.sent;
-                      _context94.next = 5;
+                      d = _context95.sent;
+                      _context95.next = 5;
                       return this.checkComment(msg.msgId);
 
                     case 5:
-                      if (_context94.sent) {
-                        _context94.next = 9;
+                      if (_context95.sent) {
+                        _context95.next = 9;
                         break;
                       }
 
@@ -18393,10 +18462,10 @@
 
                     case 9:
                     case "end":
-                      return _context94.stop();
+                      return _context95.stop();
                   }
                 }
-              }, _callee94, this);
+              }, _callee95, this);
             }));
           }
         }, {
@@ -18683,19 +18752,19 @@
         }, {
           key: "onSubmit",
           value: function onSubmit(e) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee95() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee96() {
               var result;
-              return regeneratorRuntime.wrap(function _callee95$(_context95) {
+              return regeneratorRuntime.wrap(function _callee96$(_context96) {
                 while (1) {
-                  switch (_context95.prev = _context95.next) {
+                  switch (_context96.prev = _context96.next) {
                     case 0:
                       Object(_globals__WEBPACK_IMPORTED_MODULE_11__["logger"])(e);
                       this.searchState = 1;
-                      _context95.next = 4;
+                      _context96.next = 4;
                       return this.data.getSearchResult(e);
 
                     case 4:
-                      result = _context95.sent;
+                      result = _context96.sent;
                       this.googleAnalyticsService.eventEmitter("search", "header", "search", e);
 
                       if (result.length > 0) {
@@ -18706,10 +18775,10 @@
 
                     case 8:
                     case "end":
-                      return _context95.stop();
+                      return _context96.stop();
                   }
                 }
-              }, _callee95, this);
+              }, _callee96, this);
             }));
           }
         }, {
@@ -18733,56 +18802,31 @@
         }, {
           key: "onBookmarkButton",
           value: function onBookmarkButton() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee96() {
-              return regeneratorRuntime.wrap(function _callee96$(_context96) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee97() {
+              return regeneratorRuntime.wrap(function _callee97$(_context97) {
                 while (1) {
-                  switch (_context96.prev = _context96.next) {
+                  switch (_context97.prev = _context97.next) {
                     case 0:
                       if (!(this.bookmarked == false)) {
-                        _context96.next = 5;
+                        _context97.next = 5;
                         break;
                       }
 
-                      _context96.next = 3;
+                      _context97.next = 3;
                       return this.data.addBookmark(this.userId, this.router.url, new Date().getTime(), this.title + ' ' + this.subtitle);
 
                     case 3:
-                      _context96.next = 7;
+                      _context97.next = 7;
                       break;
 
                     case 5:
-                      _context96.next = 7;
+                      _context97.next = 7;
                       return this.data.delBookmark(this.userId, this.router.url);
 
                     case 7:
                       this.checkBookmark();
 
                     case 8:
-                    case "end":
-                      return _context96.stop();
-                  }
-                }
-              }, _callee96, this);
-            }));
-          }
-        }, {
-          key: "checkBookmark",
-          value: function checkBookmark() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee97() {
-              var b;
-              return regeneratorRuntime.wrap(function _callee97$(_context97) {
-                while (1) {
-                  switch (_context97.prev = _context97.next) {
-                    case 0:
-                      _context97.next = 2;
-                      return this.data.checkBookmark(this.userId, this.router.url);
-
-                    case 2:
-                      b = _context97.sent;
-                      this.bookmarked = Boolean(JSON.parse(b));
-                      Object(_globals__WEBPACK_IMPORTED_MODULE_11__["logger"])("bookmark: " + this.bookmarked);
-
-                    case 5:
                     case "end":
                       return _context97.stop();
                   }
@@ -18791,33 +18835,23 @@
             }));
           }
         }, {
-          key: "onLikeButton",
-          value: function onLikeButton() {
+          key: "checkBookmark",
+          value: function checkBookmark() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee98() {
+              var b;
               return regeneratorRuntime.wrap(function _callee98$(_context98) {
                 while (1) {
                   switch (_context98.prev = _context98.next) {
                     case 0:
-                      if (!(this.liked == false)) {
-                        _context98.next = 5;
-                        break;
-                      }
+                      _context98.next = 2;
+                      return this.data.checkBookmark(this.userId, this.router.url);
 
-                      _context98.next = 3;
-                      return this.data.like(this.userId, this.router.url, new Date().getTime(), this.title + ' ' + this.subtitle);
-
-                    case 3:
-                      _context98.next = 7;
-                      break;
+                    case 2:
+                      b = _context98.sent;
+                      this.bookmarked = Boolean(JSON.parse(b));
+                      Object(_globals__WEBPACK_IMPORTED_MODULE_11__["logger"])("bookmark: " + this.bookmarked);
 
                     case 5:
-                      _context98.next = 7;
-                      return this.data.unlike(this.userId, this.router.url);
-
-                    case 7:
-                      this.checkLike(true);
-
-                    case 8:
                     case "end":
                       return _context98.stop();
                   }
@@ -18826,20 +18860,55 @@
             }));
           }
         }, {
-          key: "checkLike",
-          value: function checkLike() {
-            var click = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+          key: "onLikeButton",
+          value: function onLikeButton() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee99() {
-              var b;
               return regeneratorRuntime.wrap(function _callee99$(_context99) {
                 while (1) {
                   switch (_context99.prev = _context99.next) {
                     case 0:
-                      _context99.next = 2;
+                      if (!(this.liked == false)) {
+                        _context99.next = 5;
+                        break;
+                      }
+
+                      _context99.next = 3;
+                      return this.data.like(this.userId, this.router.url, new Date().getTime(), this.title + ' ' + this.subtitle);
+
+                    case 3:
+                      _context99.next = 7;
+                      break;
+
+                    case 5:
+                      _context99.next = 7;
+                      return this.data.unlike(this.userId, this.router.url);
+
+                    case 7:
+                      this.checkLike(true);
+
+                    case 8:
+                    case "end":
+                      return _context99.stop();
+                  }
+                }
+              }, _callee99, this);
+            }));
+          }
+        }, {
+          key: "checkLike",
+          value: function checkLike() {
+            var click = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee100() {
+              var b;
+              return regeneratorRuntime.wrap(function _callee100$(_context100) {
+                while (1) {
+                  switch (_context100.prev = _context100.next) {
+                    case 0:
+                      _context100.next = 2;
                       return this.data.checkLike(this.userId, this.router.url);
 
                     case 2:
-                      b = _context99.sent;
+                      b = _context100.sent;
                       this.liked = Boolean(JSON.parse(b));
                       this.countLikes();
                       if (_config__WEBPACK_IMPORTED_MODULE_8__["SOCKETIO"] && click) this.socket.postLike({
@@ -18850,33 +18919,33 @@
 
                     case 7:
                     case "end":
-                      return _context99.stop();
+                      return _context100.stop();
                   }
                 }
-              }, _callee99, this);
+              }, _callee100, this);
             }));
           }
         }, {
           key: "countLikes",
           value: function countLikes() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee100() {
-              return regeneratorRuntime.wrap(function _callee100$(_context100) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee101() {
+              return regeneratorRuntime.wrap(function _callee101$(_context101) {
                 while (1) {
-                  switch (_context100.prev = _context100.next) {
+                  switch (_context101.prev = _context101.next) {
                     case 0:
-                      _context100.next = 2;
+                      _context101.next = 2;
                       return this.data.countLikes(this.router.url);
 
                     case 2:
-                      this.likes = _context100.sent;
+                      this.likes = _context101.sent;
                       Object(_globals__WEBPACK_IMPORTED_MODULE_11__["logger"])("likes: " + this.likes);
 
                     case 4:
                     case "end":
-                      return _context100.stop();
+                      return _context101.stop();
                   }
                 }
-              }, _callee100, this);
+              }, _callee101, this);
             }));
           }
         }, {
@@ -18894,11 +18963,11 @@
         }, {
           key: "sendFeedback",
           value: function sendFeedback() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee101() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee102() {
               var dialogConfig;
-              return regeneratorRuntime.wrap(function _callee101$(_context101) {
+              return regeneratorRuntime.wrap(function _callee102$(_context102) {
                 while (1) {
-                  switch (_context101.prev = _context101.next) {
+                  switch (_context102.prev = _context102.next) {
                     case 0:
                       dialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
                       dialogConfig.disableClose = true; //dialogConfig.id = "feedback-modal";
@@ -18922,10 +18991,10 @@
 
                     case 7:
                     case "end":
-                      return _context101.stop();
+                      return _context102.stop();
                   }
                 }
-              }, _callee101, this);
+              }, _callee102, this);
             }));
           }
         }]);
@@ -19270,19 +19339,19 @@
         }, {
           key: "onClick",
           value: function onClick() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee102() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee103() {
               var _this50 = this;
 
               var m, dm;
-              return regeneratorRuntime.wrap(function _callee102$(_context102) {
+              return regeneratorRuntime.wrap(function _callee103$(_context103) {
                 while (1) {
-                  switch (_context102.prev = _context102.next) {
+                  switch (_context103.prev = _context103.next) {
                     case 0:
-                      _context102.next = 2;
+                      _context103.next = 2;
                       return this.data.sendFeedback(this.feedback, this.mdata.userid);
 
                     case 2:
-                      m = _context102.sent;
+                      m = _context103.sent;
 
                       if (m.startsWith('250')) {
                         dm = 'Feedback sent';
@@ -19298,10 +19367,10 @@
 
                     case 4:
                     case "end":
-                      return _context102.stop();
+                      return _context103.stop();
                   }
                 }
-              }, _callee102, this);
+              }, _callee103, this);
             }));
           }
         }, {
@@ -19385,12 +19454,12 @@
         _createClass(ArtistComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee104() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee105() {
               var _this51 = this;
 
-              return regeneratorRuntime.wrap(function _callee104$(_context104) {
+              return regeneratorRuntime.wrap(function _callee105$(_context105) {
                 while (1) {
-                  switch (_context104.prev = _context104.next) {
+                  switch (_context105.prev = _context105.next) {
                     case 0:
                       this.auth.userProfile$.subscribe(function (userProfile) {
                         if (userProfile) {
@@ -19413,22 +19482,22 @@
                       */
 
                       this.route.paramMap.subscribe(function (params) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this51, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee103() {
-                          return regeneratorRuntime.wrap(function _callee103$(_context103) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this51, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee104() {
+                          return regeneratorRuntime.wrap(function _callee104$(_context104) {
                             while (1) {
-                              switch (_context103.prev = _context103.next) {
+                              switch (_context104.prev = _context104.next) {
                                 case 0:
                                   if (!params.has('id')) {
-                                    _context103.next = 6;
+                                    _context104.next = 6;
                                     break;
                                   }
 
-                                  _context103.next = 3;
+                                  _context104.next = 3;
                                   return this.data.getArtistDetails(params.get('id'));
 
                                 case 3:
-                                  this.artist = _context103.sent;
-                                  _context103.next = 7;
+                                  this.artist = _context104.sent;
+                                  _context104.next = 7;
                                   break;
 
                                 case 6:
@@ -19445,10 +19514,10 @@
 
                                 case 8:
                                 case "end":
-                                  return _context103.stop();
+                                  return _context104.stop();
                               }
                             }
-                          }, _callee103, this);
+                          }, _callee104, this);
                         }));
                       });
                       /* // not working
@@ -19460,10 +19529,10 @@
 
                     case 2:
                     case "end":
-                      return _context104.stop();
+                      return _context105.stop();
                   }
                 }
-              }, _callee104, this);
+              }, _callee105, this);
             }));
           }
         }]);
@@ -19599,13 +19668,13 @@
         }, {
           key: "onMapReady",
           value: function onMapReady(map) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee105() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee106() {
               var _this52 = this;
 
               var i, tours, geoJsonData, tourGeoJsonData, all;
-              return regeneratorRuntime.wrap(function _callee105$(_context105) {
+              return regeneratorRuntime.wrap(function _callee106$(_context106) {
                 while (1) {
-                  switch (_context105.prev = _context105.next) {
+                  switch (_context106.prev = _context106.next) {
                     case 0:
                       setTimeout(function () {
                         _this52.timeOut = true;
@@ -19616,28 +19685,28 @@
 
                     case 3:
                       if (!(this.venues == undefined || this.venues.length == 0)) {
-                        _context105.next = 12;
+                        _context106.next = 12;
                         break;
                       }
 
                       // retry heroku fetch
                       Object(_globals__WEBPACK_IMPORTED_MODULE_5__["logger"])("retry " + i);
-                      _context105.next = 7;
+                      _context106.next = 7;
                       return this.data.getVenueCoordinates();
 
                     case 7:
-                      this.venues = _context105.sent;
+                      this.venues = _context106.sent;
                       Object(_globals__WEBPACK_IMPORTED_MODULE_5__["logger"])(this.venues);
                       i++;
-                      _context105.next = 3;
+                      _context106.next = 3;
                       break;
 
                     case 12:
-                      _context105.next = 14;
+                      _context106.next = 14;
                       return this.data.getTourCoordinates();
 
                     case 14:
-                      tours = _context105.sent;
+                      tours = _context106.sent;
                       Object(_globals__WEBPACK_IMPORTED_MODULE_5__["logger"])(tours);
                       geoJsonData = this.getGeoJson(this.venues);
                       tourGeoJsonData = this.getTourJson(tours);
@@ -19676,10 +19745,10 @@
 
                     case 32:
                     case "end":
-                      return _context105.stop();
+                      return _context106.stop();
                   }
                 }
-              }, _callee105, this);
+              }, _callee106, this);
             }));
           }
         }, {
@@ -20312,30 +20381,12 @@
         _createClass(DeadApiService, [{
           key: "getEvents",
           value: function getEvents() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee106() {
-              return regeneratorRuntime.wrap(function _callee106$(_context106) {
-                while (1) {
-                  switch (_context106.prev = _context106.next) {
-                    case 0:
-                      return _context106.abrupt("return", this.getJsonFromApi('events'));
-
-                    case 1:
-                    case "end":
-                      return _context106.stop();
-                  }
-                }
-              }, _callee106, this);
-            }));
-          }
-        }, {
-          key: "getVenueCoordinates",
-          value: function getVenueCoordinates() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee107() {
               return regeneratorRuntime.wrap(function _callee107$(_context107) {
                 while (1) {
                   switch (_context107.prev = _context107.next) {
                     case 0:
-                      return _context107.abrupt("return", this.getJsonFromApi('coordinates'));
+                      return _context107.abrupt("return", this.getJsonFromApi('events'));
 
                     case 1:
                     case "end":
@@ -20346,14 +20397,14 @@
             }));
           }
         }, {
-          key: "getTourCoordinates",
-          value: function getTourCoordinates() {
+          key: "getVenueCoordinates",
+          value: function getVenueCoordinates() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee108() {
               return regeneratorRuntime.wrap(function _callee108$(_context108) {
                 while (1) {
                   switch (_context108.prev = _context108.next) {
                     case 0:
-                      return _context108.abrupt("return", this.getJsonFromApi('tours'));
+                      return _context108.abrupt("return", this.getJsonFromApi('coordinates'));
 
                     case 1:
                     case "end":
@@ -20364,14 +20415,14 @@
             }));
           }
         }, {
-          key: "getEventDetails",
-          value: function getEventDetails(eventId) {
+          key: "getTourCoordinates",
+          value: function getTourCoordinates() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee109() {
               return regeneratorRuntime.wrap(function _callee109$(_context109) {
                 while (1) {
                   switch (_context109.prev = _context109.next) {
                     case 0:
-                      return _context109.abrupt("return", this.getJsonFromApi('details?event=' + encodeURIComponent(eventId)));
+                      return _context109.abrupt("return", this.getJsonFromApi('tours'));
 
                     case 1:
                     case "end":
@@ -20379,6 +20430,24 @@
                   }
                 }
               }, _callee109, this);
+            }));
+          }
+        }, {
+          key: "getEventDetails",
+          value: function getEventDetails(eventId) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee110() {
+              return regeneratorRuntime.wrap(function _callee110$(_context110) {
+                while (1) {
+                  switch (_context110.prev = _context110.next) {
+                    case 0:
+                      return _context110.abrupt("return", this.getJsonFromApi('details?event=' + encodeURIComponent(eventId)));
+
+                    case 1:
+                    case "end":
+                      return _context110.stop();
+                  }
+                }
+              }, _callee110, this);
             }));
           }
         }, {
@@ -20436,30 +20505,6 @@
         }, {
           key: "getJsonFromApi",
           value: function getJsonFromApi(path) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee110() {
-              return regeneratorRuntime.wrap(function _callee110$(_context110) {
-                while (1) {
-                  switch (_context110.prev = _context110.next) {
-                    case 0:
-                      return _context110.abrupt("return", fetch(this.api_url + path).then(function (r) {
-                        return r.text();
-                      }).then(function (t) {
-                        return JSON.parse(t);
-                      })["catch"](function (e) {
-                        return Object(_globals__WEBPACK_IMPORTED_MODULE_2__["logger"])(e);
-                      }));
-
-                    case 1:
-                    case "end":
-                      return _context110.stop();
-                  }
-                }
-              }, _callee110, this);
-            }));
-          }
-        }, {
-          key: "getTextFromApi",
-          value: function getTextFromApi(path) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee111() {
               return regeneratorRuntime.wrap(function _callee111$(_context111) {
                 while (1) {
@@ -20467,6 +20512,8 @@
                     case 0:
                       return _context111.abrupt("return", fetch(this.api_url + path).then(function (r) {
                         return r.text();
+                      }).then(function (t) {
+                        return JSON.parse(t);
                       })["catch"](function (e) {
                         return Object(_globals__WEBPACK_IMPORTED_MODULE_2__["logger"])(e);
                       }));
@@ -20480,14 +20527,18 @@
             }));
           }
         }, {
-          key: "getSearchResult",
-          value: function getSearchResult(q) {
+          key: "getTextFromApi",
+          value: function getTextFromApi(path) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee112() {
               return regeneratorRuntime.wrap(function _callee112$(_context112) {
                 while (1) {
                   switch (_context112.prev = _context112.next) {
                     case 0:
-                      return _context112.abrupt("return", this.getJsonFromApi('search?q=' + encodeURIComponent(q)));
+                      return _context112.abrupt("return", fetch(this.api_url + path).then(function (r) {
+                        return r.text();
+                      })["catch"](function (e) {
+                        return Object(_globals__WEBPACK_IMPORTED_MODULE_2__["logger"])(e);
+                      }));
 
                     case 1:
                     case "end":
@@ -20498,14 +20549,14 @@
             }));
           }
         }, {
-          key: "addBookmark",
-          value: function addBookmark(userid, route, time, title) {
+          key: "getSearchResult",
+          value: function getSearchResult(q) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee113() {
               return regeneratorRuntime.wrap(function _callee113$(_context113) {
                 while (1) {
                   switch (_context113.prev = _context113.next) {
                     case 0:
-                      return _context113.abrupt("return", this.getTextFromApi('addBookmark?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
+                      return _context113.abrupt("return", this.getJsonFromApi('search?q=' + encodeURIComponent(q)));
 
                     case 1:
                     case "end":
@@ -20516,14 +20567,14 @@
             }));
           }
         }, {
-          key: "delBookmark",
-          value: function delBookmark(userid, route) {
+          key: "addBookmark",
+          value: function addBookmark(userid, route, time, title) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee114() {
               return regeneratorRuntime.wrap(function _callee114$(_context114) {
                 while (1) {
                   switch (_context114.prev = _context114.next) {
                     case 0:
-                      return _context114.abrupt("return", this.getTextFromApi('delBookmark?userid=' + userid + '&route=' + route));
+                      return _context114.abrupt("return", this.getTextFromApi('addBookmark?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
 
                     case 1:
                     case "end":
@@ -20534,14 +20585,14 @@
             }));
           }
         }, {
-          key: "getBookmarks",
-          value: function getBookmarks(userid) {
+          key: "delBookmark",
+          value: function delBookmark(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee115() {
               return regeneratorRuntime.wrap(function _callee115$(_context115) {
                 while (1) {
                   switch (_context115.prev = _context115.next) {
                     case 0:
-                      return _context115.abrupt("return", this.getJsonFromApi('getBookmarks?userid=' + userid));
+                      return _context115.abrupt("return", this.getTextFromApi('delBookmark?userid=' + userid + '&route=' + route));
 
                     case 1:
                     case "end":
@@ -20552,14 +20603,14 @@
             }));
           }
         }, {
-          key: "checkBookmark",
-          value: function checkBookmark(userid, route) {
+          key: "getBookmarks",
+          value: function getBookmarks(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee116() {
               return regeneratorRuntime.wrap(function _callee116$(_context116) {
                 while (1) {
                   switch (_context116.prev = _context116.next) {
                     case 0:
-                      return _context116.abrupt("return", this.getTextFromApi('checkBookmark?userid=' + userid + '&route=' + route));
+                      return _context116.abrupt("return", this.getJsonFromApi('getBookmarks?userid=' + userid));
 
                     case 1:
                     case "end":
@@ -20570,14 +20621,14 @@
             }));
           }
         }, {
-          key: "getComments",
-          value: function getComments(route) {
+          key: "checkBookmark",
+          value: function checkBookmark(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee117() {
               return regeneratorRuntime.wrap(function _callee117$(_context117) {
                 while (1) {
                   switch (_context117.prev = _context117.next) {
                     case 0:
-                      return _context117.abrupt("return", this.getJsonFromApi('getComments?route=' + route));
+                      return _context117.abrupt("return", this.getTextFromApi('checkBookmark?userid=' + userid + '&route=' + route));
 
                     case 1:
                     case "end":
@@ -20588,14 +20639,14 @@
             }));
           }
         }, {
-          key: "like",
-          value: function like(userid, route, time, title) {
+          key: "getComments",
+          value: function getComments(route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee118() {
               return regeneratorRuntime.wrap(function _callee118$(_context118) {
                 while (1) {
                   switch (_context118.prev = _context118.next) {
                     case 0:
-                      return _context118.abrupt("return", this.getTextFromApi('like?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
+                      return _context118.abrupt("return", this.getJsonFromApi('getComments?route=' + route));
 
                     case 1:
                     case "end":
@@ -20606,14 +20657,14 @@
             }));
           }
         }, {
-          key: "unlike",
-          value: function unlike(userid, route) {
+          key: "like",
+          value: function like(userid, route, time, title) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee119() {
               return regeneratorRuntime.wrap(function _callee119$(_context119) {
                 while (1) {
                   switch (_context119.prev = _context119.next) {
                     case 0:
-                      return _context119.abrupt("return", this.getTextFromApi('unlike?userid=' + userid + '&route=' + route));
+                      return _context119.abrupt("return", this.getTextFromApi('like?userid=' + userid + '&route=' + route + '&time=' + time + '&title=' + title));
 
                     case 1:
                     case "end":
@@ -20624,14 +20675,14 @@
             }));
           }
         }, {
-          key: "checkLike",
-          value: function checkLike(userid, route) {
+          key: "unlike",
+          value: function unlike(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee120() {
               return regeneratorRuntime.wrap(function _callee120$(_context120) {
                 while (1) {
                   switch (_context120.prev = _context120.next) {
                     case 0:
-                      return _context120.abrupt("return", this.getTextFromApi('checkLike?userid=' + userid + '&route=' + route));
+                      return _context120.abrupt("return", this.getTextFromApi('unlike?userid=' + userid + '&route=' + route));
 
                     case 1:
                     case "end":
@@ -20642,14 +20693,14 @@
             }));
           }
         }, {
-          key: "countLikes",
-          value: function countLikes(route) {
+          key: "checkLike",
+          value: function checkLike(userid, route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee121() {
               return regeneratorRuntime.wrap(function _callee121$(_context121) {
                 while (1) {
                   switch (_context121.prev = _context121.next) {
                     case 0:
-                      return _context121.abrupt("return", this.getTextFromApi('countLikes?route=' + route));
+                      return _context121.abrupt("return", this.getTextFromApi('checkLike?userid=' + userid + '&route=' + route));
 
                     case 1:
                     case "end":
@@ -20660,14 +20711,14 @@
             }));
           }
         }, {
-          key: "getLikes",
-          value: function getLikes(userid) {
+          key: "countLikes",
+          value: function countLikes(route) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee122() {
               return regeneratorRuntime.wrap(function _callee122$(_context122) {
                 while (1) {
                   switch (_context122.prev = _context122.next) {
                     case 0:
-                      return _context122.abrupt("return", this.getJsonFromApi('getLikes?userid=' + userid));
+                      return _context122.abrupt("return", this.getTextFromApi('countLikes?route=' + route));
 
                     case 1:
                     case "end":
@@ -20678,18 +20729,16 @@
             }));
           }
         }, {
-          key: "addComment",
-          value: function addComment(comment, route, userid, title) {
+          key: "getLikes",
+          value: function getLikes(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee123() {
-              var cmt;
               return regeneratorRuntime.wrap(function _callee123$(_context123) {
                 while (1) {
                   switch (_context123.prev = _context123.next) {
                     case 0:
-                      cmt = encodeURIComponent(JSON.stringify(comment));
-                      return _context123.abrupt("return", this.getTextFromApi('addComment?comment=' + cmt + '&route=' + route + '&userid=' + userid + '&title=' + title));
+                      return _context123.abrupt("return", this.getJsonFromApi('getLikes?userid=' + userid));
 
-                    case 2:
+                    case 1:
                     case "end":
                       return _context123.stop();
                   }
@@ -20698,16 +20747,18 @@
             }));
           }
         }, {
-          key: "checkComment",
-          value: function checkComment(msgId) {
+          key: "addComment",
+          value: function addComment(comment, route, userid, title) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee124() {
+              var cmt;
               return regeneratorRuntime.wrap(function _callee124$(_context124) {
                 while (1) {
                   switch (_context124.prev = _context124.next) {
                     case 0:
-                      return _context124.abrupt("return", this.getJsonFromApi('checkComment?msgId=' + msgId));
+                      cmt = encodeURIComponent(JSON.stringify(comment));
+                      return _context124.abrupt("return", this.getTextFromApi('addComment?comment=' + cmt + '&route=' + route + '&userid=' + userid + '&title=' + title));
 
-                    case 1:
+                    case 2:
                     case "end":
                       return _context124.stop();
                   }
@@ -20716,14 +20767,14 @@
             }));
           }
         }, {
-          key: "getUserComments",
-          value: function getUserComments(userid) {
+          key: "checkComment",
+          value: function checkComment(msgId) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee125() {
               return regeneratorRuntime.wrap(function _callee125$(_context125) {
                 while (1) {
                   switch (_context125.prev = _context125.next) {
                     case 0:
-                      return _context125.abrupt("return", this.getJsonFromApi('getUserComments?userid=' + userid));
+                      return _context125.abrupt("return", this.getJsonFromApi('checkComment?msgId=' + msgId));
 
                     case 1:
                     case "end":
@@ -20734,14 +20785,14 @@
             }));
           }
         }, {
-          key: "sendCommentReport",
-          value: function sendCommentReport(comment, userid) {
+          key: "getUserComments",
+          value: function getUserComments(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee126() {
               return regeneratorRuntime.wrap(function _callee126$(_context126) {
                 while (1) {
                   switch (_context126.prev = _context126.next) {
                     case 0:
-                      return _context126.abrupt("return", this.getTextFromApi('sendCommentReport?comment=' + comment + '&userid=' + userid));
+                      return _context126.abrupt("return", this.getJsonFromApi('getUserComments?userid=' + userid));
 
                     case 1:
                     case "end":
@@ -20752,14 +20803,14 @@
             }));
           }
         }, {
-          key: "sendFeedback",
-          value: function sendFeedback(comment, userid) {
+          key: "sendCommentReport",
+          value: function sendCommentReport(comment, userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee127() {
               return regeneratorRuntime.wrap(function _callee127$(_context127) {
                 while (1) {
                   switch (_context127.prev = _context127.next) {
                     case 0:
-                      return _context127.abrupt("return", this.getTextFromApi('sendFeedback?comment=' + comment + '&userid=' + userid));
+                      return _context127.abrupt("return", this.getTextFromApi('sendCommentReport?comment=' + comment + '&userid=' + userid));
 
                     case 1:
                     case "end":
@@ -20770,14 +20821,14 @@
             }));
           }
         }, {
-          key: "addPlaylist",
-          value: function addPlaylist(name, playlist, playlistid, userid, time) {
+          key: "sendFeedback",
+          value: function sendFeedback(comment, userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee128() {
               return regeneratorRuntime.wrap(function _callee128$(_context128) {
                 while (1) {
                   switch (_context128.prev = _context128.next) {
                     case 0:
-                      return _context128.abrupt("return", this.getTextFromApi('addPlaylist?name=' + name + '&playlist=' + playlist + '&playlistid=' + playlistid + '&userid=' + userid + '&time=' + time));
+                      return _context128.abrupt("return", this.getTextFromApi('sendFeedback?comment=' + comment + '&userid=' + userid));
 
                     case 1:
                     case "end":
@@ -20788,14 +20839,14 @@
             }));
           }
         }, {
-          key: "getPlaylists",
-          value: function getPlaylists(userid) {
+          key: "addPlaylist",
+          value: function addPlaylist(name, playlist, playlistid, userid, time) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee129() {
               return regeneratorRuntime.wrap(function _callee129$(_context129) {
                 while (1) {
                   switch (_context129.prev = _context129.next) {
                     case 0:
-                      return _context129.abrupt("return", this.getJsonFromApi('getPlaylists?userid=' + userid));
+                      return _context129.abrupt("return", this.getTextFromApi('addPlaylist?name=' + name + '&playlist=' + playlist + '&playlistid=' + playlistid + '&userid=' + userid + '&time=' + time));
 
                     case 1:
                     case "end":
@@ -20806,14 +20857,14 @@
             }));
           }
         }, {
-          key: "getPlaylist",
-          value: function getPlaylist(playlistid) {
+          key: "getPlaylists",
+          value: function getPlaylists(userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee130() {
               return regeneratorRuntime.wrap(function _callee130$(_context130) {
                 while (1) {
                   switch (_context130.prev = _context130.next) {
                     case 0:
-                      return _context130.abrupt("return", this.getJsonFromApi('getPlaylist?playlistid=' + playlistid));
+                      return _context130.abrupt("return", this.getJsonFromApi('getPlaylists?userid=' + userid));
 
                     case 1:
                     case "end":
@@ -20824,14 +20875,14 @@
             }));
           }
         }, {
-          key: "delPlaylist",
-          value: function delPlaylist(userid, playlistid) {
+          key: "getPlaylist",
+          value: function getPlaylist(playlistid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee131() {
               return regeneratorRuntime.wrap(function _callee131$(_context131) {
                 while (1) {
                   switch (_context131.prev = _context131.next) {
                     case 0:
-                      return _context131.abrupt("return", this.getTextFromApi('delPlaylist?userid=' + userid + '&playlistid=' + playlistid));
+                      return _context131.abrupt("return", this.getJsonFromApi('getPlaylist?playlistid=' + playlistid));
 
                     case 1:
                     case "end":
@@ -20842,14 +20893,14 @@
             }));
           }
         }, {
-          key: "deleteComment",
-          value: function deleteComment(msgid, userid) {
+          key: "delPlaylist",
+          value: function delPlaylist(userid, playlistid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee132() {
               return regeneratorRuntime.wrap(function _callee132$(_context132) {
                 while (1) {
                   switch (_context132.prev = _context132.next) {
                     case 0:
-                      return _context132.abrupt("return", this.getTextFromApi('deleteComment?msgid=' + msgid + '&userid=' + userid));
+                      return _context132.abrupt("return", this.getTextFromApi('delPlaylist?userid=' + userid + '&playlistid=' + playlistid));
 
                     case 1:
                     case "end":
@@ -20860,14 +20911,14 @@
             }));
           }
         }, {
-          key: "getRecordingInfo",
-          value: function getRecordingInfo(recordingid) {
+          key: "deleteComment",
+          value: function deleteComment(msgid, userid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee133() {
               return regeneratorRuntime.wrap(function _callee133$(_context133) {
                 while (1) {
                   switch (_context133.prev = _context133.next) {
                     case 0:
-                      return _context133.abrupt("return", this.getJsonFromApi('getRecordingInfo?recordingid=' + recordingid));
+                      return _context133.abrupt("return", this.getTextFromApi('deleteComment?msgid=' + msgid + '&userid=' + userid));
 
                     case 1:
                     case "end":
@@ -20878,14 +20929,14 @@
             }));
           }
         }, {
-          key: "getTracklist",
-          value: function getTracklist(recordingid) {
+          key: "getRecordingInfo",
+          value: function getRecordingInfo(recordingid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee134() {
               return regeneratorRuntime.wrap(function _callee134$(_context134) {
                 while (1) {
                   switch (_context134.prev = _context134.next) {
                     case 0:
-                      return _context134.abrupt("return", this.getJsonFromApi('getTracklist?recordingid=' + recordingid));
+                      return _context134.abrupt("return", this.getJsonFromApi('getRecordingInfo?recordingid=' + recordingid));
 
                     case 1:
                     case "end":
@@ -20896,18 +20947,16 @@
             }));
           }
         }, {
-          key: "getYoutubeList",
-          value: function getYoutubeList(id, searcharray) {
+          key: "getTracklist",
+          value: function getTracklist(recordingid) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee135() {
-              var s;
               return regeneratorRuntime.wrap(function _callee135$(_context135) {
                 while (1) {
                   switch (_context135.prev = _context135.next) {
                     case 0:
-                      s = encodeURIComponent(JSON.stringify(searcharray));
-                      return _context135.abrupt("return", this.getJsonFromApi('youtube?id=' + id + '&searcharray=' + s));
+                      return _context135.abrupt("return", this.getJsonFromApi('getTracklist?recordingid=' + recordingid));
 
-                    case 2:
+                    case 1:
                     case "end":
                       return _context135.stop();
                   }
@@ -20916,16 +20965,18 @@
             }));
           }
         }, {
-          key: "getShowIndex",
-          value: function getShowIndex() {
+          key: "getYoutubeList",
+          value: function getYoutubeList(id, searcharray) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee136() {
+              var s;
               return regeneratorRuntime.wrap(function _callee136$(_context136) {
                 while (1) {
                   switch (_context136.prev = _context136.next) {
                     case 0:
-                      return _context136.abrupt("return", this.getJsonFromApi('showindex'));
+                      s = encodeURIComponent(JSON.stringify(searcharray));
+                      return _context136.abrupt("return", this.getJsonFromApi('youtube?id=' + id + '&searcharray=' + s));
 
-                    case 1:
+                    case 2:
                     case "end":
                       return _context136.stop();
                   }
@@ -20934,14 +20985,14 @@
             }));
           }
         }, {
-          key: "getVenueIndex",
-          value: function getVenueIndex() {
+          key: "getShowIndex",
+          value: function getShowIndex() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee137() {
               return regeneratorRuntime.wrap(function _callee137$(_context137) {
                 while (1) {
                   switch (_context137.prev = _context137.next) {
                     case 0:
-                      return _context137.abrupt("return", this.getJsonFromApi('venueindex'));
+                      return _context137.abrupt("return", this.getJsonFromApi('showindex'));
 
                     case 1:
                     case "end":
@@ -20952,14 +21003,14 @@
             }));
           }
         }, {
-          key: "getLocationIndex",
-          value: function getLocationIndex() {
+          key: "getVenueIndex",
+          value: function getVenueIndex() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee138() {
               return regeneratorRuntime.wrap(function _callee138$(_context138) {
                 while (1) {
                   switch (_context138.prev = _context138.next) {
                     case 0:
-                      return _context138.abrupt("return", this.getJsonFromApi('locationindex'));
+                      return _context138.abrupt("return", this.getJsonFromApi('venueindex'));
 
                     case 1:
                     case "end":
@@ -20970,14 +21021,14 @@
             }));
           }
         }, {
-          key: "getSongIndex",
-          value: function getSongIndex() {
+          key: "getLocationIndex",
+          value: function getLocationIndex() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee139() {
               return regeneratorRuntime.wrap(function _callee139$(_context139) {
                 while (1) {
                   switch (_context139.prev = _context139.next) {
                     case 0:
-                      return _context139.abrupt("return", this.getJsonFromApi('songindex'));
+                      return _context139.abrupt("return", this.getJsonFromApi('locationindex'));
 
                     case 1:
                     case "end":
@@ -20985,6 +21036,24 @@
                   }
                 }
               }, _callee139, this);
+            }));
+          }
+        }, {
+          key: "getSongIndex",
+          value: function getSongIndex() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee140() {
+              return regeneratorRuntime.wrap(function _callee140$(_context140) {
+                while (1) {
+                  switch (_context140.prev = _context140.next) {
+                    case 0:
+                      return _context140.abrupt("return", this.getJsonFromApi('songindex'));
+
+                    case 1:
+                    case "end":
+                      return _context140.stop();
+                  }
+                }
+              }, _callee140, this);
             }));
           }
         }, {
@@ -21181,22 +21250,22 @@
             } */
 
             this.route.paramMap.subscribe(function (params) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this57, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee140() {
-                return regeneratorRuntime.wrap(function _callee140$(_context140) {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this57, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee141() {
+                return regeneratorRuntime.wrap(function _callee141$(_context141) {
                   while (1) {
-                    switch (_context140.prev = _context140.next) {
+                    switch (_context141.prev = _context141.next) {
                       case 0:
                         if (!params.has('id')) {
-                          _context140.next = 6;
+                          _context141.next = 6;
                           break;
                         }
 
-                        _context140.next = 3;
+                        _context141.next = 3;
                         return this.data.getLocation(params.get('id'));
 
                       case 3:
-                        this.location = _context140.sent;
-                        _context140.next = 7;
+                        this.location = _context141.sent;
+                        _context141.next = 7;
                         break;
 
                       case 6:
@@ -21206,18 +21275,18 @@
 
                       case 7:
                         if (!(params.has('id') && this.location.state)) {
-                          _context140.next = 15;
+                          _context141.next = 15;
                           break;
                         }
 
-                        _context140.next = 10;
+                        _context141.next = 10;
                         return this.data.getYoutubeList(this.location.id, ['Grateful Dead', this.location.name]);
 
                       case 10:
-                        this.videos = _context140.sent;
+                        this.videos = _context141.sent;
                         if (this.videos) this.currentVideoId = this.videos[0].videoId;
                         Object(_globals__WEBPACK_IMPORTED_MODULE_6__["logger"])(this.videos);
-                        _context140.next = 16;
+                        _context141.next = 16;
                         break;
 
                       case 15:
@@ -21227,10 +21296,10 @@
 
                       case 16:
                       case "end":
-                        return _context140.stop();
+                        return _context141.stop();
                     }
                   }
-                }, _callee140, this);
+                }, _callee141, this);
               }));
             });
           }
@@ -21303,16 +21372,6 @@
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
       "8Y7J");
-      /* harmony import */
-
-
-      var util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! util */
-      "MCLT");
-      /* harmony import */
-
-
-      var util__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_1__);
 
       var ChatterBoxComponent = /*#__PURE__*/function () {
         function ChatterBoxComponent() {
@@ -21332,7 +21391,8 @@
         }, {
           key: "showImageOrDiv",
           value: function showImageOrDiv(comment) {
-            return Object(util__WEBPACK_IMPORTED_MODULE_1__["isUndefined"])(comment.userImagePath); // return comment.userImagePath === undefined;
+            //return isUndefined(comment.userImagePath);
+            return comment.userImagePath === undefined;
           }
         }, {
           key: "addComment",
@@ -21431,24 +21491,24 @@
         }, {
           key: "refresh",
           value: function refresh() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee141() {
-              return regeneratorRuntime.wrap(function _callee141$(_context141) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee142() {
+              return regeneratorRuntime.wrap(function _callee142$(_context142) {
                 while (1) {
-                  switch (_context141.prev = _context141.next) {
+                  switch (_context142.prev = _context142.next) {
                     case 0:
-                      _context141.next = 2;
+                      _context142.next = 2;
                       return this.data.getEventInfos(this.eventIds);
 
                     case 2:
-                      this.events = _context141.sent;
+                      this.events = _context142.sent;
                       this.pages = Math.ceil(this.events.length / 10);
 
                     case 4:
                     case "end":
-                      return _context141.stop();
+                      return _context142.stop();
                   }
                 }
-              }, _callee141, this);
+              }, _callee142, this);
             }));
           }
         }, {
@@ -21570,96 +21630,45 @@
           this.showsSort = 'date';
           this.locationsSort = 'locationName';
           this.songsSort = 'songName';
+          this.loaded = false;
         }
 
         _createClass(IndexComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this61 = this;
-
-            this.auth.userProfile$.subscribe(function (userProfile) {
-              if (userProfile) {
-                _this61.currentUser = {
-                  userId: userProfile.sub.split("|")[1],
-                  userName: userProfile['http://example.com/username']
-                };
-                gtag('set', {
-                  'user_id': _this61.currentUser.userId
-                });
-              }
-            });
-            this.selected = 'shows';
-            this.onSelectButton('shows');
-          }
-        }, {
-          key: "onSelectButton",
-          value: function onSelectButton(s) {
-            this.selected = s;
-
-            switch (s) {
-              case 'shows':
-                this.getShows();
-                break;
-
-              case 'venues':
-                this.getVenues();
-                break;
-
-              case 'locations':
-                this.getLocations();
-                break;
-
-              case 'songs':
-                this.getSongs();
-            }
-          }
-        }, {
-          key: "getShows",
-          value: function getShows() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee142() {
-              return regeneratorRuntime.wrap(function _callee142$(_context142) {
-                while (1) {
-                  switch (_context142.prev = _context142.next) {
-                    case 0:
-                      if (this.shows) {
-                        _context142.next = 4;
-                        break;
-                      }
-
-                      _context142.next = 3;
-                      return this.data.getShowIndex();
-
-                    case 3:
-                      this.shows = _context142.sent;
-
-                    case 4:
-                    case "end":
-                      return _context142.stop();
-                  }
-                }
-              }, _callee142, this);
-            }));
-          }
-        }, {
-          key: "getVenues",
-          value: function getVenues() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee143() {
+              var _this61 = this;
+
+              var index;
               return regeneratorRuntime.wrap(function _callee143$(_context143) {
                 while (1) {
                   switch (_context143.prev = _context143.next) {
                     case 0:
-                      if (this.venues) {
-                        _context143.next = 4;
-                        break;
-                      }
+                      this.auth.userProfile$.subscribe(function (userProfile) {
+                        if (userProfile) {
+                          _this61.currentUser = {
+                            userId: userProfile.sub.split("|")[1],
+                            userName: userProfile['http://example.com/username']
+                          };
+                          gtag('set', {
+                            'user_id': _this61.currentUser.userId
+                          });
+                        }
+                      });
+                      this.selected = 'shows';
+                      this.onSelectButton('shows');
+                      _context143.next = 5;
+                      return this.data.getIndex();
 
-                      _context143.next = 3;
-                      return this.data.getVenueIndex();
+                    case 5:
+                      index = _context143.sent;
+                      this.loaded = true;
+                      this.shows = index.shows;
+                      this.venues = index.venues;
+                      this.songs = index.songs;
+                      this.locations = index.locations;
 
-                    case 3:
-                      this.venues = _context143.sent;
-
-                    case 4:
+                    case 11:
                     case "end":
                       return _context143.stop();
                   }
@@ -21668,59 +21677,48 @@
             }));
           }
         }, {
-          key: "getLocations",
-          value: function getLocations() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee144() {
-              return regeneratorRuntime.wrap(function _callee144$(_context144) {
-                while (1) {
-                  switch (_context144.prev = _context144.next) {
-                    case 0:
-                      if (this.locations) {
-                        _context144.next = 4;
-                        break;
-                      }
-
-                      _context144.next = 3;
-                      return this.data.getLocationIndex();
-
-                    case 3:
-                      this.locations = _context144.sent;
-
-                    case 4:
-                    case "end":
-                      return _context144.stop();
-                  }
-                }
-              }, _callee144, this);
-            }));
+          key: "onSelectButton",
+          value: function onSelectButton(s) {
+            this.selected = s;
+            /*
+            switch(s) {
+              case 'shows':
+                this.getShows();
+                break;
+              case 'venues':
+                this.getVenues();
+                break;
+              case 'locations':
+                this.getLocations();
+                break;
+              case 'songs':
+                this.getSongs();
+            }
+            */
           }
-        }, {
-          key: "getSongs",
-          value: function getSongs() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee145() {
-              return regeneratorRuntime.wrap(function _callee145$(_context145) {
-                while (1) {
-                  switch (_context145.prev = _context145.next) {
-                    case 0:
-                      if (this.songs) {
-                        _context145.next = 4;
-                        break;
-                      }
-
-                      _context145.next = 3;
-                      return this.data.getSongIndex();
-
-                    case 3:
-                      this.songs = _context145.sent;
-
-                    case 4:
-                    case "end":
-                      return _context145.stop();
-                  }
-                }
-              }, _callee145, this);
-            }));
+          /*
+          protected async getShows(){
+            if (!this.shows){
+              this.shows = await this.data.getShowIndex();
+            }
           }
+             protected async getVenues(){
+            if (!this.venues){
+              this.venues = await this.data.getVenueIndex();
+            }
+          }
+             protected async getLocations(){
+            if (!this.locations){
+              this.locations = await this.data.getLocationIndex();
+            }
+          }
+             protected async getSongs(){
+            if (!this.songs){
+              this.songs = await this.data.getSongIndex();
+            }
+          }
+          */
+
         }, {
           key: "onClickTitle",
           value: function onClickTitle(selection, column) {
@@ -23140,7 +23138,7 @@
        */
 
 
-      var styles = ["table[_ngcontent-%COMP%] {\n  font-family: arial, sans-serif;\n  border-collapse: collapse;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  border: 1px solid #dddddd;\n  text-align: left;\n  padding: 8px;\n}\n\ntr[_ngcontent-%COMP%]:nth-child(even) {\n  background-color: #dddddd;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2luZGV4LmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0MsOEJBQUE7RUFDQSx5QkFBQTtFQUNBLFdBQUE7QUFERDs7QUFFQTtFQUNDLHlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0FBQ0Q7O0FBQ0M7RUFDQyx5QkFBQTtBQUVGIiwiZmlsZSI6ImluZGV4LmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbnRhYmxlIFxuXHRmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWYgXG5cdGJvcmRlci1jb2xsYXBzZTogY29sbGFwc2UgXG5cdHdpZHRoOiAxMDAlIFxudGQsIHRoIFxuXHRib3JkZXI6IDFweCBzb2xpZCAjZGRkZGRkIFxuXHR0ZXh0LWFsaWduOiBsZWZ0IFxuXHRwYWRkaW5nOiA4cHggXG50ciBcblx0JjpudGgtY2hpbGQoZXZlbikgXG5cdFx0YmFja2dyb3VuZC1jb2xvcjogI2RkZGRkZCBcblxuICAgICAgICAiXX0= */"];
+      var styles = ["table[_ngcontent-%COMP%] {\n  font-family: arial, sans-serif;\n  border-collapse: collapse;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  border: 1px solid #dddddd;\n  text-align: left;\n  padding: 8px;\n}\n\ntr[_ngcontent-%COMP%]:nth-child(even) {\n  background-color: #dddddd;\n}\n\n.wait[_ngcontent-%COMP%] {\n  padding-top: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2luZGV4LmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0ksOEJBQUE7RUFDQSx5QkFBQTtFQUNBLFdBQUE7QUFESjs7QUFFQTtFQUNJLHlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0FBQ0o7O0FBQ0k7RUFDSSx5QkFBQTtBQUVSOztBQUFBO0VBQ0ksaUJBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQUdKIiwiZmlsZSI6ImluZGV4LmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbnRhYmxlIFxuICAgIGZvbnQtZmFtaWx5OiBhcmlhbCwgc2Fucy1zZXJpZiBcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlIFxuICAgIHdpZHRoOiAxMDAlIFxudGQsIHRoIFxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGRkZGQgXG4gICAgdGV4dC1hbGlnbjogbGVmdCBcbiAgICBwYWRkaW5nOiA4cHggXG50ciBcbiAgICAmOm50aC1jaGlsZChldmVuKSBcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZGRkZCBcblxuLndhaXRcbiAgICBwYWRkaW5nLXRvcDogNTBweFxuICAgIGRpc3BsYXk6IGZsZXhcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXJcbiJdfQ== */"];
       /***/
     },
 
@@ -23305,12 +23303,12 @@
         _createClass(SongComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee147() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee145() {
               var _this62 = this;
 
-              return regeneratorRuntime.wrap(function _callee147$(_context147) {
+              return regeneratorRuntime.wrap(function _callee145$(_context145) {
                 while (1) {
-                  switch (_context147.prev = _context147.next) {
+                  switch (_context145.prev = _context145.next) {
                     case 0:
                       this.auth.userProfile$.subscribe(function (userProfile) {
                         if (userProfile) {
@@ -23333,36 +23331,36 @@
                       */
 
                       this.route.paramMap.subscribe(function (params) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this62, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee146() {
-                          return regeneratorRuntime.wrap(function _callee146$(_context146) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this62, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee144() {
+                          return regeneratorRuntime.wrap(function _callee144$(_context144) {
                             while (1) {
-                              switch (_context146.prev = _context146.next) {
+                              switch (_context144.prev = _context144.next) {
                                 case 0:
                                   if (!params.has('id')) {
-                                    _context146.next = 4;
+                                    _context144.next = 4;
                                     break;
                                   }
 
-                                  _context146.next = 3;
+                                  _context144.next = 3;
                                   return this.data.getSong(params.get('id'));
 
                                 case 3:
-                                  this.song = _context146.sent;
+                                  this.song = _context144.sent;
 
                                 case 4:
                                   if (!(params.has('id') && this.song)) {
-                                    _context146.next = 17;
+                                    _context144.next = 17;
                                     break;
                                   }
 
                                   this.subtitle = lodash__WEBPACK_IMPORTED_MODULE_1__["uniq"](this.song.composedBy.concat(this.song.lyricsBy).map(function (a) {
                                     return a.name;
                                   })).join(', ');
-                                  _context146.next = 8;
+                                  _context144.next = 8;
                                   return this.data.getEventInfos(this.song.eventIds);
 
                                 case 8:
-                                  this.events = _context146.sent;
+                                  this.events = _context144.sent;
 
                                   if (this.events.length) {
                                     this.firstPlayed = this.events[0].date;
@@ -23373,14 +23371,14 @@
                                     }));
                                   }
 
-                                  _context146.next = 12;
+                                  _context144.next = 12;
                                   return this.data.getYoutubeList(this.song.id, ['Grateful Dead', this.song.name]);
 
                                 case 12:
-                                  this.videos = _context146.sent;
+                                  this.videos = _context144.sent;
                                   this.currentVideoId = this.videos[0].videoId;
                                   Object(_globals__WEBPACK_IMPORTED_MODULE_7__["logger"])(this.videos);
-                                  _context146.next = 18;
+                                  _context144.next = 18;
                                   break;
 
                                 case 17:
@@ -23390,19 +23388,19 @@
 
                                 case 18:
                                 case "end":
-                                  return _context146.stop();
+                                  return _context144.stop();
                               }
                             }
-                          }, _callee146, this);
+                          }, _callee144, this);
                         }));
                       });
 
                     case 2:
                     case "end":
-                      return _context147.stop();
+                      return _context145.stop();
                   }
                 }
-              }, _callee147, this);
+              }, _callee145, this);
             }));
           }
         }, {
