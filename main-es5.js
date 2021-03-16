@@ -12101,7 +12101,7 @@
       });
 
       function View_IndexComponent_2(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
           if ("click" === en) {
@@ -12112,31 +12112,156 @@
           return ad;
         }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " (", ") "]))], function (_ck, _v) {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](7, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](8, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 10).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](11, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](12, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 14).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](15, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](16, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](19, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, ["", ""]))], function (_ck, _v) {
           var currVal_0 = _ck(_v, 3, 0, "/venue", _v.context.$implicit.venueId);
 
           _ck(_v, 2, 0, currVal_0);
+
+          var currVal_2 = _ck(_v, 7, 0, "/venue", _v.context.$implicit.venueId);
+
+          _ck(_v, 6, 0, currVal_2);
+
+          var currVal_4 = _ck(_v, 11, 0, "/venue", _v.context.$implicit.venueId);
+
+          _ck(_v, 10, 0, currVal_4);
+
+          var currVal_6 = _ck(_v, 15, 0, "/venue", _v.context.$implicit.venueId);
+
+          _ck(_v, 14, 0, currVal_6);
+
+          var currVal_8 = _ck(_v, 19, 0, "/venue", _v.context.$implicit.venueId);
+
+          _ck(_v, 18, 0, currVal_8);
         }, function (_ck, _v) {
           var currVal_1 = _v.context.$implicit.venueName;
-          var currVal_2 = _v.context.$implicit.locationName;
 
-          _ck(_v, 4, 0, currVal_1, currVal_2);
+          _ck(_v, 4, 0, currVal_1);
+
+          var currVal_3 = _v.context.$implicit.locationName;
+
+          _ck(_v, 8, 0, currVal_3);
+
+          var currVal_5 = _v.context.$implicit.numEvents;
+
+          _ck(_v, 12, 0, currVal_5);
+
+          var currVal_7 = _v.context.$implicit.numPhotos;
+
+          _ck(_v, 16, 0, currVal_7);
+
+          var currVal_9 = _v.context.$implicit.numArtefacts;
+
+          _ck(_v, 20, 0, currVal_9);
         });
       }
 
       function View_IndexComponent_1(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 16, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 15, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 12, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("venues", "venueName") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Venue"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("venues", "locationName") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Location"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("venues", "numEvents") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Events"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("venues", "numPhotos") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("venues", "numArtefacts") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 1, "th", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
           var currVal_0 = _co.venues;
 
-          _ck(_v, 2, 0, currVal_0);
+          _ck(_v, 16, 0, currVal_0);
         }, null);
       }
 
       function View_IndexComponent_4(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
           if ("click" === en) {
@@ -12147,31 +12272,156 @@
           return ad;
         }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " (", ") "]))], function (_ck, _v) {
-          var currVal_0 = _ck(_v, 3, 0, "/location", _v.context.$implicit.locationId);
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](7, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](8, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 10).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](11, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](12, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 14).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](15, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](16, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](19, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, ["", ""]))], function (_ck, _v) {
+          var currVal_0 = _ck(_v, 3, 0, "/show", _v.context.$implicit.locationId);
 
           _ck(_v, 2, 0, currVal_0);
+
+          var currVal_2 = _ck(_v, 7, 0, "/show", _v.context.$implicit.locationId);
+
+          _ck(_v, 6, 0, currVal_2);
+
+          var currVal_4 = _ck(_v, 11, 0, "/show", _v.context.$implicit.locationId);
+
+          _ck(_v, 10, 0, currVal_4);
+
+          var currVal_6 = _ck(_v, 15, 0, "/show", _v.context.$implicit.locationId);
+
+          _ck(_v, 14, 0, currVal_6);
+
+          var currVal_8 = _ck(_v, 19, 0, "/show", _v.context.$implicit.locationId);
+
+          _ck(_v, 18, 0, currVal_8);
         }, function (_ck, _v) {
           var currVal_1 = _v.context.$implicit.locationName;
-          var currVal_2 = _v.context.$implicit.country;
 
-          _ck(_v, 4, 0, currVal_1, currVal_2);
+          _ck(_v, 4, 0, currVal_1);
+
+          var currVal_3 = _v.context.$implicit.country;
+
+          _ck(_v, 8, 0, currVal_3);
+
+          var currVal_5 = _v.context.$implicit.numEvents;
+
+          _ck(_v, 12, 0, currVal_5);
+
+          var currVal_7 = _v.context.$implicit.numPhotos;
+
+          _ck(_v, 16, 0, currVal_7);
+
+          var currVal_9 = _v.context.$implicit.numArtefacts;
+
+          _ck(_v, 20, 0, currVal_9);
         });
       }
 
       function View_IndexComponent_3(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 13, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 10, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("locations", "locationName") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Location"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("locations", "country") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["State/Country"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("locations", "numEvents") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Events"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("locations", "numPhotos") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("locations", "numArtefacts") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_4)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
           var currVal_0 = _co.locations;
 
-          _ck(_v, 2, 0, currVal_0);
+          _ck(_v, 14, 0, currVal_0);
         }, null);
       }
 
       function View_IndexComponent_6(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
           if ("click" === en) {
@@ -12182,30 +12432,69 @@
           return ad;
         }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " "]))], function (_ck, _v) {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](7, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](8, null, ["", ""]))], function (_ck, _v) {
           var currVal_0 = _ck(_v, 3, 0, "/song", _v.context.$implicit.songId);
 
           _ck(_v, 2, 0, currVal_0);
+
+          var currVal_2 = _ck(_v, 7, 0, "/song", _v.context.$implicit.songId);
+
+          _ck(_v, 6, 0, currVal_2);
         }, function (_ck, _v) {
           var currVal_1 = _v.context.$implicit.songName;
 
           _ck(_v, 4, 0, currVal_1);
+
+          var currVal_3 = _v.context.$implicit.numEvents;
+
+          _ck(_v, 8, 0, currVal_3);
         });
       }
 
       function View_IndexComponent_5(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 8, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 7, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 4, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("songs", "songName") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Song"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("songs", "numEvents") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Events"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_6)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](8, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
           var currVal_0 = _co.songs;
 
-          _ck(_v, 2, 0, currVal_0);
+          _ck(_v, 8, 0, currVal_0);
         }, null);
       }
 
       function View_IndexComponent_8(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "span", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 20, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
           if ("click" === en) {
@@ -12216,29 +12505,151 @@
           return ad;
         }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, [" ", " ", ", ", ", ", " photos, ", " artefacts "]))], function (_ck, _v) {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](3, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](4, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 6).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](6, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](7, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](8, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 10).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](11, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](12, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](13, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 14).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](15, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](16, null, ["", ""])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](17, 0, null, null, 3, "td", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+
+          if ("click" === en) {
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 18).onClick() !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+          routerLink: [0, "routerLink"]
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](19, 2), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, ["", ""]))], function (_ck, _v) {
           var currVal_0 = _ck(_v, 3, 0, "/show", _v.context.$implicit.showId);
 
           _ck(_v, 2, 0, currVal_0);
+
+          var currVal_2 = _ck(_v, 7, 0, "/show", _v.context.$implicit.showId);
+
+          _ck(_v, 6, 0, currVal_2);
+
+          var currVal_4 = _ck(_v, 11, 0, "/show", _v.context.$implicit.showId);
+
+          _ck(_v, 10, 0, currVal_4);
+
+          var currVal_6 = _ck(_v, 15, 0, "/show", _v.context.$implicit.showId);
+
+          _ck(_v, 14, 0, currVal_6);
+
+          var currVal_8 = _ck(_v, 19, 0, "/show", _v.context.$implicit.showId);
+
+          _ck(_v, 18, 0, currVal_8);
         }, function (_ck, _v) {
           var currVal_1 = _v.context.$implicit.date;
-          var currVal_2 = _v.context.$implicit.venueName;
-          var currVal_3 = _v.context.$implicit.locationName;
-          var currVal_4 = _v.context.$implicit.photos;
-          var currVal_5 = _v.context.$implicit.artefacts;
 
-          _ck(_v, 4, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5);
+          _ck(_v, 4, 0, currVal_1);
+
+          var currVal_3 = _v.context.$implicit.venueName;
+
+          _ck(_v, 8, 0, currVal_3);
+
+          var currVal_5 = _v.context.$implicit.locationName;
+
+          _ck(_v, 12, 0, currVal_5);
+
+          var currVal_7 = _v.context.$implicit.photos;
+
+          _ck(_v, 16, 0, currVal_7);
+
+          var currVal_9 = _v.context.$implicit.artefacts;
+
+          _ck(_v, 20, 0, currVal_9);
         });
       }
 
       function View_IndexComponent_7(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 14, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 13, "table", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 10, "tr", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("shows", "date") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Date"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("shows", "venueName") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Venue"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("shows", "locationName") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Location"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("shows", "photos") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Photos"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 1, "th", [["style", "cursor:pointer"]], null, [[null, "click"]], function (_v, en, $event) {
+          var ad = true;
+          var _co = _v.component;
+
+          if ("click" === en) {
+            var pd_0 = _co.onClickTitle("shows", "artefacts") !== false;
+            ad = pd_0 && ad;
+          }
+
+          return ad;
+        }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Artifacts"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_IndexComponent_8)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 278528, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]], {
           ngForOf: [0, "ngForOf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
           var currVal_0 = _co.shows;
 
-          _ck(_v, 2, 0, currVal_0);
+          _ck(_v, 14, 0, currVal_0);
         }, null);
       }
 
@@ -21155,6 +21566,10 @@
             userName: '',
             userId: 'None'
           };
+          this.venuesSort = 'venueName';
+          this.showsSort = 'date';
+          this.locationsSort = 'locationName';
+          this.songsSort = 'songName';
         }
 
         _createClass(IndexComponent, [{
@@ -21305,6 +21720,39 @@
                 }
               }, _callee145, this);
             }));
+          }
+        }, {
+          key: "onClickTitle",
+          value: function onClickTitle(selection, column) {
+            switch (selection) {
+              case 'shows':
+                if (this.showsSort == column) this.shows.reverse();else this.shows = this.sortByKey(this.shows, column);
+                this.showsSort = column;
+                break;
+
+              case 'venues':
+                if (this.venuesSort == column) this.venues.reverse();else this.venues = this.sortByKey(this.venues, column);
+                this.venuesSort = column;
+                break;
+
+              case 'locations':
+                if (this.locationsSort == column) this.locations.reverse();else this.locations = this.sortByKey(this.locations, column);
+                this.locationsSort = column;
+                break;
+
+              case 'songs':
+                if (this.songsSort == column) this.songs.reverse();else this.songs = this.sortByKey(this.songs, column);
+                this.songsSort = column;
+            }
+          }
+        }, {
+          key: "sortByKey",
+          value: function sortByKey(array, key) {
+            return array.sort(function (a, b) {
+              var x = a[key];
+              var y = b[key];
+              return x < y ? -1 : x > y ? 1 : 0;
+            });
           }
         }]);
 
@@ -22692,7 +23140,7 @@
        */
 
 
-      var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJpbmRleC5jb21wb25lbnQuc2FzcyJ9 */"];
+      var styles = ["table[_ngcontent-%COMP%] {\n  font-family: arial, sans-serif;\n  border-collapse: collapse;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  border: 1px solid #dddddd;\n  text-align: left;\n  padding: 8px;\n}\n\ntr[_ngcontent-%COMP%]:nth-child(even) {\n  background-color: #dddddd;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2luZGV4LmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0MsOEJBQUE7RUFDQSx5QkFBQTtFQUNBLFdBQUE7QUFERDs7QUFFQTtFQUNDLHlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0FBQ0Q7O0FBQ0M7RUFDQyx5QkFBQTtBQUVGIiwiZmlsZSI6ImluZGV4LmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbnRhYmxlIFxuXHRmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWYgXG5cdGJvcmRlci1jb2xsYXBzZTogY29sbGFwc2UgXG5cdHdpZHRoOiAxMDAlIFxudGQsIHRoIFxuXHRib3JkZXI6IDFweCBzb2xpZCAjZGRkZGRkIFxuXHR0ZXh0LWFsaWduOiBsZWZ0IFxuXHRwYWRkaW5nOiA4cHggXG50ciBcblx0JjpudGgtY2hpbGQoZXZlbikgXG5cdFx0YmFja2dyb3VuZC1jb2xvcjogI2RkZGRkZCBcblxuICAgICAgICAiXX0= */"];
       /***/
     },
 
