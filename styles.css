@@ -202,6 +202,11 @@
   margin-top: 30px;
   margin-bottom: 30px;
   cursor: pointer;
+}.wait {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* required styles */
 
