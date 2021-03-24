@@ -231,6 +231,9 @@
   width: 100%;
 }gd-player {
   z-index: 1000;
+}.no-padding-dialog-container .mat-dialog-container {
+  padding: 10px;
+  overflow: hidden;
 }
 /* required styles */
 
