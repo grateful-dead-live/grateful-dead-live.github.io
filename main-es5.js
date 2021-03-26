@@ -18165,7 +18165,7 @@
       }
 
       function View_ShowsComponent_1(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 37, "div", [["fxLayout", "row"], ["fxLayoutAlign", " center"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 36, "div", [["fxLayout", "row"], ["fxLayoutAlign", " center"]], null, null, null, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxLayout: [0, "fxLayout"]
         }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutAlignDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutAlignStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxLayoutAlign: [0, "fxLayoutAlign"]
@@ -18189,66 +18189,66 @@
           defaultImage: [1, "defaultImage"]
         }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](9, 4341760, null, 0, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MatTooltip"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_9__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_11__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["AriaDescriber"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_SCROLL_STRATEGY"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_12__["Directionality"]], [2, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_DEFAULT_OPTIONS"]], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DOCUMENT"]], {
           message: [0, "message"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["> "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 16777216, null, null, 9, "div", [["class", "link mat-tooltip-trigger"], ["fxFlex", "1 1 10%"], ["fxLayout", "column"], ["fxLayoutAlign", "center"], ["matTooltip", "go to show"]], null, [[null, "click"]], function (_v, en, $event) {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 16777216, null, null, 9, "div", [["class", "link mat-tooltip-trigger"], ["fxFlex", "1 1 10%"], ["fxLayout", "column"], ["fxLayoutAlign", "center"], ["matTooltip", "go to show"], ["style", "margin-left:12px;"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
           if ("click" === en) {
-            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 12).onClick() !== false;
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 11).onClick() !== false;
             ad = pd_0 && ad;
           }
 
           return ad;
-        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](12, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_16__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](11, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_16__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](13, 2), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](12, 2), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](13, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxLayout: [0, "fxLayout"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutAlignDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutAlignStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](14, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutAlignDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutAlignStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxLayoutAlign: [0, "fxLayoutAlign"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](15, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxFlex: [0, "fxFlex"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](17, 933888, null, 0, _angular_flex_layout_extended__WEBPACK_IMPORTED_MODULE_18__["DefaultStyleDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], [8, null], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["SERVER_TOKEN"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](16, 933888, null, 0, _angular_flex_layout_extended__WEBPACK_IMPORTED_MODULE_18__["DefaultStyleDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], [8, null], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["SERVER_TOKEN"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]], {
           "ngStyle.xs": [0, "ngStyle.xs"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](18, {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](17, {
           "font-size": 0
-        }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](19, 4341760, null, 0, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MatTooltip"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_9__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_11__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["AriaDescriber"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_SCROLL_STRATEGY"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_12__["Directionality"]], [2, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_DEFAULT_OPTIONS"]], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DOCUMENT"]], {
+        }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](18, 4341760, null, 0, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MatTooltip"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_9__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_11__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["AriaDescriber"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_SCROLL_STRATEGY"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_12__["Directionality"]], [2, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_DEFAULT_OPTIONS"]], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DOCUMENT"]], {
           message: [0, "message"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](20, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 16777216, null, null, 9, "div", [["class", "link mat-tooltip-trigger"], ["fxFlex", "1 1 25%"], ["fxLayout", "column"], ["fxLayoutAlign", "center"], ["matTooltip", "go to venue"]], null, [[null, "click"]], function (_v, en, $event) {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](19, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](20, 16777216, null, null, 9, "div", [["class", "link mat-tooltip-trigger"], ["fxFlex", "1 1 25%"], ["fxLayout", "column"], ["fxLayoutAlign", "center"], ["matTooltip", "go to venue"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
           if ("click" === en) {
-            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 22).onClick() !== false;
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 21).onClick() !== false;
             ad = pd_0 && ad;
           }
 
           return ad;
-        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](22, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_16__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](21, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_16__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](23, 2), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](22, 2), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](23, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxLayout: [0, "fxLayout"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutAlignDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutAlignStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](24, 671744, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultLayoutAlignDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["LayoutAlignStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxLayoutAlign: [0, "fxLayoutAlign"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](26, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](25, 737280, null, 0, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["DefaultFlexDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["LAYOUT_CONFIG"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_3__["FlexStyleBuilder"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"]], {
           fxFlex: [0, "fxFlex"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](27, 933888, null, 0, _angular_flex_layout_extended__WEBPACK_IMPORTED_MODULE_18__["DefaultStyleDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], [8, null], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["SERVER_TOKEN"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](26, 933888, null, 0, _angular_flex_layout_extended__WEBPACK_IMPORTED_MODULE_18__["DefaultStyleDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["StyleUtils"], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["MediaMarshaller"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], [8, null], _angular_flex_layout_core__WEBPACK_IMPORTED_MODULE_4__["SERVER_TOKEN"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]], {
           "ngStyle.xs": [0, "ngStyle.xs"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](28, {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpod"](27, {
           "font-size": 0
-        }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](29, 4341760, null, 0, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MatTooltip"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_9__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_11__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["AriaDescriber"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_SCROLL_STRATEGY"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_12__["Directionality"]], [2, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_DEFAULT_OPTIONS"]], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DOCUMENT"]], {
+        }), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](28, 4341760, null, 0, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MatTooltip"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_9__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_11__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["AriaDescriber"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_SCROLL_STRATEGY"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_12__["Directionality"]], [2, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_DEFAULT_OPTIONS"]], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DOCUMENT"]], {
           message: [0, "message"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](30, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](31, 16777216, null, null, 4, "span", [["class", "link mat-tooltip-trigger"], ["matTooltip", "go to location"]], null, [[null, "click"]], function (_v, en, $event) {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](29, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](30, 16777216, null, null, 4, "span", [["class", "link mat-tooltip-trigger"], ["matTooltip", "go to location"]], null, [[null, "click"]], function (_v, en, $event) {
           var ad = true;
 
           if ("click" === en) {
-            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 32).onClick() !== false;
+            var pd_0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵnov"](_v, 31).onClick() !== false;
             ad = pd_0 && ad;
           }
 
           return ad;
-        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](32, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_16__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
+        }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](31, 540672, null, 0, _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterLink"], [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_16__["ActivatedRoute"], [8, null], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], {
           routerLink: [0, "routerLink"]
-        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](33, 2), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](34, 4341760, null, 0, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MatTooltip"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_9__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_11__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["AriaDescriber"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_SCROLL_STRATEGY"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_12__["Directionality"]], [2, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_DEFAULT_OPTIONS"]], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DOCUMENT"]], {
+        }, null), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵpad"](32, 2), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](33, 4341760, null, 0, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MatTooltip"], [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_9__["Overlay"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollDispatcher"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_11__["Platform"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["AriaDescriber"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["FocusMonitor"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_SCROLL_STRATEGY"], [2, _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_12__["Directionality"]], [2, _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_8__["MAT_TOOLTIP_DEFAULT_OPTIONS"]], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DOCUMENT"]], {
           message: [0, "message"]
-        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](35, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShowsComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](37, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
+        }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](34, null, [" ", " "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵand"](16777216, null, null, 1, null, View_ShowsComponent_2)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](36, 16384, null, 0, _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]], {
           ngIf: [0, "ngIf"]
         }, null)], function (_ck, _v) {
           var _co = _v.component;
@@ -18281,65 +18281,65 @@
 
           _ck(_v, 9, 0, currVal_10);
 
-          var currVal_11 = _ck(_v, 13, 0, "/show", _v.context.$implicit.id);
+          var currVal_11 = _ck(_v, 12, 0, "/show", _v.context.$implicit.id);
 
-          _ck(_v, 12, 0, currVal_11);
+          _ck(_v, 11, 0, currVal_11);
 
           var currVal_12 = "column";
 
-          _ck(_v, 14, 0, currVal_12);
+          _ck(_v, 13, 0, currVal_12);
 
           var currVal_13 = "center";
 
-          _ck(_v, 15, 0, currVal_13);
+          _ck(_v, 14, 0, currVal_13);
 
           var currVal_14 = "1 1 10%";
 
-          _ck(_v, 16, 0, currVal_14);
+          _ck(_v, 15, 0, currVal_14);
 
-          var currVal_15 = _ck(_v, 18, 0, "80%");
+          var currVal_15 = _ck(_v, 17, 0, "80%");
 
-          _ck(_v, 17, 0, currVal_15);
+          _ck(_v, 16, 0, currVal_15);
 
           var currVal_16 = "go to show";
 
-          _ck(_v, 19, 0, currVal_16);
+          _ck(_v, 18, 0, currVal_16);
 
-          var currVal_18 = _ck(_v, 23, 0, "/show", _v.context.$implicit.id);
+          var currVal_18 = _ck(_v, 22, 0, "/show", _v.context.$implicit.id);
 
-          _ck(_v, 22, 0, currVal_18);
+          _ck(_v, 21, 0, currVal_18);
 
           var currVal_19 = "column";
 
-          _ck(_v, 24, 0, currVal_19);
+          _ck(_v, 23, 0, currVal_19);
 
           var currVal_20 = "center";
 
-          _ck(_v, 25, 0, currVal_20);
+          _ck(_v, 24, 0, currVal_20);
 
           var currVal_21 = "1 1 25%";
 
-          _ck(_v, 26, 0, currVal_21);
+          _ck(_v, 25, 0, currVal_21);
 
-          var currVal_22 = _ck(_v, 28, 0, "80%");
+          var currVal_22 = _ck(_v, 27, 0, "80%");
 
-          _ck(_v, 27, 0, currVal_22);
+          _ck(_v, 26, 0, currVal_22);
 
           var currVal_23 = "go to venue";
 
-          _ck(_v, 29, 0, currVal_23);
+          _ck(_v, 28, 0, currVal_23);
 
-          var currVal_25 = _ck(_v, 33, 0, "/show", _v.context.$implicit.id);
+          var currVal_25 = _ck(_v, 32, 0, "/show", _v.context.$implicit.id);
 
-          _ck(_v, 32, 0, currVal_25);
+          _ck(_v, 31, 0, currVal_25);
 
           var currVal_26 = "go to location";
 
-          _ck(_v, 34, 0, currVal_26);
+          _ck(_v, 33, 0, currVal_26);
 
           var currVal_28 = _co.onOptions;
 
-          _ck(_v, 37, 0, currVal_28);
+          _ck(_v, 36, 0, currVal_28);
         }, function (_ck, _v) {
           var currVal_2 = "80px";
           var currVal_3 = "60px";
@@ -18349,15 +18349,15 @@
 
           var currVal_17 = _v.context.$implicit.date;
 
-          _ck(_v, 20, 0, currVal_17);
+          _ck(_v, 19, 0, currVal_17);
 
           var currVal_24 = _v.context.$implicit.venue;
 
-          _ck(_v, 30, 0, currVal_24);
+          _ck(_v, 29, 0, currVal_24);
 
           var currVal_27 = _v.context.$implicit.location;
 
-          _ck(_v, 35, 0, currVal_27);
+          _ck(_v, 34, 0, currVal_27);
         });
       }
 
